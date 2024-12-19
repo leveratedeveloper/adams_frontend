@@ -1,19 +1,43 @@
 import { Globe, Smartphone } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TabContent } from '@/components/TabContent';
+import Image from "next/image";
+import logoAdams from "../public/img/Logo_Adams_Chillax.png";
+import Header from '../components/general/header';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen w-full">
+      <Header />
+    <div
+        className="absolute inset-0 backdrop-blur-lg"
+        style={{
+          backgroundImage: `url('../public/img/background_adams.svg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'blur(10px)', // Additional CSS blur if needed
+        }}
+      ></div>
+    <main className="relative z-10 flex flex-col items-center justify-center min-h-screen bg-[url('../public/img/background_adams.svg')] bg-no-repeat bg-cover bg-center">
+      <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-1">
         {/* Logo and Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-[#F7931E] via-[#ED1C24] to-[#2E3192] text-transparent bg-clip-text">
-            ADAMS
+        <div className="text-center mb-10">
+          <h1 className="text-6xl font-bold">
+            {/* <img
+              src="/path-to-your-logo.png"
+              alt="ADAMS Logo"
+              className="h-16 w-auto"
+            /> */}
+            {/* <Image alt="ADAMS" src={logoAdams} className="h-15 w-auto"></Image> */}
+            <h1>
+              Boost your ranking
+            </h1>
+            <h1 className="gradient-text">
+              {/* Boots your ranking,<br/> */}
+              Maximize Visibility
+            </h1>
+            
           </h1>
-          <h2 className="text-xl text-gray-700 mb-6">
-            Automated Digital Marketing Solution
-          </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Accurate & efficient way to grow your website SEO easily. Powered by the cutting edge technology of Leverate Asia.
           </p>
@@ -46,5 +70,6 @@ export default function Home() {
         </div>
       </div>
     </main>
+    </div>
   );
 }

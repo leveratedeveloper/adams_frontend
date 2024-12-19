@@ -44,3 +44,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.gradient-text {
+  background-image: linear-gradient(to right, #EC8620 20%, #E23653 50%, #0E52DA 80%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Optional: Apply bold styling if needed */
+}
