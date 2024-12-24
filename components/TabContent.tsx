@@ -2,7 +2,7 @@
 import { Globe } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { TabsContent } from '@/components/ui/tabs';
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 interface TabContentProps {
   value: string;
@@ -16,18 +16,73 @@ export function TabContent({ value, placeholder }: TabContentProps) {
   const handleToggle = () => {
     setIsOn(!isOn);
   };
+  const [selectedValues, setSelectedValues] = useState([]);
+
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>, value: number) => {
+    if (e.target.checked) {
+      setSelectedValues((prev) => [...prev, value]);
+    } else {
+      setSelectedValues((prev) => prev.filter((v) => v !== value));
+    }
+  };
   return (
     <TabsContent value={value} className="mt-0">
       {/* URL Input */}
       <div className="mb-8">
-        <div className="relative max-w-3xl mx-auto">
-          <input
-            type="url"
-            placeholder={placeholder}
-            className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none pl-12"
-          />
-          <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        {value === 'website' && (
+          <div className="relative max-w-3xl mx-auto">
+            <input
+              type="url"
+              placeholder={placeholder}
+              className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none pl-12"
+            />
+          </div>
+        )}
+         {value === 'app' && (
+          <div className="flex items-center  rounded-full border border-gray-300 p-4">
+          <div className="flex items-center">
+            <p className="mr-2 text-gray-600">Category</p>
+            <button className="p-1 rounded-full text-gray-600 hover:text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </button>
+            <select className="ml-2">
+              <option value="Business">Business</option>
+              <option value="Finance">Finance</option>
+              <option value="Healthcare">Healthcare</option>
+            </select>
+          </div>
+          <div className="flex items-center w-full">
+            <button className="p-1 rounded-full text-gray-600 hover:text-gray-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-smartphone w-5 h-5"
+              >
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
+            </button>
+            <input
+              type="text"
+              className="ml-2 px-4 py-2 w-full rounded-md border border-gray-300 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-900"
+              placeholder="Type your app name."
+            />
+          </div>
+
         </div>
+        )}
+          
+          {/* <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> */}
+        {/* </div> */}
       </div>
 
       {/* Settings Grid */}
@@ -117,14 +172,6 @@ export function TabContent({ value, placeholder }: TabContentProps) {
             </button>
           </div>
           <div className="flex items-center gap-1">
-            {/* <div className="flex-1">
-              <Slider
-                defaultValue={[20]}
-                max={25}
-                step={5}
-                className="w-full"
-              />
-            </div> */}
             <div className="flex flex-col items-center w-5/6 p-2">
                 <Slider
                   min={5}
@@ -162,6 +209,59 @@ export function TabContent({ value, placeholder }: TabContentProps) {
             </div>
           </div>
         </div>
+        )}
+
+        {value === 'app' && (
+         <div className="space-y-4">
+         <div className="flex items-center justify-between">
+           <h3 className="text-sm font-medium">Objective</h3>
+           <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+         </div>
+         <div className="flex items-center gap-1">
+           <div className="flex flex-wrap items-center w-5/6 gap-2 p-2">
+             {/** Checkbox Buttons */}
+             {["App Rating", "Search Ranking"].map((value) => (
+               <label
+                 key={value}
+                 className="flex items-center gap-2 p-2 border rounded-md cursor-pointer hover:bg-gray-100"
+               >
+                 <input
+                   type="checkbox"
+                   value={value}
+                   onChange={(e) => handleCheckboxChange(e, value)}
+                   className="accent-blue-500"
+                 />
+                 <span className="text-sm">{value}</span>
+               </label>
+             ))}
+           </div>
+         </div>
+       </div>       
+        )}
+        {value === 'app' && (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-medium">
+                Keywords Optimize
+              </h3>
+              <button className="text-gray-400 hover:text-gray-600">
+                ⓘ
+              </button>
+            </div>
+            <div className="flex items-center gap-1">
+              <div className="flex flex-col items-center w-5/6 p-2">
+                  <Slider
+                    min={5}
+                    max={25}
+                    step={5}
+                    defaultValue={[15]}
+                    onValueChange={setValue}
+                    ariaLabel="Slider with numbers"
+                    showValue
+                  />
+                </div>
+            </div>
+          </div>
         )}
       </div>
 
