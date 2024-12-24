@@ -4,6 +4,7 @@ import { TabContent } from '@/components/TabContent';
 import Image from "next/image";
 import logoAdams from "../public/img/Logo_Adams_Chillax.png";
 import Header from '../components/general/header';
+import SliderLogo from '@/components/SliderLogo';
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="bg-white rounded-lg border p-6 sm:p-8">
+        <div className="bg-white rounded-lg border p-6 sm:p-8 mb-8">
           {/* Website/App Tabs */}
           <Tabs defaultValue="website" className="w-full">
             <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8">
@@ -66,8 +67,21 @@ export default function Home() {
               value="app" 
               placeholder="Enter App URL (i.e. https://play.google.com/store/apps/...)" 
             />
+           
           </Tabs>
         </div>
+        <div className="text-center">
+          <div className="inline-flex justify-center items-center bg-purple-100 rounded-full p-3 mb-8 space-x-2">
+            <span className="font-bold text-black">Trusted by</span>
+            <span className="font-bold gradient-text-well-known">well known</span>
+            <span className="font-bold">companies</span>
+          </div>
+        </div>
+      
+        <div className="flex items-center justify-center">
+          <SliderLogo />
+        </div>
+      
       </div>
     </main>
     </div>

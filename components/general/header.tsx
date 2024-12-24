@@ -10,29 +10,37 @@ export default function Header() {
 
   return (
     <header className="bg-gradient-to-r from-white via-white to-transparent backdrop-blur-lg fixed w-full z-50">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 flex items-center h-16">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
           <Link href="/">
-            <Image src={logoAdams} alt="Logo" width={100} height={50} />
+            <Image src={logoAdams} alt="Logo" width={150} height={50} />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="flex items-center justify-between w-full px-4 py-2 ">
+        {/* Left content or logo (optional) */}
+        <div className="hidden md:flex space-x-6">
           <Link href="/">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>Home</Link>
+            <Link className="text-gray-700 hover:text-blue-500" href={''}>How It Works</Link>
           </Link>
           <Link href="/about">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>About</Link>
+            <Link className="text-gray-700 hover:text-blue-500" href={''}>Why Adams</Link>
           </Link>
           <Link href="/services">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>Services</Link>
+            <Link className="text-gray-700 hover:text-blue-500" href={''}>Proven Results</Link>
           </Link>
-          <Link href="/contact">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>Contact</Link>
-          </Link>
-        </nav>
+        </div>
+        
+        {/* Button on the far right */}
+        <button
+          className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
+          onClick={() => alert('Button Clicked!')}>
+          Consult Now
+        </button>
+      </nav>
+
 
         {/* Hamburger Menu */}
         <button
