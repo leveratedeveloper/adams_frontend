@@ -4,7 +4,6 @@ interface MetricDisplayProps {
   }
   
   export function MetricDisplay({ value, label }: MetricDisplayProps) {
-    console.log("ini value metric", value)
     const isPercentage = value.startsWith('+');
     const displayClass = isPercentage 
       ? "text-7xl font-bold bg-gradient-to-r from-orange-400 via-pink-500 to-blue-600 bg-clip-text text-transparent"
