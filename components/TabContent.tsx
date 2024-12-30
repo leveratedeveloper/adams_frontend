@@ -16,15 +16,6 @@ export function TabContent({ value, placeholder }: TabContentProps) {
   const handleToggle = () => {
     setIsOn(!isOn);
   };
-  const [selectedValues, setSelectedValues] = useState([]);
-
-  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>, value: number) => {
-    if (e.target.checked) {
-      setSelectedValues((prev) => [...prev, value]);
-    } else {
-      setSelectedValues((prev) => prev.filter((v) => v !== value));
-    }
-  };
   return (
     <TabsContent value={value} className="mt-0">
       {/* URL Input */}
@@ -162,7 +153,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
 
         {/* Keywords/Article Development */}
         {value === 'website' && (
-        <div className="space-y-4">
+        <div className="space-y-4 items-center">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium">
               Keywords to be optimized
@@ -212,31 +203,31 @@ export function TabContent({ value, placeholder }: TabContentProps) {
         )}
 
         {value === 'app' && (
-         <div className="space-y-4">
-         <div className="flex items-center justify-between">
-           <h3 className="text-sm font-medium">Objective</h3>
-           <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
-         </div>
-         <div className="flex items-center gap-1">
-           <div className="flex flex-wrap items-center w-5/6 gap-2 p-2">
-             {/** Checkbox Buttons */}
-             {["App Rating", "Search Ranking"].map((value) => (
-               <label
-                 key={value}
-                 className="flex items-center gap-2 p-2 border rounded-md cursor-pointer hover:bg-gray-100"
-               >
-                 <input
-                   type="checkbox"
-                   value={value}
-                   onChange={(e) => handleCheckboxChange(e, value)}
-                   className="accent-blue-500"
-                 />
-                 <span className="text-sm">{value}</span>
-               </label>
-             ))}
-           </div>
-         </div>
-       </div>       
+         <div className="space-x-6">
+            <div className="flex items-center">
+              <h3 className="text-sm font-medium mr-2">Objective</h3>
+              <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+            </div>
+            <div className="flex items-center gap-1">
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="item-1"
+                      className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label htmlFor="item-1" className="ml-2 mr-2 text-gray-700">App Rating</label> {/* Added mr-4 */}
+                    
+                    <input
+                      type="checkbox"
+                      id="item-2"
+                      className="w-5 h-5 ml-4 ml-6 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label htmlFor="item-2" className="ml-2 text-gray-700">Search Ranking</label>
+                  </div>
+                </div>
+            </div>
+          </div>       
         )}
         {value === 'app' && (
           <div className="space-y-4">

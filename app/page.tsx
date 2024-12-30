@@ -5,6 +5,9 @@ import Image from "next/image";
 import logoAdams from "../public/img/Logo_Adams_Chillax.png";
 import Header from '../components/general/header';
 import SliderLogo from '@/components/SliderLogo';
+import HowItWorks from '@/components/Howitworks';
+import WhyAdams from '@/components/Whyadams';
+import ProvenResult from '@/components/ProvenResult';
 
 export default function Home() {
   return (
@@ -22,23 +25,24 @@ export default function Home() {
     <main className="relative z-10 flex flex-col items-center justify-center min-h-screen bg-[url('../public/img/background_adams.svg')] bg-no-repeat bg-cover bg-center">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-1">
         {/* Logo and Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 mt-10">
           <h1 className="text-6xl font-bold">
-            {/* <img
-              src="/path-to-your-logo.png"
-              alt="ADAMS Logo"
-              className="h-16 w-auto"
-            /> */}
-            {/* <Image alt="ADAMS" src={logoAdams} className="h-15 w-auto"></Image> */}
             <h1>
               Boost your ranking
             </h1>
             <h1 className="gradient-text">
-              {/* Boots your ranking,<br/> */}
               Maximize Visibility
             </h1>
             
           </h1>
+          {/* <div className="text-center sm:text-left md:text-right">
+            <p>This text changes alignment based on screen size.</p>
+          </div>
+
+          <div className="block sm:hidden md:block">
+            <p>This text is only visible on larger screens.</p>
+          </div> */}
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Accurate & efficient way to grow your website SEO easily. Powered by the cutting edge technology of Leverate Asia.
           </p>
@@ -81,7 +85,9 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <SliderLogo />
         </div>
-      
+        <HowItWorks />
+        <WhyAdams />
+        <ProvenResult />
       </div>
     </main>
     </div>

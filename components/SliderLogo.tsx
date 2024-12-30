@@ -27,20 +27,24 @@ const SliderLogo: React.FC = () => {
       src: "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65fd58d0ed2718f3cc1a54b4_Xerox.svg",
       alt: "Xerox",
     },
+    {
+      src: "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65fd58d0ed2718f3cc1a54b4_Xerox.svg",
+      alt: "Xerox",
+    },
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4">
+    <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
       {logos.map((logo, index) => (
         <div
           key={index}
-          className="flex justify-center items-center w-[132px] h-[48px]"
+          className="flex justify-center items-center w-[132px] h-[120px]"
         >
           <img
             src={logo.src}
             alt={logo.alt}
             loading="lazy"
-            className="w-full h-auto object-contain"
+            className="object-contain"
           />
         </div>
       ))}
