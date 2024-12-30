@@ -19,7 +19,6 @@ interface ResultCardProps {
   
 export function ResultCard(props: ResultCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-console.log("ini data props",props)
   return (
     <>
       <div className="bg-gray-50 p-8 rounded-lg">

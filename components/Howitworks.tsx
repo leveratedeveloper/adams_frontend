@@ -36,7 +36,7 @@ export default function HowItWorks() {
     const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="py-6 bg-gradient-to-b from-white to-gray-50">
+    <main className="py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -83,6 +83,6 @@ export default function HowItWorks() {
           <p className="text-gray-600">{tabs[activeTab].description}</p>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
