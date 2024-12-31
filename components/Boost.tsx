@@ -15,6 +15,6 @@ export default function HowItWorks() {
           Accurate & efficient way to grow your website SEO easily. Powered by cutting-edge technology of Leverate Asia.
         </p>
       </div>
-  </div>
+    </div>
   );
 }
