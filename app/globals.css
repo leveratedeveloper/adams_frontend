@@ -50,7 +50,6 @@
   -webkit-background-clip: text;
   color: transparent;
   font-size: 4rem; /* Adjust the font size as needed */
-  font-weight: bold; /* Optional: Apply bold styling if needed */
 }
 
 
@@ -76,4 +75,33 @@
 
 .button-gradient:hover {
   background-position: right center; /* Smooth transition to the end of the gradient */
+}
+
+/* =============Font */
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Regular.woff2') format('woff2'),
+       url('/fonts/Chillax-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Bold.woff2') format('woff2'),
+       url('/fonts/Chillax-Bold.woff') format('woff');
+  font-weight: 550;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Medium.woff2') format('woff2'),
+       url('/fonts/Chillax-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Chillax', sans-serif;
 }

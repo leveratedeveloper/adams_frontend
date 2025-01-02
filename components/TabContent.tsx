@@ -1,10 +1,12 @@
-'use client'
+"use client";
+
 import { Globe } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { TabsContent } from '@/components/ui/tabs';
 import { ChangeEvent, useState } from "react";
 import { FiSearch } from "react-icons/fi"; // Using react-icons for the icon
-import { ChevronDown, Smartphone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { useRouter } from "next/navigation";
 
 interface TabContentProps {
   value: string;
@@ -14,7 +16,11 @@ interface TabContentProps {
 export function TabContent({ value, placeholder }: TabContentProps) {
   const [isOn, setIsOn] = useState(false);
   const [valueSlide, setValue] = useState([50]);
+  const router = useRouter();
 
+  const handleNavigation = () => {
+    router.push("/resultPage");
+  };
   const handleToggle = () => {
     setIsOn(!isOn);
   };
@@ -181,7 +187,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                   className={`w-14 h-8 flex-shrink-0 rounded-full relative focus:outline-none transition-colors duration-300 ${isOn ? "bg-blue-500" : "bg-gray-300"}`}
                 >
                   <span
-                    className={`absolute top-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform ${isOn ? "-translate-x-6" : "translate-x-0"}`}
+                    className={`absolute top-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform ${isOn ? "translate-x-0" : "-translate-x-6"}`}
                   ></span>
                 </button>
               </div>
@@ -236,7 +242,10 @@ export function TabContent({ value, placeholder }: TabContentProps) {
 
       {/* Check Now Button */}
       <div className="text-center">
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto">
+        <button
+          onClick={handleNavigation}
+          className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
+        >
           Check Now
           <span className="text-xl">→</span>
         </button>
