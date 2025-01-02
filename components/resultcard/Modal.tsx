@@ -49,7 +49,7 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white p-8 shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-8 shadow-xl transition-all">
                 <div className="flex justify-between items-start mb-8">
                   <Badge label={data.badge} />
                   <button
@@ -79,8 +79,8 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-8 rounded-xl mb-8">
-                  <div className="grid grid-cols-2 gap-8">
+                <div className="p-8 rounded-xl mb-8">
+                  <div className="grid grid-cols-3">
                     {data.metrics.map((metric, index) => (
                       <MetricDisplay
                         key={index}
@@ -88,10 +88,11 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
                         label={metric.label}
                       />
                     ))}
+                    <div className='px-4'>
+                      <FeatureList features={data.features} />
+                    </div>
                   </div>
                 </div>
-
-                <FeatureList features={data.features} />
               </Dialog.Panel>
             </Transition.Child>
           </div>

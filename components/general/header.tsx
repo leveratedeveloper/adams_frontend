@@ -7,7 +7,12 @@ import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const handleScroll = (id: string) => {
+    const targetDiv = document.getElementById(id);
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+    }
+  };
   return (
     <header className="bg-gradient-to-r from-white via-white to-transparent backdrop-blur-lg fixed w-full z-50">
       <div className="container mx-auto px-4 flex items-center h-16">
@@ -22,14 +27,14 @@ export default function Header() {
         <nav className="flex items-center justify-between w-full px-4 py-2 ">
         {/* Left content or logo (optional) */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>How It Works</Link>
+          <Link href="/#how-it-works" className="text-gray-700 hover:text-blue-500">
+            How It Works
           </Link>
-          <Link href="/about">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>Why Adams</Link>
+          <Link href="/#why-adams" className="text-gray-700 hover:text-blue-500">
+            Why Adams
           </Link>
-          <Link href="/services">
-            <Link className="text-gray-700 hover:text-blue-500" href={''}>Proven Results</Link>
+          <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
+            Proven Results
           </Link>
         </div>
         

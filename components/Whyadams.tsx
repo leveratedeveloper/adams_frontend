@@ -6,8 +6,8 @@ import { RefreshIcon, BadgeCheckIcon, SparklesIcon } from '@/components/ui/icon'
 export default function Home() {
   return (
     <main >
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-6xl font-bold text-center mb-16">Why Adams</h1>
+      <div id="why-adams" className="container mx-auto px-4 mt-24">
+        <h1 className="text-6xl font-bold text-center mb-10">Why Adams</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard

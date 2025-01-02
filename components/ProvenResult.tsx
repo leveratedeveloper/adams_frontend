@@ -71,9 +71,9 @@ const results = [
 
 export default function ProvenResult() {
 return (
-    <main className="min-h-screen bg-white py-16">
+    <main id="proven-results" className="min-h-screen bg-white py-16 mt-12">
         <div className="container mx-auto px-4">
-        <h1 className="text-6xl font-bold text-center mb-16">Proven Results</h1>
+        <h1 className="text-6xl font-bold text-center mb-12">Proven Results</h1>
         
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {results.map((result, index) => (
