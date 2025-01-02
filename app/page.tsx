@@ -27,7 +27,7 @@ export default function Home() {
           <Boost />
 
           {/* Main Content */}
-          <div className="bg-white rounded-lg border p-6 sm:p-8 mb-8">
+          <div className="bg-white rounded-lg border p-6 sm:p-8">
             {/* Website/App Tabs */}
             <Tabs defaultValue="website" className="w-full">
               <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8 overflow-auto">
@@ -53,8 +53,8 @@ export default function Home() {
           </div>
 
           {/* Trusted by Section */}
-          <div className="text-center">
-            <div className="inline-flex justify-center items-center bg-purple-100 rounded-full p-2 sm:p-3 mb-6 sm:mb-8 space-x-1 sm:space-x-2">
+          <div className="text-center mt-20">
+            <div className="inline-flex justify-center items-center bg-purple-100 rounded-full p-2 sm:p-3  space-x-1 sm:space-x-2">
               <span className="font-bold text-sm sm:text-base text-black">Trusted by</span>
               <span className="font-bold text-sm sm:text-base gradient-text-well-known">well known</span>
               <span className="font-bold text-sm sm:text-base">companies</span>
