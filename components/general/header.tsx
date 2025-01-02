@@ -73,33 +73,14 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <nav className="flex flex-col space-y-4 p-4">
-            <Link href="/">
-              <Link
-                              className="text-gray-700 hover:text-blue-500"
-                              onClick={() => setIsMenuOpen(false)} href={''}              >
-                Home
-              </Link>
+            <Link href="/#how-it-works" className="text-gray-700 hover:text-blue-500">
+              How It Works
             </Link>
-            <Link href="/about">
-              <Link
-                              className="text-gray-700 hover:text-blue-500"
-                              onClick={() => setIsMenuOpen(false)} href={''}              >
-                About
-              </Link>
+            <Link href="/#why-adams" className="text-gray-700 hover:text-blue-500">
+              Why Adams
             </Link>
-            <Link href="/services">
-              <Link
-                              className="text-gray-700 hover:text-blue-500"
-                              onClick={() => setIsMenuOpen(false)} href={''}              >
-                Services
-              </Link>
-            </Link>
-            <Link href="/contact">
-              <Link
-                              className="text-gray-700 hover:text-blue-500"
-                              onClick={() => setIsMenuOpen(false)} href={''}              >
-                Contact
-              </Link>
+            <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
+              Proven Results
             </Link>
           </nav>
         </div>
