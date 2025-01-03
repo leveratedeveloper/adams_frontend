@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import logoAdams from "../../public/img/Logo_Adams_Chillax.png";
+import logoAdams from "../../public/img/Logo_Adams_Chillax_New.webp";
 import Image from "next/image";
 
 export default function Header() {
@@ -68,7 +68,6 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">

@@ -12,7 +12,7 @@ export default function HowItWorks() {
         </h1>
         <span className="gradient-text" style={{ fontFamily: 'Chillax' }}>maximize visibility</span>
         <p className="text-sm text-gray-600 max-w-md mx-auto mt-4">
-          Accurate & efficient way to grow your website SEO easily. Powered by cutting-edge technology of Leverate Asia.
+          Automated digital marketing solutions to grow your website & mobile app organically.
         </p>
       </div>
     </div>
