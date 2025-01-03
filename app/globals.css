@@ -105,3 +105,35 @@
 body {
   font-family: 'Chillax', sans-serif;
 }
+
+.wrapper{
+  min-height: 250px;
+}
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: inline-flex;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import logoAdams from "../../public/img/Logo_Adams_Chillax.png";
+import logoAdams from "../../public/img/Logo_Adams_Chillax_New.webp";
 import Image from "next/image";
 
 export default function Header() {
