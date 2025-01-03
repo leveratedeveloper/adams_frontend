@@ -68,7 +68,6 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
