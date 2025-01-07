@@ -9,17 +9,18 @@ interface ServiceCardProps {
 export default function ServiceCard({ title, description, imageUrl }: ServiceCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-      <div className="relative h-48">
+      <div className="relative h-28 justify-center items-center flex">
         <Image
           src={imageUrl}
           alt={title}
-          fill
-          className="object-cover"
+          width={150} 
+          height={75} 
+          className="object-cover "
         />
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+      <div className="">
+        <h3 className="text-md font-semibold mb1 justify-center items-center flex">{title}</h3>
+        <p className="text-sm justify-center items-center flex">{description}</p>
       </div>
     </div>
   );

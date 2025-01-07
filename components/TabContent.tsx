@@ -1,5 +1,6 @@
-"use client";
+'use client';
 
+import Link from 'next/link';
 import { Globe } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { TabsContent } from '@/components/ui/tabs';
@@ -19,7 +20,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
   const router = useRouter();
 
   const handleNavigation = () => {
-    router.push("/resultPage");
+    router.push("/");
   };
   const handleToggle = () => {
     setIsOn(!isOn);
@@ -242,13 +243,14 @@ export function TabContent({ value, placeholder }: TabContentProps) {
 
       {/* Check Now Button */}
       <div className="text-center">
+        <Link href="/content">
         <button
-          onClick={handleNavigation}
           className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
         >
           Check Now
           <span className="text-xl">→</span>
         </button>
+        </Link>
       </div>
     </TabsContent>
   );

@@ -21,7 +21,7 @@ export default function Home() {
           filter: 'blur(10px)', // Additional CSS blur if needed
         }}
       ></div>
-    <main className=" relative z-10 items-center justify-center min-h-screen bg-[url('../public/img/background_adams.webp')] bg-no-repeat md:bg-contain bg-top overflow-x-hidden">
+    <main className="relative z-10 items-center justify-center min-h-screen bg-[url('../public/img/background_adams.webp')] bg-no-repeat md:bg-contain bg-top overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-1">
           {/* Logo and Header */}
           <Boost />
