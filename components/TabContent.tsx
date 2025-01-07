@@ -250,6 +250,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
           Check Now
           <span className="text-xl">→</span>
         </button>
+        
         </Link>
       </div>
     </TabsContent>
