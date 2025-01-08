@@ -35,7 +35,7 @@ export default function HowItWorks() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <main id="how-it-works" className="py-12 bg-gradient-to-b from-white to-gray-50">
+    <main id="how-it-works" className="py-12 rounded bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Title with motion animation */}
         <motion.h2

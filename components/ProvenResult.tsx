@@ -71,7 +71,7 @@ const results = [
 
 export default function ProvenResult() {
 return (
-    <main id="proven-results" className="min-h-screen bg-white py-16 mt-12">
+    <main id="proven-results"  className="py-12 rounded bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
         <h1 className="text-6xl font-bold text-center mb-12">Proven Results</h1>
         

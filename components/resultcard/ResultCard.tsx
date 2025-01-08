@@ -29,7 +29,9 @@ export function ResultCard(props: ResultCardProps) {
           {props.percentage}
         </div>
         <h3 className="text-xl font-semibold mb-4">{props.title}</h3>
-        <p className="text-gray-600 mb-4">{props.description}</p>
+        <p className="text-gray-600 mb-4"> {props.description.length > 100
+        ? `${props.description.substring(0, 100)}...`
+        : props.description}</p>
         <button
           onClick={() => setIsModalOpen(true)}
           className="text-blue-600 font-semibold flex items-center hover:text-blue-700"

@@ -8,6 +8,7 @@ import { ChangeEvent, useState } from "react";
 import { FiSearch } from "react-icons/fi"; // Using react-icons for the icon
 import { Smartphone } from 'lucide-react';
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface TabContentProps {
   value: string;
@@ -41,35 +42,43 @@ export function TabContent({ value, placeholder }: TabContentProps) {
         {value === 'app' && (
         <div className="flex flex-col md:flex-row items-center rounded-full border border-gray-300 p-2 mb-8 mx-auto max-w-full md:max-w-lg lg:max-w-xl xl:max-w-4xl">
           <div className="flex items-center w-full md:w-auto">
-            <p className="mr-2 text-sm text-gray-600 whitespace-nowrap">Category</p>
-            <button className="p-1 rounded-full text-gray-600 hover:text-gray-900">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </button>
-            <select className="ml-2 text-sm border border-gray-300 rounded-md px-2 py-1">
-              <option value="Business">Business</option>
-              <option value="Finance">Finance</option>
-              <option value="Healthcare">Healthcare</option>
-            </select>
+            <p className="mr-3 text-sm text-gray-600 whitespace-nowrap">Platform</p>
+
+              <input
+                type="checkbox"
+                id="item-1"
+                name="option" 
+                value="option1" 
+                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2 " />
+              <Image
+                src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
+                alt="Google Play Store Logo"
+                width={20}
+                height={20}
+                className="object-contain ml-1"
+              />
+            <span className="text-xs text-gray-600 ml-2 mr-3">Play Store</span>
+            <input
+                type="checkbox"
+                id="item-2"
+                name="option" 
+                value="option2" 
+                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2" />
+              <Image
+                src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path
+                alt="Apps Store Logo"
+                width={22}
+                height={22}
+                className="object-contain ml-2"
+              />
+            <span className="text-xs text-gray-600 ml-2">Apps Store</span>
           </div>
         
           {/* Divider */}
-          <div className="hidden md:block w-px h-full bg-gray-300 mx-2" />
+          <div className="hidden md:block w-px  bg-gray-300 mx-2" />
         
           {/* Bottom Section: Input */}
-          <div className="flex-grow flex items-center w-full mt-2 md:mt-0 md:px-4">
+          <div className="flex-grow flex items-center mt-2  md:mt-0 md:px-4">
             <Smartphone className="w-5 h-5 text-gray-400 mr-3" />
             <input
               type="text"
@@ -250,7 +259,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
           Check Now
           <span className="text-xl">→</span>
         </button>
-        
+
         </Link>
       </div>
     </TabsContent>
