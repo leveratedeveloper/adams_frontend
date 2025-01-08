@@ -3,6 +3,7 @@ import { ArrowLeft, Rocket } from 'lucide-react';
 import KeywordTable from '@/components/summary/KeywordTable';
 import ServiceCard from '@/components/summary/ServiceCard';
 import Header from '@/components/general/header';
+import Link from 'next/link';
 
 export default function ContentPage() {
   const summaryData = {
@@ -20,10 +21,12 @@ export default function ContentPage() {
         <div className='max-w-6xl mx-auto items-center px-4 py-16 sm:px-6 lg:px-1'>
         {/* Header Section */}
           <div className="max-sm px-4 py-4">
+            <Link href="/">
             <button className="flex items-center text-gray-600 hover:text-gray-900">
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back
             </button>
+            </Link>
           </div>
           <div className="grid md:grid-cols-3 grid-flow-col gap-8">
             <div className="space-y-4 p-4 col-span-1">
