@@ -42,16 +42,40 @@ export default function ContentPage() {
                     <span className="text-gray-600">Store</span>
                     <span className="font-medium">Google Play Store</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <span className="text-gray-600">Country</span>
+                    <div className="relative group">
+                      <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-24">
+                        ⓘ
+                      </button>
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        Select market where your app will be optimized
+                      </div>
+                    </div>
                     <span className="font-medium">English</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <span className="text-gray-600">Objective</span>
+                    <div className="relative group">
+                      <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-16">
+                          ⓘ
+                      </button>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          Goals of your ASO Campaign
+                        </div>
+                      </div>
                     <span className="font-medium">App rating</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Keywords to be optimized</span>
+                  <div className="flex items-center">
+                    <span className="text-gray-600">Keywords optimized</span>
+                    <div className="relative group">
+                      <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-10">
+                          ⓘ
+                      </button>
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        Number of relevant keywords to be optimized
+                      </div>
+                    </div>
                     <span className="font-medium">20</span>
                   </div>
                 </div>
