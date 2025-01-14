@@ -75,10 +75,10 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
                   </button>
                 </div>
 
-                <div className="flex justify-between items-start mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-start p-6 sm:p-8 mb-12 space-y-6 md:space-y-0">
                   {/* Left Section */}
                   <div className="flex-1">
-                    <h2 className="text-6xl font-bold mb-4">{data.subtitle}</h2>
+                    <h2 className="text-5xl font-bold mb-4">{data.subtitle}</h2>
                     <p className="text-gray-600 mb-4">
                       {isExpanded ? data.description : truncatedDescription}
                     </p>
@@ -91,17 +91,16 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
                   </div>
 
                   {/* Right Section */}
-                  <div className="ml-8">
+                  <div className="md:ml-8">
                     <Image
                       src={data.logo}
                       alt={data.title}
                       width={120}
                       height={120}
-                      className="object-contain"
+                      className="object-contain mx-auto md:mx-0"
                     />
                   </div>
                 </div>
-
                 <div className="p-8 rounded-xl mb-8">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {data.metrics.map((metric, index) => (
