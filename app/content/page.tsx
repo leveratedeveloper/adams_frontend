@@ -18,7 +18,7 @@ export default function ContentPage() {
     <div className="relative max-h-screen w-full">
           <Header />
       <main className="relative z-10 items-center justify-center min-h-screen">
-        <div className='max-w-6xl mx-auto items-center px-4 py-16 sm:px-6 lg:px-1'>
+        <div className='max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
         {/* Header Section */}
           <div className="max-sm px-4 py-4">
             <Link href="/">
@@ -28,7 +28,7 @@ export default function ContentPage() {
             </button>
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 grid-flow-col gap-8">
+          <div className="grid md:grid-cols-3 p-6 sm:p-8">
             <div className="space-y-4 p-4 col-span-1">
               <div className="border-2 border-solid rounded-lg p-4 ">
                 <h2 className="text-2xl font-semibold mb-4">Inquiry</h2>
@@ -79,26 +79,38 @@ export default function ContentPage() {
             </div>
             <div className="space-y-4 p-4 col-span-2">
               <div className="bg-white rounded-lg p-4 shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Potential keywords</h2>
-                <p className="text-gray-600 mb-4">
+                {/* Heading */}
+                <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
+                  Potential keywords
+                </h2>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-4 text-center md:text-left">
                   We incorporate third-party resources for these keywords. Get more accurate data from us.
                 </p>
+
+                {/* Keyword Table */}
                 <KeywordTable />
-                <h2 className="text-2xl font-semibold text-blue-600 mb-2 justify-center items-center flex">
+
+                {/* Call-to-Action Heading */}
+                <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center">
                   Unlock the best keywords to boost your online presence
                 </h2>
-                <p className="text-gray-600 mb-4 justify-center items-center flex">
+
+                {/* Secondary Description */}
+                <p className="text-gray-600 mb-4 text-center">
                   Contact us and get the best SEO plan from our experts
                 </p>
+
+                {/* Button */}
                 <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm">
                   <span>Start Your Online Growth</span>
                   <Rocket className="w-5 h-5 ml-2" />
                 </button>
               </div>
-              
             </div>
           </div>
-          <div className="grid md:grid-cols-3 grid-flow-col gap-8">
+          <div className="grid md:grid-cols-3 grid-flow-col p-6 ">
             <div className="space-y-4 p-4 col-span-1">
             </div>
             <div className="space-y-4 p-4 col-span-2">

@@ -30,7 +30,7 @@ export function ResultCard(props: ResultCardProps) {
         </div>
         <h3 className="text-xl font-semibold mb-4">{props.title}</h3>
         <p className="text-gray-600 mb-4"> {props.description.length > 100
-        ? `${props.description.substring(0, 100)}...`
+        ? `${props.description.substring(0, 70)}...`
         : props.description}</p>
         <button
           onClick={() => setIsModalOpen(true)}
