@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment,useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { Badge } from './Badge';
@@ -9,6 +9,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: {
+    subtitle: string;
     badge: string;
     logo: string;
     title: string;
@@ -23,6 +24,18 @@ interface ModalProps {
 
 
 export function Modal({ isOpen, onClose, data }: ModalProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Function to toggle description view
+  const toggleDescription = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const truncatedDescription =
+  data.description.length > 100
+    ? `${data.description.slice(0, 100)}...`
+    : data.description;
+
   return (
     <Transition show={isOpen} as={Fragment}>
       <Dialog onClose={onClose} className="relative z-50">
@@ -63,11 +76,21 @@ export function Modal({ isOpen, onClose, data }: ModalProps) {
                 </div>
 
                 <div className="flex justify-between items-start mb-12">
+                  {/* Left Section */}
                   <div className="flex-1">
-                    <h2 className="text-6xl font-bold mb-4">{data.title}</h2>
-                    <p className="text-gray-600 mb-4">{data.description}</p>
-                    <button className="text-blue-600 hover:text-blue-700">See more</button>
+                    <h2 className="text-6xl font-bold mb-4">{data.subtitle}</h2>
+                    <p className="text-gray-600 mb-4">
+                      {isExpanded ? data.description : truncatedDescription}
+                    </p>
+                    <button
+                      className="text-blue-600 hover:text-blue-700"
+                      onClick={toggleDescription}
+                    >
+                      {isExpanded ? "See less" : "See more"}
+                    </button>
                   </div>
+
+                  {/* Right Section */}
                   <div className="ml-8">
                     <Image
                       src={data.logo}

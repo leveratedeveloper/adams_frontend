@@ -10,7 +10,7 @@ export default function HowItWorks() {
         <h1 className="text-6xl" style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}>
           <span>Boost your ranking,</span>
         </h1>
-        <span className="gradient-text" style={{ fontFamily: 'Chillax' }}>maximize visibility</span>
+        <span className="text-6xl gradient-text" style={{ fontFamily: 'Chillax', fontWeight: 500 }}>maximize visibility</span>
         <p className="text-sm text-gray-600 max-w-md mx-auto mt-4">
           Automated digital marketing solutions to grow your website & mobile app organically.
         </p>
