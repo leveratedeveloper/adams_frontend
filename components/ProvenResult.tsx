@@ -6,7 +6,8 @@ const results = [
     logo: 'img/logo/proven_result_merries.png',
     percentage: '+80%',
     title: 'Organic Traffic Growth',
-    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. Leverate was entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategic...',
+    subtitle: 'Merries',
+    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. Leverate was entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategically funneling this traffic to Merries’ newsletter signups to support broader business goals. Ranking for health-related keywords is challenging due to the competition from established institutions.',
     metrics: [
       {
         value: '+80%',
@@ -28,7 +29,8 @@ const results = [
     logo: 'img/logo/proven_result_brimo.png',
     percentage: '+5.3%',
     title: 'Store Listing Visitors',
-    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. Leverate was entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategic...',
+    subtitle: 'BRImo',
+    description: 'Amid rising competition in the mobile banking industry, it’s essential for BRI’s BRImo app to stay ahead in App Store rankings. Leverate was entrusted with this task, focusing on improving BRImo’s performance in mobile app stores like the Apple App Store and Google Play Store',
     metrics: [
       {
         value: '+80%',
@@ -50,7 +52,8 @@ const results = [
     logo: 'img/logo/proven_result_msig.png',
     percentage: '+223%',
     title: 'Organic Traffic Growth',
-    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. Leverate was entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategic...',
+    subtitle: 'MSIG Life',
+    description: 'The insurance industry is highly competitive, and this extends to Google search rankings. Operating within the finance and health niches means MSIG must compete not only with other insurance companies but also with established health and financial publishers that dominate their respective domains. Leverate was tasked with ensuring the website achieves visibility on Google for six highly competitive priority keywords while also boosting organic traffic.',
     metrics: [
       {
         value: '+80%',
@@ -74,7 +77,6 @@ return (
     <main id="proven-results"  className="py-12 rounded bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
         <h1 className="text-6xl font-bold text-center mb-12">Proven Results</h1>
-        
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {results.map((result, index) => (
                 <ResultCard key={index} {...result} />
