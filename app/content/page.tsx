@@ -159,12 +159,14 @@ export default function ContentPage() {
                 </div>
 
                 <div className="text-center mt-6">
-                <button
-                  onClick={() => window.location.href = "https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"}
+                <a
+                  href="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
+                  target="_blank" // Opens the link in a new tab
+                  rel="noopener noreferrer" // Security best practice for external links
                   className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
                 >
                   Schedule Meeting Now
-                </button>
+                </a>
                 </div>
               </div>
             </div>
