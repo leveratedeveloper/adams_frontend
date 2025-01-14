@@ -19,7 +19,7 @@ const results = [
     ],
     features: [
       'SEO-driven content',
-      'Premium backlink',
+      'Premium Backlink',
       'Optimizing underperforming pages'
     ]
   },
@@ -41,7 +41,7 @@ const results = [
     ],
     features: [
       'SEO-driven content',
-      'Premium backlink',
+      'Premium Backlink',
       'Optimizing underperforming pages'
     ]
   },
@@ -63,7 +63,7 @@ const results = [
     ],
     features: [
       'SEO-driven content',
-      'Premium backlink',
+      'Premium Backlink',
       'Optimizing underperforming pages'
     ]
   }

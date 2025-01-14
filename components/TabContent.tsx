@@ -41,15 +41,17 @@ export function TabContent({ value, placeholder }: TabContentProps) {
         )}
         {value === 'app' && (
         <div className="flex flex-col md:flex-row items-center rounded-full border border-gray-300 p-2 mb-8 mx-auto max-w-full md:max-w-lg lg:max-w-xl xl:max-w-4xl">
+          {/* Top Section: Market Options */}
           <div className="flex items-center w-full md:w-auto">
-            <p className="mr-3 text-sm text-gray-600 whitespace-nowrap">Platform</p>
-
+            <p className="mr-4 ml-3 text-sm text-gray-600  whitespace-nowrap">Market</p>
+            <div className="flex items-center">
               <input
                 type="checkbox"
                 id="item-1"
-                name="option" 
-                value="option1" 
-                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2 " />
+                name="option"
+                value="option1"
+                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+              />
               <Image
                 src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
                 alt="Google Play Store Logo"
@@ -57,13 +59,16 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                 height={20}
                 className="object-contain ml-1"
               />
-            <span className="text-xs text-gray-600 ml-2 mr-3">Play Store</span>
-            <input
+              <span className="text-xs text-gray-600 ml-2 mr-3">Play Store</span>
+            </div>
+            <div className="flex items-center">
+              <input
                 type="checkbox"
                 id="item-2"
-                name="option" 
-                value="option2" 
-                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2" />
+                name="option"
+                value="option2"
+                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+              />
               <Image
                 src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path
                 alt="Apps Store Logo"
@@ -71,14 +76,15 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                 height={22}
                 className="object-contain ml-2"
               />
-            <span className="text-xs text-gray-600 ml-2">Apps Store</span>
+              <span className="text-xs text-gray-600 ml-2">Apps Store</span>
+            </div>
           </div>
         
           {/* Divider */}
-          <div className="hidden md:block w-px  bg-gray-300 mx-2" />
+          <div className="hidden md:block w-px bg-gray-300 mx-2" />
         
           {/* Bottom Section: Input */}
-          <div className="flex-grow flex items-center mt-2  md:mt-0 md:px-4">
+          <div className="flex-grow flex items-center mt-2 md:mt-0 md:px-4">
             <Smartphone className="w-5 h-5 text-gray-400 mr-3" />
             <input
               type="text"
@@ -86,14 +92,19 @@ export function TabContent({ value, placeholder }: TabContentProps) {
               className="w-full py-2 text-sm bg-transparent outline-none text-gray-800 placeholder-gray-500"
             />
           </div>
-        </div>     
+        </div>         
         )}
         {value === 'app' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 mx-auto max-w-full lg:max-w-xl xl:max-w-4xl">
             <div className="space-y-2">
                 <div className="flex items-center">
                   <h3 className="text-sm font-medium mr-2">Country</h3>
-                  <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+                  <div className="relative group">
+                    <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      Select market where your app will be optimized
+                    </div>
+                  </div>
                 </div>
                 <div className="flex gap-4">
                   <select className="rounded-full px-4 py-2">
@@ -108,7 +119,12 @@ export function TabContent({ value, placeholder }: TabContentProps) {
             <div className="space-x-6">
                 <div className="flex items-center">
                   <h3 className="text-sm font-medium mr-2">Objective</h3>
-                  <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+                    <div className="relative group">
+                      <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        Goals of your ASO campaign
+                      </div>
+                    </div>
                 </div>
                 <div className="flex items-center gap-1">
                   <div className="space-y-2">
@@ -133,16 +149,22 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                   <h3 className="text-sm font-medium mr-2">
                     Keywords Optimize
                   </h3>
-                  <button className="text-gray-400 hover:text-gray-600">
-                    ⓘ
-                  </button>
+                  <div className="relative group">
+                    <button className="text-gray-400 hover:text-gray-600 focus:outline-none">
+                      ⓘ
+                    </button>
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      Number of relevant keywords to be optimized
+                    </div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-1">
                   <div className="flex flex-col items-center w-5/6 p-2">
                     <Slider
                       min={5}
-                      max={25}
-                      step={5}
+                      max={35}
+                      step={1}
                       defaultValue={[15]}
                       onValueChange={setValue}
                       ariaLabel="Slider with numbers"
@@ -161,11 +183,16 @@ export function TabContent({ value, placeholder }: TabContentProps) {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {/* Language Selection */}
         <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h3 className="text-sm font-medium">Country</h3>
-            <button className="text-gray-400 hover:text-gray-600">
-              ⓘ
-            </button>
+          <div className="flex items-center">
+            <h3 className="text-sm font-medium mr-2">Country</h3>
+            <div className="relative group">
+              <button className="text-gray-400 hover:text-gray-600">
+                ⓘ
+              </button>
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Select specific country and have localized SEO strategies to dominate search result in your chosen country
+              </div>
+            </div>
           </div>
           <div className="flex gap-4">
             <select className="rounded-full px-4 py-2">
@@ -181,11 +208,16 @@ export function TabContent({ value, placeholder }: TabContentProps) {
         {/* Premium Backlink */}
      
           <><div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium">Premium backlink</h3>
-              <button className="text-gray-400 hover:text-gray-600">
-                ⓘ
-              </button>
+            <div className="flex items-center">
+              <h3 className="text-sm font-medium mr-2">Premium Backlink</h3>
+              <div className="relative group">
+                <button className="text-gray-400 hover:text-gray-600">
+                  ⓘ
+                </button>
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Accelerate ranking with high quality contents and publishers
+                </div>
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex items-center">
@@ -208,20 +240,25 @@ export function TabContent({ value, placeholder }: TabContentProps) {
               <span className={`text-sm font-medium ${isOn ? "text-blue-600" : "text-gray-600"}`}>Boosted</span>
             </div>
           </div><div className="space-y-4 items-center">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-medium">
+              <div className="flex items-center">
+                <h3 className="text-sm font-medium mr-2">
                   Keywords to be optimized
                 </h3>
-                <button className="text-gray-400 hover:text-gray-600">
-                  ⓘ
-                </button>
+                <div className="relative group">
+                  <button className="text-gray-400 hover:text-gray-600">
+                    ⓘ
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                   Accelerate ranking with high quality contents and publishers
+                  </div>
+                </div>
               </div>
               <div className="flex items-center gap-1">
                 <div className="flex flex-col items-center w-5/6 p-2">
                   <Slider
                     min={5}
-                    max={25}
-                    step={5}
+                    max={35}
+                    step={1}
                     defaultValue={[15]}
                     onValueChange={setValue}
                     ariaLabel="Slider with numbers"
@@ -229,20 +266,25 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                 </div>
               </div>
             </div><div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-medium">
+              <div className="flex items-center">
+                <h3 className="text-sm font-medium mr-2">
                   On-page article development
                 </h3>
-                <button className="text-gray-400 hover:text-gray-600">
-                  ⓘ
-                </button>
+                <div className="relative group">
+                  <button className="text-gray-400 hover:text-gray-600">
+                    ⓘ
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    SEO-friendly on-page articles tailored to improve search engine performance
+                  </div>
+                </div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="flex-1">
+                <div className="flex flex-col items-center w-5/6 p-2">
                   <Slider
                     defaultValue={[20]}
-                    max={25}
-                    step={5}
+                    max={35}
+                    step={1}
                     className="dient-to-r from-white via-blue-300 to-blue-600 rounded-lg appearance-none" />
                 </div>
               </div>
