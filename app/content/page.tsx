@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ArrowLeft, Rocket } from 'lucide-react';
-import KeywordTable from '@/components/summary/KeywordTable';
 import ServiceCard from '@/components/summary/ServiceCard';
+import TabSwitch from '@/components/summary/TabSwitch';
 import Header from '@/components/general/header';
 import Link from 'next/link';
 
@@ -12,6 +12,9 @@ export default function ContentPage() {
     premiumBacklink: "On",
     keywordsOptimized: "20",
     onPageArticles: "20"
+  };
+  const handleClick = () => {
+    window.location.href = 'https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment';
   };
 
   return (
@@ -48,7 +51,7 @@ export default function ContentPage() {
                       <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-24">
                         ⓘ
                       </button>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                         Select market where your app will be optimized
                       </div>
                     </div>
@@ -60,7 +63,7 @@ export default function ContentPage() {
                       <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-16">
                           ⓘ
                       </button>
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                           Goals of your ASO Campaign
                         </div>
                       </div>
@@ -72,7 +75,7 @@ export default function ContentPage() {
                       <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-10">
                           ⓘ
                       </button>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                         Number of relevant keywords to be optimized
                       </div>
                     </div>
@@ -140,21 +143,12 @@ export default function ContentPage() {
                 <p className="text-gray-600 mb-4 text-center md:text-left">
                   Suggested keywords to be optimized based on analysis from our AI engine:
                 </p>
-                <div className="flex space-x-4">
-                  <button className="flex items-center px-4 py-2 rounded-full border border-black-500 text-black-500">
-                    <img src="img/icon/Apps_Store_Icon_Logo.svg" alt="App Store" className="w-6 h-6 mr-2" />
-                    App Store
-                  </button>
-                  <button className="flex items-center px-4 py-2 rounded-full border border-black-500 text-black-500">
-                    <img src="img/icon/Google_Play_Icon_Logo.svg" alt="Play Store" className="w-6 h-6 mr-2" />
-                    Play Store
-                  </button>
-                </div>
-                {/* Keyword Table */}
-                <KeywordTable />
+               
+                {/* Tab switch Table */}
+                <TabSwitch />
 
                 {/* Call-to-Action Heading */}
-                <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center">
+                <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center mb-2">
                   Unlock the best keywords to boost your online presence
                 </h2>
 
@@ -164,7 +158,8 @@ export default function ContentPage() {
                 </p>
 
                 {/* Button */}
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
+                 >
                   <span>Start Your Online Growth</span>
                   <Rocket className="w-5 h-5 ml-2" />
                 </button>

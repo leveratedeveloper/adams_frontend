@@ -47,8 +47,10 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
   const handleSubmit = async () => {
     setLoading(true);
+    router.push('/content')
     console.log("add data form",formData)
     await addData('storeName', formData);
+   
     // await sendData(formData)
     // .then(()=>{
     //    setFormData({
@@ -85,16 +87,16 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       {/* URL Input */}
         <div className="mb-8">
           {value === 'website' && (
-            <div className="relative max-w-3xl mx-auto">
-              <input
-                name="url"
-                type="url"
-                placeholder={placeholder}
-                className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none pl-12"
-                onChange={handleChange}
-                value={formData.url}
-              />
-            </div>
+           <div className="md:grid-cols-3 gap-8 mb-8">
+            <input
+              name="url"
+              type="url"
+              placeholder={placeholder}
+              className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
+              onChange={handleChange}
+              value={formData.url}
+            />
+          </div>
           )}
           {value === 'app' && (
           <div className="flex flex-col md:flex-row items-center rounded-full border border-gray-300 p-2 mb-8 mx-auto max-w-full md:max-w-lg lg:max-w-xl xl:max-w-4xl">
@@ -152,8 +154,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
           </div>         
           )}
           {value === 'app' && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 mx-auto max-w-full lg:max-w-xl xl:max-w-4xl">
-              <div className="space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4 mx-auto max-w-full lg:max-w-xl xl:max-w-4xl">
+              <div className="space-y-4 col-span-1">
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">Country</h3>
                     <div className="relative group">
@@ -164,12 +166,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <select className="rounded-full px-4 py-2">
+                    <select className="w-full rounded-full px-4 py-2 border-2 border-gray-200">
                       <option value="indonesia">Indonesia</option>
                     </select>
                   </div>
               </div>
-              <div className="space-x-6">
+              <div className="space-y-6 col-span-2 ml-12">
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">Objective</h3>
                       <div className="relative group">
@@ -179,7 +181,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                         </div>
                       </div>
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 col-span-2">
                     <div className="space-y-2">
                       <div className="flex items-center">
                         <input
@@ -188,7 +190,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                           defaultChecked
                           className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
                         />
-                        <label htmlFor="item-2" className="ml-2 text-gray-700">
+                        <label htmlFor="item-2" className="ml-2 text-gray-700 mr-6">
                           Search Ranking
                         </label>
 
@@ -201,7 +203,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     </div>
                   </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-6 col-span-1">
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">
                       Keywords Optimize
@@ -243,18 +245,23 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             <div className="flex items-center">
               <h3 className="text-sm font-medium mr-2">Country</h3>
               <div className="relative group">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button
+                  className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                  aria-label="Information"
+                >
                   ⓘ
                 </button>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Select specific country and have localized SEO strategies to dominate search result in your chosen country
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                  Select specific country and have localized SEO strategies to dominate search results in your chosen country.
                 </div>
               </div>
+
+
             </div>
             <div className="flex gap-4">
               <select 
                 name="country"
-                className="rounded-full px-4 py-2"
+                className="w-full rounded-full px-3 py-2 border-2 border-gray-200"
                 value={formData.country}
                 onChange={handleChange}
                 defaultValue="indonesia">
@@ -269,10 +276,11 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <div className="flex items-center">
                 <h3 className="text-sm font-medium mr-2">Premium Backlink</h3>
                 <div className="relative group">
-                  <button className="text-gray-400 hover:text-gray-600">
+                  <button className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                   aria-label="Information">
                     ⓘ
                   </button>
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                     Accelerate ranking with high quality contents and publishers
                   </div>
                 </div>
@@ -306,7 +314,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     <button className="text-gray-400 hover:text-gray-600">
                       ⓘ
                     </button>
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                     Accelerate ranking with high quality contents and publishers
                     </div>
                   </div>
@@ -334,7 +342,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     <button className="text-gray-400 hover:text-gray-600">
                       ⓘ
                     </button>
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                       SEO-friendly on-page articles tailored to improve search engine performance
                     </div>
                   </div>
@@ -358,7 +366,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
         {/* Check Now Button */}
         <div className="text-center">
-          <Link href="/content">
+          {/* <Link href="/content"> */}
           <button onClick={handleSubmit}
             className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
           >
@@ -366,7 +374,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             <span className="text-xl">→</span>
           </button>
 
-          </Link>
+          {/* </Link> */}
         </div>
     </TabsContent>
   );
