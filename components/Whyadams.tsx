@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main >
       <div id="why-adams" className="container mx-auto px-4 mt-24">
-        <h1 className="text-6xl font-bold text-center mb-10">Why Adams</h1>
+        <h1 className="text-6xl font-bold text-left mb-10"  style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}>Why Adams</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard
