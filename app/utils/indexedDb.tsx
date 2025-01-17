@@ -3,7 +3,6 @@ let dbPromise: Promise<IDBPDatabase<any>> | undefined;
 
 
 export async function getDB(): Promise<IDBPDatabase<any>> {
-  console.log("db dbPromise",dbPromise)
   if (!dbPromise) {
     dbPromise = openDB('MyAdamsDB', 1, {
       upgrade(db) {

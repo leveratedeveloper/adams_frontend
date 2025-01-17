@@ -93,6 +93,34 @@ export default function ContentPage() {
                       <h3 className="text-xl font-semibold">BRImo</h3>
                       <p className="text-gray-600">PT Bank Rakyat Indonesia (Persero) Tbk.</p>
                       <div className="flex items-center mt-1">
+                        <Image
+                          src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path
+                          alt="Apps Store Logo"
+                          width={22}
+                          height={22}
+                          className="object-contain mr-2"
+                        />
+                        <span className="text-sm font-medium">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-black-400 mr-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path d="M10 15.27l4.18 2.19-1.64-5.03L18 7.24h-5.18L10 2 7.18 7.24H2l3.46 5.19-1.64 5.03L10 15.27z" />
+                          </svg>
+                        </span>
+                        <span className="text-sm font-medium">4.7</span>
+                        <span className="text-sm text-gray-500 ml-1">(1.65 mio)</span>
+                      </div>
+                      <div className="flex items-center mt-1">
+                        <Image
+                           src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
+                          alt="Apps Store Logo"
+                          width={22}
+                          height={22}
+                          className="object-contain mr-2"
+                        />
+                        <span className="text-sm font-medium">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-black-400 mr-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path d="M10 15.27l4.18 2.19-1.64-5.03L18 7.24h-5.18L10 2 7.18 7.24H2l3.46 5.19-1.64 5.03L10 15.27z" />
+                          </svg>
+                        </span>
                         <span className="text-sm font-medium">4.7</span>
                         <span className="text-sm text-gray-500 ml-1">(1.65 mio)</span>
                       </div>
@@ -110,9 +138,18 @@ export default function ContentPage() {
 
                 {/* Description */}
                 <p className="text-gray-600 mb-4 text-center md:text-left">
-                  We incorporate third-party resources for these keywords. Get more accurate data from us.
+                  Suggested keywords to be optimized based on analysis from our AI engine:
                 </p>
-
+                <div className="flex space-x-4">
+                  <button className="flex items-center px-4 py-2 rounded-full border border-black-500 text-black-500">
+                    <img src="img/icon/Apps_Store_Icon_Logo.svg" alt="App Store" className="w-6 h-6 mr-2" />
+                    App Store
+                  </button>
+                  <button className="flex items-center px-4 py-2 rounded-full border border-black-500 text-black-500">
+                    <img src="img/icon/Google_Play_Icon_Logo.svg" alt="Play Store" className="w-6 h-6 mr-2" />
+                    Play Store
+                  </button>
+                </div>
                 {/* Keyword Table */}
                 <KeywordTable />
 
@@ -142,18 +179,18 @@ export default function ContentPage() {
                 <h2 className="text-2xl font-semibold mb-8">Services you&apos;ll get</h2>
                 <div className="grid md:grid-cols-3">
                   <ServiceCard
-                    title="Store listing page review"
-                    description="We improve title, description, and review the visual assets."
+                    title="Full Audit Report"
+                    description="Unlock comprehensive data and analysis"
                     imageUrl="img/icon/icon_service_review.svg"
                   />
                   <ServiceCard
-                    title="Monthly report"
-                    description="Sit back and get scheduled report of your growth every month."
+                    title="Expert Consultation"
+                    description="Consult with our experts to grow your online presence"
                     imageUrl="img/icon/icon_service_report.svg"
                   />
                   <ServiceCard
-                    title="Communicative experts"
-                    description="We are ready to listen to bring you the best experience & result."
+                    title="Customized Package"
+                    description="Tailored solutions to achieve your goals and KPIs"
                     imageUrl="img/icon/icon_service_consult.svg"
                   />
                 </div>
