@@ -9,7 +9,7 @@ import { Smartphone } from 'lucide-react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 // import sendData  from './action'
-import { addData, getAllData } from '../utils/indexedDb';
+import { addData, getAllData,deleteData } from '../utils/indexedDb';
 
 interface TabContentProps {
   value: string;
@@ -26,7 +26,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [formData, setFormData] = useState({
     url:'',
     country: '',
-    premium_backlink: '',
+    premium_backlink: true,
     keyword_optimized: 0,
     article_development: 0,
   });
@@ -35,6 +35,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     router.push("/");
   };
   const handleToggle = () => {
+    console.log("handle toogle",isOn)
     setIsOn(!isOn);
   };
 
@@ -44,9 +45,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setLoading(true);
+    console.log("add data form",formData)
     await addData('storeName', formData);
     // await sendData(formData)
     // .then(()=>{
@@ -72,23 +73,26 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     async function fetchData() {
       const allData = await getAllData('storeName');
       console.log("ini allData",allData)
+      // await deleteData('storeName',1)
       // setData(allData);
     }
     fetchData();
   }, []);
+
+
   return (
     <TabsContent value={value} className="mt-0">
       {/* URL Input */}
-      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="mb-8">
           {value === 'website' && (
             <div className="relative max-w-3xl mx-auto">
               <input
+                name="url"
                 type="url"
                 placeholder={placeholder}
                 className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none pl-12"
-                value={formData.url}
                 onChange={handleChange}
+                value={formData.url}
               />
             </div>
           )}
@@ -252,7 +256,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 name="country"
                 className="rounded-full px-4 py-2"
                 value={formData.country}
-                onChange={handleChange}>
+                onChange={handleChange}
+                defaultValue="indonesia">
                 <option value="indonesia">Indonesia</option>
               </select>
             </div>
@@ -354,7 +359,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
         {/* Check Now Button */}
         <div className="text-center">
           <Link href="/content">
-          <button type="submit"
+          <button onClick={handleSubmit}
             className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
           >
             Check Now
@@ -363,7 +368,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
           </Link>
         </div>
-      </form>
     </TabsContent>
   );
 }
