@@ -48,24 +48,24 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     e.preventDefault();
     setLoading(true);
     await addData('storeName', formData);
-    await sendData(formData)
-    .then(()=>{
-       setFormData({
-          url:'',
-          country: '',
-          premium_backlink: '',
-          keyword_optimized: 0,
-          article_development: 0,
-        });
-      // setSuccessAlert(true)
-      // setTimeout(() => setSuccessAlert(false), 3000)
-      setLoading(false);
+    // await sendData(formData)
+    // .then(()=>{
+    //    setFormData({
+    //       url:'',
+    //       country: '',
+    //       premium_backlink: '',
+    //       keyword_optimized: 0,
+    //       article_development: 0,
+    //     });
+    //   // setSuccessAlert(true)
+    //   // setTimeout(() => setSuccessAlert(false), 3000)
+    //   setLoading(false);
 
-    }).catch(()=>{
-      // setFailAlert(true)
-      // setTimeout(() => setFailAlert(false), 3000)
-      setLoading(false);
-    })
+    // }).catch(()=>{
+    //   // setFailAlert(true)
+    //   // setTimeout(() => setFailAlert(false), 3000)
+    //   setLoading(false);
+    // })
   };
 
   useEffect(() => {
