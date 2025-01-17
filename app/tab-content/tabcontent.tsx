@@ -8,7 +8,7 @@ import { FiSearch } from "react-icons/fi"; // Using react-icons for the icon
 import { Smartphone } from 'lucide-react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import sendData  from './action'
+// import sendData  from './action'
 import { addData, getAllData } from '../utils/indexedDb';
 
 interface TabContentProps {
