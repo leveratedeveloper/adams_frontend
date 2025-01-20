@@ -26,7 +26,7 @@ const tabs = [
   {
     number: 3,
     title: "Consult with Us",
-    video:"",
+    video:"video/step_3_adams.mp4",
     subtitle: "Schedule an appointment with our consultant to get started",
     description: "Schedule an appointment with our consultant to get started.",
     color: "bg-purple-500", // Color for active tab
@@ -36,7 +36,7 @@ const tabs = [
 
 export default function HowItWorks() {
   const [activeTab, setActiveTab] = useState(0);
-  const intervals = [6100, 6300, 2000]; // Different durations for each tab
+  const intervals = [6100, 6300, 11000]; // Different durations for each tab
   const videoWidth = "w-auto"
   const [isFading, setIsFading] = useState(false);
 
