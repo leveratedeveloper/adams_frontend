@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { ArrowRight, Send, LineChart, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -8,6 +8,7 @@ const tabs = [
   {
     number: 1,
     title: "Submit your web/app",
+    video:"video/step_1_adams.mp4",
     subtitle: "Your web/app will be categorized & analyzed by our system",
     description: "Your web/app will be categorized & analyzed by our system.",
     color: "bg-blue-500", // Color for active tab
@@ -16,6 +17,7 @@ const tabs = [
   {
     number: 2,
     title: "Get Result",
+    video:"video/step_2_adams.mp4",
     subtitle: "Instant result by our machine learning & technology",
     description: "Instant result by our machine learning & technology.",
     color: "bg-green-500", // Color for active tab
@@ -24,6 +26,7 @@ const tabs = [
   {
     number: 3,
     title: "Consult with Us",
+    video:"",
     subtitle: "Schedule an appointment with our consultant to get started",
     description: "Schedule an appointment with our consultant to get started.",
     color: "bg-purple-500", // Color for active tab
@@ -33,9 +36,32 @@ const tabs = [
 
 export default function HowItWorks() {
   const [activeTab, setActiveTab] = useState(0);
+  const intervals = [6100, 6300, 2000]; // Different durations for each tab
+  const videoWidth = "w-auto"
+  const [isFading, setIsFading] = useState(false);
 
+  useEffect(() => {
+    // Validate intervals array
+    if (intervals.length !== tabs.length) {
+      console.error("Intervals array length must match tabs array length.");
+      return;
+    }
+
+    const handleTabSwitch = () => {
+      setIsFading(true); // Start fading out
+
+      setTimeout(() => {
+        setActiveTab((prevTab) => (prevTab + 1) % tabs.length); // Switch to next tab
+        setIsFading(false); // Fade back in
+      }, 300); // Fade-out duration (matches CSS duration)
+    };
+
+    const timer = setTimeout(handleTabSwitch, intervals[activeTab]);
+
+    return () => clearTimeout(timer); // Cleanup timer
+  }, [activeTab, intervals, tabs.length]);
   return (
-    <main id="how-it-works" className="py-12 rounded bg-gradient-to-b from-white to-gray-50">
+    <main id="how-it-works" className="py-9 rounded bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Title with motion animation */}
         <motion.h2
@@ -70,6 +96,7 @@ export default function HowItWorks() {
             </button>
           ))}
         </div>
+        
 
         {/* Tab Content */}
         <motion.div
@@ -80,8 +107,19 @@ export default function HowItWorks() {
           transition={{ duration: 0.3 }}
           className="px-12 rounded-lg"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4">{tabs[activeTab].title}</h3>
-          <p className="text-gray-600">{tabs[activeTab].description}</p>
+          <div className={`video-container transition-opacity duration-500 ${isFading ? "opacity-0" : "opacity-100"}`}>
+            {tabs.map((tab, index) => (
+              <video
+                key={index}
+                src={tab.video}
+                className={`rounded-lg shadow-lg transition-all duration-500 ${
+                  activeTab === index ? "block" : "hidden"
+                } ${videoWidth}`}
+                autoPlay
+                muted
+              />
+            ))}
+          </div>
         </motion.div>
       </div>
     </main>
