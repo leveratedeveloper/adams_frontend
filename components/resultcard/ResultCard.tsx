@@ -35,7 +35,7 @@ export function ResultCard(props: ResultCardProps) {
   </div>
     {/* Percentage */}
     <div className="text-6xl font-bold bg-gradient-to-r from-orange-400 to-purple-600 bg-clip-text text-transparent mb-4">
-          {props.percentage}
+        <div style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}> {props.percentage}</div> 
         </div>
         {/* Title */}
         <h3 className="text-xl font-semibold mb-4">{props.title}</h3>

@@ -11,7 +11,7 @@ interface MetricDisplayProps {
   
     return (
       <div className="text-center bg-gray-50">
-        <div className={displayClass}>{value}</div>
+        <div className={displayClass} style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}>{value}</div>
         <p className="mt-3 text-gray-700 max-w-[280px] mx-auto">{label}</p>
       </div>
     );
