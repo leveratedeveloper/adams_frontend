@@ -7,7 +7,7 @@ const results = [
     percentage: '+80%',
     title: 'Organic Traffic Growth',
     subtitle: 'Merries',
-    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. Leverate was entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategically funneling this traffic to Merries’ newsletter signups to support broader business goals. Ranking for health-related keywords is challenging due to the competition from established institutions.',
+    description: 'As a top baby care brand in Indonesia, Merries is dedicated to simplifying motherhood by offering seamless experiences. We were entrusted with the task of driving high-quality traffic to a new, SEO-optimized website and strategically funneling this traffic to Merries’ newsletter signups to support broader business goals. Ranking for health-related keywords is challenging due to the competition from established institutions.',
     metrics: [
       {
         value: '+80%',
@@ -25,26 +25,26 @@ const results = [
     ]
   },
   {
-    badge: 'SEO',
+    badge: 'ASO',
     logo: 'img/logo/proven_result_brimo.png',
     percentage: '+5.3%',
     title: 'Store Listing Visitors',
     subtitle: 'BRImo',
-    description: 'Amid rising competition in the mobile banking industry, it’s essential for BRI’s BRImo app to stay ahead in App Store rankings. Leverate was entrusted with this task, focusing on improving BRImo’s performance in mobile app stores like the Apple App Store and Google Play Store',
+    description: 'Amid rising competition in the mobile banking industry, it’s essential for BRI’s BRImo app to stay ahead in App Store rankings. We were entrusted with this task, focusing on improving BRImo’s performance in mobile app stores like the Apple App Store and Google Play Store',
     metrics: [
       {
-        value: '+80%',
-        label: 'Organic Traffic Growth'
+        value: '+5.3%',
+        label: 'Store listing visitors'
       },
       {
-        value: '#1',
-        label: "Keywords visibility on first page Google's Search Engine Result page"
+        value: '+2.5%',
+        label: "Organic app installs"
       }
     ],
     features: [
-      'SEO-driven content',
-      'Premium Backlink',
-      'Optimizing underperforming pages'
+      'App title and description optimization',
+      'High quality backlinks',
+      'Creative improvements'
     ]
   },
   {
@@ -53,10 +53,10 @@ const results = [
     percentage: '+223%',
     title: 'Organic Traffic Growth',
     subtitle: 'MSIG Life',
-    description: 'The insurance industry is highly competitive, and this extends to Google search rankings. Operating within the finance and health niches means MSIG must compete not only with other insurance companies but also with established health and financial publishers that dominate their respective domains. Leverate was tasked with ensuring the website achieves visibility on Google for six highly competitive priority keywords while also boosting organic traffic.',
+    description: 'The insurance industry is highly competitive, and this extends to Google search rankings. Operating within the finance and health niches means MSIG must compete not only with other insurance companies but also with established health and financial publishers that dominate their respective domains. We were tasked with ensuring the website achieves visibility on Google for six highly competitive priority keywords while also boosting organic traffic.',
     metrics: [
       {
-        value: '+80%',
+        value: '+223%',
         label: 'Organic Traffic Growth'
       },
       {

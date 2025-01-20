@@ -47,9 +47,14 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
   const handleSubmit = async () => {
     setLoading(true);
-    router.push('/content')
+    if (value == 'website'){
+      router.push('/content-web')
+    }else{
+      router.push('/content')
+    }
+  
     console.log("add data form",formData)
-    await addData('storeName', formData);
+    // await addData('storeName', formData);
    
     // await sendData(formData)
     // .then(()=>{
