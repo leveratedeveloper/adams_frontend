@@ -64,7 +64,7 @@ export default function ContentPage() {
                     <span className="font-medium">App rating</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-gray-600">Keywords optimized</span>
+                    <span className="text-gray-600">Keywords Optimized</span>
                     <div className="relative group">
                       <button className="text-gray-400 hover:text-gray-600 mr-left ml-2 mr-10">
                           ⓘ

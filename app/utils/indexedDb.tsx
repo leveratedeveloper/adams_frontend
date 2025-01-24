@@ -1,38 +1,41 @@
 import { openDB, IDBPDatabase } from 'idb';
-let dbPromise: Promise<IDBPDatabase<any>> | undefined;
+
+const DB_NAME = 'myDB';
+const STORE_NAME = 'myStore';
+
+// Initialize IndexedDB
+const initDB = async () => {
+  return openDB(DB_NAME, 1, {
+    upgrade(db) {
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      }
+    },
+  });
+};
 
 
-export async function getDB(): Promise<IDBPDatabase<any>> {
-  if (!dbPromise) {
-    dbPromise = openDB('MyAdamsDB', 1, {
-      upgrade(db) {
-        if (!db.objectStoreNames.contains('storeName')) {
-          db.createObjectStore('storeName', { keyPath: 'id' }); // 'id' is the primary key
-        }
-      },
-    });
-    console.log("dbPromise",dbPromise)
-  }
-  return dbPromise;
-}
+// Save data to IndexedDB
+export const saveDataToDB = async (data: any) => {
+  const db = await initDB();
+  const transaction = db.transaction(STORE_NAME, 'readwrite');
+  const store = transaction.objectStore(STORE_NAME);
+  store.put(data); // Save or update data
+  await transaction.done;
+};
 
+// Retrieve data from IndexedDB
+export const getDataFromDB = async () => {
+  const db = await initDB();
+  const store = db.transaction(STORE_NAME).objectStore(STORE_NAME);
+  return store.getAll();
+};
 
-export async function addData(storeName: string, data: any): Promise<void> {
-  const db = await getDB();
-  await db.add(storeName, data);
-}
-
-export async function getData(storeName: string, key: IDBValidKey): Promise<any> {
-  const db = await getDB();
-  return db.get(storeName, key);
-}
-
-export async function getAllData(storeName: string): Promise<any[]> {
-  const db = await getDB();
-  return db.getAll(storeName);
-}
-
-export async function deleteData(storeName: string, key: IDBValidKey): Promise<void> {
-  const db = await getDB();
-  await db.delete(storeName, key);
-}
+//Delete all data
+export const deleteAllData = async () => {
+  const db = await initDB();
+  const transaction = db.transaction(STORE_NAME, 'readwrite');
+  const store = transaction.objectStore(STORE_NAME);
+  store.clear(); // This will delete all data in the store
+  await transaction.done;
+};
