@@ -2,29 +2,27 @@ import { NextResponse } from 'next/server';
 import { nanoid } from 'nanoid';
 
 export function middleware(req) {
-  const { cookies } = req;
-  const sessionId = cookies.get('sessionId');
+  const response = NextResponse.next();
+  const sessionIdCookie = req.cookies.get('sessionId');
 
-  // If sessionId doesn't exist, create one
-  if (!sessionId) {
-    const newSessionId = nanoid();
-    // Set the sessionId cookie
-    const response = NextResponse.next();
-    console.log("ini response cookie",response)
-    response.cookies.set('sessionId', newSessionId, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // Use secure in production
-      sameSite: 'strict',
-      path: '/',
+  // Log cookie status
+  console.log('Existing sessionId:', sessionIdCookie);
+
+  if (!sessionIdCookie) {
+    const sessionId = nanoid();
+    console.log('Generated sessionId:', sessionId); // Debug log
+
+    response.cookies.set('sessionId', sessionId, {
+      httpOnly: false,
+      sameSite: 'Lax',
+      secure: process.env.NODE_ENV === 'development',
+      maxAge: 5 * 60, //5 minutes
     });
-
-    return response;
   }
 
-  // Continue request if sessionId exists
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
-  matcher: '/', // Apply middleware to all routes or specific ones
+  matcher: ['/', '/api/:path*'],
 };

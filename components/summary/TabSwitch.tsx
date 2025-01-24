@@ -36,13 +36,13 @@ const TabSwitch = () => {
           <div>
             <h3 className="text-lg font-semibold">App Store</h3>
             {/* <p>Download the app from the App Store to enjoy great features.</p> */}
-            <KeywordTable />
+            <KeywordTable data={""}/>
           </div>
         )}
         {activeTab === "playStore" && (
           <div>
             <h3 className="text-lg font-semibold">Play Store</h3>
-            <KeywordTable />
+            <KeywordTable data={""}/>
           </div>
         )}
       </div>

@@ -9,7 +9,9 @@ import { Smartphone } from 'lucide-react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 // import sendData  from './action'
-import { addData, getAllData,deleteData } from '../utils/indexedDb';
+import { saveDataToDB, getDataFromDB,deleteAllData } from '../utils/indexedDb';
+import Cookies from 'js-cookie';
+
 
 interface TabContentProps {
   value: string;
@@ -19,10 +21,11 @@ interface TabContentProps {
 export default function  Page({ value, placeholder }: TabContentProps)  {
   const router = useRouter();
   const [isOn, setIsOn] = useState(true);
-  const [valueSlideArticle, setValueArticle] = useState([5]);
-  const [valueKeyword, setValueKeyword] = useState([5]);
+  const [valueSlideArticle, setValueArticle] = useState();
+  const [valueKeyword, setValueKeyword] = useState();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const [sliderValue, setSliderValue] = useState<number>(0);
   const [formData, setFormData] = useState({
     url:'',
     country: '',
@@ -35,16 +38,45 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     router.push("/");
   };
   const handleToggle = () => {
-    console.log("handle toogle",isOn)
     setIsOn(!isOn);
+    handleChange({
+      target: {
+        name: "premium_backlink", // Field name in formData
+        value: isOn, // First value from slider
+      },
+    });
+    // console.log("handle toogle",isOn)
+    
   };
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Initialize state for slider value
+  const handleSliderChange = (value: number[]): void => {
+    console.log("ini slider",value)
+    handleChange({
+      target: {
+        name: "keyword_optimized", // Field name in formData
+        value: value[0], // First value from slider
+      },
     });
   };
+
+  const handleSliderChangeArticle = (value: number[]):void => {
+    handleChange({
+      target: {
+        name: "article_development",
+        value: value[0], 
+      },
+    });
+  }
+
   const handleSubmit = async () => {
     setLoading(true);
     if (value == 'website'){
@@ -54,38 +86,27 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     }
   
     console.log("add data form",formData)
-    // await addData('storeName', formData);
-   
-    // await sendData(formData)
-    // .then(()=>{
-    //    setFormData({
-    //       url:'',
-    //       country: '',
-    //       premium_backlink: '',
-    //       keyword_optimized: 0,
-    //       article_development: 0,
-    //     });
-    //   // setSuccessAlert(true)
-    //   // setTimeout(() => setSuccessAlert(false), 3000)
-    //   setLoading(false);
+    await saveDataToDB(formData);
 
-    // }).catch(()=>{
-    //   // setFailAlert(true)
-    //   // setTimeout(() => setFailAlert(false), 3000)
-    //   setLoading(false);
-    // })
   };
 
   useEffect(() => {
-    async function fetchData() {
-      const allData = await getAllData('storeName');
-      console.log("ini allData",allData)
-      // await deleteData('storeName',1)
-      // setData(allData);
-    }
+    const fetchData = async () => {
+      const dbData = await getDataFromDB();
+      console.log("ini dbData",dbData)
+       deleteAllData()
+      
+      // setData(dbData);
+    };
+    
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const sessionId = Cookies.get('sessionId');
+    console.log('Session ID:', sessionId);
+  }, []);
+  
 
   return (
     <TabsContent value={value} className="mt-0">
@@ -211,7 +232,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <div className="space-y-6 col-span-1">
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">
-                      Keywords Optimize
+                      Keywords Optimized
                     </h3>
                     <div className="relative group">
                       <button className="text-gray-400 hover:text-gray-600 focus:outline-none">
@@ -230,7 +251,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                         max={30}
                         step={1}
                         defaultValue={[5]}
-                        // onValueChange={setValue}
+                        // onValueChange={handleChangeSlider}
                         ariaLabel="Slider with numbers"
                         showValue />
                     </div>
@@ -265,11 +286,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             </div>
             <div className="flex gap-4">
               <select 
+                id="country"
                 name="country"
                 className="w-full rounded-full px-3 py-2 border-2 border-gray-200"
-                value={formData.country}
                 onChange={handleChange}
-                defaultValue="indonesia">
+                value={formData.country || ""}>
+                <option value="" disabled>Select your country</option>
                 <option value="indonesia">Indonesia</option>
               </select>
             </div>
@@ -305,7 +327,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   </button>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className={`w-8 h-8 ${isOn ? "fill-blue-500" : "fill-gray-300"}`}>
-                  <path fill-rule="evenodd" d="M6.333 4.478A4 4 0 0 0 1 8.25c0 .414.336.75.75.75h3.322c.572.71 1.219 1.356 1.928 1.928v3.322c0 .414.336.75.75.75a4 4 0 0 0 3.772-5.333A10.721 10.721 0 0 0 15 1.75a.75.75 0 0 0-.75-.75c-3.133 0-5.953 1.34-7.917 3.478ZM12 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clip-rule="evenodd" />
+                  <path fillRule="evenodd" d="M6.333 4.478A4 4 0 0 0 1 8.25c0 .414.336.75.75.75h3.322c.572.71 1.219 1.356 1.928 1.928v3.322c0 .414.336.75.75.75a4 4 0 0 0 3.772-5.333A10.721 10.721 0 0 0 15 1.75a.75.75 0 0 0-.75-.75c-3.133 0-5.953 1.34-7.917 3.478ZM12 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clipRule="evenodd" />
                   <path d="M3.902 10.682a.75.75 0 1 0-1.313-.725 4.764 4.764 0 0 0-.469 3.36.75.75 0 0 0 .564.563 4.76 4.76 0 0 0 3.359-.47.75.75 0 1 0-.725-1.312 3.231 3.231 0 0 1-1.81.393 3.232 3.232 0 0 1 .394-1.81Z" />
                 </svg>
                 <span className={`text-sm font-medium ${isOn ? "text-blue-600" : "text-gray-600"}`}>Boosted</span>
@@ -313,7 +335,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             </div><div className="space-y-4 items-center">
                 <div className="flex items-center">
                   <h3 className="text-sm font-medium mr-2">
-                    Keywords optimized
+                    Keywords Optimized
                   </h3>
                   <div className="relative group">
                     <button className="text-gray-400 hover:text-gray-600">
@@ -332,8 +354,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                       step={1}
                       className="dient-to-r from-white via-blue-300 to-blue-600 rounded-lg appearance-none" 
                       defaultValue={[5]}
-                      value={valueKeyword}   
-                      onValueChange={setValueKeyword}
+                      onValueChange={handleSliderChange} 
                       ariaLabel="Slider with numbers"
                       showValue />
                   </div>
@@ -359,9 +380,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                       defaultValue={[5]}
                       max={30}
                       step={1}
-                      className="dient-to-r from-white via-blue-300 to-blue-600 rounded-lg appearance-none" 
-                      value={valueSlideArticle}               // Bind the value state to the slider
-                      onValueChange={setValueArticle}  // Add the onChange handler         
+                      className="dient-to-r from-white via-blue-300 to-blue-600 rounded-lg appearance-none"      
+                      onValueChange={handleSliderChangeArticle} 
                       />
                   </div>
                 </div>
