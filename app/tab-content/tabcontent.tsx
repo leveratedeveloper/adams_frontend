@@ -127,7 +127,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //DataforSEO
   const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
     setLoading(true);
-    console.log("checkedItems nih",checkedItems)
     try {
   
       // Replace with your DataForSEO API credentials
@@ -154,7 +153,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       const apiCalls = [];
 
       if (checkedItems["optionGoogle"] == true) {
-        alert("active nih");
         apiCalls.push(
           axios.post(API_URL, requestBody, {
             auth: {
@@ -169,7 +167,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       }
       
       if (checkedItems["optionApple"] == true) {
-        alert("active");
         apiCalls.push(
           axios.post(API_URL2, requestBody, {
             auth: {
