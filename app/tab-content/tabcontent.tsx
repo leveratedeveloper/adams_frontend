@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Globe } from 'lucide-react';
+import { Globe, Target } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { TabsContent } from '@/components/ui/tabs';
 import React,{ useEffect, useState } from "react";
@@ -8,9 +8,9 @@ import { FiSearch } from "react-icons/fi"; // Using react-icons for the icon
 import { Smartphone } from 'lucide-react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-// import sendData  from './action'
 import { saveDataToDB, getDataFromDB,deleteAllData } from '../utils/indexedDb';
 import Cookies from 'js-cookie';
+import axios from 'axios';
 
 
 interface TabContentProps {
@@ -26,14 +26,28 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [sliderValue, setSliderValue] = useState<number>(0);
+  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
+
+
+  //DataforSEO
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [categories, setCategories] = useState<string[]>(["Finance", "Business"]); 
+  const [isSearchRankingChecked, setIsSearchRankingChecked] = useState(true); // default checked
+  const [isAppRatingChecked, setIsAppRatingChecked] = useState(false); // default unchecked
+
+
+  // const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     url:'',
-    country: '',
+    country: 'indonesia',
     premium_backlink: true,
-    keyword_optimized: 0,
-    article_development: 0,
+    keyword_optimized: 5,
+    article_development: 5,
   });
-
+  
   const handleNavigation = () => {
     router.push("/");
   };
@@ -45,12 +59,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
         value: isOn, // First value from slider
       },
     });
-    // console.log("handle toogle",isOn)
-    
   };
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
+    if(name == 'url'){
+      value == value.replace(/(^\w+:|^)\/\//, "");
+    }
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -59,7 +74,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   // Initialize state for slider value
   const handleSliderChange = (value: number[]): void => {
-    console.log("ini slider",value)
     handleChange({
       target: {
         name: "keyword_optimized", // Field name in formData
@@ -76,27 +90,30 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       },
     });
   }
+  
 
   const handleSubmit = async () => {
     setLoading(true);
     if (value == 'website'){
+      await saveDataToDB(formData);
+      console.log("add data form",formData)
       router.push('/content-web')
     }else{
+      await saveDataToDB(formData);
+      console.log("add data form",formData)
       router.push('/content')
     }
   
-    console.log("add data form",formData)
-    await saveDataToDB(formData);
+   
 
   };
 
   useEffect(() => {
+    console.log("ini checkedItems",checkedItems)
     const fetchData = async () => {
       const dbData = await getDataFromDB();
       console.log("ini dbData",dbData)
-       deleteAllData()
-      
-      // setData(dbData);
+      //  deleteAllData()
     };
     
     fetchData();
@@ -107,7 +124,162 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     console.log('Session ID:', sessionId);
   }, []);
   
+  //DataforSEO
+  const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
+    setLoading(true);
+    console.log("checkedItems nih",checkedItems)
+    try {
+  
+      // Replace with your DataForSEO API credentials
+      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
+      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
+      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
+      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
+  
+      // API request body
+      const requestBody = [
+        {
+          categories: ["Finance", "Business"],
+          description: searchQuery,
+          title: searchQuery,
+          limit: 100,
+          additional_data: {
+            filters: [["language_code", "=", "en"]],
+          },
+        },
+      ];
+  
+  
+      // Make both API calls in parallel by checkedItems
+      const apiCalls = [];
 
+      if (checkedItems["optionGoogle"] == true) {
+        alert("active nih");
+        apiCalls.push(
+          axios.post(API_URL, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
+      
+      if (checkedItems["optionApple"] == true) {
+        alert("active");
+        apiCalls.push(
+          axios.post(API_URL2, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
+      
+      // If no API calls were made, return an empty array to avoid errors
+      if (apiCalls.length === 0) {
+        setLoading(false);
+        return [];
+      }
+      
+      // Wait for all API calls to complete
+      const responses = await Promise.all(apiCalls);
+      
+      // Extract results safely
+      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      
+      console.log("hit 3", results);
+      
+      setLoading(false);
+      
+      return results;      
+    } catch (error) {
+      setLoading(false);
+      console.error("Error fetching suggestions:", error);
+      return [];
+    }
+  };
+
+  // const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
+  //   setLoading(true);
+  //   console.log("ini checkedItems",checkedItems)
+  //   try {
+  //     console.log("Fetching from local JSON...",searchQuery);
+  
+  //     const API_URL = "datajson/data.json"; 
+
+  //     // Fetch data from the local JSON file
+  //     const response = await fetch(API_URL);
+  //     const data = await response.json();
+
+  //     // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
+  //     const filteredResults = data.tasks.flatMap((task: any) =>
+  //       task.result.flatMap((resultItem: any) =>
+  //         resultItem.items.filter((item: any) =>
+  //           item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //           item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  //         )
+  //       )
+  //     );
+
+  //     setLoading(false);
+  //     console.log("Fetched data:", filteredResults);
+  //     return filteredResults;
+  //   } catch (error) {
+  //     setLoading(false);
+  //     console.error("Error fetching suggestions:", error);
+  //     return [];
+  //   }
+  // };
+    
+    // Handle clicking outside the dropdown
+    useEffect(() => {
+      const handleClickOutside = () => setShowDropdown(false);
+      document.addEventListener("click", handleClickOutside);
+      console.log("out of box",handleClickOutside)
+      return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
+    
+    const handleSelectItem = (item: string) => {
+      setQuery(item);  // Set the query to the selected item
+      setShowDropdown(false);  // Close the dropdown
+    };
+
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setCheckedItems({
+        ...checkedItems,
+        [event.target.name]: event.target.checked,
+      });
+    };
+
+  const handleChangeMobile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+    if (e.target.value.length >= 3) {
+      setShowDropdown(true);
+      const results = await fetchSuggestions(e.target.value, checkedItems);
+      setSuggestions(results);
+     
+      return;
+    } else {
+      setShowDropdown(false);
+    }
+  };
+
+  const handleFocus = () => {
+    if (query.length >= 3) {
+      setShowDropdown(true);
+    }
+  };
+
+
+ 
   return (
     <TabsContent value={value} className="mt-0">
       {/* URL Input */}
@@ -132,10 +304,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  id="item-1"
-                  name="option"
-                  value="option1"
+                  id="item-google"
+                  name="optionGoogle"
+                  value="google"
                   className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+                  checked={checkedItems["optionGoogle"] || false} 
+                  onChange={handleCheckboxChange}
                 />
                 <Image
                   src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
@@ -149,10 +323,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  id="item-2"
-                  name="option"
-                  value="option2"
+                  id="item-apple"
+                  name="optionApple"
+                  value="apple"
                   className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
+                  checked={checkedItems["optionApple"] || false} 
+                  onChange={handleCheckboxChange}
                 />
                 <Image
                   src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path
@@ -169,14 +345,88 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             <div className="hidden md:block w-px bg-gray-300 mx-2" />
           
             {/* Bottom Section: Input */}
-            <div className="flex-grow flex items-center mt-2 md:mt-0 md:px-4">
-              <Smartphone className="w-5 h-5 text-gray-400 mr-3" />
-              <input
-                type="text"
-                placeholder="Type your app name"
-                className="w-full py-2 text-sm bg-transparent outline-none text-gray-800 placeholder-gray-500"
-              />
+            <div className="flex-grow flex flex-col mt-2 md:mt-0 md:px-4 relative">
+              <div className="flex items-center">
+                <Smartphone className="w-5 h-5 text-gray-400 mr-3" />
+                <input
+                  type="text"
+                  placeholder="Type your app name"
+                  className="w-full py-2 px-4 text-sm bg-transparent  outline-none text-gray-800 placeholder-gray-500 focus:border-blue-500"
+                  value={query}
+                  onChange={handleChangeMobile}
+                  onFocus={handleFocus}
+                />
+              </div>
+
+              {showDropdown && query.length >= 3 && (
+              <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
+                {loading ? (
+                  <div className="p-2 text-sm text-gray-500">Loading...</div>
+                ) : suggestions.length > 0 ? (
+                  suggestions.map((suggestion, index) => (
+                    <div
+                      key={index}
+                      className="relative flex items-center gap-2 py-2 px-4 text-sm text-gray-800 cursor-pointer bg-white hover:bg-gray-100"
+                      onClick={() => handleSelectItem(suggestion.item.title)}
+                    >
+                      <Image
+                        src={suggestion.item.icon || "/img/not_found.png"} // Default icon if missing
+                        alt={suggestion.item.title}
+                        width={30}
+                        height={30}
+                        className="object-contain"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "/img/not_found.png"; // Fallback if image fails to load
+                        }}
+                      />
+                      
+                      <span className="flex-grow">{suggestion.item.title}</span>
+
+                      {/* Apple App Store Badge */}
+                      {suggestion.se_domain === "itunes.apple.com" && (
+                        <span className="absolute right-0 top-0 flex items-center space-x-1 text-xs text-gray-500 bg-gray-20 py-0.5 px-2 rounded-lg">
+                          <Image
+                            src="/img/icon/Apps_Store_Icon_Logo.svg" // Replace with correct logo path
+                            alt="App Store Logo"
+                            width={18}
+                            height={18}
+                            className="object-contain"
+                          />
+                        </span>
+                      )}
+
+                      {/* Google Play Store Badge */}
+                      {suggestion.se_domain === "play.google.com" && (
+                        <span className="absolute right-0 top-0 flex items-center space-x-1 text-xs text-gray-500 bg-gray-20 py-0.5 px-2 rounded-lg">
+                          <Image
+                            src="/img/icon/Google_Play_Icon_Logo.svg" // Replace with correct logo path
+                            alt="Google Play Logo"
+                            width={18}
+                            height={18}
+                            className="object-contain"
+                          />
+                        </span>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <div className="p-2 text-sm text-gray-500">No results found</div>
+                )}
+
+                {!loading && suggestions.length > 0 && (
+                  <div className="p-2 text-sm text-white bg-blue-500 border-t border-blue-600">
+                    App not found? Try selecting 1 platform at a time
+                    <p className="text-xs opacity-80 mt-1">
+                      Inconsistent app name between platforms can affect results
+                    </p>
+                  </div>
+                )}
+              </div>
+              )}
+
             </div>
+
+
           </div>         
           )}
           {value === 'app' && (
@@ -185,8 +435,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">Country</h3>
                     <div className="relative group">
-                      <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <button
+                        className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                        aria-label="Information"
+                      >
+                        ⓘ
+                      </button>
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                         Select market where your app will be optimized
                       </div>
                     </div>
@@ -201,8 +456,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   <div className="flex items-center">
                     <h3 className="text-sm font-medium mr-2">Objective</h3>
                       <div className="relative group">
-                        <button className="text-gray-400 hover:text-gray-600">ⓘ</button>
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        <button
+                          className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
+                          aria-label="Information"
+                        >
+                          ⓘ
+                        </button>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                           Goals of your ASO campaign
                         </div>
                       </div>
@@ -235,14 +495,16 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                       Keywords Optimized
                     </h3>
                     <div className="relative group">
-                      <button className="text-gray-400 hover:text-gray-600 focus:outline-none">
-                        ⓘ
-                      </button>
-                      {/* Tooltip */}
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        <button
+                          className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
+                          aria-label="Information"
+                        >
+                          ⓘ
+                        </button>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                         Number of relevant keywords to be optimized
+                        </div>
                       </div>
-                    </div>
                   </div>
                   <div className="flex items-center gap-1">
                     <div className="flex flex-col items-center w-5/6 p-2">
@@ -291,7 +553,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 className="w-full rounded-full px-3 py-2 border-2 border-gray-200"
                 onChange={handleChange}
                 value={formData.country || ""}>
-                <option value="" disabled>Select your country</option>
                 <option value="indonesia">Indonesia</option>
               </select>
             </div>

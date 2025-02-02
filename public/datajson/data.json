@@ -1,0 +1,200 @@
+{
+    "version": "0.1.20241227",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.3164 sec.",
+    "cost": 0.102,
+    "tasks_count": 1,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "01291238-8872-0554-0000-d2e99f4de466",
+            "status_code": 20000,
+            "status_message": "Ok.",
+            "time": "0.2319 sec.",
+            "cost": 0.102,
+            "result_count": 1,
+            "path": [
+                "v3",
+                "app_data",
+                "google",
+                "app_listings",
+                "search",
+                "live"
+            ],
+            "data": {
+                "api": "app_data",
+                "function": "search",
+                "se": "google",
+                "title": "bca",
+                "description": "bca",
+                "categories": [
+                    "Finance"
+                ],
+                "order_by": [
+                    "item.installs_count,asc"
+                ],
+                "filters": [
+                    [
+                        "item.rating.value",
+                        ">",
+                        2.5
+                    ]
+                ],
+                "limit": 2
+            },
+            "result": [
+                {
+                    "total_count": 5,
+                    "count": 2,
+                    "offset": 0,
+                    "offset_token": "eyJDdXJyZW50T2Zmc2V0IjoyLCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjIsIm9mZnNldCI6bnVsbCwiYWlkIjpudWxsfSwiUmF3UXVlcnkiOnsiZmllbGQiOiJpdGVtLnJhdGluZy52YWx1ZSIsInR5cGUiOiJndCIsInZhbHVlIjoyLjV9LCJJZCI6bnVsbCwiU2VhcmNoQWZ0ZXJEYXRhIjpbMTE2NTE3Mi4wLCJjb20udnEubWJyb2NodXJlZ3AuY2xpZW50LmFuZHJvaWQiXX0=",
+                    "items": [
+                        {
+                            "app_id": "com.exictos.mbanka.bca.ao",
+                            "se_domain": "play.google.com",
+                            "location_code": 2840,
+                            "language_code": "en",
+                            "check_url": "https://play.google.com/store/apps/details?id=com.exictos.mbanka.bca.ao&hl=en&gl=us",
+                            "time_update": "2025-01-23 04:41:06 +00:00",
+                            "item": {
+                                "type": "google_play_info_organic",
+                                "rank_group": 1,
+                                "rank_absolute": 1,
+                                "position": "left",
+                                "app_id": "com.exictos.mbanka.bca.ao",
+                                "title": "BCA Mobile",
+                                "url": "https://play.google.com/store/apps/details?id=com.exictos.mbanka.bca.ao&hl=en&gl=us",
+                                "icon": "https://play-lh.googleusercontent.com/1rmO8C2Z46Ly3YD2rHMYs1-Al-IAwnSOMu8_yuJHAthtaT9tANqsMFS59It7bZMQRBM",
+                                "description": "No BCA Mobile pode:\n- Efectuar a personalização do ecrã;\n- Consultar saldos, movimentos, NIB, IBAN e SWIFT;\n- Consultar contas de depósito a prazo;\n- Consultar detalhes sobre créditos contraídos;\n- Agendar e efectuar transferências Conta a Conta e Interbancárias;\n- Efectuar transferências KWiK (usando número do telemóvel, email ou nickname);   \n- Carregar o saldo do telemóvel e pagar a conta da energia, água, televisão, internet, entre outros;\n- Consultar a taxa de câmbio;\n- Levantamento sem Cartão;\n- Bloquear cartões, em situações de emergência (perda/roubo);\n- Definir limites diários nos cartões multicaixa;\n- Consultar operações e exportar detalhes em documento PDF;\n- Criar e utilizar favoritos de transferências e pagamentos de serviços;\n- Pagamentos de Impostos, incluindo RUPE;\n- Consulta de Posição Integrada, com visualização gráfica de activos vs passivos;\n- Localizador de Serviços – A partir da sua posição actual, ou outra por si determinada, pode localizar os serviços BCA mais próximos de si, assim como as respectivas moradas e contactos.\nE muito mais...",
+                                "reviews_count": 145,
+                                "rating": {
+                                    "rating_type": "Max5",
+                                    "value": 4.2,
+                                    "votes_count": 145,
+                                    "rating_max": 5
+                                },
+                                "price": {
+                                    "current": 0,
+                                    "regular": null,
+                                    "max_value": null,
+                                    "currency": "USD",
+                                    "is_price_range": false,
+                                    "displayed_price": null
+                                },
+                                "is_free": true,
+                                "main_category": "Finance",
+                                "installs": "10,000+",
+                                "installs_count": 26095,
+                                "developer": "Banco Comercial Angolano",
+                                "developer_id": "Banco+Comercial+Angolano",
+                                "developer_url": "https://play.google.com/store/apps/developer?id=Banco+Comercial+Angolano",
+                                "developer_email": "servicesdesk@bca.co.ao",
+                                "developer_address": null,
+                                "developer_website": "http://www.bca.co.ao",
+                                "version": "4.3.9",
+                                "minimum_os_version": "5.0",
+                                "size": null,
+                                "released_date": "2019-02-27 02:00:00 +00:00",
+                                "last_update_date": "2024-07-25 03:00:00 +00:00",
+                                "update_notes": "Temos o prazer de anunciar que lançamos uma nova aplicação, agora com uma imagem renovada e uma interface ainda mais amigável!\nNesta nova versão, poderá encontrar diversas melhorias e funcionalidades, pelo que convidamos todos a experimentar a nova aplicação.\nAgradecemos pela sua confiança.\nBCA, o Banco que pensa em si...",
+                                "images": [
+                                    "https://play-lh.googleusercontent.com/-m3RLtZAZtvnKXjdWHKY1OR-umLXD3DtYaei0Ni7XhrcGPQPftou73U_G3tDPGWXJJk",
+                                    "https://play-lh.googleusercontent.com/HOfBT06JnkVlXGisXIOjWPylnibjph074yq5NKuLeJ1YUKBv0DrjxCHwr-XWJPZGoqs",
+                                    "https://play-lh.googleusercontent.com/0a8XhpNFKqbwP5YRvM9ZQ9hM-ELkd1vK1F7x0AtxfX00Af4hMorZjTrJgVFaYnxe9Q",
+                                    "https://play-lh.googleusercontent.com/FJVJrVKa3C22b4xIl_kpzchkcMg1IZiH8Uxdigi1VgM7M7ukBaukiP9pil6Ft9DeAJub",
+                                    "https://play-lh.googleusercontent.com/F05cjJ4wrPahdgdNXC8UqUlmAvtF3uvoq7llvZMQwyJBFyn-TYOfMO3oFdkez2j6cA",
+                                    "https://play-lh.googleusercontent.com/j_Hl2LnypdgzPwz87F77HGLhj3wOAEtTP7lnTXaT80DmfsHiYdE6N60Dg0MKKqtPi84",
+                                    "https://play-lh.googleusercontent.com/lCIaNLkVSPX4nqEuaqquxTjPhv_KhTVlJ4yEJrAuCvejGDJro28NgC3c1d0Jfox37ob3",
+                                    "https://play-lh.googleusercontent.com/OzU6JptymwCoze-lzC7ziB2JyyPcMLJ_XGvY2XLl7ghpN5RMempx0I9Q4nvlVDDyYg",
+                                    "https://play-lh.googleusercontent.com/gyAQVhJjIZWXSzxh-n_wdlPO9ky-fYzr16AI0YspB1YhsDu8k1E0ObH5yyDZIWGF-U8",
+                                    "https://play-lh.googleusercontent.com/Nzn7197d867X_hlNFLu0cW0vkBZvre3vNAZYL873GxNoFAl23rB2ezVLR0ZwiKEihkY",
+                                    "https://play-lh.googleusercontent.com/zmA6lJBW9XL47ZoCiiB-LXgviTRqLNeWMpFdmafdn3eSyX_A6kAAZlHTtTLyPk3Gbw",
+                                    "https://play-lh.googleusercontent.com/EOGMpz1ORg22_5n2F4K-ZFy39hnWi8gx0RvpDqstdoloit6RxhA2elPo9eOL8f-ezY4",
+                                    "https://play-lh.googleusercontent.com/VZ7kIy8-kLiqGJlusAu19IXp-mBXhaVr5AzKI05-bOjKMD6vSG5X--FSmWKXj2sEGfg",
+                                    "https://play-lh.googleusercontent.com/tcrm8feAiHUiWRXWeXX4ZKt4nrXb1TI_rKPLhe5o6qcICG1H_l6QTH2JsIsf0LrOU2g",
+                                    "https://play-lh.googleusercontent.com/Bsz7_GquI7tH4p38kfNwLn0yxMXJo47FYp825cXmxJ4OKnDvznLQ2sDerAfBCEs9sEw"
+                                ],
+                                "videos": null,
+                                "similar_apps": null,
+                                "more_apps_by_developer": null,
+                                "genres": [
+                                    "Finance"
+                                ],
+                                "tags": [
+                                    "Finance"
+                                ]
+                            }
+                        },
+                        {
+                            "app_id": "com.vq.mbrochuregp.client.android",
+                            "se_domain": "play.google.com",
+                            "location_code": 2840,
+                            "language_code": "en",
+                            "check_url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
+                            "time_update": "2025-01-08 16:36:56 +00:00",
+                            "item": {
+                                "type": "google_play_info_organic",
+                                "rank_group": 1,
+                                "rank_absolute": 1,
+                                "position": "left",
+                                "app_id": "com.vq.mbrochuregp.client.android",
+                                "title": "BCA Finance",
+                                "url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
+                                "icon": "https://play-lh.googleusercontent.com/4FpvKqIdq24Cx1SWvKPtS4GUHnRIjndAGLT9VdzNQ9sJCWjSIV1LixfOl06CITdB_EU",
+                                "description": "BCAF App, aplikasi financial di tangan Anda.\nLayanan financial terpercaya, kapan saja dan dimana saja.\n\nManfaat BCAF App :\n1.Dapatkan info update promosi, suku bunga dan produk-produk dari BCAF lebih cepat.\n2.Ajukan kredit mobil dan pantau prosesnya tanpa harus keluar rumah.\n3.Layanan konsumen sesuai kebutuhan Anda, seperti informasi pelanggan, simulasi pelunasan dipercepat, reservasi pengambilan BPKB tanpa harus antri terlebih dahulu.\n4.Terhubung langsung dengan layanan digital BCAF lainnya, seperti Website BCAF, HaloBCA Chat, Astari dan Instagram BCAF.\n\nSemuanya hanya dalam genggaman tangan Anda.\n\nFitur-fitur BCAF App :\n1.Simulasi kredit mobil baru dan bekas berdasarkan budget total pembayaran pertama ataupun angsuran.\n2.Pengajuan kredit online.\n3.Tracking status pengajuan kredit online.\n4.Layanan konsumen :\na.Info Pelanggan (informasi angsuran dan histori pembayaran).\nb.Simulasi early termination / pelunasan dipercepat.\nc.Booking Pengambilan BPKB.\n5.E-Doc.\n\nUntuk bantuan lebih lanjut dapat menghubungi Astari, Virtual Assistant kami di 08111027780 atau email ke customercarebcaf@bcaf.id\n\nSelamat menggunakan BCAF App.",
+                                "reviews_count": 12516,
+                                "rating": {
+                                    "rating_type": "Max5",
+                                    "value": 3.5,
+                                    "votes_count": 12516,
+                                    "rating_max": 5
+                                },
+                                "price": {
+                                    "current": 0,
+                                    "regular": null,
+                                    "max_value": null,
+                                    "currency": "USD",
+                                    "is_price_range": false,
+                                    "displayed_price": null
+                                },
+                                "is_free": true,
+                                "main_category": "Finance",
+                                "installs": "1,000,000+",
+                                "installs_count": 1165172,
+                                "developer": "PT. BCA Finance",
+                                "developer_id": "PT.+BCA+Finance",
+                                "developer_url": "https://play.google.com/store/apps/developer?id=PT.+BCA+Finance",
+                                "developer_email": "customercarebcaf@bcaf.id",
+                                "developer_address": null,
+                                "developer_website": "http://www.bcafinance.co.id",
+                                "version": "8.30.0",
+                                "minimum_os_version": "7.0",
+                                "size": null,
+                                "released_date": "2014-10-08 03:00:00 +00:00",
+                                "last_update_date": "2024-12-01 02:00:00 +00:00",
+                                "update_notes": "erimakasih telah menggunakan FinA BCA Finance.\n\nYang terbaru dari kami :\nFitur “Cari Mobil Bekas” menghadirkan Klik Garasi yang merupakan website terpercaya hasil kerjasama Garasi.id bersama dengan BCA Finance untuk jual beli mobil bekas dengan mobil berkualitas dari showroom rekanan BCA Finance. Temukan beragam mobil dari seluruh Indonesia dengan kredit mudah, cepat, dan bunga ringan dari BCA Finance.\n\nSelamat menggunakan FinA BCA Finance, dan dapatkan kemudahannya.",
+                                "images": [
+                                    "https://play-lh.googleusercontent.com/miURL_q-DWarWGVlKuSyoLmIUPLR3-amHQqpVKJOO3KzTrVi3vJyhKb3xa1mDS7Gvw",
+                                    "https://play-lh.googleusercontent.com/5P56KJwDuMXex6ebxZmJTTt33T2uj1Egh0V6hYeK7unwIBNkrt7SJBYbrZ0h3pyWRg",
+                                    "https://play-lh.googleusercontent.com/9aAMUFkmjwlNLjSkv7uNpDi0jDE1NOlBO7QVxDz9s87uW6J_O9IxwwPkfRMjMgqudg",
+                                    "https://play-lh.googleusercontent.com/RODI9NIXUawwvBOLyaPqhDBDJn1L-xZdaRMpNxutD-MA6vtvq-53rmU6HUalOhEefFU",
+                                    "https://play-lh.googleusercontent.com/xad4YFQNrBeTSt9cCJqpatFySOE8L4YPZu74T-FtsZy4po3eFc-w4Frq3Ogtkwo19g"
+                                ],
+                                "videos": null,
+                                "similar_apps": null,
+                                "more_apps_by_developer": null,
+                                "genres": [
+                                    "Finance"
+                                ],
+                                "tags": [
+                                    "Finance"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

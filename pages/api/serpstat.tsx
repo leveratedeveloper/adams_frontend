@@ -28,6 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       se: "g_id",
       withIntents: true,
       sort: { traff: "desc" },
+      size:"3",
       filters: {
         right_spelling: false,
         region_queries_count_from: 0,

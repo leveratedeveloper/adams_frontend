@@ -12,7 +12,15 @@ export default function ContentPage() {
   // const handleClick = () => {
   //   window.location.href = 'https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment';
   // };
-  const [dataArray, setDataArray] = useState<any[]>([]); 
+  interface DataItem {
+    url: string;
+    country: string;
+    premium_backlink: string;
+    keyword_optimized: number;
+    article_development: number;
+    id: number;
+  }
+  const [dataArray, setDataArray] = useState<DataItem[]>([]);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -22,9 +30,9 @@ export default function ContentPage() {
       try {
         const dbData = await getDataFromDB();
         if (Array.isArray(dbData)) {
-          setDataArray(dbData); // Update the data array
-          const domain = dbData[0]['url'];
-          console.log("Local domain:", domain);
+          const lastItem = dbData[dbData.length - 1];
+          const domain = lastItem['url'];
+          setDataArray([lastItem]); // Update the data array
 
           // Call the API with the domain immediately
           await fetchDataApi(domain);
@@ -35,7 +43,6 @@ export default function ContentPage() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []); // No need to include `domain` in the dependency array
  // Function to call the API
@@ -81,7 +88,6 @@ export default function ContentPage() {
       setLoading(false); // Stop loading
     }
   };
-    
 
   return (
     <div className="relative max-h-screen w-full">
@@ -115,29 +121,49 @@ export default function ContentPage() {
                     </thead>
                     <tbody>
                     {dataArray.length > 0 ? (
-                      <><tr>
-                        <td className="px-4 py-2" colSpan={2}>Web URL</td>
-                        <td className="px-4 py-1 text-right" colSpan={2}>
-                          <a href="https://www.codingo.com" className="text-blue-500 underline">
-                          {dataArray[0]['url']}
-                          </a>
-                        </td>
-                      </tr><tr>
-                          <td className="px-4 py-2" colSpan={2}>Country</td>
-                          <td className="px-4 py-2 text-right" colSpan={2}>{dataArray[0].country}</td>
-                        </tr><tr>
-                          <td className="px-4 py-2" colSpan={2}>Premium Backlink</td>
-                          <td className="px-4 py-2 text-right" colSpan={2}>{JSON.stringify(dataArray[0].premium_backlink)}</td>
-                        </tr><tr>
-                          <td className="px-4 py-2" colSpan={2}>Keywords Optimized</td>
-                          <td className="px-4 py-2 text-right" colSpan={2}>{JSON.stringify(dataArray[0].keyword_optimized)}</td>
-                        </tr><tr>
-                          <td className="px-4 py-2" colSpan={2}>Article Development</td>
-                          <td className="px-4 py-2 text-right" colSpan={2}>{JSON.stringify(dataArray[0].article_development)}</td>
-                        </tr></>
-                         ) : (
-                          <td className="padding: 10px; font-size: 16px;">Loading or no data available...</td>
-                        )}
+                        dataArray.map((item, index) => (
+                          <React.Fragment key={item.id || index}> {/* Ensure a unique key */}
+                            <tr>
+                              <td className="px-4 py-2" colSpan={2}>Web URL</td>
+                              <td className="px-4 py-1 text-right" colSpan={2}>
+                                <a href={item.url} className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+                                  {item.url}
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-4 py-2" colSpan={2}>Country</td>
+                              <td className="px-4 py-2 text-right" colSpan={2}>
+                                {item.country}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-4 py-2" colSpan={2}>Premium Backlink</td>
+                              <td className="px-4 py-2 text-right" colSpan={2}>
+                                {item.premium_backlink ? 'On' : 'Off'}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-4 py-2" colSpan={2}>Keywords Optimized</td>
+                              <td className="px-4 py-2 text-right" colSpan={2}>
+                                {item.keyword_optimized}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="px-4 py-2" colSpan={2}>Article Development</td>
+                              <td className="px-4 py-2 text-right" colSpan={2}>
+                                {item.article_development}
+                              </td>
+                            </tr>
+                          </React.Fragment>
+                        ))
+                      ) : (
+                        <tr>
+                          <td className="px-4 py-2 text-center" colSpan={4}>Loading or no data available...</td>
+                        </tr>
+                      )}
+
+
                     </tbody>
                   </table>
                 </div>

@@ -1,5 +1,6 @@
 "use client"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
   if (!data?.result?.data) {
@@ -20,14 +21,41 @@ export default function KeywordTable({ data }: { data: any }) {
       </TableHeader>
       <TableBody>
         {data.result.data.slice(0, 6).map((item: any, index: number) => (
-          <TableRow key={item.position} className={index >= 3 ? "blur-sm" : ""}>
-            <TableCell>{index + 1}</TableCell>
-            <TableCell>{item.keyword}</TableCell>
-            <TableCell>{item.region_queries_count}</TableCell>
-            <TableCell>{item.position}</TableCell>
-          </TableRow>
+          <React.Fragment key={item.position}>
+            <TableRow className={index == 3 ? "blur-sm" : ""}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell>{item.keyword}</TableCell>
+              <TableCell>{item.region_queries_count}</TableCell>
+              <TableCell>{item.position}</TableCell>
+            </TableRow>
+            {index >= 2 && (
+              <><TableRow>
+                <TableCell className="blur-sm">
+                  <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
+                </TableCell>
+                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none"/></TableCell>
+                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+              </TableRow><TableRow>
+                  <TableCell className="blur-sm">
+                    <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
+                  </TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                </TableRow><TableRow>
+                  <TableCell className="blur-sm">
+                    <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
+                  </TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
+                </TableRow></>
+            )}
+          </React.Fragment>
         ))}
       </TableBody>
     </Table>
+
   );
 }
