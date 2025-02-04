@@ -32,7 +32,8 @@ export default function ContentPage() {
         const dbData = await getDataFromDB();
         if (Array.isArray(dbData)) {
           const lastItem = dbData[dbData.length - 1];
-          const domain = lastItem['url'];
+          const domain = lastItem['url'].replace(/(^\w+:|^)\/\//, "").replace(/\/$/, ""); 
+          console.log("ini domain",domain)
           setDataArray([lastItem]); // Update the data array
 
           // Call the API with the domain immediately
@@ -44,7 +45,7 @@ export default function ContentPage() {
         console.error("Error fetching data:", error);
       }
     };
-    sendItemtoCMS();
+    // sendItemtoCMS();
     fetchData();
   }, []); // No need to include `domain` in the dependency array
  // Function to call the API
@@ -83,6 +84,7 @@ export default function ContentPage() {
     const sessionId = Cookies.get('sessionId');
 
     if (Array.isArray(dbData) && dbData.length > 0) {
+      console.log("ini data db",dbData)
       const lastItem = dbData[dbData.length - 1];
       lastItem['session'] = sessionId
       try {
