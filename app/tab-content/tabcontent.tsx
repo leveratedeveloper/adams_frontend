@@ -61,15 +61,14 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
-    if(name == 'url'){
-      value == value.replace(/(^\w+:|^)\/\//, "");
-    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
+  
   // Initialize state for slider value
   const handleSliderChange = (value: number[]): void => {
     handleChange({
@@ -107,14 +106,21 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
 
   useEffect(() => {
-    console.log("ini checkedItems",checkedItems)
-    const fetchData = async () => {
+    console.log("ini checkedItems", checkedItems);
+  
+    const fetchDataDB = async () => {
       const dbData = await getDataFromDB();
-      console.log("ini dbData",dbData)
-      //  deleteAllData()
+      console.log("ini dbData", dbData);
+  
+      const timeout = setTimeout(() => {
+        deleteAllData();
+        console.log("Deleted all data after 10 seconds");
+      }, 10000);
+  
+      return () => clearTimeout(timeout); // Cleanup if component unmounts
     };
-    
-    fetchData();
+  
+    fetchDataDB();
   }, []);
 
   useEffect(() => {
