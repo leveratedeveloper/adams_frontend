@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Globe, Target } from 'lucide-react';
+import { Globe, Star, Target } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { TabsContent } from '@/components/ui/tabs';
 import React,{ useEffect, useState } from "react";
@@ -32,12 +32,10 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //DataforSEO
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [suggestionsIcon, setSuggestionsIcon] = useState<any[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [categories, setCategories] = useState<string[]>(["Finance", "Business"]); 
-  const [isSearchRankingChecked, setIsSearchRankingChecked] = useState(true); // default checked
-  const [isAppRatingChecked, setIsAppRatingChecked] = useState(false); // default unchecked
-
-
+  const [showIcon, setIcon] = useState(false);
   // const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -125,116 +123,116 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   }, []);
   
   //DataforSEO
-  const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
-    setLoading(true);
-    try {
-  
-      // Replace with your DataForSEO API credentials
-      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
-      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
-      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
-      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
-  
-      // API request body
-      const requestBody = [
-        {
-          categories: ["Finance", "Business"],
-          description: searchQuery,
-          title: searchQuery,
-          limit: 100,
-          additional_data: {
-            filters: [["language_code", "=", "en"]],
-          },
-        },
-      ];
-  
-  
-      // Make both API calls in parallel by checkedItems
-      const apiCalls = [];
-
-      if (checkedItems["optionGoogle"] == true) {
-        apiCalls.push(
-          axios.post(API_URL, requestBody, {
-            auth: {
-              username: API_USERNAME,
-              password: API_PASSWORD,
-            },
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-        );
-      }
-      
-      if (checkedItems["optionApple"] == true) {
-        apiCalls.push(
-          axios.post(API_URL2, requestBody, {
-            auth: {
-              username: API_USERNAME,
-              password: API_PASSWORD,
-            },
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-        );
-      }
-      
-      // If no API calls were made, return an empty array to avoid errors
-      if (apiCalls.length === 0) {
-        setLoading(false);
-        return [];
-      }
-      
-      // Wait for all API calls to complete
-      const responses = await Promise.all(apiCalls);
-      
-      // Extract results safely
-      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
-      
-      console.log("hit 3", results);
-      
-      setLoading(false);
-      
-      return results;      
-    } catch (error) {
-      setLoading(false);
-      console.error("Error fetching suggestions:", error);
-      return [];
-    }
-  };
-
-  // const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
+  // const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
   //   setLoading(true);
-  //   console.log("ini checkedItems",checkedItems)
   //   try {
-  //     console.log("Fetching from local JSON...",searchQuery);
   
-  //     const API_URL = "datajson/data.json"; 
+  //     // Replace with your DataForSEO API credentials
+  //     const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
+  //     const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
+  //     const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
+  //     const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
+  
+  //     // API request body
+  //     const requestBody = [
+  //       {
+  //         categories: ["Finance", "Business"],
+  //         description: searchQuery,
+  //         title: searchQuery,
+  //         limit: 100,
+  //         additional_data: {
+  //           filters: [["language_code", "=", "en"]],
+  //         },
+  //       },
+  //     ];
+  
+  
+  //     // Make both API calls in parallel by checkedItems
+  //     const apiCalls = [];
 
-  //     // Fetch data from the local JSON file
-  //     const response = await fetch(API_URL);
-  //     const data = await response.json();
-
-  //     // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
-  //     const filteredResults = data.tasks.flatMap((task: any) =>
-  //       task.result.flatMap((resultItem: any) =>
-  //         resultItem.items.filter((item: any) =>
-  //           item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-  //           item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
-  //         )
-  //       )
-  //     );
-
+  //     if (checkedItems["optionGoogle"] == true) {
+  //       apiCalls.push(
+  //         axios.post(API_URL, requestBody, {
+  //           auth: {
+  //             username: API_USERNAME,
+  //             password: API_PASSWORD,
+  //           },
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //         })
+  //       );
+  //     }
+      
+  //     if (checkedItems["optionApple"] == true) {
+  //       apiCalls.push(
+  //         axios.post(API_URL2, requestBody, {
+  //           auth: {
+  //             username: API_USERNAME,
+  //             password: API_PASSWORD,
+  //           },
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //         })
+  //       );
+  //     }
+      
+  //     // If no API calls were made, return an empty array to avoid errors
+  //     if (apiCalls.length === 0) {
+  //       setLoading(false);
+  //       return [];
+  //     }
+      
+  //     // Wait for all API calls to complete
+  //     const responses = await Promise.all(apiCalls);
+      
+  //     // Extract results safely
+  //     const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      
+  //     console.log("hit 3", results);
+      
   //     setLoading(false);
-  //     console.log("Fetched data:", filteredResults);
-  //     return filteredResults;
+      
+  //     return results;      
   //   } catch (error) {
   //     setLoading(false);
   //     console.error("Error fetching suggestions:", error);
   //     return [];
   //   }
   // };
+
+  const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
+    setLoading(true);
+    console.log("ini checkedItems",checkedItems)
+    try {
+      console.log("Fetching from local JSON...",searchQuery);
+  
+      const API_URL = "datajson/data.json"; 
+
+      // Fetch data from the local JSON file
+      const response = await fetch(API_URL);
+      const data = await response.json();
+
+      // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
+      const filteredResults = data.tasks.flatMap((task: any) =>
+        task.result.flatMap((resultItem: any) =>
+          resultItem.items.filter((item: any) =>
+            item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+        )
+      );
+
+      setLoading(false);
+      console.log("Fetched data:", filteredResults);
+      return filteredResults;
+    } catch (error) {
+      setLoading(false);
+      console.error("Error fetching suggestions:", error);
+      return [];
+    }
+  };
     
     // Handle clicking outside the dropdown
     useEffect(() => {
@@ -244,9 +242,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       return () => document.removeEventListener("click", handleClickOutside);
     }, []);
     
-    const handleSelectItem = (item: string) => {
-      setQuery(item);  // Set the query to the selected item
+    const handleSelectItem = (data: any) => {
+      console.log("item",data)
+      setQuery(data.item.title);  // Set the query to the selected item
       setShowDropdown(false);  // Close the dropdown
+      setIcon(true)
+      setSuggestionsIcon(prevItems => [...prevItems, data]);
     };
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -271,6 +272,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const handleFocus = () => {
     if (query.length >= 3) {
+      setSuggestionsIcon([]); 
       setShowDropdown(true);
     }
   };
@@ -364,7 +366,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     <div
                       key={index}
                       className="relative flex items-center gap-2 py-2 px-4 text-sm text-gray-800 cursor-pointer bg-white hover:bg-gray-100"
-                      onClick={() => handleSelectItem(suggestion.item.title)}
+                      onClick={() => handleSelectItem(suggestion)}
                     >
                       <Image
                         src={suggestion.item.icon || "/img/not_found.png"} // Default icon if missing
@@ -427,96 +429,155 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
           </div>         
           )}
           {value === 'app' && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4 mx-auto max-w-full lg:max-w-xl xl:max-w-4xl">
-              <div className="space-y-4 col-span-1">
-                  <div className="flex items-center">
-                    <h3 className="text-sm font-medium mr-2">Country</h3>
-                    <div className="relative group">
-                      <button
-                        className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
-                        aria-label="Information"
-                      >
-                        ⓘ
-                      </button>
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                        Select market where your app will be optimized
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <select className="w-full rounded-full px-4 py-2 border-2 border-gray-200">
-                      <option value="indonesia">Indonesia</option>
-                    </select>
-                  </div>
-              </div>
-              <div className="space-y-6 col-span-2 ml-12">
-                  <div className="flex items-center">
-                    <h3 className="text-sm font-medium mr-2">Objective</h3>
-                      <div className="relative group">
-                        <button
-                          className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
-                          aria-label="Information"
-                        >
-                          ⓘ
-                        </button>
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                          Goals of your ASO campaign
-                        </div>
-                      </div>
-                  </div>
-                  <div className="flex items-center gap-1 col-span-2">
-                    <div className="space-y-2">
-                      <div className="flex items-center">
-                        <input
-                        type="checkbox"
-                          id="item-2"
-                          defaultChecked
-                          className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
-                        />
-                        <label htmlFor="item-2" className="ml-2 text-gray-700 mr-6">
-                          Search Ranking
-                        </label>
-
-                        <input
-                          type="checkbox"
-                          id="item-1"
-                          className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2" />
-                        <label htmlFor="item-1" className="ml-2 text-gray-700">App Rating</label> {/* Added mr-4 */}
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div className="space-y-6 col-span-1">
-                  <div className="flex items-center">
-                    <h3 className="text-sm font-medium mr-2">
-                      Keywords Optimized
-                    </h3>
-                    <div className="relative group">
-                        <button
-                          className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
-                          aria-label="Information"
-                        >
-                          ⓘ
-                        </button>
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                        Number of relevant keywords to be optimized
-                        </div>
-                      </div>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className="flex flex-col items-center w-5/6 p-2">
-                      <Slider
-                        min={5}
-                        max={30}
-                        step={1}
-                        defaultValue={[5]}
-                        // onValueChange={handleChangeSlider}
-                        ariaLabel="Slider with numbers"
-                        showValue />
-                    </div>
+            <><div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4 mx-auto max-w-full lg:max-w-xl xl:max-w-4xl">
+            <div className="space-y-4 col-span-1">
+              <div className="flex items-center">
+                <h3 className="text-sm font-medium mr-2">Country</h3>
+                <div className="relative group">
+                  <button
+                    className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                    aria-label="Information"
+                  >
+                    ⓘ
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    Select market where your app will be optimized
                   </div>
                 </div>
               </div>
+              <div className="flex gap-4">
+                <select className="w-full rounded-full px-4 py-2 border-2 border-gray-200">
+                  <option value="indonesia">Indonesia</option>
+                </select>
+              </div>
+            </div>
+            <div className="space-y-6 col-span-2 ml-12">
+              <div className="flex items-center">
+                <h3 className="text-sm font-medium mr-2">Objective</h3>
+                <div className="relative group">
+                  <button
+                    className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
+                    aria-label="Information"
+                  >
+                    ⓘ
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    Goals of your ASO campaign
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-1 col-span-2">
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="item-2"
+                      defaultChecked
+                      className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2" />
+                    <label htmlFor="item-2" className="ml-2 text-gray-700 mr-6">
+                      Search Ranking
+                    </label>
+
+                    <input
+                      type="checkbox"
+                      id="item-1"
+                      className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2" />
+                    <label htmlFor="item-1" className="ml-2 text-gray-700">App Rating</label> {/* Added mr-4 */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6 col-span-1">
+              <div className="flex items-center">
+                <h3 className="text-sm font-medium mr-2">
+                  Keywords Optimized
+                </h3>
+                <div className="relative group">
+                  <button
+                    className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
+                    aria-label="Information"
+                  >
+                    ⓘ
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -mb-2 w-60 p-2 bg-gray-200 text-black text-xs rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    Number of relevant keywords to be optimized
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-1">
+                <div className="flex flex-col items-center w-5/6 p-2">
+                  <Slider
+                    min={5}
+                    max={30}
+                    step={1}
+                    defaultValue={[5]}
+                    // onValueChange={handleChangeSlider}
+                    ariaLabel="Slider with numbers"
+                    showValue />
+                </div>
+              </div>
+            </div>
+          </div>
+          {showIcon && (
+            <div className="bg-white flex items-center justify-center">
+              
+                  {(suggestionsIcon || []).map((suggestionIcon, index) => (
+                      <>
+                      <div className="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl  shadow-sm max-w-4xl w-full">
+                      {/* App Icon */}
+                        <div className="flex-shrink-0">
+                          <div className="w-24 h-24 rounded-3xl flex items-center justify-center overflow-hidden">
+                            <img src={suggestionIcon.item.icon || "/img/not_found.png"} alt="BRImo Icon" className="w-25 h-25 object-contain" />
+                          </div>
+                        </div>
+                        <div className="flex-1" key={index}>
+                          <h1 className="text-2xl font-bold text-gray-900 mb-1">{suggestionIcon.item.title}</h1>
+                          <p className="text-gray-600 text-sm mb-3">
+                          {suggestionIcon.item.title}
+                          </p>
+
+                          {/* Ratings */}
+                          <div className="flex flex-col space-y-2">
+                            {/* App Store Rating */}
+                            <div className="flex items-center space-x-2">
+                            {suggestionIcon.se_domain === "itunes.apple.com" && (
+                              <><div className="w-6 h-6 rounded-lg flex items-center  justify-center">
+                                <span className="text-white text-xs"> <Image
+                                  src="/img/icon/Apps_Store_Icon_Logo.svg" // Replace with correct logo path
+                                  alt="App Store Logo"
+                                  width={18}
+                                  height={18}
+                                  className="object-contain" /></span>
+                              </div><div className="flex items-center">
+                                  <Star className="w-4 h-4 fill-current text-yellow-400" />
+                                  <span className="text-sm text-gray-700 ml-1">{suggestionIcon.item.rating.value}</span>
+                                </div></>
+                            )}
+                              {suggestionIcon.se_domain === "play.google.com" && (
+                              <><div className="w-6 h-6  from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                                <span className="text-white text-xs">
+                                  <Image
+                                    src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
+                                    alt="Google Play Store Logo"
+                                    width={20}
+                                    height={20}
+                                    className="object-contain ml-1" />
+                                </span>
+                              </div><div className="flex items-center">
+                                  <Star className="w-4 h-4 fill-current text-yellow-400" />
+                                  <span className="text-sm text-gray-700 ml-1">{suggestionIcon.item.rating.value}</span>
+                                </div></>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div></>
+                    ))
+                  }
+                {/* App Info */}
+               
+              
+            </div>) }</>
           )}
             {/* <Globe className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> */}
           {/* </div> */}
