@@ -123,116 +123,116 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   }, []);
   
   //DataforSEO
-  // const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
-  //   setLoading(true);
-  //   try {
-  
-  //     // Replace with your DataForSEO API credentials
-  //     const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
-  //     const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
-  //     const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
-  //     const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
-  
-  //     // API request body
-  //     const requestBody = [
-  //       {
-  //         categories: ["Finance", "Business"],
-  //         description: searchQuery,
-  //         title: searchQuery,
-  //         limit: 100,
-  //         additional_data: {
-  //           filters: [["language_code", "=", "en"]],
-  //         },
-  //       },
-  //     ];
-  
-  
-  //     // Make both API calls in parallel by checkedItems
-  //     const apiCalls = [];
-
-  //     if (checkedItems["optionGoogle"] == true) {
-  //       apiCalls.push(
-  //         axios.post(API_URL, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
-      
-  //     if (checkedItems["optionApple"] == true) {
-  //       apiCalls.push(
-  //         axios.post(API_URL2, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
-      
-  //     // If no API calls were made, return an empty array to avoid errors
-  //     if (apiCalls.length === 0) {
-  //       setLoading(false);
-  //       return [];
-  //     }
-      
-  //     // Wait for all API calls to complete
-  //     const responses = await Promise.all(apiCalls);
-      
-  //     // Extract results safely
-  //     const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
-      
-  //     console.log("hit 3", results);
-      
-  //     setLoading(false);
-      
-  //     return results;      
-  //   } catch (error) {
-  //     setLoading(false);
-  //     console.error("Error fetching suggestions:", error);
-  //     return [];
-  //   }
-  // };
-
-  const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
+  const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
     setLoading(true);
-    console.log("ini checkedItems",checkedItems)
     try {
-      console.log("Fetching from local JSON...",searchQuery);
   
-      const API_URL = "datajson/data.json"; 
+      // Replace with your DataForSEO API credentials
+      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
+      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
+      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
+      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
+  
+      // API request body
+      const requestBody = [
+        {
+          categories: ["Finance", "Business"],
+          description: searchQuery,
+          title: searchQuery,
+          limit: 100,
+          additional_data: {
+            filters: [["language_code", "=", "en"]],
+          },
+        },
+      ];
+  
+  
+      // Make both API calls in parallel by checkedItems
+      const apiCalls = [];
 
-      // Fetch data from the local JSON file
-      const response = await fetch(API_URL);
-      const data = await response.json();
-
-      // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
-      const filteredResults = data.tasks.flatMap((task: any) =>
-        task.result.flatMap((resultItem: any) =>
-          resultItem.items.filter((item: any) =>
-            item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-        )
-      );
-
+      if (checkedItems["optionGoogle"] == true) {
+        apiCalls.push(
+          axios.post(API_URL, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
+      
+      if (checkedItems["optionApple"] == true) {
+        apiCalls.push(
+          axios.post(API_URL2, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
+      
+      // If no API calls were made, return an empty array to avoid errors
+      if (apiCalls.length === 0) {
+        setLoading(false);
+        return [];
+      }
+      
+      // Wait for all API calls to complete
+      const responses = await Promise.all(apiCalls);
+      
+      // Extract results safely
+      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      
+      console.log("hit 3", results);
+      
       setLoading(false);
-      console.log("Fetched data:", filteredResults);
-      return filteredResults;
+      
+      return results;      
     } catch (error) {
       setLoading(false);
       console.error("Error fetching suggestions:", error);
       return [];
     }
   };
+
+  // const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
+  //   setLoading(true);
+  //   console.log("ini checkedItems",checkedItems)
+  //   try {
+  //     console.log("Fetching from local JSON...",searchQuery);
+  
+  //     const API_URL = "datajson/data.json"; 
+
+  //     // Fetch data from the local JSON file
+  //     const response = await fetch(API_URL);
+  //     const data = await response.json();
+
+  //     // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
+  //     const filteredResults = data.tasks.flatMap((task: any) =>
+  //       task.result.flatMap((resultItem: any) =>
+  //         resultItem.items.filter((item: any) =>
+  //           item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //           item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  //         )
+  //       )
+  //     );
+
+  //     setLoading(false);
+  //     console.log("Fetched data:", filteredResults);
+  //     return filteredResults;
+  //   } catch (error) {
+  //     setLoading(false);
+  //     console.error("Error fetching suggestions:", error);
+  //     return [];
+  //   }
+  // };
     
     // Handle clicking outside the dropdown
     useEffect(() => {
