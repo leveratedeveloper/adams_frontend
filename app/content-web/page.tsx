@@ -7,6 +7,7 @@ import Link from 'next/link';
 import KeywordTable from '@/components/summary/KeywordTable';
 import React,{ useEffect, useState } from "react";
 import { getDataFromDB } from '../utils/indexedDb';
+import Cookies from 'js-cookie';
 
 export default function ContentPage() {
   // const handleClick = () => {
@@ -43,13 +44,13 @@ export default function ContentPage() {
         console.error("Error fetching data:", error);
       }
     };
+    sendItemtoCMS();
     fetchData();
   }, []); // No need to include `domain` in the dependency array
  // Function to call the API
  const fetchDataApi = async (domains: any) => {
     // setLoading(true); // Start loading
     try {
-      console.log("ini domain loh",domains)
       const response = await fetch('/api/serpstat', {
         method: 'POST',
         headers: {
@@ -58,22 +59,10 @@ export default function ContentPage() {
         body: JSON.stringify({
           params: {
             domain: domains, // Use the passed domain directly
-            se: 'g_id',
-            filters: {
-              right_spelling: false,
-              region_queries_count_from: 0,
-              region_queries_count_to: 30000,
-              position_from: 11,
-              position_to: 20,
-              difficulty_from: 0,
-              difficulty_to: 50,
-            },
           },
         }),
       });
-
       const result = await response.json();
-
       if (response.ok) {
         console.log("API Response:", result);
         setData(result); // Set the response data to state
@@ -88,6 +77,39 @@ export default function ContentPage() {
       setLoading(false); // Stop loading
     }
   };
+
+  const sendItemtoCMS = async () => {
+    const dbData = await getDataFromDB();
+    const sessionId = Cookies.get('sessionId');
+
+    if (Array.isArray(dbData) && dbData.length > 0) {
+      const lastItem = dbData[dbData.length - 1];
+      lastItem['session'] = sessionId
+      try {
+        const response = await fetch('/api/cmsAdam', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ lastItem }), // Sending lastItem
+        });
+  
+        const result = await response.json();
+  
+        if (response.ok) {
+          console.log('API Response:', result);
+        } else {
+          console.error('API Error:', result.error);
+        }
+      } catch (error) {
+        console.error('Error calling API:', error);
+      }
+    } else {
+      console.log('No data found in the database.');
+    }
+  };
+  
+  
 
   return (
     <div className="relative max-h-screen w-full">

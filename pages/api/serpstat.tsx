@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { params } = req.body; // Get the domain from the request body
   const domain = params?.domain; 
-  console.log('Received domain req:', domain);
+
   
   if (!domain) {
     return res.status(400).json({ error: 'Domain is required' });

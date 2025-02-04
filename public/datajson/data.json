@@ -2,17 +2,17 @@
     "version": "0.1.20241227",
     "status_code": 20000,
     "status_message": "Ok.",
-    "time": "0.3164 sec.",
-    "cost": 0.102,
+    "time": "0.2206 sec.",
+    "cost": 0.105,
     "tasks_count": 1,
     "tasks_error": 0,
     "tasks": [
         {
-            "id": "01291238-8872-0554-0000-d2e99f4de466",
+            "id": "02040234-8872-0554-0000-91d62ac28b7e",
             "status_code": 20000,
             "status_message": "Ok.",
-            "time": "0.2319 sec.",
-            "cost": 0.102,
+            "time": "0.2014 sec.",
+            "cost": 0.105,
             "result_count": 1,
             "path": [
                 "v3",
@@ -34,21 +34,21 @@
                 "order_by": [
                     "item.installs_count,asc"
                 ],
+                "limit": 10,
                 "filters": [
                     [
                         "item.rating.value",
                         ">",
                         2.5
                     ]
-                ],
-                "limit": 2
+                ]
             },
             "result": [
                 {
                     "total_count": 5,
-                    "count": 2,
+                    "count": 5,
                     "offset": 0,
-                    "offset_token": "eyJDdXJyZW50T2Zmc2V0IjoyLCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjIsIm9mZnNldCI6bnVsbCwiYWlkIjpudWxsfSwiUmF3UXVlcnkiOnsiZmllbGQiOiJpdGVtLnJhdGluZy52YWx1ZSIsInR5cGUiOiJndCIsInZhbHVlIjoyLjV9LCJJZCI6bnVsbCwiU2VhcmNoQWZ0ZXJEYXRhIjpbMTE2NTE3Mi4wLCJjb20udnEubWJyb2NodXJlZ3AuY2xpZW50LmFuZHJvaWQiXX0=",
+                    "offset_token": "eyJDdXJyZW50T2Zmc2V0Ijo1LCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjEwLCJvZmZzZXQiOm51bGwsImFpZCI6bnVsbH0sIlJhd1F1ZXJ5Ijp7ImZpZWxkIjoiaXRlbS5yYXRpbmcudmFsdWUiLCJ0eXBlIjoiZ3QiLCJ2YWx1ZSI6Mi41fSwiSWQiOm51bGwsIlNlYXJjaEFmdGVyRGF0YSI6WzY2NjI5MDEyLjAsImNvbS5iY2EiXX0=",
                     "items": [
                         {
                             "app_id": "com.exictos.mbanka.bca.ao",
@@ -184,6 +184,308 @@
                                 "videos": null,
                                 "similar_apps": null,
                                 "more_apps_by_developer": null,
+                                "genres": [
+                                    "Finance"
+                                ],
+                                "tags": [
+                                    "Finance"
+                                ]
+                            }
+                        },
+                        {
+                            "app_id": "com.bcadigital.blu",
+                            "se_domain": "play.google.com",
+                            "location_code": 2840,
+                            "language_code": "en",
+                            "check_url": "https://play.google.com/store/apps/details?id=com.bcadigital.blu&hl=en&gl=us",
+                            "time_update": "2025-01-16 19:31:09 +00:00",
+                            "item": {
+                                "type": "google_play_info_organic",
+                                "rank_group": 1,
+                                "rank_absolute": 1,
+                                "position": "left",
+                                "app_id": "com.bcadigital.blu",
+                                "title": "blu by BCA Digital",
+                                "url": "https://play.google.com/store/apps/details?id=com.bcadigital.blu&hl=en&gl=us",
+                                "icon": "https://play-lh.googleusercontent.com/-OdereTd6Aw2fdNV7K_N90Mhhzr3tcsuDlkFuYKZf7PgkM33SexLWRFmnhcRPuu52Q",
+                                "description": "blu Siap Jadi Pegangan Finansialmu!\n \nblu menjawab kebutuhan finansial kamu dengan cara baru agar kamu bisa wujudkan apa pun yang kamu tuju. blu adalah aplikasi mobile banking dari BCA Digital, anak perusahaan BCA\n \nblu punya layanan seamless yang bisa bikin kamu tenang dengan:\n• Koneksi ke sistem BCA\n• Sistem keamanan transaksi menggunakan PIN, Password, CVC, dan biometrik.\n• Customer care haloblu yang selalu ada buat kamu\n \nAda Untukmu, Apa Pun Tujuanmu\n \nPengen nabung buat sepatu baru? Gadget baru? Rumah? Mobil? Sekolah? Apa pun tujuanmu, we’ve got your back! blu punya akses layanan perbankan digital yang mudah dengan pengalaman yang seru. Kamu bisa:\n \n• Punya 20 tabungan dalam 1 rekening\n• Patungan online bisa sampai 50 orang\n• Buka deposito mulai dari Rp 1 juta, pencairan sebelum jatuh tempo gak kena penalti\n• Bayar/beli dalam satu aplikasi\n• Bayar pakai QRIS\n• bluVirtual Card dan bluDebit Card yang terkoneksi dengan Mastercard, memudahkan transaksimu di dalam maupun luar negeri.\n• Tarik dan Setor Tunai di ATM BCA\n• Investasi di bluInvest bekerjasama dengan partner terpercaya\n \n \nEits, belum selesai! Pakai blu bebas biaya admin bulanan, bebas biaya transfer via BI-FAST dari dan ke BCA unlimited,\n \nSo...tunggu apa lagi? Download blu sekarang!\n \nPerlu bantuan? Haloblu siap bantu kamu 24/7 via telepon 1500 668/ WhatsApp 0811-6500-668\n \nPT Bank Digital BCA\nMenara blu, The City Tower Lantai 11 Jl. M.H. Thamrin No.81, Menteng, 10310, Jakarta, Indonesia 10310\nhttps://www.blubybcadigital.id/",
+                                "reviews_count": 101182,
+                                "rating": {
+                                    "rating_type": "Max5",
+                                    "value": 4.3,
+                                    "votes_count": 101182,
+                                    "rating_max": 5
+                                },
+                                "price": {
+                                    "current": 0,
+                                    "regular": null,
+                                    "max_value": null,
+                                    "currency": "USD",
+                                    "is_price_range": false,
+                                    "displayed_price": null
+                                },
+                                "is_free": true,
+                                "main_category": "Finance",
+                                "installs": "1,000,000+",
+                                "installs_count": 3776903,
+                                "developer": "BCA Digital",
+                                "developer_id": "BCA+Digital",
+                                "developer_url": "https://play.google.com/store/apps/developer?id=BCA+Digital",
+                                "developer_email": "haloblu@bcadigital.co.id",
+                                "developer_address": "The City Tower Lantai 11, Jl. M.H. Thamrin No.81, RT.1/RW.6, Dukuh Atas, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310",
+                                "developer_website": "https://blubybcadigital.id",
+                                "version": "1.59.20",
+                                "minimum_os_version": "7.0",
+                                "size": null,
+                                "released_date": "2021-07-28 03:00:00 +00:00",
+                                "last_update_date": "2024-12-17 02:00:00 +00:00",
+                                "update_notes": "Tenang bertransaksi, senang sampai destinasi pakai Garuda x bluDebit Card, kartu debit terbaru kolaborasi blu dan Garuda Indonesia di versi 1.59.20  ✈️\nRequest Garuda x bluDebit Card dan dapatkan benefit:\n🎁 Welcome bonus aktivasi kartu 600 GarudaMiles &amp; welcome bonus transaksi hingga 5.000 GarudaMiles\n🛍️ GarudaMiles tiap transaksi pembelian pakai Garuda x bluDebit Card\n \nDi blu versi ini, kamu juga bisa Beli GarudaMiles bisa di aplikasi blu juga lho!\nYuk apdet blu kamu sekarang!",
+                                "images": [
+                                    "https://play-lh.googleusercontent.com/xPMln7NjdFrv0m-V9JwMS_6dZXV7IqHXN3fQA2QE0syZNEv7ruzryo3ujG8K-lF6Zw",
+                                    "https://play-lh.googleusercontent.com/D4ayouGbWLh1NWiWnN7vffyDzV27lfz8P18-yvHCyma6ALQJ4qLnw4ETzRd1nWeMSfM",
+                                    "https://play-lh.googleusercontent.com/hpr7LT3AlMHBTBetsrEzh4WiuZczF16GCM7w0I6A86XsLxCl_JMJKmx4Xm3Gq2jtSNXw",
+                                    "https://play-lh.googleusercontent.com/xwhNpC7Js4deCQqwhHphvbhKYCtV41W6xMk2_enk5i80gqHWCe6IxO7w1EAwkiTh3ww",
+                                    "https://play-lh.googleusercontent.com/dy_DJrCUCUtf2_mOXH6CVRtO1NkUNFuxQduiVNbMiUcc_KWaM-LVFHhIkwD6nqLzvg",
+                                    "https://play-lh.googleusercontent.com/BBF8wpFhAAGYvkNFf2dV0kR0RGvoje1Bafs5Z_sLUTxyUJ870nRtJCr-fUMiUBXPzLA",
+                                    "https://play-lh.googleusercontent.com/W4aTjlia1m54GxH9CfY2x2FcQjEMhDcweToF6udIU2FPLCPTtNiKhCpOqYybZMDgww",
+                                    "https://play-lh.googleusercontent.com/p3o1et3BHowtcJWN8gE54mfXMYptY2oUlpXJR1gAHWiPS4Am5EQs_DJp6qAg954nAJRo"
+                                ],
+                                "videos": null,
+                                "similar_apps": [
+                                    {
+                                        "app_id": "com.traveloka.android",
+                                        "title": "Traveloka: Book Hotel & Flight",
+                                        "url": "https://play.google.com/store/apps/details?id=com.traveloka.android"
+                                    },
+                                    {
+                                        "app_id": "com.partipost",
+                                        "title": "Partipost",
+                                        "url": "https://play.google.com/store/apps/details?id=com.partipost"
+                                    },
+                                    {
+                                        "app_id": "com.ocbc.mobile",
+                                        "title": "OCBC Digital - Mobile Banking",
+                                        "url": "https://play.google.com/store/apps/details?id=com.ocbc.mobile"
+                                    }
+                                ],
+                                "more_apps_by_developer": null,
+                                "genres": [
+                                    "Finance"
+                                ],
+                                "tags": [
+                                    "Finance"
+                                ]
+                            }
+                        },
+                        {
+                            "app_id": "com.bca.halobca.android",
+                            "se_domain": "play.google.com",
+                            "location_code": 2840,
+                            "language_code": "en",
+                            "check_url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android&hl=en&gl=us",
+                            "time_update": "2025-01-16 19:31:08 +00:00",
+                            "item": {
+                                "type": "google_play_info_organic",
+                                "rank_group": 1,
+                                "rank_absolute": 1,
+                                "position": "left",
+                                "app_id": "com.bca.halobca.android",
+                                "title": "Halo BCA",
+                                "url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android&hl=en&gl=us",
+                                "icon": "https://play-lh.googleusercontent.com/L1qd4xiKqRm-fsjETp6824KFazKKZI4FltwI0mK-ni0Evr9LeMA3GHJ691Y2S5MTJ1HD",
+                                "description": "It&#39;s time for a tour of the new haloBCA world! With the new look, enjoy these benefits below:\n\n1. Easy Access with BCA ID\nIn the new world of haloBCA, you can already access haloBCA with the BCA ID that you already have. Don’t have a BCA ID? You can register in this application.\n\n2. Using Biometric, Safer and More Convenient\nAfter setting up your Biometric feature, just scan your face or fingerprint to get into haloBCA app.\n\n3. Contact Customer Service Without Credit\nYou can contact our Customer Service with Voice over Internet Protocol (VoIP) credit-free call or simply through Halo BCA Chat.\n\n4. Works Anywhere\nhaloBCA can be used anywhere in Indonesia and abroad as long as your phone is connected to an internet network.\n\n5. Trustworthy Halo BCA Number &amp; Account\nNo need to worry about fake Halo BCA contacts that are circulating and troubling. Access official BCA contacts through the Email and X (Twitter) menu.\n\n6. Update Data Directly from the Application\nYou can update your data from a smartphone. Just access the &quot;Akun Saya&quot; menu from this application.\n\n7. Check The Report Status\nYou can check your report status and handling time estimation from the apps.\n\nCheck out more information at www.bca.co.id/halobca\n\nHave a great tour inside the haloBCA world!",
+                                "reviews_count": 16758,
+                                "rating": {
+                                    "rating_type": "Max5",
+                                    "value": 3.8,
+                                    "votes_count": 16758,
+                                    "rating_max": 5
+                                },
+                                "price": {
+                                    "current": 0,
+                                    "regular": null,
+                                    "max_value": null,
+                                    "currency": "USD",
+                                    "is_price_range": false,
+                                    "displayed_price": null
+                                },
+                                "is_free": true,
+                                "main_category": "Finance",
+                                "installs": "5,000,000+",
+                                "installs_count": 8115350,
+                                "developer": "PT Bank Central Asia Tbk.",
+                                "developer_id": "9162366183828083338",
+                                "developer_url": "https://play.google.com/store/apps/dev?id=9162366183828083338",
+                                "developer_email": "halobca@bca.co.id",
+                                "developer_address": null,
+                                "developer_website": "https://www.bca.co.id/halobca",
+                                "version": "2.4.1",
+                                "minimum_os_version": "7.0",
+                                "size": null,
+                                "released_date": "2021-07-25 03:00:00 +00:00",
+                                "last_update_date": "2025-01-08 02:00:00 +00:00",
+                                "update_notes": "Get the updated version of haloBCA Apps, you can check your report status and handling time estimation from the apps.",
+                                "images": [
+                                    "https://play-lh.googleusercontent.com/raf8b-gx56L3QxnpUfatHU82M1IDtJkDI7PFrQ5NBC-k4FN0BXdWuJn6pEiINvYN7ys",
+                                    "https://play-lh.googleusercontent.com/AB0X9zLDi4Vk867zjfbdvQZvN0FNmkCJtdbHiSDxH2ArqHYaCpT_RcF9IL96y7J1qS3_",
+                                    "https://play-lh.googleusercontent.com/lo-o8DddCwsZ0sfkgOkxmhFZ5Z_8ksFmdRkoXDeDpJZUK3KF2GWQFtJyG4jyt8PG57M",
+                                    "https://play-lh.googleusercontent.com/4TnyLaRQSF_BhLyq0qHY_rRGcBT1AcuQ1ly5eO4Vkehp6G8aHLcFMQQzRpsJJH4dp8gX",
+                                    "https://play-lh.googleusercontent.com/UVHVsS1F8RLQp3M5LzcP1XQi5TzyMSEasAFA2wpodJatfEDGriTm6n8lVqNlaBN5yIxh",
+                                    "https://play-lh.googleusercontent.com/DtwbKdWhsC6zXBQzbQD-JFxWXJryoYEzR6KvSZSVLsYfGqJbQkry0NyNYjzIC6DsUVPZ"
+                                ],
+                                "videos": null,
+                                "similar_apps": [
+                                    {
+                                        "app_id": "com.bca.mybca.omni.android",
+                                        "title": "myBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
+                                    },
+                                    {
+                                        "app_id": "com.bca",
+                                        "title": "BCA mobile",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca"
+                                    },
+                                    {
+                                        "app_id": "com.bca.sakuku",
+                                        "title": "Sakuku",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
+                                    },
+                                    {
+                                        "app_id": "com.bca.keybca",
+                                        "title": "keyBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
+                                    }
+                                ],
+                                "more_apps_by_developer": [
+                                    {
+                                        "app_id": "com.bca.mybca.omni.android",
+                                        "title": "myBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
+                                    },
+                                    {
+                                        "app_id": "com.bca",
+                                        "title": "BCA mobile",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca"
+                                    },
+                                    {
+                                        "app_id": "com.bca.sakuku",
+                                        "title": "Sakuku",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
+                                    },
+                                    {
+                                        "app_id": "com.bca.keybca",
+                                        "title": "KeyBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
+                                    }
+                                ],
+                                "genres": [
+                                    "Finance"
+                                ],
+                                "tags": [
+                                    "Finance"
+                                ]
+                            }
+                        },
+                        {
+                            "app_id": "com.bca",
+                            "se_domain": "play.google.com",
+                            "location_code": 2840,
+                            "language_code": "en",
+                            "check_url": "https://play.google.com/store/apps/details?id=com.bca&hl=en&gl=us",
+                            "time_update": "2025-01-16 19:31:09 +00:00",
+                            "item": {
+                                "type": "google_play_info_organic",
+                                "rank_group": 1,
+                                "rank_absolute": 1,
+                                "position": "left",
+                                "app_id": "com.bca",
+                                "title": "BCA mobile",
+                                "url": "https://play.google.com/store/apps/details?id=com.bca&hl=en&gl=us",
+                                "icon": "https://play-lh.googleusercontent.com/ggZzVVDWsTm7gSnVl8m3cNFgoeUN2r7dhAZdB8lz0d_s6ZcYOkvUQdbG3dPU5LHZnWvc",
+                                "description": "Bank on the go with BCA mobile app. Conduct non-cash transactions using BCA mobile banking (m-BCA) and BCA internet banking (KlikBCA Smartphone) whenever, wherever.\n\nm-BCA Benefits\n1. No SIM card changes\nm-BCA transactions are available through all GSM operators, including Telkomsel, XL Axiata, Indosat, Axis, and Three\n2. Low transactions cost \nReduce unnecessary cost using GPRS/EDGE/3G/WIFI internet connection\n3. Payment Data Storage\nm-BCA’s storage feature enables you to conduct repeat transactions without having to input the data all over again\n4. Transfer Data\nm-BCA saves your transfer activities--whether you’re sending funds between BCA accounts or to other banks—to a list for a time-saving and reliable banking experience\n5. Practical and Easy to Use\nRecipient company or banking code is not required for payment and transfer transactions.\n\nFor BCA mobile users with Android OS and iOS, can enjoy the latest services as follows:\n1. Block BCA ATM Card or BCA Credit Card facility through m-Admin menu \n2. BCA Credit Card Activation feature through menu m-Admin → Credit Card Activation\n3. BCA Credit Card PIN Make / change facility via m-Admin menu → Create / Change PIN.\n4. Cardless Transaction feature through Setor Tarik menu → Cash withdrawal and cash deposit. \n5. Transfer without hassle through QR menu → Send or receive money using QR\nFor the time being, Cardless Transactions can be made at these following ATMs (www.bca.co.id/ATMtanpakartu)\n\nKlikBCA \nEasy to access KlikBCA smartphone version smartphone https://m.klikbca.com with just one click\n\nInfo BCA \nLink to our corporate website https://www.bca.co.id/promo\n\nBuka Rekening Baru\nNow you can open bank account anywhere just with your mobile phone. What you need to do to get your bank account is only by providing e-KTP, completing the form, and doing video call with our Customer Service Officer through BCA mobile application. After you done, you’ll get the success notification of your opening account; you might need to directly activate your mobile banking service (by creating PIN number for transaction) and deposit money to your account. Then you are ready to do any transaction with your BCA mobile application (m-BCA menu). You will also get KlikBCA account the day after you succeed creating your mobile banking PIN via email.\n\nInfo Saldo Flazz \nEasy to check balance as well as the latest 10 transaction information from Flazz card, on Android smartphone equipped with Near Field Communication (NFC) feature. \n\nFor further assistant, call halo bca at 1500888 via cellular phone\n\nEnjoy using the BCA mobile.",
+                                "reviews_count": 1336549,
+                                "rating": {
+                                    "rating_type": "Max5",
+                                    "value": 3.4,
+                                    "votes_count": 1336549,
+                                    "rating_max": 5
+                                },
+                                "price": {
+                                    "current": 0,
+                                    "regular": null,
+                                    "max_value": null,
+                                    "currency": "USD",
+                                    "is_price_range": false,
+                                    "displayed_price": null
+                                },
+                                "is_free": true,
+                                "main_category": "Finance",
+                                "installs": "50,000,000+",
+                                "installs_count": 66629011,
+                                "developer": "PT Bank Central Asia Tbk.",
+                                "developer_id": "9162366183828083338",
+                                "developer_url": "https://play.google.com/store/apps/dev?id=9162366183828083338",
+                                "developer_email": "halobca@bca.co.id",
+                                "developer_address": null,
+                                "developer_website": "http://www.bca.co.id",
+                                "version": "4.5.6",
+                                "minimum_os_version": "7.0",
+                                "size": null,
+                                "released_date": "2012-11-12 02:00:00 +00:00",
+                                "last_update_date": "2025-01-15 02:00:00 +00:00",
+                                "update_notes": "Versi terbaru BCA mobile memberikan kenyamanan dan kecepatan dalam bertransaksi!\n\nTunggu apa lagi, yuk update BCA mobile sekarang juga!",
+                                "images": [
+                                    "https://play-lh.googleusercontent.com/nT1ouh9h2bqRjQHEcZ_pDN8Pb5TC3CY95B-24I0SYF69TP0IaslwBrTjpEk3wDXyZVg",
+                                    "https://play-lh.googleusercontent.com/8TbIKDyXrTl0pBnEJJvLeSYhKbkziAiWa-52NXecECI3AUrStCKbZIbtQlF3OCJRxdc",
+                                    "https://play-lh.googleusercontent.com/iD7G7XhR8B9Cjofk9UDhiXzGKvWF8-aVZbYPfdN-M7PeWFljbOT2WZKoW-rX_vS3Xw",
+                                    "https://play-lh.googleusercontent.com/mSdKvNVb9_L2z6y18b9z10IO2QWjUcnL1O8Ls7nYeX6k5sW6llTpYbfZhfFZ0Vf2VEGs",
+                                    "https://play-lh.googleusercontent.com/_-12VnA4Wlk94-YoMCTfgcOiBx9N2NapuUserELM-LCvjHnCWazKxmeFYP_xF_GLRmzz",
+                                    "https://play-lh.googleusercontent.com/yOciqUVdTr1Xkx5BtRk_c6z2mKdKupJrCYMX4SWzziWkfHxkKnyvoOEa6CJaG6ZBmWU",
+                                    "https://play-lh.googleusercontent.com/ou5bhiWOJv_N1JAeH2wSQ7zsJiOqgAktXfmGMxJ4CA9HW3ldKq7saHQ1R9B3UA0sGQ",
+                                    "https://play-lh.googleusercontent.com/OmLIW_Qa5-cph35GYVDcp43kac8PgbVBMPLR-6P4_GL4WxFHG1K5pznczSUrjaZAQk4"
+                                ],
+                                "videos": [
+                                    "https://play.google.com/video/lava/web/player/yt:movie:FdmGaYt5QwM?autoplay=1&embed=play"
+                                ],
+                                "similar_apps": [
+                                    {
+                                        "app_id": "com.grab.merchant",
+                                        "title": "GrabMerchant",
+                                        "url": "https://play.google.com/store/apps/details?id=com.grab.merchant"
+                                    },
+                                    {
+                                        "app_id": "com.grabtaxi.driver2",
+                                        "title": "Grab Driver: App for Partners",
+                                        "url": "https://play.google.com/store/apps/details?id=com.grabtaxi.driver2"
+                                    },
+                                    {
+                                        "app_id": "com.dbs.sg.dbsmbanking",
+                                        "title": "DBS digibank",
+                                        "url": "https://play.google.com/store/apps/details?id=com.dbs.sg.dbsmbanking"
+                                    }
+                                ],
+                                "more_apps_by_developer": [
+                                    {
+                                        "app_id": "com.bca.mybca.omni.android",
+                                        "title": "myBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
+                                    },
+                                    {
+                                        "app_id": "com.bca.halobca.android",
+                                        "title": "Halo BCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android"
+                                    },
+                                    {
+                                        "app_id": "com.bca.sakuku",
+                                        "title": "Sakuku",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
+                                    },
+                                    {
+                                        "app_id": "com.bca.keybca",
+                                        "title": "KeyBCA",
+                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
+                                    }
+                                ],
                                 "genres": [
                                     "Finance"
                                 ],
