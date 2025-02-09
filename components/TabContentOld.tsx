@@ -108,7 +108,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
                 </div>
                 <div className="flex gap-4">
                   <select className="rounded-full px-4 py-2">
-                    <option value="indonesia">Indonesia</option>
+                    <option value="Indonesia">Indonesia</option>
                   </select>
                 </div>
             </div>
@@ -196,7 +196,7 @@ export function TabContent({ value, placeholder }: TabContentProps) {
           </div>
           <div className="flex gap-4">
             <select className="rounded-full px-4 py-2">
-              <option value="indonesia">Indonesia</option>
+              <option value="Indonesia">Indonesia</option>
             </select>
           </div>
         </div>

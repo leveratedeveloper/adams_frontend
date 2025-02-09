@@ -4,6 +4,7 @@ import ServiceCard from '@/components/summary/ServiceCard';
 import TabSwitch from '@/components/summary/TabSwitch';
 import Header from '@/components/general/header';
 import Link from 'next/link';
+import { Footer } from '@/components/Footer';
 
 export default function ContentPage() {
  
@@ -200,6 +201,7 @@ export default function ContentPage() {
         {/* Services Section */}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -6,12 +6,12 @@ import { TabsContent } from '@/components/ui/tabs';
 import React,{ useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi"; // Using react-icons for the icon
 import { Smartphone } from 'lucide-react';
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { saveDataToDB, getDataFromDB,deleteAllData } from '../utils/indexedDb';
 import Cookies from 'js-cookie';
 import axios from 'axios';
-
+import Modal from "@/components/hubspotmodal/modal";
 
 interface TabContentProps {
   value: string;
@@ -21,12 +21,9 @@ interface TabContentProps {
 export default function  Page({ value, placeholder }: TabContentProps)  {
   const router = useRouter();
   const [isOn, setIsOn] = useState(true);
-  const [valueSlideArticle, setValueArticle] = useState();
-  const [valueKeyword, setValueKeyword] = useState();
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [sliderValue, setSliderValue] = useState<number>(0);
   const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
+  const [isOpenConsult, setIsOpenConsult] = useState(false);
 
 
   //DataforSEO
@@ -40,7 +37,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const [formData, setFormData] = useState({
     url:'',
-    country: 'indonesia',
+    country: 'Indonesia',
     premium_backlink: true,
     keyword_optimized: 5,
     article_development: 5,
@@ -106,8 +103,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
 
   useEffect(() => {
-    console.log("ini checkedItems", checkedItems);
-  
     const fetchDataDB = async () => {
       const dbData = await getDataFromDB();
       console.log("ini dbData", dbData);
@@ -453,7 +448,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               </div>
               <div className="flex gap-4">
                 <select className="w-full rounded-full px-4 py-2 border-2 border-gray-200">
-                  <option value="indonesia">Indonesia</option>
+                  <option value="Indonesia">Indonesia</option>
                 </select>
               </div>
             </div>
@@ -617,7 +612,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 className="w-full rounded-full px-3 py-2 border-2 border-gray-200"
                 onChange={handleChange}
                 value={formData.country || ""}>
-                <option value="indonesia">Indonesia</option>
+                <option value="Indonesia">Indonesia</option>
               </select>
             </div>
           </div>
@@ -628,7 +623,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <div className="flex items-center">
                 <h3 className="text-sm font-medium mr-2">Premium Backlink</h3>
                 <div className="relative group">
-                  <button className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                  <button className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
                    aria-label="Information">
                     ⓘ
                   </button>
@@ -726,6 +721,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
           {/* </Link> */}
         </div>
+         
     </TabsContent>
   );
 }

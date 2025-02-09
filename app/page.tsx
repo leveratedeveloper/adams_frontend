@@ -1,5 +1,4 @@
-import { Globe, Smartphone } from 'lucide-react';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+'use client';
 import  TabContent  from './tab-content/page';
 import Image from "next/image";
 import logoAdams from "../public/img/Logo_Adams_Chillax.png";
@@ -9,19 +8,25 @@ import WhyAdams from '@/components/Whyadams';
 import ProvenResult from '@/components/ProvenResult';
 import Boost from '@/components/Boost';
 import LogoCarousel from '@/components/LogoCarousel';
+import { useState } from 'react';
+import Modal from "@/components/hubspotmodal/modal";
+import { useModal } from "../contexts/ModalContext";
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
+   const { isOpen, setIsOpen } = useModal();
   return (
-    <div className="relative min-h-screen w-full">
+    <><div className="relative min-h-screen w-full">
       <Header />
-    <div className="absolute inset-0 backdrop-blur-lg" style={{
-          backgroundImage: `url('../public/img/background_adams.webp')`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          filter: 'blur(10px)', // Additional CSS blur if needed
-        }}
+
+      <div className="absolute inset-0 backdrop-blur-lg" style={{
+        backgroundImage: `url('../public/img/background_adams.webp')`,
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        filter: 'blur(10px)', // Additional CSS blur if needed
+      }}
       ></div>
-    <main className="relative z-10 items-center justify-center min-h-screen bg-[url('../public/img/background_adams.webp')] bg-no-repeat md:bg-contain bg-top overflow-x-hidden">
+      <main className="relative z-10 items-center justify-center min-h-screen bg-[url('../public/img/background_adams.webp')] bg-no-repeat md:bg-contain bg-top overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-1">
           {/* Logo and Header */}
           <Boost />
@@ -49,7 +54,16 @@ export default function Home() {
           <WhyAdams />
           <ProvenResult />
         </div>
+        {/* Modal */}
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          {/* Embedded HubSpot Meeting */}
+          <iframe
+            src="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
+            className="w-full h-96 border rounded"
+            allowFullScreen
+          ></iframe>
+        </Modal>
       </main>
-    </div>
+    </div><Footer /></>
   );
 }

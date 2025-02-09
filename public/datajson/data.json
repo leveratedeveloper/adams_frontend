@@ -1,502 +1,1041 @@
-{
-    "version": "0.1.20241227",
-    "status_code": 20000,
-    "status_message": "Ok.",
-    "time": "0.2206 sec.",
-    "cost": 0.105,
-    "tasks_count": 1,
-    "tasks_error": 0,
-    "tasks": [
-        {
-            "id": "02040234-8872-0554-0000-91d62ac28b7e",
-            "status_code": 20000,
-            "status_message": "Ok.",
-            "time": "0.2014 sec.",
-            "cost": 0.105,
-            "result_count": 1,
-            "path": [
-                "v3",
-                "app_data",
-                "google",
-                "app_listings",
-                "search",
-                "live"
-            ],
-            "data": {
-                "api": "app_data",
-                "function": "search",
-                "se": "google",
-                "title": "bca",
-                "description": "bca",
-                "categories": [
-                    "Finance"
-                ],
-                "order_by": [
-                    "item.installs_count,asc"
-                ],
-                "limit": 10,
-                "filters": [
-                    [
-                        "item.rating.value",
-                        ">",
-                        2.5
-                    ]
-                ]
+[
+    {
+        "app_id": "com.gojek.gopay",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.gojek.gopay&hl=en&gl=us",
+        "time_update": "2025-01-30 03:28:44 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.gojek.gopay",
+            "title": "GoPay: Transfer Pulsa Bills",
+            "url": "https://play.google.com/store/apps/details?id=com.gojek.gopay&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/COG1sOAwyt_rkT5Lqv5I2PT2lic0YQ_bPAOVKnM3AxGBqeef5QJ2cfHHRDbJP5BGLBTx",
+            "description": "Always cheap price in GoPay app! You can get:\n1. Pulsa 15K, the price is 9.9K\n2. PLN electricity tokens 20K, the price is 15K\n3. Data packages starting from 4K from all providers\n\n----------\n\nTRANSFER ANYWHERE\n- FREE transfer 100x/month to any bank starting from BCA, BNI, BRI, BSI, CIMB, Jago, Mandiri, Permata, and others\n- Transfer balance &amp; top up to e-wallet / digital wallet DANA, OVO, and ShopeePay easily. Also accept transfers from FLIP\n- Safe transfers with On-Time Guarantee, get FREE GoPay Coins if your transfer is not processed within one minute\n\nCHEAP CREDIT &amp; DATA PACKAGES\n- Buy credit &amp; data packages for Telkomsel, IM3 Indosat, XL, Axis, Smartfren, 3\n- Daily, weekly, monthly credit &amp; data packages available\n\nPAY, BUY, TOP UP ANY TRANSACTION\n- Top up GoPay via Debit &amp; Virtual Account FREE admin fee 5x/month\n- Pay &amp; buy PLN electricity tokens, check PLN electricity bills, PDAM water bills, BPJS Ketenagakerjaan &amp; BPJS Kesehatan bills, vehicle tax to streaming services\n- Top up games from mobile Diamond FF &amp; MLBB to Steam PC vouchers at GoPay Games\n- Pay for transactions at Gojek, GoFood, GoSend, GoRide, GoCar, and others\n- Pay for transactions and shopping at e-commerce Tokopedia, use GoPay for lots of cashback, discounts, and promo\n- Buy movie tickets via TIX.ID, now you can use GoPay\n- Split bills, just take a photo of the receipt, the split will be billed directly in the GoPay application\n\nSCAN ANY QRIS\n- Scan QRIS at the cashier\n- Always get GoPay Coins cashback with QRIS Unlimited every time you pay QRIS using the GoPay digital wallet\n\nMANY PROMOS, CASHBACKS, DISCOUNTS\n- Enjoy various promos for new users, cashback up to 25K\n- Shop during payday / salary promos at favorite online merchants, GoPay Coins cashback up to 5K\n- Shop directly at Alfamart and Indomaret, there is a cashback promo of up to 5K\n\nSCAN ANY QRIS\n- Find QRIS? Scan at the cashier and pay cashless faster, only in seconds.\n- Earn even more cashback promo on every transaction with QRIS Unlimited.\n\nLOANS WITH GOPAY PINJAM\n- Online cash loan with limit of up to Rp15 million.\n- Loan duration, shortest tenure is 61 days, longest tenure is 183 days.\n- Interest rate (APR) minimum of 17.6% to a maximum of 36% per annum (depending on the loan tenure).\n- For illustration, for loan amount of Rp1,000,000 with tenure of 93 days, total interest is as follows:\nTotal interest rate = 17.6%/365 * 93 * Rp1,000,000 = Rp44,742\nTotal repayment = Rp1,000,000 + Rp44,742 = Rp1,044,742\nMonthly repayment of Rp348,247\n\nTRACK AUTO-RECORDED EXPENSES\n- Your expenses are automatically recorded and categorized to help you stay in control.\n- Know how much you spend for food, transport, groceries, shopping, and more for easier budgeting.\n- Compare your spending from month to month.\n\nGOPAY AMAN WITH FULL PROTECTION\n- Your account is protected with PIN, biometric, Touch &amp; Face ID to secure your transaction.\n- 24/7 Customer Service ready at your service.\n- Money Back Guarantee will refund your money in case of unexpected loss.\n- We keep your data confidential and you&#39;re always in control over how it&#39;s used.\n\nNo matter where you are in Indonesia, we&#39;ve got your back! Hit that download button, and kick off your financial adventure with, GoPay app, your digital wallet!\n\nCheck out GoPay social media accounts and never miss an update:\nInstagram - @gopayindonesia\nFacebook - GoPay Indonesia\nTwitter - @gopayindonesia\nYouTube - GoPay Indonesia\n\nHave questions or complaints with GoPay app service? Reach us at:\nEmail - customerservice@gopay.co.id\nCall Center - 1500729\n\nPT Dompet Anak Bangsa\nGedung Pasaraya Blok M, Gedung B, Lt. 3 Jalan Iskandarsyah II No. 2, Melawai, Kebayoran Baru Jakarta Selatan 12160\nWebsite - gopay.co.id\nTelephone - 021 213821938",
+            "reviews_count": 630658,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 630658,
+                "rating_max": 5
             },
-            "result": [
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "10,000,000+",
+            "installs_count": 46054134,
+            "developer": "PT. GoTo Gojek Tokopedia Tbk",
+            "developer_id": "4853785597837765677",
+            "developer_url": "https://play.google.com/store/apps/dev?id=4853785597837765677",
+            "developer_email": "customserservice@gopay.co.id",
+            "developer_address": "Pasaraya Blok M Gedung B Lt. 6, Jalan Iskandarsyah II No.7, RW. 2, Melawai, Kebayoran Baru, RT.3/RW.1, Kota Jakarta Selatan, 12160, Indonesia",
+            "developer_website": "https://gopay.co.id/",
+            "version": "1.40.1",
+            "minimum_os_version": "5.0",
+            "size": null,
+            "released_date": "2023-07-24 03:00:00 +00:00",
+            "last_update_date": "2025-01-21 02:00:00 +00:00",
+            "update_notes": "SMOOTHER APP FOR YOU\nIn this update we bashed all the bug to make sure your payments and transactions smoother, safer, and more convenient.\n\nCheers!",
+            "images": [
+                "https://play-lh.googleusercontent.com/bUa7rHCxqQhUD4Tz9uza_MpG9OBI6bSMnzX9AYdV2qit0IxEAaktn0tw7WRJrx37VUs",
+                "https://play-lh.googleusercontent.com/qGeu5kHxJjPtE8EpoHztJbBdlavcQyIKGFyf_x1yIh7s4_O89hP887EMLno79Jlz99k",
+                "https://play-lh.googleusercontent.com/wtwjxgfclr8hrM5x7fYLXPKetIk0ouUk-AxqfeniKPR34_3MbOYtfUER4TN1Ek2Xnt1D",
+                "https://play-lh.googleusercontent.com/v3O0hUZt0VLqqG1AHK4UBxFM099MvJf_9mCSUlWnsSN0cBZwVdJEofdyHdGPp_4NK_S8",
+                "https://play-lh.googleusercontent.com/8gT_LfGh54zuDQDZl5Pwf5gHxGkC5nz1SB8_tcHPxC1V9xzYQK6jhIHVa2QXdcJbgsa3",
+                "https://play-lh.googleusercontent.com/3FWF13I2akeeS6yt1NJGO-804MOXbtYOiaagUJFDRAUwZHrwzukPozXVS2FMFoMgcJk",
+                "https://play-lh.googleusercontent.com/aRjk24Ii0L4SY_BNHmiG66EWTBU8cUyIPi55IWb8fhz6eD60YYdpTp5umV0OXGjsueo",
+                "https://play-lh.googleusercontent.com/I2A2QwX-ItE6m5ps3sxWyDU-TnnyYZMIOk6Uj_ZxOVVjVYivptOkIdkMZtAwsIS_HGU"
+            ],
+            "videos": [
+                "https://play.google.com/video/lava/web/player/yt:movie:QC5Lnhe9bz8?autoplay=1&embed=play"
+            ],
+            "similar_apps": [
                 {
-                    "total_count": 5,
-                    "count": 5,
-                    "offset": 0,
-                    "offset_token": "eyJDdXJyZW50T2Zmc2V0Ijo1LCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjEwLCJvZmZzZXQiOm51bGwsImFpZCI6bnVsbH0sIlJhd1F1ZXJ5Ijp7ImZpZWxkIjoiaXRlbS5yYXRpbmcudmFsdWUiLCJ0eXBlIjoiZ3QiLCJ2YWx1ZSI6Mi41fSwiSWQiOm51bGwsIlNlYXJjaEFmdGVyRGF0YSI6WzY2NjI5MDEyLjAsImNvbS5iY2EiXX0=",
-                    "items": [
-                        {
-                            "app_id": "com.exictos.mbanka.bca.ao",
-                            "se_domain": "play.google.com",
-                            "location_code": 2840,
-                            "language_code": "en",
-                            "check_url": "https://play.google.com/store/apps/details?id=com.exictos.mbanka.bca.ao&hl=en&gl=us",
-                            "time_update": "2025-01-23 04:41:06 +00:00",
-                            "item": {
-                                "type": "google_play_info_organic",
-                                "rank_group": 1,
-                                "rank_absolute": 1,
-                                "position": "left",
-                                "app_id": "com.exictos.mbanka.bca.ao",
-                                "title": "BCA Mobile",
-                                "url": "https://play.google.com/store/apps/details?id=com.exictos.mbanka.bca.ao&hl=en&gl=us",
-                                "icon": "https://play-lh.googleusercontent.com/1rmO8C2Z46Ly3YD2rHMYs1-Al-IAwnSOMu8_yuJHAthtaT9tANqsMFS59It7bZMQRBM",
-                                "description": "No BCA Mobile pode:\n- Efectuar a personalização do ecrã;\n- Consultar saldos, movimentos, NIB, IBAN e SWIFT;\n- Consultar contas de depósito a prazo;\n- Consultar detalhes sobre créditos contraídos;\n- Agendar e efectuar transferências Conta a Conta e Interbancárias;\n- Efectuar transferências KWiK (usando número do telemóvel, email ou nickname);   \n- Carregar o saldo do telemóvel e pagar a conta da energia, água, televisão, internet, entre outros;\n- Consultar a taxa de câmbio;\n- Levantamento sem Cartão;\n- Bloquear cartões, em situações de emergência (perda/roubo);\n- Definir limites diários nos cartões multicaixa;\n- Consultar operações e exportar detalhes em documento PDF;\n- Criar e utilizar favoritos de transferências e pagamentos de serviços;\n- Pagamentos de Impostos, incluindo RUPE;\n- Consulta de Posição Integrada, com visualização gráfica de activos vs passivos;\n- Localizador de Serviços – A partir da sua posição actual, ou outra por si determinada, pode localizar os serviços BCA mais próximos de si, assim como as respectivas moradas e contactos.\nE muito mais...",
-                                "reviews_count": 145,
-                                "rating": {
-                                    "rating_type": "Max5",
-                                    "value": 4.2,
-                                    "votes_count": 145,
-                                    "rating_max": 5
-                                },
-                                "price": {
-                                    "current": 0,
-                                    "regular": null,
-                                    "max_value": null,
-                                    "currency": "USD",
-                                    "is_price_range": false,
-                                    "displayed_price": null
-                                },
-                                "is_free": true,
-                                "main_category": "Finance",
-                                "installs": "10,000+",
-                                "installs_count": 26095,
-                                "developer": "Banco Comercial Angolano",
-                                "developer_id": "Banco+Comercial+Angolano",
-                                "developer_url": "https://play.google.com/store/apps/developer?id=Banco+Comercial+Angolano",
-                                "developer_email": "servicesdesk@bca.co.ao",
-                                "developer_address": null,
-                                "developer_website": "http://www.bca.co.ao",
-                                "version": "4.3.9",
-                                "minimum_os_version": "5.0",
-                                "size": null,
-                                "released_date": "2019-02-27 02:00:00 +00:00",
-                                "last_update_date": "2024-07-25 03:00:00 +00:00",
-                                "update_notes": "Temos o prazer de anunciar que lançamos uma nova aplicação, agora com uma imagem renovada e uma interface ainda mais amigável!\nNesta nova versão, poderá encontrar diversas melhorias e funcionalidades, pelo que convidamos todos a experimentar a nova aplicação.\nAgradecemos pela sua confiança.\nBCA, o Banco que pensa em si...",
-                                "images": [
-                                    "https://play-lh.googleusercontent.com/-m3RLtZAZtvnKXjdWHKY1OR-umLXD3DtYaei0Ni7XhrcGPQPftou73U_G3tDPGWXJJk",
-                                    "https://play-lh.googleusercontent.com/HOfBT06JnkVlXGisXIOjWPylnibjph074yq5NKuLeJ1YUKBv0DrjxCHwr-XWJPZGoqs",
-                                    "https://play-lh.googleusercontent.com/0a8XhpNFKqbwP5YRvM9ZQ9hM-ELkd1vK1F7x0AtxfX00Af4hMorZjTrJgVFaYnxe9Q",
-                                    "https://play-lh.googleusercontent.com/FJVJrVKa3C22b4xIl_kpzchkcMg1IZiH8Uxdigi1VgM7M7ukBaukiP9pil6Ft9DeAJub",
-                                    "https://play-lh.googleusercontent.com/F05cjJ4wrPahdgdNXC8UqUlmAvtF3uvoq7llvZMQwyJBFyn-TYOfMO3oFdkez2j6cA",
-                                    "https://play-lh.googleusercontent.com/j_Hl2LnypdgzPwz87F77HGLhj3wOAEtTP7lnTXaT80DmfsHiYdE6N60Dg0MKKqtPi84",
-                                    "https://play-lh.googleusercontent.com/lCIaNLkVSPX4nqEuaqquxTjPhv_KhTVlJ4yEJrAuCvejGDJro28NgC3c1d0Jfox37ob3",
-                                    "https://play-lh.googleusercontent.com/OzU6JptymwCoze-lzC7ziB2JyyPcMLJ_XGvY2XLl7ghpN5RMempx0I9Q4nvlVDDyYg",
-                                    "https://play-lh.googleusercontent.com/gyAQVhJjIZWXSzxh-n_wdlPO9ky-fYzr16AI0YspB1YhsDu8k1E0ObH5yyDZIWGF-U8",
-                                    "https://play-lh.googleusercontent.com/Nzn7197d867X_hlNFLu0cW0vkBZvre3vNAZYL873GxNoFAl23rB2ezVLR0ZwiKEihkY",
-                                    "https://play-lh.googleusercontent.com/zmA6lJBW9XL47ZoCiiB-LXgviTRqLNeWMpFdmafdn3eSyX_A6kAAZlHTtTLyPk3Gbw",
-                                    "https://play-lh.googleusercontent.com/EOGMpz1ORg22_5n2F4K-ZFy39hnWi8gx0RvpDqstdoloit6RxhA2elPo9eOL8f-ezY4",
-                                    "https://play-lh.googleusercontent.com/VZ7kIy8-kLiqGJlusAu19IXp-mBXhaVr5AzKI05-bOjKMD6vSG5X--FSmWKXj2sEGfg",
-                                    "https://play-lh.googleusercontent.com/tcrm8feAiHUiWRXWeXX4ZKt4nrXb1TI_rKPLhe5o6qcICG1H_l6QTH2JsIsf0LrOU2g",
-                                    "https://play-lh.googleusercontent.com/Bsz7_GquI7tH4p38kfNwLn0yxMXJo47FYp825cXmxJ4OKnDvznLQ2sDerAfBCEs9sEw"
-                                ],
-                                "videos": null,
-                                "similar_apps": null,
-                                "more_apps_by_developer": null,
-                                "genres": [
-                                    "Finance"
-                                ],
-                                "tags": [
-                                    "Finance"
-                                ]
-                            }
-                        },
-                        {
-                            "app_id": "com.vq.mbrochuregp.client.android",
-                            "se_domain": "play.google.com",
-                            "location_code": 2840,
-                            "language_code": "en",
-                            "check_url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
-                            "time_update": "2025-01-08 16:36:56 +00:00",
-                            "item": {
-                                "type": "google_play_info_organic",
-                                "rank_group": 1,
-                                "rank_absolute": 1,
-                                "position": "left",
-                                "app_id": "com.vq.mbrochuregp.client.android",
-                                "title": "BCA Finance",
-                                "url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
-                                "icon": "https://play-lh.googleusercontent.com/4FpvKqIdq24Cx1SWvKPtS4GUHnRIjndAGLT9VdzNQ9sJCWjSIV1LixfOl06CITdB_EU",
-                                "description": "BCAF App, aplikasi financial di tangan Anda.\nLayanan financial terpercaya, kapan saja dan dimana saja.\n\nManfaat BCAF App :\n1.Dapatkan info update promosi, suku bunga dan produk-produk dari BCAF lebih cepat.\n2.Ajukan kredit mobil dan pantau prosesnya tanpa harus keluar rumah.\n3.Layanan konsumen sesuai kebutuhan Anda, seperti informasi pelanggan, simulasi pelunasan dipercepat, reservasi pengambilan BPKB tanpa harus antri terlebih dahulu.\n4.Terhubung langsung dengan layanan digital BCAF lainnya, seperti Website BCAF, HaloBCA Chat, Astari dan Instagram BCAF.\n\nSemuanya hanya dalam genggaman tangan Anda.\n\nFitur-fitur BCAF App :\n1.Simulasi kredit mobil baru dan bekas berdasarkan budget total pembayaran pertama ataupun angsuran.\n2.Pengajuan kredit online.\n3.Tracking status pengajuan kredit online.\n4.Layanan konsumen :\na.Info Pelanggan (informasi angsuran dan histori pembayaran).\nb.Simulasi early termination / pelunasan dipercepat.\nc.Booking Pengambilan BPKB.\n5.E-Doc.\n\nUntuk bantuan lebih lanjut dapat menghubungi Astari, Virtual Assistant kami di 08111027780 atau email ke customercarebcaf@bcaf.id\n\nSelamat menggunakan BCAF App.",
-                                "reviews_count": 12516,
-                                "rating": {
-                                    "rating_type": "Max5",
-                                    "value": 3.5,
-                                    "votes_count": 12516,
-                                    "rating_max": 5
-                                },
-                                "price": {
-                                    "current": 0,
-                                    "regular": null,
-                                    "max_value": null,
-                                    "currency": "USD",
-                                    "is_price_range": false,
-                                    "displayed_price": null
-                                },
-                                "is_free": true,
-                                "main_category": "Finance",
-                                "installs": "1,000,000+",
-                                "installs_count": 1165172,
-                                "developer": "PT. BCA Finance",
-                                "developer_id": "PT.+BCA+Finance",
-                                "developer_url": "https://play.google.com/store/apps/developer?id=PT.+BCA+Finance",
-                                "developer_email": "customercarebcaf@bcaf.id",
-                                "developer_address": null,
-                                "developer_website": "http://www.bcafinance.co.id",
-                                "version": "8.30.0",
-                                "minimum_os_version": "7.0",
-                                "size": null,
-                                "released_date": "2014-10-08 03:00:00 +00:00",
-                                "last_update_date": "2024-12-01 02:00:00 +00:00",
-                                "update_notes": "erimakasih telah menggunakan FinA BCA Finance.\n\nYang terbaru dari kami :\nFitur “Cari Mobil Bekas” menghadirkan Klik Garasi yang merupakan website terpercaya hasil kerjasama Garasi.id bersama dengan BCA Finance untuk jual beli mobil bekas dengan mobil berkualitas dari showroom rekanan BCA Finance. Temukan beragam mobil dari seluruh Indonesia dengan kredit mudah, cepat, dan bunga ringan dari BCA Finance.\n\nSelamat menggunakan FinA BCA Finance, dan dapatkan kemudahannya.",
-                                "images": [
-                                    "https://play-lh.googleusercontent.com/miURL_q-DWarWGVlKuSyoLmIUPLR3-amHQqpVKJOO3KzTrVi3vJyhKb3xa1mDS7Gvw",
-                                    "https://play-lh.googleusercontent.com/5P56KJwDuMXex6ebxZmJTTt33T2uj1Egh0V6hYeK7unwIBNkrt7SJBYbrZ0h3pyWRg",
-                                    "https://play-lh.googleusercontent.com/9aAMUFkmjwlNLjSkv7uNpDi0jDE1NOlBO7QVxDz9s87uW6J_O9IxwwPkfRMjMgqudg",
-                                    "https://play-lh.googleusercontent.com/RODI9NIXUawwvBOLyaPqhDBDJn1L-xZdaRMpNxutD-MA6vtvq-53rmU6HUalOhEefFU",
-                                    "https://play-lh.googleusercontent.com/xad4YFQNrBeTSt9cCJqpatFySOE8L4YPZu74T-FtsZy4po3eFc-w4Frq3Ogtkwo19g"
-                                ],
-                                "videos": null,
-                                "similar_apps": null,
-                                "more_apps_by_developer": null,
-                                "genres": [
-                                    "Finance"
-                                ],
-                                "tags": [
-                                    "Finance"
-                                ]
-                            }
-                        },
-                        {
-                            "app_id": "com.bcadigital.blu",
-                            "se_domain": "play.google.com",
-                            "location_code": 2840,
-                            "language_code": "en",
-                            "check_url": "https://play.google.com/store/apps/details?id=com.bcadigital.blu&hl=en&gl=us",
-                            "time_update": "2025-01-16 19:31:09 +00:00",
-                            "item": {
-                                "type": "google_play_info_organic",
-                                "rank_group": 1,
-                                "rank_absolute": 1,
-                                "position": "left",
-                                "app_id": "com.bcadigital.blu",
-                                "title": "blu by BCA Digital",
-                                "url": "https://play.google.com/store/apps/details?id=com.bcadigital.blu&hl=en&gl=us",
-                                "icon": "https://play-lh.googleusercontent.com/-OdereTd6Aw2fdNV7K_N90Mhhzr3tcsuDlkFuYKZf7PgkM33SexLWRFmnhcRPuu52Q",
-                                "description": "blu Siap Jadi Pegangan Finansialmu!\n \nblu menjawab kebutuhan finansial kamu dengan cara baru agar kamu bisa wujudkan apa pun yang kamu tuju. blu adalah aplikasi mobile banking dari BCA Digital, anak perusahaan BCA\n \nblu punya layanan seamless yang bisa bikin kamu tenang dengan:\n• Koneksi ke sistem BCA\n• Sistem keamanan transaksi menggunakan PIN, Password, CVC, dan biometrik.\n• Customer care haloblu yang selalu ada buat kamu\n \nAda Untukmu, Apa Pun Tujuanmu\n \nPengen nabung buat sepatu baru? Gadget baru? Rumah? Mobil? Sekolah? Apa pun tujuanmu, we’ve got your back! blu punya akses layanan perbankan digital yang mudah dengan pengalaman yang seru. Kamu bisa:\n \n• Punya 20 tabungan dalam 1 rekening\n• Patungan online bisa sampai 50 orang\n• Buka deposito mulai dari Rp 1 juta, pencairan sebelum jatuh tempo gak kena penalti\n• Bayar/beli dalam satu aplikasi\n• Bayar pakai QRIS\n• bluVirtual Card dan bluDebit Card yang terkoneksi dengan Mastercard, memudahkan transaksimu di dalam maupun luar negeri.\n• Tarik dan Setor Tunai di ATM BCA\n• Investasi di bluInvest bekerjasama dengan partner terpercaya\n \n \nEits, belum selesai! Pakai blu bebas biaya admin bulanan, bebas biaya transfer via BI-FAST dari dan ke BCA unlimited,\n \nSo...tunggu apa lagi? Download blu sekarang!\n \nPerlu bantuan? Haloblu siap bantu kamu 24/7 via telepon 1500 668/ WhatsApp 0811-6500-668\n \nPT Bank Digital BCA\nMenara blu, The City Tower Lantai 11 Jl. M.H. Thamrin No.81, Menteng, 10310, Jakarta, Indonesia 10310\nhttps://www.blubybcadigital.id/",
-                                "reviews_count": 101182,
-                                "rating": {
-                                    "rating_type": "Max5",
-                                    "value": 4.3,
-                                    "votes_count": 101182,
-                                    "rating_max": 5
-                                },
-                                "price": {
-                                    "current": 0,
-                                    "regular": null,
-                                    "max_value": null,
-                                    "currency": "USD",
-                                    "is_price_range": false,
-                                    "displayed_price": null
-                                },
-                                "is_free": true,
-                                "main_category": "Finance",
-                                "installs": "1,000,000+",
-                                "installs_count": 3776903,
-                                "developer": "BCA Digital",
-                                "developer_id": "BCA+Digital",
-                                "developer_url": "https://play.google.com/store/apps/developer?id=BCA+Digital",
-                                "developer_email": "haloblu@bcadigital.co.id",
-                                "developer_address": "The City Tower Lantai 11, Jl. M.H. Thamrin No.81, RT.1/RW.6, Dukuh Atas, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310",
-                                "developer_website": "https://blubybcadigital.id",
-                                "version": "1.59.20",
-                                "minimum_os_version": "7.0",
-                                "size": null,
-                                "released_date": "2021-07-28 03:00:00 +00:00",
-                                "last_update_date": "2024-12-17 02:00:00 +00:00",
-                                "update_notes": "Tenang bertransaksi, senang sampai destinasi pakai Garuda x bluDebit Card, kartu debit terbaru kolaborasi blu dan Garuda Indonesia di versi 1.59.20  ✈️\nRequest Garuda x bluDebit Card dan dapatkan benefit:\n🎁 Welcome bonus aktivasi kartu 600 GarudaMiles &amp; welcome bonus transaksi hingga 5.000 GarudaMiles\n🛍️ GarudaMiles tiap transaksi pembelian pakai Garuda x bluDebit Card\n \nDi blu versi ini, kamu juga bisa Beli GarudaMiles bisa di aplikasi blu juga lho!\nYuk apdet blu kamu sekarang!",
-                                "images": [
-                                    "https://play-lh.googleusercontent.com/xPMln7NjdFrv0m-V9JwMS_6dZXV7IqHXN3fQA2QE0syZNEv7ruzryo3ujG8K-lF6Zw",
-                                    "https://play-lh.googleusercontent.com/D4ayouGbWLh1NWiWnN7vffyDzV27lfz8P18-yvHCyma6ALQJ4qLnw4ETzRd1nWeMSfM",
-                                    "https://play-lh.googleusercontent.com/hpr7LT3AlMHBTBetsrEzh4WiuZczF16GCM7w0I6A86XsLxCl_JMJKmx4Xm3Gq2jtSNXw",
-                                    "https://play-lh.googleusercontent.com/xwhNpC7Js4deCQqwhHphvbhKYCtV41W6xMk2_enk5i80gqHWCe6IxO7w1EAwkiTh3ww",
-                                    "https://play-lh.googleusercontent.com/dy_DJrCUCUtf2_mOXH6CVRtO1NkUNFuxQduiVNbMiUcc_KWaM-LVFHhIkwD6nqLzvg",
-                                    "https://play-lh.googleusercontent.com/BBF8wpFhAAGYvkNFf2dV0kR0RGvoje1Bafs5Z_sLUTxyUJ870nRtJCr-fUMiUBXPzLA",
-                                    "https://play-lh.googleusercontent.com/W4aTjlia1m54GxH9CfY2x2FcQjEMhDcweToF6udIU2FPLCPTtNiKhCpOqYybZMDgww",
-                                    "https://play-lh.googleusercontent.com/p3o1et3BHowtcJWN8gE54mfXMYptY2oUlpXJR1gAHWiPS4Am5EQs_DJp6qAg954nAJRo"
-                                ],
-                                "videos": null,
-                                "similar_apps": [
-                                    {
-                                        "app_id": "com.traveloka.android",
-                                        "title": "Traveloka: Book Hotel & Flight",
-                                        "url": "https://play.google.com/store/apps/details?id=com.traveloka.android"
-                                    },
-                                    {
-                                        "app_id": "com.partipost",
-                                        "title": "Partipost",
-                                        "url": "https://play.google.com/store/apps/details?id=com.partipost"
-                                    },
-                                    {
-                                        "app_id": "com.ocbc.mobile",
-                                        "title": "OCBC Digital - Mobile Banking",
-                                        "url": "https://play.google.com/store/apps/details?id=com.ocbc.mobile"
-                                    }
-                                ],
-                                "more_apps_by_developer": null,
-                                "genres": [
-                                    "Finance"
-                                ],
-                                "tags": [
-                                    "Finance"
-                                ]
-                            }
-                        },
-                        {
-                            "app_id": "com.bca.halobca.android",
-                            "se_domain": "play.google.com",
-                            "location_code": 2840,
-                            "language_code": "en",
-                            "check_url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android&hl=en&gl=us",
-                            "time_update": "2025-01-16 19:31:08 +00:00",
-                            "item": {
-                                "type": "google_play_info_organic",
-                                "rank_group": 1,
-                                "rank_absolute": 1,
-                                "position": "left",
-                                "app_id": "com.bca.halobca.android",
-                                "title": "Halo BCA",
-                                "url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android&hl=en&gl=us",
-                                "icon": "https://play-lh.googleusercontent.com/L1qd4xiKqRm-fsjETp6824KFazKKZI4FltwI0mK-ni0Evr9LeMA3GHJ691Y2S5MTJ1HD",
-                                "description": "It&#39;s time for a tour of the new haloBCA world! With the new look, enjoy these benefits below:\n\n1. Easy Access with BCA ID\nIn the new world of haloBCA, you can already access haloBCA with the BCA ID that you already have. Don’t have a BCA ID? You can register in this application.\n\n2. Using Biometric, Safer and More Convenient\nAfter setting up your Biometric feature, just scan your face or fingerprint to get into haloBCA app.\n\n3. Contact Customer Service Without Credit\nYou can contact our Customer Service with Voice over Internet Protocol (VoIP) credit-free call or simply through Halo BCA Chat.\n\n4. Works Anywhere\nhaloBCA can be used anywhere in Indonesia and abroad as long as your phone is connected to an internet network.\n\n5. Trustworthy Halo BCA Number &amp; Account\nNo need to worry about fake Halo BCA contacts that are circulating and troubling. Access official BCA contacts through the Email and X (Twitter) menu.\n\n6. Update Data Directly from the Application\nYou can update your data from a smartphone. Just access the &quot;Akun Saya&quot; menu from this application.\n\n7. Check The Report Status\nYou can check your report status and handling time estimation from the apps.\n\nCheck out more information at www.bca.co.id/halobca\n\nHave a great tour inside the haloBCA world!",
-                                "reviews_count": 16758,
-                                "rating": {
-                                    "rating_type": "Max5",
-                                    "value": 3.8,
-                                    "votes_count": 16758,
-                                    "rating_max": 5
-                                },
-                                "price": {
-                                    "current": 0,
-                                    "regular": null,
-                                    "max_value": null,
-                                    "currency": "USD",
-                                    "is_price_range": false,
-                                    "displayed_price": null
-                                },
-                                "is_free": true,
-                                "main_category": "Finance",
-                                "installs": "5,000,000+",
-                                "installs_count": 8115350,
-                                "developer": "PT Bank Central Asia Tbk.",
-                                "developer_id": "9162366183828083338",
-                                "developer_url": "https://play.google.com/store/apps/dev?id=9162366183828083338",
-                                "developer_email": "halobca@bca.co.id",
-                                "developer_address": null,
-                                "developer_website": "https://www.bca.co.id/halobca",
-                                "version": "2.4.1",
-                                "minimum_os_version": "7.0",
-                                "size": null,
-                                "released_date": "2021-07-25 03:00:00 +00:00",
-                                "last_update_date": "2025-01-08 02:00:00 +00:00",
-                                "update_notes": "Get the updated version of haloBCA Apps, you can check your report status and handling time estimation from the apps.",
-                                "images": [
-                                    "https://play-lh.googleusercontent.com/raf8b-gx56L3QxnpUfatHU82M1IDtJkDI7PFrQ5NBC-k4FN0BXdWuJn6pEiINvYN7ys",
-                                    "https://play-lh.googleusercontent.com/AB0X9zLDi4Vk867zjfbdvQZvN0FNmkCJtdbHiSDxH2ArqHYaCpT_RcF9IL96y7J1qS3_",
-                                    "https://play-lh.googleusercontent.com/lo-o8DddCwsZ0sfkgOkxmhFZ5Z_8ksFmdRkoXDeDpJZUK3KF2GWQFtJyG4jyt8PG57M",
-                                    "https://play-lh.googleusercontent.com/4TnyLaRQSF_BhLyq0qHY_rRGcBT1AcuQ1ly5eO4Vkehp6G8aHLcFMQQzRpsJJH4dp8gX",
-                                    "https://play-lh.googleusercontent.com/UVHVsS1F8RLQp3M5LzcP1XQi5TzyMSEasAFA2wpodJatfEDGriTm6n8lVqNlaBN5yIxh",
-                                    "https://play-lh.googleusercontent.com/DtwbKdWhsC6zXBQzbQD-JFxWXJryoYEzR6KvSZSVLsYfGqJbQkry0NyNYjzIC6DsUVPZ"
-                                ],
-                                "videos": null,
-                                "similar_apps": [
-                                    {
-                                        "app_id": "com.bca.mybca.omni.android",
-                                        "title": "myBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
-                                    },
-                                    {
-                                        "app_id": "com.bca",
-                                        "title": "BCA mobile",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca"
-                                    },
-                                    {
-                                        "app_id": "com.bca.sakuku",
-                                        "title": "Sakuku",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
-                                    },
-                                    {
-                                        "app_id": "com.bca.keybca",
-                                        "title": "keyBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
-                                    }
-                                ],
-                                "more_apps_by_developer": [
-                                    {
-                                        "app_id": "com.bca.mybca.omni.android",
-                                        "title": "myBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
-                                    },
-                                    {
-                                        "app_id": "com.bca",
-                                        "title": "BCA mobile",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca"
-                                    },
-                                    {
-                                        "app_id": "com.bca.sakuku",
-                                        "title": "Sakuku",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
-                                    },
-                                    {
-                                        "app_id": "com.bca.keybca",
-                                        "title": "KeyBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
-                                    }
-                                ],
-                                "genres": [
-                                    "Finance"
-                                ],
-                                "tags": [
-                                    "Finance"
-                                ]
-                            }
-                        },
-                        {
-                            "app_id": "com.bca",
-                            "se_domain": "play.google.com",
-                            "location_code": 2840,
-                            "language_code": "en",
-                            "check_url": "https://play.google.com/store/apps/details?id=com.bca&hl=en&gl=us",
-                            "time_update": "2025-01-16 19:31:09 +00:00",
-                            "item": {
-                                "type": "google_play_info_organic",
-                                "rank_group": 1,
-                                "rank_absolute": 1,
-                                "position": "left",
-                                "app_id": "com.bca",
-                                "title": "BCA mobile",
-                                "url": "https://play.google.com/store/apps/details?id=com.bca&hl=en&gl=us",
-                                "icon": "https://play-lh.googleusercontent.com/ggZzVVDWsTm7gSnVl8m3cNFgoeUN2r7dhAZdB8lz0d_s6ZcYOkvUQdbG3dPU5LHZnWvc",
-                                "description": "Bank on the go with BCA mobile app. Conduct non-cash transactions using BCA mobile banking (m-BCA) and BCA internet banking (KlikBCA Smartphone) whenever, wherever.\n\nm-BCA Benefits\n1. No SIM card changes\nm-BCA transactions are available through all GSM operators, including Telkomsel, XL Axiata, Indosat, Axis, and Three\n2. Low transactions cost \nReduce unnecessary cost using GPRS/EDGE/3G/WIFI internet connection\n3. Payment Data Storage\nm-BCA’s storage feature enables you to conduct repeat transactions without having to input the data all over again\n4. Transfer Data\nm-BCA saves your transfer activities--whether you’re sending funds between BCA accounts or to other banks—to a list for a time-saving and reliable banking experience\n5. Practical and Easy to Use\nRecipient company or banking code is not required for payment and transfer transactions.\n\nFor BCA mobile users with Android OS and iOS, can enjoy the latest services as follows:\n1. Block BCA ATM Card or BCA Credit Card facility through m-Admin menu \n2. BCA Credit Card Activation feature through menu m-Admin → Credit Card Activation\n3. BCA Credit Card PIN Make / change facility via m-Admin menu → Create / Change PIN.\n4. Cardless Transaction feature through Setor Tarik menu → Cash withdrawal and cash deposit. \n5. Transfer without hassle through QR menu → Send or receive money using QR\nFor the time being, Cardless Transactions can be made at these following ATMs (www.bca.co.id/ATMtanpakartu)\n\nKlikBCA \nEasy to access KlikBCA smartphone version smartphone https://m.klikbca.com with just one click\n\nInfo BCA \nLink to our corporate website https://www.bca.co.id/promo\n\nBuka Rekening Baru\nNow you can open bank account anywhere just with your mobile phone. What you need to do to get your bank account is only by providing e-KTP, completing the form, and doing video call with our Customer Service Officer through BCA mobile application. After you done, you’ll get the success notification of your opening account; you might need to directly activate your mobile banking service (by creating PIN number for transaction) and deposit money to your account. Then you are ready to do any transaction with your BCA mobile application (m-BCA menu). You will also get KlikBCA account the day after you succeed creating your mobile banking PIN via email.\n\nInfo Saldo Flazz \nEasy to check balance as well as the latest 10 transaction information from Flazz card, on Android smartphone equipped with Near Field Communication (NFC) feature. \n\nFor further assistant, call halo bca at 1500888 via cellular phone\n\nEnjoy using the BCA mobile.",
-                                "reviews_count": 1336549,
-                                "rating": {
-                                    "rating_type": "Max5",
-                                    "value": 3.4,
-                                    "votes_count": 1336549,
-                                    "rating_max": 5
-                                },
-                                "price": {
-                                    "current": 0,
-                                    "regular": null,
-                                    "max_value": null,
-                                    "currency": "USD",
-                                    "is_price_range": false,
-                                    "displayed_price": null
-                                },
-                                "is_free": true,
-                                "main_category": "Finance",
-                                "installs": "50,000,000+",
-                                "installs_count": 66629011,
-                                "developer": "PT Bank Central Asia Tbk.",
-                                "developer_id": "9162366183828083338",
-                                "developer_url": "https://play.google.com/store/apps/dev?id=9162366183828083338",
-                                "developer_email": "halobca@bca.co.id",
-                                "developer_address": null,
-                                "developer_website": "http://www.bca.co.id",
-                                "version": "4.5.6",
-                                "minimum_os_version": "7.0",
-                                "size": null,
-                                "released_date": "2012-11-12 02:00:00 +00:00",
-                                "last_update_date": "2025-01-15 02:00:00 +00:00",
-                                "update_notes": "Versi terbaru BCA mobile memberikan kenyamanan dan kecepatan dalam bertransaksi!\n\nTunggu apa lagi, yuk update BCA mobile sekarang juga!",
-                                "images": [
-                                    "https://play-lh.googleusercontent.com/nT1ouh9h2bqRjQHEcZ_pDN8Pb5TC3CY95B-24I0SYF69TP0IaslwBrTjpEk3wDXyZVg",
-                                    "https://play-lh.googleusercontent.com/8TbIKDyXrTl0pBnEJJvLeSYhKbkziAiWa-52NXecECI3AUrStCKbZIbtQlF3OCJRxdc",
-                                    "https://play-lh.googleusercontent.com/iD7G7XhR8B9Cjofk9UDhiXzGKvWF8-aVZbYPfdN-M7PeWFljbOT2WZKoW-rX_vS3Xw",
-                                    "https://play-lh.googleusercontent.com/mSdKvNVb9_L2z6y18b9z10IO2QWjUcnL1O8Ls7nYeX6k5sW6llTpYbfZhfFZ0Vf2VEGs",
-                                    "https://play-lh.googleusercontent.com/_-12VnA4Wlk94-YoMCTfgcOiBx9N2NapuUserELM-LCvjHnCWazKxmeFYP_xF_GLRmzz",
-                                    "https://play-lh.googleusercontent.com/yOciqUVdTr1Xkx5BtRk_c6z2mKdKupJrCYMX4SWzziWkfHxkKnyvoOEa6CJaG6ZBmWU",
-                                    "https://play-lh.googleusercontent.com/ou5bhiWOJv_N1JAeH2wSQ7zsJiOqgAktXfmGMxJ4CA9HW3ldKq7saHQ1R9B3UA0sGQ",
-                                    "https://play-lh.googleusercontent.com/OmLIW_Qa5-cph35GYVDcp43kac8PgbVBMPLR-6P4_GL4WxFHG1K5pznczSUrjaZAQk4"
-                                ],
-                                "videos": [
-                                    "https://play.google.com/video/lava/web/player/yt:movie:FdmGaYt5QwM?autoplay=1&embed=play"
-                                ],
-                                "similar_apps": [
-                                    {
-                                        "app_id": "com.grab.merchant",
-                                        "title": "GrabMerchant",
-                                        "url": "https://play.google.com/store/apps/details?id=com.grab.merchant"
-                                    },
-                                    {
-                                        "app_id": "com.grabtaxi.driver2",
-                                        "title": "Grab Driver: App for Partners",
-                                        "url": "https://play.google.com/store/apps/details?id=com.grabtaxi.driver2"
-                                    },
-                                    {
-                                        "app_id": "com.dbs.sg.dbsmbanking",
-                                        "title": "DBS digibank",
-                                        "url": "https://play.google.com/store/apps/details?id=com.dbs.sg.dbsmbanking"
-                                    }
-                                ],
-                                "more_apps_by_developer": [
-                                    {
-                                        "app_id": "com.bca.mybca.omni.android",
-                                        "title": "myBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.mybca.omni.android"
-                                    },
-                                    {
-                                        "app_id": "com.bca.halobca.android",
-                                        "title": "Halo BCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.halobca.android"
-                                    },
-                                    {
-                                        "app_id": "com.bca.sakuku",
-                                        "title": "Sakuku",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.sakuku"
-                                    },
-                                    {
-                                        "app_id": "com.bca.keybca",
-                                        "title": "KeyBCA",
-                                        "url": "https://play.google.com/store/apps/details?id=com.bca.keybca"
-                                    }
-                                ],
-                                "genres": [
-                                    "Finance"
-                                ],
-                                "tags": [
-                                    "Finance"
-                                ]
-                            }
-                        }
-                    ]
+                    "app_id": "com.lazada.android",
+                    "title": "Lazada 10.10",
+                    "url": "https://play.google.com/store/apps/details?id=com.lazada.android"
+                },
+                {
+                    "app_id": "com.grabtaxi.passenger",
+                    "title": "Grab - Taxi & Food Delivery",
+                    "url": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger"
+                },
+                {
+                    "app_id": "com.shopback.app",
+                    "title": "ShopBack: Cashback & Rewards",
+                    "url": "https://play.google.com/store/apps/details?id=com.shopback.app"
+                },
+                {
+                    "app_id": "com.taxsee.taxsee",
+                    "title": "maxim — order a taxi & food",
+                    "url": "https://play.google.com/store/apps/details?id=com.taxsee.taxsee"
+                },
+                {
+                    "app_id": "com.traveloka.android",
+                    "title": "Traveloka: Book Hotel & Flight",
+                    "url": "https://play.google.com/store/apps/details?id=com.traveloka.android"
+                },
+                {
+                    "app_id": "com.funbit.android",
+                    "title": "Lita - Meet Gamer Friends",
+                    "url": "https://play.google.com/store/apps/details?id=com.funbit.android"
                 }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "com.gojek.app",
+                    "title": "Gojek - Food & Transportation",
+                    "url": "https://play.google.com/store/apps/details?id=com.gojek.app"
+                },
+                {
+                    "app_id": "com.mokapos.android",
+                    "title": "Moka POS - Aplikasi Kasir",
+                    "url": "https://play.google.com/store/apps/details?id=com.mokapos.android"
+                },
+                {
+                    "app_id": "io.prismapp.prismtouch",
+                    "title": "Selly - Online Shop Keyboard",
+                    "url": "https://play.google.com/store/apps/details?id=io.prismapp.prismtouch"
+                }
+            ],
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
             ]
         }
-    ]
-}
+    },
+    {
+        "app_id": "com.asapsoftwares.gopayng",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.asapsoftwares.gopayng&hl=en&gl=us",
+        "time_update": "2025-01-16 20:15:54 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.asapsoftwares.gopayng",
+            "title": "Gopay - Cheap Data & Airtime",
+            "url": "https://play.google.com/store/apps/details?id=com.asapsoftwares.gopayng&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/S38Faj_CeCGXHh6eLtGIgHfS-rgipfSbO_Me-1KRaAjJuQk62809fwIpDbxivhZkfQw",
+            "description": "Welcome to the new Gopay mobile app. The first mobile vtu app that enables you to purchase cheap airtime and cheap data.\n\nYou can now purchase cheap airtime reliably, purchase cheap data at the most affordable rates, swap airtime, pay bills using airtime, make online payments with airtime, and a lot more\n\nWith Gopay Transact, You can do the following:\n\n\n* Purchase Airtime\n* Purchase Data\n* Pay Bills\n* And much more\n\nHOW TO USE GoPay TRANSACT MOBILE APP:\n\n* Install Gopay\n* Sign in using your existing AsapBills credentials\n\n\nNEW USER?\n\n(Signing up is now easier than ever, it takes less than a minute)\nAll you have to do is click on the &quot;Sign up here&quot; link, fill in the form with your appropriate data, and create your account.\n\nIMPROVED SECURITY\n\nGopay is now more secured. All accounts are now secured\n\n\nFor more information, you can send us an Email via support@gopay.com",
+            "reviews_count": 449,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 3.2,
+                "votes_count": 449,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "50,000+",
+            "installs_count": 80687,
+            "developer": "Asap Software Developers",
+            "developer_id": "Asap+Software+Developers",
+            "developer_url": "https://play.google.com/store/apps/developer?id=Asap+Software+Developers",
+            "developer_email": "support@gopay.ng",
+            "developer_address": null,
+            "developer_website": "https://gopay.ng",
+            "version": "1.1.6",
+            "minimum_os_version": "4.4W",
+            "size": null,
+            "released_date": "2022-07-13 03:00:00 +00:00",
+            "last_update_date": "2023-03-14 02:00:00 +00:00",
+            "update_notes": "You can now view our privacy and policy from profile screen",
+            "images": [
+                "https://play-lh.googleusercontent.com/U2-BOOJSXyyxzhRGLF3gsR_cYGBWCNf-ujx5XtW_MYo2cr0m_83_zfg01vfjDD19fhg",
+                "https://play-lh.googleusercontent.com/-CwQ25V3NnW5u7TyWeJI6tDP3S8tLy3vwkCj2wIDAtnOWS7WpROEir_dW_a4FaX0iM4",
+                "https://play-lh.googleusercontent.com/EjZoWfjCQtFlJMfe6ZZG0YhpU_dr3cd9sXg3uPRGr0tPNmU4_PQuH8UhbboW95KQzeY",
+                "https://play-lh.googleusercontent.com/aNqhvg44A6LuwczfWV1YAHToVOcfMz-fQ85cvcbOcGbaAohWTPAmFqeC4iMUPk-8Gq8",
+                "https://play-lh.googleusercontent.com/jsNFyLz2raA0UhuSi84B8ocGbyYPnjTWNR2f_ORn7ndRtpkZiWlfGV2lU_fYoDI739A-",
+                "https://play-lh.googleusercontent.com/-6Tdd5N-wWowXa3RWoJ9EXmy4I6JP92Te5sgPycJCYxzIu8sTkx8W9Yl2sv9uWqZE48",
+                "https://play-lh.googleusercontent.com/jxpcikEUq3plhryE6983uMdWkvpVWQDQ5QWifbg67OHoGDSmeQNms2UULO-Tw8OgAQ",
+                "https://play-lh.googleusercontent.com/--F6XOccJreLr6TXt8VnvkWezzKRA2RfZVxiH5pDhRFPCTsdRHgPU9zi9epsORYSTw",
+                "https://play-lh.googleusercontent.com/jnhR2vPixeWUmAH9n6w5S5CeA4UgilJK63fBUfTQE1Qvf9jas6jIQQyxMib16hfYwA",
+                "https://play-lh.googleusercontent.com/xEPjRPShAiM8dtOJ2tit7uxSGKUpYoNl_rW34z1DtClpLQ1tFpX_8fpyb_4qICGClgM",
+                "https://play-lh.googleusercontent.com/g5sYCSADMc9j5hUkXHbtIFF8zr8qK83ySCT_NPDwq0igJMCMqVqgOz7RVTzpt1Q1kG4",
+                "https://play-lh.googleusercontent.com/EQbNEzJlQgxV34RW4k-LPklrIUIec4OExSjogyg-u3Gbyw7yhC4DP3o4I-FAEp_ZmQ",
+                "https://play-lh.googleusercontent.com/FcWuGgHpI-nzMY4je8K4Yu3svB3rLJzSZnjbdjeizAAAX0jpMTwgXq1I7Zkf3dU4pVY",
+                "https://play-lh.googleusercontent.com/pzUptB38yLo6a6XHiSfOn5P7XR0tUX2ndrPxTHy9IbBEMyNLTpvjLDvuob2RLK7eKg",
+                "https://play-lh.googleusercontent.com/UxdQapiNedBsmNEQP4-ECGDI-zNX0gnvAdOn0RLCDybMziBXpXSgP7POZAHnMKJDfKY"
+            ],
+            "videos": null,
+            "similar_apps": null,
+            "more_apps_by_developer": null,
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
+            ]
+        }
+    },
+    {
+        "app_id": "io.facilitynet.mobile",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=io.facilitynet.mobile&hl=en&gl=us",
+        "time_update": "2025-01-08 11:54:54 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "io.facilitynet.mobile",
+            "title": "GoPay",
+            "url": "https://play.google.com/store/apps/details?id=io.facilitynet.mobile&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/gPLHJFrb4LWddHZJgMnIWOVvuUCIDFr_r9ZbBPoxDcnrqbObd5m6FWjENIGkufKUKQ",
+            "description": "GoPay is a business solution that connects employees of a company with kitchen suppliers to make ordering food simple and fast while reducing food waste. With GoPay you, as an employee, can order lunch or takeaway in the canteen or at external kitchen suppliers.\n\nYou will be able to see the menu of the week, pre-order lunch, buy deals and takeaway. You will always stay up-to-date with news and have the option to provide feedback. GoPay supports multiple payment options, e.g. payroll reduction and one-click credit card payment. You can pay on the go - you never have to wait in a line and will save time. If you bring a guest you can easily make a guest purchase paid by your company or let the guest pay on his own. All your receipts are saved in GoPay and easy to find. \n\nGoPay is an effective communication channel for the kitchen supplier and the company which can improve sales, service and encourage employees to plan their lunch.\n\nEnterprise:\nThe GoPay app supports features for bigger companies, educational establishments and institutions with branches on multiple locations. GoPay supports companies with several eateries, cafes and events where paying must be easy. App content can be personalized by account owner (the kitchen supplier or the company) – GoPay is flexible, easy to implement and can replace a POS system.\n\nRequirements:\nGoPay is a business app and not available for private consumers. Your organization must have a subscription with FacilityNet in order for you to use the app.\n\nWhen you use GoPay, you agree to be bound by our terms of service:\nhttps://facilitynet.zendesk.com/hc/da/articles/360052706891",
+            "reviews_count": 197,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 3.5,
+                "votes_count": 197,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "installs": "50,000+",
+            "installs_count": 62887,
+            "developer": "GoPay | facilitynet.io",
+            "developer_id": "GoPay+%7C+facilitynet.io",
+            "developer_url": "https://play.google.com/store/apps/developer?id=GoPay+%7C+facilitynet.io",
+            "developer_email": "hello@facilitynet.dk",
+            "developer_address": null,
+            "developer_website": "https://facilitynet.io",
+            "version": "1.9.0",
+            "minimum_os_version": "7.0",
+            "size": null,
+            "released_date": "2021-08-08 03:00:00 +00:00",
+            "last_update_date": "2024-12-02 02:00:00 +00:00",
+            "update_notes": "Support for newest Android version. Improvements and bugfixes.",
+            "images": [
+                "https://play-lh.googleusercontent.com/5tUMF7d4Jg8EXRYApOGlSanQJDO1h_NOzt8-QnljLLqmvVWKkFdu6XBlMUUW2h3FuXM",
+                "https://play-lh.googleusercontent.com/fkmcHP6Q0RdRqaBtL4K0selnl3UO225sIfVxiAwF1Zebpot87h9ePvoWkDUK0GP28A",
+                "https://play-lh.googleusercontent.com/5jzReijWwvFDHdpGu_wZue64iWU-5elt_TXSnjKfFIqrxIOT6WliA-ruGqVW3VJu4A",
+                "https://play-lh.googleusercontent.com/txuyaRAD7J613cabZWcsGOhtdy9na6NPSDZ3Fvc5XoiXIJEaALXMuDXCIvfEWf8ruQ",
+                "https://play-lh.googleusercontent.com/5TszAN4Ew5Lbk2dqUtvZtpbV60rpIXtpGKiMQa03H7lcPBVDQdUdRVNCtOiH7XIEqg",
+                "https://play-lh.googleusercontent.com/HyCnlQCIBTTzX9u-9MxLYRjtp3CwLWL_5PbT80cfbz1TS-trYcSdbGZQ0VJZHC7hls82",
+                "https://play-lh.googleusercontent.com/0-bz628ll0ntuZP1IIDbW9gcpD5G6frSDhK8tYG7hHKtjlLBTBy7skYRI_FyPE5rUlc",
+                "https://play-lh.googleusercontent.com/HwdHtwH2vadcxp4AORd384HWAphE-_3zHww4dTz3F0F4lqkccgmTnPEjqMurf7j1cSI",
+                "https://play-lh.googleusercontent.com/jb0U23RrMwcj-gB_0-7bpGaBa-joFMAPV35tSfPfYefdF6tFkattJ2LuCw9xM8vV8g"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "se.seb.myfootprint",
+                    "title": "MyFootprint | SEB",
+                    "url": "https://play.google.com/store/apps/details?id=se.seb.myfootprint"
+                },
+                {
+                    "app_id": "com.ubipark.app.App",
+                    "title": "UbiPark",
+                    "url": "https://play.google.com/store/apps/details?id=com.ubipark.app.App"
+                },
+                {
+                    "app_id": "dk.danskebank.mobilepay",
+                    "title": "MobilePay",
+                    "url": "https://play.google.com/store/apps/details?id=dk.danskebank.mobilepay"
+                },
+                {
+                    "app_id": "com.looptravel.looptravel",
+                    "title": "LoopTravel • Fly with Points",
+                    "url": "https://play.google.com/store/apps/details?id=com.looptravel.looptravel"
+                },
+                {
+                    "app_id": "ods.worldwide.passenger",
+                    "title": "ODS Worldwide",
+                    "url": "https://play.google.com/store/apps/details?id=ods.worldwide.passenger"
+                },
+                {
+                    "app_id": "com.nurogames.LabelBioHero",
+                    "title": "Label BioHero",
+                    "url": "https://play.google.com/store/apps/details?id=com.nurogames.LabelBioHero"
+                }
+            ],
+            "more_apps_by_developer": null,
+            "genres": [
+                "Business"
+            ],
+            "tags": [
+                "Business"
+            ]
+        }
+    },
+    {
+        "app_id": "com.cara.aktifkan.gopay.pinjam",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.cara.aktifkan.gopay.pinjam&hl=en&gl=us",
+        "time_update": "2024-03-17 23:10:20 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.cara.aktifkan.gopay.pinjam",
+            "title": "Cara Aktifkan Gopay Pinjam",
+            "url": "https://play.google.com/store/apps/details?id=com.cara.aktifkan.gopay.pinjam&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/axGXljYJhyiuTk5MnvDWxe_jvSB3i57X4dwIH3g5GtSI9enPmzTC1aebRa5JbbJuZg",
+            "description": "Sekarang kamu bisa pinjam uang dengan Gopay Pinjam. Cara Daftar dan Aktifkan Gopay Pinjam Terbaru. GoPay Pinjam memberikan pinjaman tunai dengan limit hingga 15 juta dan pilihan tenor cicilan sampai 6 bulan. Anda Bisa Daftar di Aplikasi Gopay atau bisa Juga Daftar di Aplikasi Gojek.\n\nApliaksi in berisi tentang Panduan\n- Cara Aktifkan Gopay Pinjam\n- Cara Bayar Gopay Pinjam\n- Gopay Pinjam Aman atau Tidak\n- Gopay Pinjam Tidak Muncul\n- Limit awal Gopay Pinjam\n- Bunga Gopay Pinjam\n- Simulasi Gopay Pinjam\n- Biaya Gopay Pinjam \n\n\nDisclaimer:\n- Aplikasi ini Bukan Aplikasi Pemerintah dan Tidak Bekerjasama dengan Entitas Pemerintah Manapun\n- Aplikasi ini bukanlah aplikasi resmi Gopay. Kami tidak menyediakan layanan keuangan dalam bentuk apapun.",
+            "reviews_count": 108,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 4.3,
+                "votes_count": 108,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "installs": "10,000+",
+            "installs_count": 13671,
+            "developer": "Global Finance LTE",
+            "developer_id": "Global+Finance+LTE",
+            "developer_url": "https://play.google.com/store/apps/developer?id=Global+Finance+LTE",
+            "developer_email": "lteglobalfinance@gmail.com",
+            "developer_address": null,
+            "developer_website": "https://lteglobalfinance.blogspot.com/",
+            "version": "1.0",
+            "minimum_os_version": "7.0",
+            "size": null,
+            "released_date": "2023-10-20 03:00:00 +00:00",
+            "last_update_date": "2023-10-20 03:00:00 +00:00",
+            "update_notes": null,
+            "images": [
+                "https://play-lh.googleusercontent.com/PpDQgpsvl4f2g_SZtIiX5tRD9SqQkK3KleyA4CyWkiQMzbGR9tZgX39pNl1e8llUrJY",
+                "https://play-lh.googleusercontent.com/J7SRr_LxIgPkST7DVB7_Dl1syR027Yk2rMetRpH5o0S1N-kim26ADRu0aEVn1J0gow4",
+                "https://play-lh.googleusercontent.com/qQD0HFw-MZN5m4DwjfcUXPIKpUVpLdZmHmYWddz7Vh5ED6p5f9KN3Tvc65o2bYy2BpbU",
+                "https://play-lh.googleusercontent.com/PFaOY55J9_v73iKp25zpAvQNRRFIZUxzNTwj2NxsIz_9OF-dL724HcCZClE9U2YlRV0",
+                "https://play-lh.googleusercontent.com/f-ecx3T4aGDhvL__4EmduDpfiEU-N7xAo9IJn9TMN7dj9nJ62B2Z039Q8lrXqUFC6JE",
+                "https://play-lh.googleusercontent.com/DvNOVFXo39mPy7tci--OSvDmcjcVyQG43FITVsB2MSLeoftI_MdSow_E24VKJcDgelY",
+                "https://play-lh.googleusercontent.com/3Yo_AGlQa_xQy7sZ2PkJ2x164T2ff1ACumk3roD2fMwQdphgHY_TzRdPlhXdl-dytg"
+            ],
+            "videos": null,
+            "similar_apps": null,
+            "more_apps_by_developer": null,
+            "genres": [
+                "Business"
+            ],
+            "tags": [
+                "Business"
+            ]
+        }
+    },
+    {
+        "app_id": "com.fix.pay",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.fix.pay&hl=en&gl=us",
+        "time_update": "2024-01-23 17:12:08 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.fix.pay",
+            "title": "Fixpay Agen Pulsa Gopay PPOB",
+            "url": "https://play.google.com/store/apps/details?id=com.fix.pay&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/Gh1z4o8EmIg7EYnnSKDwwpUFFKZXDeQ92jGP1B-4KILZP-09g9IigXaFmGVvy8pVfKo",
+            "description": "Fixpay adalah platform mengisian pulsa, paket data, Listrik PLN (token dan tagihan), pembayaran BPJS Kesehatan, Cicilan, Telkom/Indihome dan PDAM. \n\nDengan Fixpay kini kamu dapat melakukan pengisian pulsa secara online dan beragam pembayaran langsung dari gadget-mu. Hanya dengan melakukan beberapa klik saja kamu dapat sukses melakukan transaksi yang kamu inginkan.\n\nFixpay juga selalu memberikan promo lain yang tidak kalah menarik makanya update terus info terbaru dari Fixpay dengan mengunjungi website dan download aplikasinya, berikut ini adalah alasan kamu harus menggunakan aplikasi Fixpay:\n\nSiap sedia kapan saja dan dimana saja\nGak perlu ribet keluar rumah hanya untuk membeli pulsa, membayar BPJS atau listrik, kamu hanya perlu menggunakan aplikasi Fixpay maka semua pembayaran tagihan kamu akan sukses dilakukan.\n\nAman dan nyaman\nFixpay bekerjasama dengan midtrans membangun system pembayaran yang aman dan menjamin kerahasiaan informasi semua customer.\n\nBeragam Metode Pembayaran\nKamu bebas untuk memilih metode pembayaran yang kamu biasa gunakan dengan nyaman. Fixpay menyediakan metode pembayaran berupa Bank Transfer, Kartu Kredit dan Kartu Debit, Mandiri Virtual Account, BCA Virtual Account, Kredivo, dan Fixpay Kredit. \n\nCustomer Service 24 jam\nFixpay hadir 24 jam untuk membantu semua customer mendapatkan informasi sesuai seperti yang mereka harapkan. Kirimkan masukan, keluhan dan kritik kamu ke email info@fixpay.com \n\nProduk di Fixpay \n\nPulsa &amp; Paket Data : Hanya perlu 3 langkah maka pulsa dan paket data kamu akan langsung terkirim, tidak perlu lagi keluar rumah hanya untuk membeli pulsa. Lakukan pembayaran pulsa dan paket data untuk provider berikut ini (Telkomsel, Indosat, XL, Tri, Bolt, SmartFren &amp; Axis)\n\nToken Listrik &amp; Listrik Pascabayar : Fixpay menjamin proses transaksi token listrik dan listrik pascabayar hanya memerlukan waktu 30 detik ini berlaku untuk semua produk jika menggunakan metode pembayaran dengan Fixpay Kredit.\n\nBPJS Kesehatan : Hindari tunggakan pembayaran BPJS kesehatan. Mudah dan praktis yang hanya dengan melakukan pembayaran di Fixpay.\n\nPDAM : Pilih wilayah PDAM, masukan id pelanggan, nomor handphone, pilih metode pembayaran yang kamu inginkan maka tagihan PDAM kamu sukses dilakukan.\n\nBayar Cicilan : Mau bayar cicilan kendaraan juga bisa kok, 3 tagihan yang bisa dibayar saat ini adalah WOM ( Wahana Ottomitra Multiartha ), Mega Central Finance, Mega Auto Finance.\n\nTelkom : Bayar tagihan indihome, speedy dan telepon rumah langsung dengan menggunakan layanan pembayaran Telkom di Fixpay.\n\nTerima kasih atas feedback-mu. Kami selalu memastikan kelancaran dan kenyamananmu bertransaksi di Fixpay adalah prioritas utama kami. \n\nAda saran dan kritik? Kirimkan saja ke info@fixpay.com.\n\nwww.fixpay.id\n\nFacebook: Fixpay || Twitter: @fixpay_id || Instagram: @fixpay_id\n\nCustomer service : info@fixpay.com",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "installs": "5,000+",
+            "installs_count": 9627,
+            "developer": "PT. Insan Hijrah Indonesia",
+            "developer_id": "PT.+Insan+Hijrah+Indonesia",
+            "developer_url": "https://play.google.com/store/apps/developer?id=PT.+Insan+Hijrah+Indonesia",
+            "developer_email": "info@fixpay.id",
+            "developer_address": "Virtual Office Menara Rajawali",
+            "developer_website": "https://fixpay.id",
+            "version": "1.9.1",
+            "minimum_os_version": "5.0",
+            "size": null,
+            "released_date": "2018-04-01 03:00:00 +00:00",
+            "last_update_date": "2023-03-16 02:00:00 +00:00",
+            "update_notes": "Fix some bugs",
+            "images": [
+                "https://play-lh.googleusercontent.com/ywQaz4GQRGjrjeYvMZeAmnwGqDzqRyEYk61Ul5YizUX_0MXN-v35KYbk0vmR7V9J5Q",
+                "https://play-lh.googleusercontent.com/bv8fhMrjjlPjZo8j_AF5M-JODj2EnBQi83CAEd2M-UEmAzwc59WRLJhiO7UGmTb5bSA",
+                "https://play-lh.googleusercontent.com/pJjtus3ov4SOTPFisSKnirQj-mfnt9hMwIUSsBF2x0DUVWWOGS_q352y4DPwi5F6qkk",
+                "https://play-lh.googleusercontent.com/fzpOnqbXaiLBAyWsS4yudK-XdhFRw_goCEP-LMjc7UFgn49qQ9V0sl6lpfJ5nvWVu2I",
+                "https://play-lh.googleusercontent.com/5EaneZutcUkLsWAMFFjUewleyesY5aAuZ1WKPM-k-KJ9sXxxLsFHzHcfHD8Mf1I1c9k"
+            ],
+            "videos": null,
+            "similar_apps": null,
+            "more_apps_by_developer": null,
+            "genres": [
+                "Business"
+            ],
+            "tags": [
+                "Business"
+            ]
+        }
+    },
+    {
+        "app_id": "com.skytel.goplustv",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.skytel.goplustv&hl=en&gl=us",
+        "time_update": "2025-01-22 18:30:56 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.skytel.goplustv",
+            "title": "GoPay",
+            "url": "https://play.google.com/store/apps/details?id=com.skytel.goplustv&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/80EwGhJM6I94Rg4QNxjerVItJQmg1GXFLzEAMrcceEjA2CgAiB7a6VY8tksaKLgW7Tw",
+            "description": "GoPay нь GO+ үйлчилгээний данс цэнэглэх, багц идэвхжүүлэх, багц шилжих, төлбөр болон контентын түүх шалгах зэрэг цогц үйлчилгээг агуулсан аппликэйшн юм.",
+            "reviews_count": 21,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 2.4,
+                "votes_count": 21,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "installs": "5,000+",
+            "installs_count": 9608,
+            "developer": "SKYtel LLC",
+            "developer_id": "SKYtel+LLC",
+            "developer_url": "https://play.google.com/store/apps/developer?id=SKYtel+LLC",
+            "developer_email": "skytelteam2013@gmail.com",
+            "developer_address": null,
+            "developer_website": "https://my.skygo.mn/",
+            "version": "1.5.3(1)",
+            "minimum_os_version": "7.0",
+            "size": null,
+            "released_date": "2023-06-28 03:00:00 +00:00",
+            "last_update_date": "2024-09-02 03:00:00 +00:00",
+            "update_notes": "Сайжруулалтууд болон зарим нэмэлт хөгжүүлэлт",
+            "images": [
+                "https://play-lh.googleusercontent.com/37eJnLPoIisNaoIg0Cof2jQw-POfcnmLnLUqKUXjVVAWto8NYKHXevk-KVgNKmI4eVc",
+                "https://play-lh.googleusercontent.com/U-bu1yIkd6Rd03BKyAwTq7YT59E2LsVKOKPX5HUd-WEbj7edNI3XhGuADikoJzUFR5Y",
+                "https://play-lh.googleusercontent.com/HvCgctUDD3mXj9nu9TyTzhgfZMIHcqzCEJU2YMfg2gARptFzDd9RvqFcscmB8_gZ5iQ",
+                "https://play-lh.googleusercontent.com/3zfYSQgBm25dGrobL1kh2ph3RBEQPvMj7iwhHrZ7BzZPLfGMD4VG17dY-b0qqYHzkg",
+                "https://play-lh.googleusercontent.com/edpVTPnLxYMxkLy5daeghgPB3EjxoaYxVMMy7m89BupNHgoeipcQCB987gnpiMjvDyID",
+                "https://play-lh.googleusercontent.com/Vo-y6pXfsbgZowOoA4Wx7VYVL9wKOWgU5YKUakZflIUiOuxi-z5lWuF3MPP-wpqalJtZ",
+                "https://play-lh.googleusercontent.com/6T5GqfqJSGPC5FfIlp2Tmlcb8o9JQEMmC-qf1jL78nn_Q0CVCclhTcGGywEXoSHSZw"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "tv.mirada.iris.android.inspire.skygo",
+                    "title": "GO+",
+                    "url": "https://play.google.com/store/apps/details?id=tv.mirada.iris.android.inspire.skygo"
+                },
+                {
+                    "app_id": "com.skytel.workspace",
+                    "title": "SKYtel",
+                    "url": "https://play.google.com/store/apps/details?id=com.skytel.workspace"
+                },
+                {
+                    "app_id": "com.skyteams.skyteams2024",
+                    "title": "SKYteams",
+                    "url": "https://play.google.com/store/apps/details?id=com.skyteams.skyteams2024"
+                },
+                {
+                    "app_id": "com.skytel.pipelin",
+                    "title": "SKYtel-Corporate",
+                    "url": "https://play.google.com/store/apps/details?id=com.skytel.pipelin"
+                },
+                {
+                    "app_id": "com.skytel.bolorhuu.skydealler",
+                    "title": "SkyDealer",
+                    "url": "https://play.google.com/store/apps/details?id=com.skytel.bolorhuu.skydealler"
+                }
+            ],
+            "more_apps_by_developer": null,
+            "genres": [
+                "Business"
+            ],
+            "tags": [
+                "Business"
+            ]
+        }
+    },
+    {
+        "app_id": "mn.godeal.gopay",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=mn.godeal.gopay&hl=en&gl=us",
+        "time_update": "2024-04-16 19:07:09 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "mn.godeal.gopay",
+            "title": "GoPay Bitcoin HD Wallet",
+            "url": "https://play.google.com/store/apps/details?id=mn.godeal.gopay&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/5EOW9wpXSBglaWmU25faSKB1KDE5bszzjN7jLKELEIW_v0QLeW658_VITzesBVAE0g",
+            "description": "Та өөрийн Биткойныг үргэлж биедээ авч явах боломжтой боллоо.\n\nТа Биткойн авж хэрэглэж эхлэхийн тулд заавал өөрийн гэсэн хэтэвчтэй байх ёстой. Хэтэвч байхгүй бол Биткойн хүлээн авч, хадгалж, шилжүүлэх боломжгүй.\n\nБиткойн хэтэвч гэдэг нь таныг өөрийн биткойноо эзэмшдэг гэдгийг баталгаажуулдаг хувийн түлхүүр (Private Key)-г хадгалж байдаг програм юм.\n\nӨндөр нууцлал, хамгаалалт бүхий GoPay мобайл хэтэвчинд өөрийн Биткойн-оо холбож хүссэн үедээ хэрэгтэй үйлчилгээнүүддээ хэрэглээрэй.\n\nGoPay хэтэвч нь шууд Биткойны сүлжээ рүү холбогдож ажилладаг учраас илүү найдвартайд тооцогдоно. Хэрэглэхэд маш энгийн ойлгомжтой гэдгээрээ давуу талтай.  \n\nБоломжууд:\n\n- Хэрэглэгч бүртгэхгүй. Энэ хэтэвч нь тархмал сүлжээг болон peer to peer холболт ашигладаг. Таныг хэн гэдгийг хэн нэгэн мэдэх, мөрдөх боломжгүй юм.\n\n-Та бусад төрлийн хэтэвчнүүдээ GoPay мобайл апп дээр холбож нэмэлт үйлчилгээнүүдийг ашиглах боломжтой. /Цаасан болон Өөр апп дээрх хэтэвч/\n\n-Биткойноо төгрөгт хөрвүүлэн харах боломжтой\n\n-QR code эсвэл хэтэвчний хаягаа ашиглан Биткойн илгээх болон хүлээн авах боломжтой.\n\n-Апп дээр хувийн тохиргоо үүсгэн нэмэлт нууцлалууд хийх боломжтой.\n\n-Биткойн барьцаалан зээл авах үйлчилгээ нь таны Биткойныг түр битүүмжилж төгрөг/валютын зээл олгодог үйлчилгээ юм. Тиймээс таны Биткойн таны хяналтад хэвээр байх болно.\n\nНэмэлт үйлчилгээнүүд:\n\n-Та Биткойноо барьцаалан  төгрөг болон бусад валютаар зээл авах боломжтой.\n\n-Та крипто зах зээлийн талаарх хамгийн сүүлийн үеийн мэдээ мэдээллүүдийг цаг алдалгүй авах боломжтой.\n\n-Биткойны ханшийн өөрчлөлтүүдийн мэдээллийг харах боломжтой.\n\n-Мөн зах зээл борлогдож байгаа үнээр Биткойн олборлогч төхөөрөмж/miner/ худалдан авах, захиалах боломжтой.\n\n-Өөрийн олборлогч төхөөрөмжүүдийг шаардлага хангасан фарм хөлслөн байршуулах боломжтой.\n\nGoPay нь Bitpay-ийн нээлттэй Copay хэтэвч дээр суурилсан.\n\nТаны нууцлал таны гарт.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "1,000+",
+            "installs_count": 3532,
+            "developer": "Disrupt LLC",
+            "developer_id": "Disrupt+LLC",
+            "developer_url": "https://play.google.com/store/apps/developer?id=Disrupt+LLC",
+            "developer_email": "info@gopay.mn",
+            "developer_address": null,
+            "developer_website": "https://gopay.mn",
+            "version": "2.0.0",
+            "minimum_os_version": "5.1",
+            "size": null,
+            "released_date": "2018-02-10 02:00:00 +00:00",
+            "last_update_date": "2019-01-20 02:00:00 +00:00",
+            "update_notes": "- New simple &amp; beautiful UIs\n- Buy &amp; Sell 100+ Coins\n- Top Exchanges &amp; Market Capitalization update\n- Read crypto &amp; blockchain news in 9 languages",
+            "images": [
+                "https://play-lh.googleusercontent.com/H3PuVWzPf9keAtVvOqjUXUH4dbjjBQDMV96imiEapvCT1WqtE6JWM7xtIiuR_Q51HA",
+                "https://play-lh.googleusercontent.com/aMjYsTb3Kr9jYoATq8hBxGiHySCn0D4x8OLJOwzVUexaK3gi1VGqTdodJpsub1J8OUvq",
+                "https://play-lh.googleusercontent.com/y0Z2_Ofm8JokagRuTLPCOyuHVx0vfRQv7Nnbwy_D00lf7pbq1kovBf3u6OzT-Tl-5Pw",
+                "https://play-lh.googleusercontent.com/5iDcf3q2ZT_aQ0rYsvTa9vM-jRmJ5s6Ce6FB8xvcqyh7j8KqPANuJwnKjz_BdwVK_82y",
+                "https://play-lh.googleusercontent.com/UqCGRGWUdXA_mlkzOe5gX7BwXTPNtfrFbjwsm9qkg8cZexojqHRnCm35uZ94r49uEg",
+                "https://play-lh.googleusercontent.com/XgN4f39IPsk2DhnvrhY6_WkM3k_Mpm66kG4FN3ogNjNnkqvKjuFFegiEhTPmA9Uc1c3P",
+                "https://play-lh.googleusercontent.com/7xA9-ehr5cTGX_yNx5kK9l91e70PRIVju79zre7gUDJzolWqKLi_GC2F8OJL9IOVmRiH",
+                "https://play-lh.googleusercontent.com/UP7plvn5mUBgwBaxqHt-tB2rs2yVusIWTah1xKoVYFLbM_6Et93s2B5OvEB1f4YQBe6E",
+                "https://play-lh.googleusercontent.com/Pfc4jxg9C46sqca9foXjzCGpAbdGHhtJ-ucdkd8vBpsMiK9jRuAbrbfJ0bhEmztz0Ow",
+                "https://play-lh.googleusercontent.com/xrGnjPFeiGsbKuBDDo0GCcr-4oEOHeSAA_uFsvJfOJU6AsD7NNcxGJgDiy0RtBNrNA",
+                "https://play-lh.googleusercontent.com/RYpMpyy-tXYDtHNQUfw8hHurEhzkqsghPkwI_UabxsbWjkPvrm-KWuVnvq4zpq3z7gU",
+                "https://play-lh.googleusercontent.com/RC8LYzTpuytVV84kmcXSuytRrC15MeA5fRZJJKsuPtmpYjXb8BfIXoJxvwkBayST5nhO",
+                "https://play-lh.googleusercontent.com/GRtgpaKwsQfS98TneiwvyutZV3rAsMd0yjC2tz7Xr1W7U2IBXjfyY7RwU-mGJQDSboH3",
+                "https://play-lh.googleusercontent.com/YDsu3YRTeFDtnuUDWkieHmCLaMn9I6foCaiRo4CU49C_OwJjs-cyF2NrWbPgDHiFkQ",
+                "https://play-lh.googleusercontent.com/qCWEZiVWo2-9MyDetWGYmHHDfcQd2ig6GmN25CESEuzv8x5fGd_mj2XpbsdTsgrnxPs",
+                "https://play-lh.googleusercontent.com/6lFrUMZq4tE4I1zMcVlfPmY_u2yvPot30eoRMYZIDN8bmY1vj33VcQw34NXRN-9hLP4",
+                "https://play-lh.googleusercontent.com/33kmnCI0-q-HNtb_86eQfmY7Cu-tYTsLp-PPuhAQyYEwqs7YR-6R7z61Gepi7JH3hu8"
+            ],
+            "videos": [
+                "https://play.google.com/video/lava/web/player/yt:movie:kHCLhD4ypXE?autoplay=1&embed=play"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "com.firstiraqibank.corporate",
+                    "title": "First Iraqi Bank for Corporate",
+                    "url": "https://play.google.com/store/apps/details?id=com.firstiraqibank.corporate"
+                },
+                {
+                    "app_id": "com.bona.invest",
+                    "title": "Bona Invest",
+                    "url": "https://play.google.com/store/apps/details?id=com.bona.invest"
+                },
+                {
+                    "app_id": "biz.ezeemarket",
+                    "title": "Ezee Market",
+                    "url": "https://play.google.com/store/apps/details?id=biz.ezeemarket"
+                }
+            ],
+            "more_apps_by_developer": null,
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
+            ]
+        }
+    },
+    {
+        "app_id": "com.gopay.android",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.gopay.android&hl=en&gl=us",
+        "time_update": "2025-01-16 10:05:54 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.gopay.android",
+            "title": "GWCU GoPay",
+            "url": "https://play.google.com/store/apps/details?id=com.gopay.android&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/h9Y0hRlTnS0zQeOXJld0YeRNUsrhDqdoh97PODGdNnCshk9OwgTP50kxHFtpP95X22g",
+            "description": "Accept credit and debit cards anytime, anywhere with GWCU GoPay. Simply plug your free card reader into your phone and start accepting credit and debit cards anywhere you go. You may also type in the card information if your card reader isn’t nearby.\n \nGoPay allows both payments and refunds, provides electronic receipts, and allows easy access to your transaction history.\n \nFeatures\n-Easily accept credit and debit cards\n-Receive a free card reader\n-Accept EMV (chip) card transactions \n-Bluetooth EMV (chip) card readers availiable for purchase\n-Personalized receipts can be sent by text or email\n-Encrypts transactions\n-No monthly fee options\n-High transaction volume options",
+            "reviews_count": 5,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 2,
+                "votes_count": 5,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "1,000+",
+            "installs_count": 1444,
+            "developer": "Payroc, LLC",
+            "developer_id": "7588863168467477750",
+            "developer_url": "https://play.google.com/store/apps/dev?id=7588863168467477750",
+            "developer_email": "mobilesupport@itransact.com",
+            "developer_address": "1350 E Touhy Ave\nDes Plaines, IL 60018",
+            "developer_website": "https://www.gwcu.org/business/merchant/",
+            "version": "4.4.3",
+            "minimum_os_version": "5.0",
+            "size": null,
+            "released_date": "2014-06-03 03:00:00 +00:00",
+            "last_update_date": "2019-07-12 03:00:00 +00:00",
+            "update_notes": "Fixed some UI display bugs on the following pages\n- Transaction\n- Email Popups\n- Signature Page\n\nOther improvements:\n- Improved UI for smaller screens \n- Overhauled device selection\n- Enhanced Firebase for faster development iterations on app issues\n- Supercharged app for 64 bit users",
+            "images": [
+                "https://play-lh.googleusercontent.com/GGwTtbRGjawkluGpeY3PBdYYH22Ce0yWfPjigJ2e6uRWEAfkvu4izqwHmM49CY_I8M-h",
+                "https://play-lh.googleusercontent.com/U9UwG2BTD66c4sgAE3I7AiJoJHO3ai0HZVD3FHKe2rz5uOcaOHoI85WAOaG7fKOOOKI",
+                "https://play-lh.googleusercontent.com/C71rME3ffP12wK3purtFSD3zZdaqiPA8PSwBgSoeKaC9XbMTSfNsfaHS1WifmjcClA",
+                "https://play-lh.googleusercontent.com/r7_ii1R4F7aKvXjJim-OUOyA6MIdGuffuwiju3MoPP233xKha47lVlCXqQ3Fa2nqk5s",
+                "https://play-lh.googleusercontent.com/uULfnG1yrzXwP0Ckbngqtz-uvF45OHjHpCMMNj5jvmlvn8Q1USrmikSAvoPLNArc-M-t"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "com.bnt.currencydirect",
+                    "title": "Currencies Direct",
+                    "url": "https://play.google.com/store/apps/details?id=com.bnt.currencydirect"
+                },
+                {
+                    "app_id": "com.soan.pos",
+                    "title": "Soan POS, Billing & Accounting",
+                    "url": "https://play.google.com/store/apps/details?id=com.soan.pos"
+                },
+                {
+                    "app_id": "com.foreceipt.android.cloud",
+                    "title": "Foreceipt Receipt Tracker App",
+                    "url": "https://play.google.com/store/apps/details?id=com.foreceipt.android.cloud"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "com.payroc.rocservices",
+                    "title": "Roc Services",
+                    "url": "https://play.google.com/store/apps/details?id=com.payroc.rocservices"
+                },
+                {
+                    "app_id": "com.payroc.payroc_pos",
+                    "title": "Payroc Pay - Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.payroc.payroc_pos"
+                },
+                {
+                    "app_id": "com.rmsnpc.mobile",
+                    "title": "Payroc Agent Portal",
+                    "url": "https://play.google.com/store/apps/details?id=com.rmsnpc.mobile"
+                },
+                {
+                    "app_id": "com.unitedroadtowing.android",
+                    "title": "United Road Towing - Payments",
+                    "url": "https://play.google.com/store/apps/details?id=com.unitedroadtowing.android"
+                },
+                {
+                    "app_id": "com.alpinecu.android",
+                    "title": "Alpine CU Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.alpinecu.android"
+                },
+                {
+                    "app_id": "com.discoveryfcu.android",
+                    "title": "Discovery FCU Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.discoveryfcu.android"
+                }
+            ],
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
+            ]
+        }
+    },
+    {
+        "app_id": "com.gopayusu.android",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.gopayusu.android&hl=en&gl=us",
+        "time_update": "2023-10-16 03:23:54 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.gopayusu.android",
+            "title": "USUCU GoPay",
+            "url": "https://play.google.com/store/apps/details?id=com.gopayusu.android&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/P5iHFgcMARo5jr0jjgHZ9qQt1_4xDsu2BPK1hdVoEZzO-lwZgDVvM3iT_04UHiEsO-Y",
+            "description": "Accept credit and debit cards anytime, anywhere with USUCU GoPay. Simply plug your free card reader into your phone and start accepting credit and debit cards anywhere you go. You may also type in the card information if your card reader isn’t nearby.\n \nGoPay allows both payments and refunds, provides electronic receipts and allows easy access to your transaction history.\n \nFeatures\n-Easily accept credit and debit cards\n-Receive a free card reader\n-Accept EMV (chip) card transactions \n-Bluetooth EMV (chip) card readers available for purchase\n-Personalized receipts can be sent by text or email\n-Encrypts transactions\n-No monthly fee options\n-High transaction volume options",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "100+",
+            "installs_count": 320,
+            "developer": "Payroc, LLC",
+            "developer_id": "7588863168467477750",
+            "developer_url": "https://play.google.com/store/apps/dev?id=7588863168467477750",
+            "developer_email": "support@payroc.com",
+            "developer_address": "1350 E Touhy Ave\nDes Plaines, IL 60018",
+            "developer_website": "https://www.usucu.org/business/merchant/",
+            "version": "4.4.3",
+            "minimum_os_version": "5.0",
+            "size": null,
+            "released_date": "2014-06-03 03:00:00 +00:00",
+            "last_update_date": "2019-07-12 03:00:00 +00:00",
+            "update_notes": "Fixed some UI display bugs on the following pages\n- Transaction\n- Email Popups\n- Signature Page\n\nOther improvements:\n- Improved UI for smaller screens \n- Overhauled device selection\n- Enhanced Firebase for faster development iterations on app issues\n- Supercharged app for 64 bit users",
+            "images": [
+                "https://play-lh.googleusercontent.com/DEqZ_E6aTuzdmP9wIsixVPFHMrKF2Nv0hLM-WlX9Iv8yuBapEwvbfFn9Hh411j_a_xg",
+                "https://play-lh.googleusercontent.com/sejJSxiIYQlqvZXHjWWWlDperhmOkZ09GrJ17qX72W29VE5_fYK2B4HPMM2JGW1ozw",
+                "https://play-lh.googleusercontent.com/LQRkjBy9HtWLgULTeYvmfysQfXtUs_9cvU11PqaWgdNy71xb4ty1ULUwV6zmNum3bpA",
+                "https://play-lh.googleusercontent.com/skAhl1PysVr2i3AJqdchzshrDfIq1q31WOGm28_z3JdYg1Kvpxj3jy_xcZrzXnTfv2E",
+                "https://play-lh.googleusercontent.com/jAmbRUH9xDWsu7qSkHMGRN6QxGBq9KKAzLaRNO-J0g_fIUBttMcFjYmyk4C4pTlpfqU"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "com.dbs.dbspaylah",
+                    "title": "DBS PayLah!",
+                    "url": "https://play.google.com/store/apps/details?id=com.dbs.dbspaylah"
+                },
+                {
+                    "app_id": "one.tomorrow.app",
+                    "title": "Tomorrow: Mobile Banking",
+                    "url": "https://play.google.com/store/apps/details?id=one.tomorrow.app"
+                },
+                {
+                    "app_id": "nz.co.asb.asbmobile",
+                    "title": "ASB Mobile Banking",
+                    "url": "https://play.google.com/store/apps/details?id=nz.co.asb.asbmobile"
+                },
+                {
+                    "app_id": "com.dbs.sg.dbsmbanking",
+                    "title": "DBS digibank",
+                    "url": "https://play.google.com/store/apps/details?id=com.dbs.sg.dbsmbanking"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "com.payroc.payroc_pos",
+                    "title": "Payroc Pay - Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.payroc.payroc_pos"
+                },
+                {
+                    "app_id": "com.rmsnpc.mobile",
+                    "title": "Payroc Agent Portal",
+                    "url": "https://play.google.com/store/apps/details?id=com.rmsnpc.mobile"
+                },
+                {
+                    "app_id": "com.unitedroadtowing.android",
+                    "title": "United Road Towing - Payments",
+                    "url": "https://play.google.com/store/apps/details?id=com.unitedroadtowing.android"
+                },
+                {
+                    "app_id": "com.fivelinx.android",
+                    "title": "5LINX Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.fivelinx.android"
+                },
+                {
+                    "app_id": "com.alpinecu.android",
+                    "title": "Alpine CU Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.alpinecu.android"
+                },
+                {
+                    "app_id": "com.discoveryfcu.android",
+                    "title": "Discovery FCU Mobile Merchant",
+                    "url": "https://play.google.com/store/apps/details?id=com.discoveryfcu.android"
+                }
+            ],
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
+            ]
+        }
+    },
+    {
+        "app_id": "com.variablesoft.usdgopay",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.variablesoft.usdgopay&hl=en&gl=us",
+        "time_update": "2025-01-08 17:13:59 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.variablesoft.usdgopay",
+            "title": "USD GoPay",
+            "url": "https://play.google.com/store/apps/details?id=com.variablesoft.usdgopay&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/wLd-peJ4jjaFXG5GtHCkz6tSc-B7E5SC75nhRg2r4r499A0lB9-cYfNxzF800aPdQp3n",
+            "description": "Our team at United Software Developers, Inc. (USD) is your go to company for any software solution. In business over 25 years, we work one on one with our clients to ensure a seamless delivery.\n\nWhat sets us apart? Our programs simplify any business process resulting in efficiency and ease of use.\n\nUSD GoPay, powered by United Software, is the absolute web based customer management system. For any industry or size business, this is the easiest and most effective way to manage your clients.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "installs": "50+",
+            "installs_count": 56,
+            "developer": "United Software Developers Inc.",
+            "developer_id": "United+Software+Developers+Inc.",
+            "developer_url": "https://play.google.com/store/apps/developer?id=United+Software+Developers+Inc.",
+            "developer_email": "Aankur81@gmail.com",
+            "developer_address": null,
+            "developer_website": "https://usdgopay.com/",
+            "version": "1.2.2",
+            "minimum_os_version": "8.0",
+            "size": null,
+            "released_date": "2022-09-27 03:00:00 +00:00",
+            "last_update_date": "2024-08-16 03:00:00 +00:00",
+            "update_notes": "update some function",
+            "images": [
+                "https://play-lh.googleusercontent.com/rkzfEI--_wFNGnQh2umSNxBvxEyk0b-NH2iCe_yEJmGGLilH91hVaeXURMwR8s1BgQ",
+                "https://play-lh.googleusercontent.com/moOmlpcIGeOxOIFTvljGSfoaRz1rW6iS2ZRT5ds2xTxhAtVOoAcojVf1xQ-AQ8-DYwFq",
+                "https://play-lh.googleusercontent.com/zSIp6GWGLZUx2UqV8lGq1m4La19rwt0jvAT1APu0caLR3P--vzrn_0hSbbp-OYDRCA",
+                "https://play-lh.googleusercontent.com/hAM8_4xLjd8BFFjYRx4ov7yqQCHAwiUh-R25Uk_Wcl7JlqquTRr2sMrQosSHbE7twYU",
+                "https://play-lh.googleusercontent.com/yy5ltQ-XhrYpgW2YoUFdgzRXnwz8E8x1JLzc5OvO5Xc-vF4RD-ie1GoXDEu1PZH2-rN0",
+                "https://play-lh.googleusercontent.com/uhC98dFaEkInkb7vPd8BIY_3tw8pGtj32oL2qmdo-hBWQUfDU92YQO4l0bFMhhDkDw",
+                "https://play-lh.googleusercontent.com/ZfGu04LIoHebxxuwhIlQJ1s3bAZIbIzPs-xI6IeD-Uhyjp2Cf_AgVgnTZlKvCQQEkmxL",
+                "https://play-lh.googleusercontent.com/9aho7blFvZvbVvLiogbFikrkSle5s_8NnNcPBgoGCLpHYKjiy37b6NUu4fKr8W7UTeQ",
+                "https://play-lh.googleusercontent.com/PC7Q2Hdf4RUMXL15K3-UTrfmU559kG5TU4ehZVuqddoPv7eFwK0h8psfPSVF8mnVa3k",
+                "https://play-lh.googleusercontent.com/zvktxOrl9MMukU-XkrWNZyG-G3byjAnOnqSDsrKCtAhyn5jtaVEaxBS41Rpj5PlGkRM",
+                "https://play-lh.googleusercontent.com/EI-YibrWe-IQJrP7sWK_uHeFLrF5BP04jm9gUNQfMNY3pGakcnNBYwfB2Ko9BoQs3g",
+                "https://play-lh.googleusercontent.com/-F16Tfs9fzX0XZlPe6rtsP2cksWAlWCVaVMD51RHXZtXvXaU92z2-TyOsA5drWUz5jM",
+                "https://play-lh.googleusercontent.com/bkSOh6-NDsICbLcS1cM60bgo9WAshUBleYfthxumdCNs6wirDtuCjGzxIGD57Ju6UDs6",
+                "https://play-lh.googleusercontent.com/P_fjjYo749ADxQ0taWhjYPA0EWDO2axBmuVrgOIoBzYc4PgfJsLKL_bbEGHyiBMutqk"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "com.usdsoftware.mvradmin",
+                    "title": "MVRNOW Admin",
+                    "url": "https://play.google.com/store/apps/details?id=com.usdsoftware.mvradmin"
+                },
+                {
+                    "app_id": "com.usdsoftware.omitarisk",
+                    "title": "OmitARisk",
+                    "url": "https://play.google.com/store/apps/details?id=com.usdsoftware.omitarisk"
+                },
+                {
+                    "app_id": "com.usdsoftware.mvrnow",
+                    "title": "MVRNOW",
+                    "url": "https://play.google.com/store/apps/details?id=com.usdsoftware.mvrnow"
+                }
+            ],
+            "more_apps_by_developer": null,
+            "genres": [
+                "Business"
+            ],
+            "tags": [
+                "Business"
+            ]
+        }
+    },
+    {
+        "app_id": "com.sa.gopay.biller",
+        "se_domain": "play.google.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://play.google.com/store/apps/details?id=com.sa.gopay.biller&hl=en&gl=us",
+        "time_update": "2025-01-15 20:06:36 +00:00",
+        "item": {
+            "type": "google_play_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "com.sa.gopay.biller",
+            "title": "GoPay Biller",
+            "url": "https://play.google.com/store/apps/details?id=com.sa.gopay.biller&hl=en&gl=us",
+            "icon": "https://play-lh.googleusercontent.com/162nXoljOIdzKryVWn19bKI9zJWQ5XZpWqnTelT8xs-sfk4TJm5OdCGOOhcQ5D5EMw",
+            "description": "It is one of the products offered by the Financial Comprehensive Solutions Company to the business sector. It is a service that targets all segments and sizes of establishments in the Saudi market (small, medium, large). This service provides the necessary electronic technologies and tools to enable the facility to raise invoices automatically and pay them on the “SADAD” system. The service also notifies the facility&#39;s customers of the issuance of the invoice (abbreviated - detailed) and sends it to them electronically through text messages or e-mails.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "installs": "10+",
+            "installs_count": 20,
+            "developer": "Digital Cash International Company",
+            "developer_id": "Digital+Cash+International+Company",
+            "developer_url": "https://play.google.com/store/apps/developer?id=Digital+Cash+International+Company",
+            "developer_email": "helpdesk@ifs.sa",
+            "developer_address": null,
+            "developer_website": "https://gopay.sa/",
+            "version": "1.1.5",
+            "minimum_os_version": "5.0",
+            "size": null,
+            "released_date": "2023-03-24 02:00:00 +00:00",
+            "last_update_date": "2024-10-09 03:00:00 +00:00",
+            "update_notes": "Bug fix",
+            "images": [
+                "https://play-lh.googleusercontent.com/GMVjNMg_RFnEyPud6T9P06fp90mqWhscwiroe4pNK_2CPOnl-dfTodIYs7fJPIDjfZQ",
+                "https://play-lh.googleusercontent.com/3fthJEdQU6gB086t6o2hrS6lkNpBDMK7iKd1C87F5e-P9Iqafx9KidC2GkWBXpRM5Wsw",
+                "https://play-lh.googleusercontent.com/Idhe2E_IFpDiCsiIlQKy82WrqUDzwEm9quySC-fCsp3wcB4oa_pQrLoVUAZcmWb6WQ",
+                "https://play-lh.googleusercontent.com/wyLpspVOAaId9XaX0IVRh7vfrH60Ja205HgVYXiI53JbtH5-v5g5dtyeztdAHEjEyRJN",
+                "https://play-lh.googleusercontent.com/G9FCtdzcxOl1hDaux7MTdI4JzAC5Ro-FxFGphSGCMfxL5Cz2hYngPK8q0bQs8rWMGA",
+                "https://play-lh.googleusercontent.com/3bJD1-ab_xPNej7wrfBHKga4WSQVGYuU07MsPlzTCIDSwagrq2Qqb-UhfSo0ZLnC-x8"
+            ],
+            "videos": null,
+            "similar_apps": [
+                {
+                    "app_id": "io.wallet.zapit",
+                    "title": "Zapit: Crypto Wallet & P2P",
+                    "url": "https://play.google.com/store/apps/details?id=io.wallet.zapit"
+                },
+                {
+                    "app_id": "com.lobstr.client",
+                    "title": "LOBSTR Wallet. Buy Stellar XLM",
+                    "url": "https://play.google.com/store/apps/details?id=com.lobstr.client"
+                },
+                {
+                    "app_id": "com.dbs.dbspaylah",
+                    "title": "DBS PayLah!",
+                    "url": "https://play.google.com/store/apps/details?id=com.dbs.dbspaylah"
+                },
+                {
+                    "app_id": "io.horizontalsystems.bankwallet",
+                    "title": "Unstoppable Crypto Wallet",
+                    "url": "https://play.google.com/store/apps/details?id=io.horizontalsystems.bankwallet"
+                },
+                {
+                    "app_id": "com.ancryptoWallet",
+                    "title": "AnCrypto: Safest Web3 Wallet",
+                    "url": "https://play.google.com/store/apps/details?id=com.ancryptoWallet"
+                },
+                {
+                    "app_id": "com.hash.mytoken",
+                    "title": "MyToken-Crypto OnChain Tracker",
+                    "url": "https://play.google.com/store/apps/details?id=com.hash.mytoken"
+                }
+            ],
+            "more_apps_by_developer": null,
+            "genres": [
+                "Finance"
+            ],
+            "tags": [
+                "Finance"
+            ]
+        }
+    }
+]

@@ -21,40 +21,30 @@ export default function KeywordTable({ data }: { data: any }) {
       </TableHeader>
       <TableBody>
         {data.result.data.slice(0, 6).map((item: any, index: number) => (
-          <React.Fragment key={item.position}>
+          <React.Fragment key={item.position + "-" + index}> {/* Ensure uniqueness */}
             <TableRow className={index == 3 ? "blur-sm" : ""}>
               <TableCell>{index + 1}</TableCell>
               <TableCell>{item.keyword}</TableCell>
-              <TableCell>{item.region_queries_count}</TableCell>
+              <TableCell>{item.region_queries_count.toLocaleString("id-ID")}</TableCell>
               <TableCell>{item.position}</TableCell>
             </TableRow>
             {index >= 2 && (
-              <><TableRow>
-                <TableCell className="blur-sm">
-                  <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
-                </TableCell>
-                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none"/></TableCell>
-                <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-              </TableRow><TableRow>
-                  <TableCell className="blur-sm">
-                    <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
-                  </TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                </TableRow><TableRow>
-                  <TableCell className="blur-sm">
-                    <img src="img/blur_background.png" alt="Placeholder" className="w-20 h-5 mx-auto pointer-events-none select-none" />
-                  </TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                  <TableCell className="blur-sm"> <img src="img/blur_background.png" alt="Placeholder"  className="w-50 h-5 w-full mx-auto pointer-events-none select-none" /></TableCell>
-                </TableRow></>
+              <>
+                {[...Array(3)].map((_, i) => (
+                  <TableRow key={`blurred-${index}-${i}`}> {/* Unique key for each row */}
+                    {[...Array(4)].map((_, j) => (
+                      <TableCell key={`blurred-cell-${index}-${i}-${j}`} className="blur-sm">
+                        <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none" />
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </>
             )}
           </React.Fragment>
         ))}
       </TableBody>
+
     </Table>
 
   );
