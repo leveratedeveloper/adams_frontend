@@ -4,9 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import logoAdams from "../../public/img/Logo_Adams_Chillax_New.webp";
 import Image from "next/image";
+import { useModal } from "../../contexts/ModalContext";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setIsOpen } = useModal();
   const handleScroll = (id: string) => {
     const targetDiv = document.getElementById(id);
     if (targetDiv) {
@@ -40,8 +43,9 @@ export default function Header() {
         
         {/* Button on the far right */}
         <button
-          className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
-          onClick={() => window.location.href = "https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"}>
+        className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
+          onClick={() => setIsOpen(true)}
+        >
           Consult Now
         </button>
       </nav>
@@ -84,6 +88,7 @@ export default function Header() {
           </nav>
         </div>
       )}
+      
     </header>
   );
 }
