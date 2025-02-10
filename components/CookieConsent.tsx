@@ -18,7 +18,6 @@ const CookieConsent = () => {
   };
 
   if (!showBanner) return null;
-
   return (
     <div className="fixed bottom-0 left-0 w-full bg-gray-900 text-white p-4 flex justify-between items-center z-50">
       <p className="text-sm">
