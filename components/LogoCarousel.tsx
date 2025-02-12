@@ -2,14 +2,14 @@ import Image from 'next/image';
 
 const LogoCarousel = () => {
   const logos = [
-    '/img/client-logos/logo_colour_allianz.png',
-    '/img/client-logos/logo_colour_bri.png',
-    '/img/client-logos/logo_colour_bussan autofinance baf.png',
-    '/img/client-logos/logo_colour_home credit.png',
-    '/img/client-logos/logo_colour_maybank sekuritas.png',
-    '/img/client-logos/logo_colour_merries.png',
-    '/img/client-logos/logo_colour_msig.png',
-    '/img/client-logos/logo_colour_unicef.png',
+    '/img/client-logos/logo_colour_allianz.webp',
+    '/img/client-logos/logo_colour_bri.webp',
+    '/img/client-logos/logo_colour_bussan autofinance baf.webp',
+    '/img/client-logos/logo_colour_home credit.webp',
+    '/img/client-logos/logo_colour_maybank sekuritas.webp',
+    '/img/client-logos/logo_colour_merries.webp',
+    '/img/client-logos/logo_colour_msig.webp',
+    '/img/client-logos/logo_colour_unicef.webp',
   ];
 
   return (

@@ -4,8 +4,11 @@ import { Triangle } from 'lucide-react';
 import Link from 'next/link';
 import logoAdams from "../public/img/Adams_logo_white.png";
 import Image from "next/image";
+import { useModal } from "../contexts/ModalContext";
 
 export function Footer() {
+  const { setIsOpen } = useModal();
+
   return (
     <footer className="w-full bg-[#111111] text-white py-1">
       <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between">
@@ -17,14 +20,14 @@ export function Footer() {
           © 2025 ADAMS Indonesia - All right reserved.
         </div>
         
-        <div className="flex items-center space-x-6 text-sm">
-          <Link href="#" className="hover:text-gray-300 transition-colors">
+        <div className="flex items-center space-x-6 text-xs md:mb-0 sm:mb-4">
+          <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">
             Privacy Policy
           </Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">
+          <Link href="/terms-condition" className="hover:text-gray-300 transition-colors">
             Terms & Condition
           </Link>
-          <Link href="#" className="hover:text-gray-300 transition-colors">
+          <Link href="#" onClick={() => setIsOpen(true)} className="hover:text-gray-300 transition-colors">
             Consult Now
           </Link>
         </div>
