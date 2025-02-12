@@ -142,6 +142,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //DataforSEO
   const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
     setLoading(true);
+    if (getFetchCount() > 3) {
+        setLoading(false)
+        setSuggestionsIcon([])
+        setIsOpen(true)
+        return [];
+      }
     try {
       const currentFetchCount = getFetchCount() + 1;
 
