@@ -10,8 +10,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { saveDataToDB, getDataFromDB,deleteAllData } from '../utils/indexedDb';
 import Cookies from 'js-cookie';
-import axios from 'axios';
+import { useModal } from "../../contexts/ModalContext";
 import Modal from "@/components/hubspotmodal/modal";
+import axios from 'axios';
 
 interface TabContentProps {
   value: string;
@@ -23,8 +24,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [isOn, setIsOn] = useState(true);
   const [loading, setLoading] = useState(false);
   const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
-  const [isOpenConsult, setIsOpenConsult] = useState(false);
-
+  const { isOpen, setIsOpen } = useModal();
+  const [error, setError] = useState("");
 
   //DataforSEO
   const [query, setQuery] = useState("");
@@ -33,6 +34,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [showDropdown, setShowDropdown] = useState(false);
   const [categories, setCategories] = useState<string[]>(["Finance", "Business"]); 
   const [showIcon, setIcon] = useState(false);
+  const [appsID, setAppsID] = useState("");
+  const [nameID, setNameID] = useState("");
   // const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -41,6 +44,8 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     premium_backlink: true,
     keyword_optimized: 5,
     article_development: 5,
+    appId: '', 
+    appName: '',
   });
   
   const handleNavigation = () => {
@@ -58,7 +63,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
-
+    setError(""); 
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -89,10 +94,21 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const handleSubmit = async () => {
     setLoading(true);
     if (value == 'website'){
+      if (!formData.url) {
+        setError("URL is required!");
+        return;
+      }
       await saveDataToDB(formData);
       console.log("add data form",formData)
       router.push('/content-web')
     }else{
+      if (!checkedItems["optionGoogle"] && !checkedItems["optionApple"]) {
+        setError("You must select Google!! or Apple!!");
+        return;
+      }
+
+      formData.appId = appsID;
+      formData.appName = nameID;
       await saveDataToDB(formData);
       console.log("add data form",formData)
       router.push('/content')
@@ -106,13 +122,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     const fetchDataDB = async () => {
       const dbData = await getDataFromDB();
       console.log("ini dbData", dbData);
+      console.log("ini count",getFetchCount())
+      // const timeout = setTimeout(() => {
+      //   deleteAllData();
+      //   console.log("Deleted all data after 10 seconds");
+      // }, 10000);
   
-      const timeout = setTimeout(() => {
-        deleteAllData();
-        console.log("Deleted all data after 10 seconds");
-      }, 10000);
-  
-      return () => clearTimeout(timeout); // Cleanup if component unmounts
+      // return () => clearTimeout(timeout); // Cleanup if component unmounts
     };
   
     fetchDataDB();
@@ -127,7 +143,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
     setLoading(true);
     try {
-  
+      const currentFetchCount = getFetchCount() + 1;
+
+      setFetchCount(currentFetchCount);
       // Replace with your DataForSEO API credentials
       const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
       const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
@@ -202,27 +220,50 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       return [];
     }
   };
-
+  const getFetchCount = () => {
+    return parseInt(Cookies.get("fetch_count") || "0", 10);
+  };
+  
+  const setFetchCount = (count: number) => {
+    Cookies.set("fetch_count", count.toString(), { expires: 1 }); // Save count in cookies for 7 days
+  };
+  
   // const fetchSuggestions = async (searchQuery: string,checkedItems: { [key: string]: boolean }) => {
   //   setLoading(true);
-  //   console.log("ini checkedItems",checkedItems)
+  //   if (getFetchCount() > 3) {
+  //     setLoading(false)
+  //     setSuggestionsIcon([])
+  //     setIsOpen(true)
+  //     return [];
+  //   }
   //   try {
   //     console.log("Fetching from local JSON...",searchQuery);
   
   //     const API_URL = "datajson/data.json"; 
+  //     const currentFetchCount = getFetchCount() + 1;
 
+  //     setFetchCount(currentFetchCount);
   //     // Fetch data from the local JSON file
   //     const response = await fetch(API_URL);
   //     const data = await response.json();
+  //     console.log("ini data item", data)
+  //     if (!data.tasks || !Array.isArray(data.tasks)) {
+  //       console.error("Unexpected data structure: tasks is missing or not an array", data);
+  //       return [];
+  //     }
 
   //     // Filter results based on searchQuery (assuming "title" and "description" exist in the JSON inside "data.result.items")
   //     const filteredResults = data.tasks.flatMap((task: any) =>
-  //       task.result.flatMap((resultItem: any) =>
-  //         resultItem.items.filter((item: any) =>
-  //           item.item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-  //           item.item.description.toLowerCase().includes(searchQuery.toLowerCase())
-  //         )
-  //       )
+  //       Array.isArray(task.result)
+  //         ? task.result.flatMap((resultItem: any) =>
+  //             Array.isArray(resultItem.items)
+  //               ? resultItem.items.filter((item: any) =>
+  //                   item?.item?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //                   item?.item?.description?.toLowerCase().includes(searchQuery.toLowerCase())
+  //                 )
+  //               : []
+  //           )
+  //         : []
   //     );
 
   //     setLoading(false);
@@ -244,8 +285,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     }, []);
     
     const handleSelectItem = (data: any) => {
-      console.log("item",data)
       setQuery(data.item.title);  // Set the query to the selected item
+      setAppsID(data.app_id)
+      setNameID(data.item.title);
       setShowDropdown(false);  // Close the dropdown
       setIcon(true)
       setSuggestionsIcon(prevItems => [...prevItems, data]);
@@ -264,7 +306,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       setShowDropdown(true);
       const results = await fetchSuggestions(e.target.value, checkedItems);
       setSuggestions(results);
-     
       return;
     } else {
       setShowDropdown(false);
@@ -272,6 +313,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
 
   const handleFocus = () => {
+    setError(""); 
     if (query.length >= 3) {
       setSuggestionsIcon([]); 
       setShowDropdown(true);
@@ -283,6 +325,14 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   return (
     <TabsContent value={value} className="mt-0">
       {/* URL Input */}
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          {/* Embedded HubSpot Meeting */}
+          <iframe
+            src="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
+            className="w-full h-96 border rounded"
+            allowFullScreen
+          ></iframe>
+        </Modal>
         <div className="mb-8">
           {value === 'website' && (
            <div className="md:grid-cols-3 gap-8 mb-8">
@@ -293,7 +343,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
               onChange={handleChange}
               value={formData.url}
+              required
             />
+            {error && <p className="text-red-500 text-sm">{error}</p>} {/* Error Message */}
           </div>
           )}
           {value === 'app' && (
@@ -340,7 +392,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 <span className="text-xs text-gray-600 ml-2">Apps Store</span>
               </div>
             </div>
-          
             {/* Divider */}
             <div className="hidden md:block w-px bg-gray-300 mx-2" />
           
@@ -359,7 +410,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               </div>
 
               {showDropdown && query.length >= 3 && (
-              <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
+              <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-1">
                 {loading ? (
                   <div className="p-2 text-sm text-gray-500">Loading...</div>
                 ) : suggestions.length > 0 ? (
@@ -410,7 +461,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     </div>
                   ))
                 ) : (
-                  <div className="p-2 text-sm text-gray-500">No results found</div>
+                  <div className="p-2 text-sm text-gray-500 relative z-1">No results found</div>
                 )}
 
                 {!loading && suggestions.length > 0 && (
@@ -423,10 +474,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 )}
               </div>
               )}
-
+              {error && <p className="text-red-500 text-sm">{error}</p>} {/* Error Message */}
             </div>
-
-
+            
           </div>         
           )}
           {value === 'app' && (
@@ -721,7 +771,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
           {/* </Link> */}
         </div>
-         
     </TabsContent>
   );
 }

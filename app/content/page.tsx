@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { ArrowLeft, Rocket } from 'lucide-react';
 import ServiceCard from '@/components/summary/ServiceCard';
@@ -5,9 +7,45 @@ import TabSwitch from '@/components/summary/TabSwitch';
 import Header from '@/components/general/header';
 import Link from 'next/link';
 import { Footer } from '@/components/Footer';
+import React,{ useEffect, useState } from "react";
+import { getDataFromDB } from '../utils/indexedDb';
 
 export default function ContentPage() {
- 
+  interface DataItem {
+    url: string;
+    country: string;
+    premium_backlink: string;
+    keyword_optimized: number;
+    article_development: number;
+    appId: string,
+    appName: string,
+    id: number;
+  }
+
+   const [dataArray, setDataArray] = useState<DataItem[]>([]);
+
+   useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const dbData = await getDataFromDB();
+          if (Array.isArray(dbData)) {
+            const lastItem = dbData[dbData.length - 1];
+            const domain = lastItem['url'].replace(/(^\w+:|^)\/\//, "").replace(/\/$/, ""); 
+            console.log("ini lastItem",lastItem)
+            setDataArray([lastItem]); // Update the data array
+  
+            // Call the API with the domain immediately
+            // await fetchDataApi(domain);
+          } else {
+            console.error("dbData is not an array:", dbData);
+          }
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+      // sendItemtoCMS();
+      fetchData();
+    }, []); 
   const handleClick = () => {
     window.location.href = 'https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment';
   };
