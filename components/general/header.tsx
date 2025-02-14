@@ -9,7 +9,7 @@ import { useModal } from "../../contexts/ModalContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { setIsOpen } = useModal();
+  const { isOpen, setIsOpen } = useModal();
   const handleScroll = (id: string) => {
     const targetDiv = document.getElementById(id);
     if (targetDiv) {
@@ -17,7 +17,7 @@ export default function Header() {
     }
   };
   return (
-    <header className="bg-gradient-to-r from-white via-white to-transparent backdrop-blur-lg fixed w-full z-50">
+    <header className={`bg-gradient-to-r from-white via-white to-transparent backdrop-blur-lg fixed w-full ${isOpen ? "z-10" : "z-50"}`}>
       <div className="container mx-auto px-4 flex items-center h-16">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
@@ -28,27 +28,27 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="flex items-center justify-between w-full px-4 py-2 ">
-        {/* Left content or logo (optional) */}
-        <div className="hidden md:flex space-x-6">
-          <Link href="/#how-it-works" className="text-gray-700 hover:text-blue-500">
-            How It Works
-          </Link>
-          <Link href="/#why-adams" className="text-gray-700 hover:text-blue-500">
-            Why Adams
-          </Link>
-          <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
-            Proven Results
-          </Link>
-        </div>
-        
-        {/* Button on the far right */}
-        <button
-        className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
-          onClick={() => setIsOpen(true)}
-        >
-          Consult Now
-        </button>
-      </nav>
+          {/* Left content or logo (optional) */}
+          <div className="hidden md:flex space-x-6">
+            <Link href="/#how-it-works" className="text-gray-700 hover:text-blue-500">
+              How It Works
+            </Link>
+            <Link href="/#why-adams" className="text-gray-700 hover:text-blue-500">
+              Why Adams
+            </Link>
+            <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
+              Proven Results
+            </Link>
+          </div>
+          
+          {/* Button on the far right */}
+          <button
+          className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
+            onClick={() => setIsOpen(true)}
+          >
+            Consult Now
+          </button>
+        </nav>
 
 
         {/* Hamburger Menu */}
