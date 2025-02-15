@@ -2,10 +2,16 @@
 
 import React, { useState } from "react";
 import KeywordTable from '@/components/summary/KeywordTable';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-const TabSwitch = () => {
+export default function TabSwitch ({ data }: { data: any, dataArray: any }) {
   const [activeTab, setActiveTab] = useState("appStore");
-
+  if (!data) {
+    return <p className="text-center">data not found ...</p>;
+  }
+  const appID = Object.keys(data)?.[0]; // Extract the first key 
+  const suggestions = data?.[appID]?.suggestions || []; // Access suggestions safely
+  
   return (
     <div>
       {/* Tab Buttons */}
@@ -42,12 +48,52 @@ const TabSwitch = () => {
         {activeTab === "playStore" && (
           <div>
             <h3 className="text-lg font-semibold">Play Store</h3>
-            <KeywordTable data={""}/>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[100px]">No.</TableHead>
+                  <TableHead>Keyword</TableHead>
+                  <TableHead>Monthly search volume</TableHead>
+                  <TableHead>Current rank</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+              {suggestions.length > 0 ? (
+                  suggestions.slice(0, 3).map((item: any, index: number) => (
+                    <React.Fragment key={`${appID}-${item.keyword}-${index}`}>
+                      <TableRow className={index === 3 ? "blur-sm" : ""}>
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell>{item.keyword}</TableCell>
+                        <TableCell>{item.volume}</TableCell>
+                        <TableCell>{item.ranking}</TableCell>
+                      </TableRow>
+                      {index >= 2 && (
+                        <>
+                          {[...Array(3)].map((_, i) => (
+                            <TableRow key={`blurred-${index}-${i}`}>
+                              {[...Array(4)].map((_, j) => (
+                                <TableCell key={`blurred-cell-${index}-${i}-${j}`} className="blur-sm">
+                                  <img src="img/blur_background.png" alt="Placeholder" className="w-50 h-5 w-full mx-auto pointer-events-none select-none" />
+                                </TableCell>
+                              ))}
+                            </TableRow>
+                          ))}
+                        </>
+                      )}
+                    </React.Fragment>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={4} className="text-center">No Data Available</TableCell>
+                  </TableRow>
+                )}
+
+              </TableBody>
+
+            </Table>
           </div>
         )}
       </div>
     </div>
   );
 };
-
-export default TabSwitch;

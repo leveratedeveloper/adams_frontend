@@ -4,7 +4,7 @@ import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
   if (!data?.result?.data) {
-    return <p className="text-center">Loading...</p>;
+    return <p className="text-center">data not found ...</p>;
   }
 
   console.log("ini data table", data.result.data);

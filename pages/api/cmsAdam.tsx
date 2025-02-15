@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method !== "POST") {
         return res.status(405).json({ error: "Method Not Allowed" });
       }
-    
+
       try {
         const { lastItem } = req.body;
 
@@ -16,32 +16,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
 
         const formData = new FormData();
-        formData.append("session_id", lastItem['session']);
-        formData.append("type", "web");
+        formData.append("session_id", lastItem['sessionId']);
+        formData.append("type", lastItem['url'] != null ? 'web' : 'app');
         formData.append("url", lastItem['url']);
+        formData.append("app_name", lastItem['appName']);
         formData.append("country", lastItem['country']);
         formData.append("is_premium", lastItem['premium_backlink']);
         formData.append("keywords_optimized", lastItem['keyword_optimized']);
         formData.append("onpage_articles", "10");
-        formData.append("ip", "103.135.220.186");
-        formData.append(
-          "user_agent",
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 9_8_4; en-US) AppleWebKit/537.18 (KHTML, like Gecko) Chrome/48.0.1488.203 Safari/537"
-        );
+        formData.append("ip", lastItem['ipAddress']);
+        formData.append("user_agent",lastItem['userAgent']);
     
         const response = await fetch(
           "https://backend-stg.adamsolutions.asia/api/admin/request-inquiries",
           {
             method: "POST",
             headers: {
-              Authorization: "Bearer 1|MBJv7P6qx4mcdpGDmqat6AHGudOIBXulF5aNsIgL2225042a", // Replace with actual token
+              Authorization: "Bearer 1|MBJv7P6qx4mcdpGDmqat6AHGudOIBXulF5aNsIgL2225042a", 
             },
             body: formData,
           }
         );
     
-        console.log("response nih",response)
-        const data = await response.json();
+        const contentType = response.headers.get("content-type");
+
+        let data;
+        if (contentType && contentType.includes("application/json")) {
+          data = await response.json(); // Parse JSON only if the response is JSON
+        } else {
+          data = await response.text(); // Fallback to plain text
+        }
+        // const data = await response.json();
         res.status(response.status).json(data);
       } catch (error) {
         console.error("Error making request:", error);

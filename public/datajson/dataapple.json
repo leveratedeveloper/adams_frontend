@@ -1,0 +1,2063 @@
+[
+    {
+        "app_id": "551587254",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id551587254",
+        "time_update": "2025-01-20 22:36:35 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "551587254",
+            "title": "BCA mobile",
+            "url": "https://apps.apple.com/us/app/bca-mobile/id551587254",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cf/47/be/cf47be34-fdb1-e2ae-33aa-255f3699bbe0/AppIcon-1x_U007emarketing-0-5-0-85-220-0.png/512x512bb.jpg",
+            "description": "Bank on the go with BCA mobile app. Conduct non-cash transactions using BCA mobile banking (m-BCA) and BCA internet banking (KlikBCA Smartphone) whenever, wherever.\n\nm-BCA Benefits\n1. No SIM card changes\nm-BCA transactions are available through all GSM operators, including Telkomsel, XL Axiata, Indosat, Axis, and Three\n2. Low transactions cost \nReduce unnecessary cost using GPRS/EDGE/3G/WIFI internet connection\n3. Payment Data Storage\nm-BCA’s storage feature enables you to conduct repeat transactions without having to input the data all over again\n4. Transfer Data\nm-BCA saves your transfer activities--whether you’re sending funds between BCA accounts or to other banks—to a list for a time-saving and reliable banking experience\n5. Practical and Easy to Use\nRecipient company or banking code is not required for payment and transfer transactions.\n\nFor BCA mobile users, can enjoy the latest services as follows:\n1. Block BCA ATM Card or BCA Credit Card facility through m-Admin menu \n2. BCA Credit Card Activation feature through menu m-Admin ->Credit Card Activation\n3. BCA Credit Card PIN Make / change facility via m-Admin menu ->Create / Change PIN.\n4. Cardless Transaction feature through Setor Tarik menu ->Cash withdrawal and cash deposit. \n5. Transfer without hassle through QR menu ->Send or receive money using QR\nFor the time being, Cardless Transactions can be made at these following ATMs (www.bca.co.id/ATMtanpakartu)\n\nKlikBCA \nEasy to access KlikBCA smartphone version smartphone https://m.klikbca.com with just one click\n\nInfo BCA \nhttps://www.bca.co.id/id/Individu/Produk/E-Banking/Info-BCA\n\nOpen New Account\nNow you can open bank account anywhere just with your mobile phone. What you need to do to get your bank account is only by providing e-KTP, completing the form, and doing video call with our Customer Service Officer through BCA mobile application. After you done, you’ll get the success notification of your opening account; you might need to directly activate your mobile banking service (by creating PIN number for transaction) and deposit money to your account. Then you are ready to do any transaction with your BCA mobile application (m-BCA menu). You will also get KlikBCA account the day after you succeed creating your mobile banking PIN via email.\n\nFor further assistant, call halo bca at 1500888 via cellular phone\n\nEnjoy using the BCA mobile.",
+            "reviews_count": 266,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 2.6,
+                "votes_count": 266,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Business"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. Bank Central Asia Tbk",
+            "developer_id": "551587257",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-central-asia-tbk/id551587257",
+            "version": "4.5.6",
+            "minimum_os_version": "13.0",
+            "size": 118949888,
+            "released_date": "2012-10-30 00:00:00 +00:00",
+            "last_update_date": "2025-01-15 23:46:46 +00:00",
+            "update_notes": "The latest version of BCA mobile provides convenience and faster in transactions!\n\nWhat are you waiting for, let's update BCA mobile now!",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/7d/88/51/7d885198-fbbd-2b6a-99c7-8bdf728a56a2/244f6c8f-56ae-49a0-ac29-ab886169933c_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_1.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/5c/0d/f2/5c0df238-d876-32e1-1dad-caa868bfcae7/a74a9c69-74d7-4fba-8a34-d67021fc7d19_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_2.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/28/8e/31/288e31cd-06b1-6bc5-7137-a3987c6e16b5/6265f121-1f86-4652-ba72-daf24f778a51_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_03.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/47/a8/df/47a8df8d-d09f-74f7-0eae-c234850e3415/49411a1e-34f0-49f1-9aa4-d3dd97ca20c3_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_4.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/d1/ab/e0/d1abe0f6-b5bb-a4ee-8778-b445462c34a9/c64f97e9-3a75-4dfd-a39f-a34f11efe637_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_5.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/03/46/a3/0346a3f7-a399-c5ea-23d6-01a4e3e5d076/2716e192-94aa-4b72-ac7b-5dfa63311d97_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_6.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/b1/b3/6a/b1b36a47-6a2f-e89c-ba36-ed3e324717cf/a3c4e96e-1a7a-4c92-8401-40218fe4afe7_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_7.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/bf/8e/96/bf8e9665-18ec-5007-76d8-ac50792d8773/e61afe39-4c0b-422c-bc8c-233f66d7f234_6_U002c5_U0027-APPSTORE_IOS_1_1242x2688_8.jpg/1242x2688bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1142114207",
+                    "title": "OVO",
+                    "url": "https://apps.apple.com/us/app/ovo/id1142114207"
+                },
+                {
+                    "app_id": "1437123008",
+                    "title": "DANA Dompet Digital Indonesia",
+                    "url": "https://apps.apple.com/us/app/dana-dompet-digital-indonesia/id1437123008"
+                },
+                {
+                    "app_id": "1555414743",
+                    "title": "Livin' by Mandiri",
+                    "url": "https://apps.apple.com/us/app/livin-by-mandiri/id1555414743"
+                },
+                {
+                    "app_id": "1439730817",
+                    "title": "BRImo BRI",
+                    "url": "https://apps.apple.com/us/app/brimo-bri/id1439730817"
+                },
+                {
+                    "app_id": "967205539",
+                    "title": "BNI Mobile Banking",
+                    "url": "https://apps.apple.com/us/app/bni-mobile-banking/id967205539"
+                },
+                {
+                    "app_id": "1079340119",
+                    "title": "Jenius",
+                    "url": "https://apps.apple.com/us/app/jenius/id1079340119"
+                },
+                {
+                    "app_id": "1539402234",
+                    "title": "Bank Jago/Jago Syariah",
+                    "url": "https://apps.apple.com/us/app/bank-jago-jago-syariah/id1539402234"
+                },
+                {
+                    "app_id": "1255413338",
+                    "title": "Kredivo - Paylater & Pinjaman",
+                    "url": "https://apps.apple.com/us/app/kredivo-paylater-pinjaman/id1255413338"
+                },
+                {
+                    "app_id": "505917174",
+                    "title": "OCTO Mobile by CIMB Niaga",
+                    "url": "https://apps.apple.com/us/app/octo-mobile-by-cimb-niaga/id505917174"
+                },
+                {
+                    "app_id": "1445856964",
+                    "title": "Bibit - Reksadana & Obligasi",
+                    "url": "https://apps.apple.com/us/app/bibit-reksadana-obligasi/id1445856964"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "1440241902",
+                    "title": "myBCA",
+                    "url": "https://apps.apple.com/us/app/mybca/id1440241902"
+                },
+                {
+                    "app_id": "1527740494",
+                    "title": "Halo BCA",
+                    "url": "https://apps.apple.com/us/app/halo-bca/id1527740494"
+                },
+                {
+                    "app_id": "965131157",
+                    "title": "Sakuku",
+                    "url": "https://apps.apple.com/us/app/sakuku/id965131157"
+                },
+                {
+                    "app_id": "1151700413",
+                    "title": "eBranch BCA",
+                    "url": "https://apps.apple.com/us/app/ebranch-bca/id1151700413"
+                },
+                {
+                    "app_id": "1498188945",
+                    "title": "KeyBCA",
+                    "url": "https://apps.apple.com/us/app/keybca/id1498188945"
+                },
+                {
+                    "app_id": "1585153742",
+                    "title": "BCA Young Community",
+                    "url": "https://apps.apple.com/us/app/bca-young-community/id1585153742"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "1151404048",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1151404048",
+        "time_update": "2025-01-22 04:36:49 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1151404048",
+            "title": "BCA Research",
+            "url": "https://apps.apple.com/us/app/bca-research/id1151404048",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/e2/4f/04/e24f04b0-d489-8fa6-0c56-04f5f8e9c2c8/AppIcon-0-1x_U007epad-85-220.png/512x512bb.jpg",
+            "description": "The BCA Research app puts our market-leading investment research directly in your hands, helping you to make more informed decisions, faster than ever.\n\nFEATURES\n- Get our latest research instantly on your phone\n- Create your own personalized feed\n- Listen to Podcasts & Reports\n- Watch Webcasts & BCA Live & Unfiltered\n- Save content to read later\n- Read reports in light or dark mode",
+            "reviews_count": 126,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 126,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Business"
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "BCA Research",
+            "developer_id": "418957201",
+            "developer_url": "https://apps.apple.com/us/developer/bca-research/id418957201",
+            "version": "2.3.6",
+            "minimum_os_version": "15.0",
+            "size": 29741056,
+            "released_date": "2016-09-23 00:00:00 +00:00",
+            "last_update_date": "2024-01-09 14:56:53 +00:00",
+            "update_notes": "App improvements",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/30/dc/85/30dc8510-0a6a-31c2-d212-bef5b6cb85c5/937ed2e7-f42c-44f3-8078-f384efe3d636_6.7-01.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/f6/61/13/f661133f-2897-bd6a-c750-80b6353e8ad2/f756b403-6a0d-47fc-b4ef-c6e1e1d75b24_6.7-02.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/a0/5b/1a/a05b1aa4-c90b-5bf1-6f0a-5d120ec01b2d/c8aef2e1-94e5-4dd6-a0eb-3e977edd859f_6.7-03.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/7c/2e/1b/7c2e1bcb-61dc-19cd-227d-47027b0f4e44/bdfc69a9-5b8f-490b-b06b-9e3dc51648b3_6.7-04.png/1290x2796bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "594477080",
+                    "title": "UBS Neo",
+                    "url": "https://apps.apple.com/us/app/ubs-neo/id594477080"
+                },
+                {
+                    "app_id": "1041337533",
+                    "title": "13D Research & Strategy",
+                    "url": "https://apps.apple.com/us/app/13d-research-strategy/id1041337533"
+                },
+                {
+                    "app_id": "1541821746",
+                    "title": "Morgan Stanley Research",
+                    "url": "https://apps.apple.com/us/app/morgan-stanley-research/id1541821746"
+                },
+                {
+                    "app_id": "915736765",
+                    "title": "J.P. Morgan Markets",
+                    "url": "https://apps.apple.com/us/app/j-p-morgan-markets/id915736765"
+                },
+                {
+                    "app_id": "1473474041",
+                    "title": "GS Now",
+                    "url": "https://apps.apple.com/us/app/gs-now/id1473474041"
+                },
+                {
+                    "app_id": "1359282941",
+                    "title": "CreditSights",
+                    "url": "https://apps.apple.com/us/app/creditsights/id1359282941"
+                },
+                {
+                    "app_id": "6468893347",
+                    "title": "Mauldin Economics",
+                    "url": "https://apps.apple.com/us/app/mauldin-economics/id6468893347"
+                },
+                {
+                    "app_id": "414697122",
+                    "title": "Citi Velocity",
+                    "url": "https://apps.apple.com/us/app/citi-velocity/id414697122"
+                },
+                {
+                    "app_id": "1518269915",
+                    "title": "Marquee Trader Mobile",
+                    "url": "https://apps.apple.com/us/app/marquee-trader-mobile/id1518269915"
+                },
+                {
+                    "app_id": "406934681",
+                    "title": "Research Library",
+                    "url": "https://apps.apple.com/us/app/research-library/id406934681"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "1550237185",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1550237185",
+        "time_update": "2025-01-21 12:19:12 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1550237185",
+            "title": "blu by BCA Digital",
+            "url": "https://apps.apple.com/us/app/blu-by-bca-digital/id1550237185",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/4f/cf/714fcf0c-e950-0cbb-e44f-b66a16b38f4d/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+            "description": "blu Siap Jadi Pegangan Finansialmu!\n \nblu menjawab kebutuhan finansial kamu dengan cara baru agar kamu bisa wujudkan apa pun yang kamu tuju. blu adalah aplikasi mobile banking dari BCA Digital, anak perusahaan BCA\n \nblu punya layanan seamless yang bisa bikin kamu tenang dengan:\n• Koneksi ke sistem BCA\n• Sistem keamanan transaksi menggunakan PIN, Password, CVC, dan biometrik.\n• Customer care haloblu yang selalu ada buat kamu\n \nAda Untukmu, Apa Pun Tujuanmu\n \nPengen nabung buat sepatu baru? Gadget baru? Rumah? Mobil? Sekolah? Apa pun tujuanmu, we’ve got your back! blu punya akses layanan perbankan digital yang mudah dengan pengalaman yang seru. Kamu bisa:\n \n• Punya 20 tabungan dalam 1 rekening\n• Patungan online bisa sampai 50 orang\n• Buka deposito mulai dari Rp 1 juta, pencairan sebelum jatuh tempo gak kena penalti\n• Bayar/beli dalam satu aplikasi\n• Bayar pakai QRIS\n• bluVirtual Card dan bluDebit Card yang terkoneksi dengan Mastercard, memudahkan transaksimu di dalam maupun luar negeri.\n• Tarik dan Setor Tunai di ATM BCA\n• Investasi di bluInvest bekerjasama dengan partner terpercaya\n \n \nEits, belum selesai! Pakai blu bebas biaya admin bulanan, bebas biaya transfer via BI-FAST dari dan ke BCA unlimited,\n \nSo...tunggu apa lagi? Download blu sekarang!\n \nPerlu bantuan? Haloblu siap bantu kamu 24/7 via telepon 1500 668/ WhatsApp 0811-6500-668\n \nPT Bank Digital BCA\nMenara blu, The City Tower Lantai 11 Jl. M.H. Thamrin No.81, Menteng, 10310, Jakarta, Indonesia 10310\nhttps://www.blubybcadigital.id/",
+            "reviews_count": 76,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 4.7,
+                "votes_count": 76,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance"
+            ],
+            "languages": [
+                "en-US",
+                "id"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. Bank Digital BCA",
+            "developer_id": "1549630938",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-digital-bca/id1549630938",
+            "version": "1.59.20",
+            "minimum_os_version": "13.0",
+            "size": 266530816,
+            "released_date": "2021-07-26 00:00:00 +00:00",
+            "last_update_date": "2024-12-18 09:06:10 +00:00",
+            "update_notes": "Tenang bertransaksi, senang sampai destinasi pakai Garuda x bluDebit Card, kartu debit terbaru kolaborasi blu dan Garuda Indonesia di versi 1.59.20 \nRequest Garuda x bluDebit Card dan dapatkan benefit:\nWelcome bonus aktivasi kartu 600 GarudaMiles & welcome bonus transaksi hingga 5.000 GarudaMiles\nGarudaMiles tiap transaksi pembelian pakai Garuda x bluDebit Card",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/38/5d/9b385d4e-8d69-afef-9a08-1ac3a5b1fa37/Artboard_1_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/bf/56/76bf56d1-5f3c-68d5-cc62-2b8a4522c518/Artboard_2_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/67/7f/73/677f73dd-0683-3a33-1698-e48337b89319/iOS_5.5_1.59.2.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/85/03/0f/85030ff5-b50f-e44b-0828-55df900369bf/Artboard_4_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b4/b1/da/b4b1da43-8efe-f390-a665-5b5421ba24c4/Artboard_5_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d2/47/b7/d247b790-ba05-3e80-6f79-f9725f7a7986/Artboard_6_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/07/89/dc/0789dc5e-ea2c-ba7d-65d0-a020c7005176/Artboard_7_5_U002c5_Inch.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d2/24/11/d2241182-deee-65a3-37de-bd62b9d1e1bb/Artboard_8_5_U002c5_Inch.jpg/1242x2208bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "965131157",
+                    "title": "Sakuku",
+                    "url": "https://apps.apple.com/us/app/sakuku/id965131157"
+                },
+                {
+                    "app_id": "1539402234",
+                    "title": "Bank Jago/Jago Syariah",
+                    "url": "https://apps.apple.com/us/app/bank-jago-jago-syariah/id1539402234"
+                },
+                {
+                    "app_id": "1472320289",
+                    "title": "UOB TMRW Indonesia",
+                    "url": "https://apps.apple.com/us/app/uob-tmrw-indonesia/id1472320289"
+                },
+                {
+                    "app_id": "6444720285",
+                    "title": "Superbank",
+                    "url": "https://apps.apple.com/us/app/superbank/id6444720285"
+                },
+                {
+                    "app_id": "1527740494",
+                    "title": "Halo BCA",
+                    "url": "https://apps.apple.com/us/app/halo-bca/id1527740494"
+                },
+                {
+                    "app_id": "1184800207",
+                    "title": "Stockbit - Stock Investing App",
+                    "url": "https://apps.apple.com/us/app/stockbit-stock-investing-app/id1184800207"
+                },
+                {
+                    "app_id": "1445856964",
+                    "title": "Bibit - Reksadana & Obligasi",
+                    "url": "https://apps.apple.com/us/app/bibit-reksadana-obligasi/id1445856964"
+                },
+                {
+                    "app_id": "1473916571",
+                    "title": "Ajaib: Saham, Bond & Reksadana",
+                    "url": "https://apps.apple.com/us/app/ajaib-saham-bond-reksadana/id1473916571"
+                },
+                {
+                    "app_id": "1079340119",
+                    "title": "Jenius",
+                    "url": "https://apps.apple.com/us/app/jenius/id1079340119"
+                },
+                {
+                    "app_id": "1440241902",
+                    "title": "myBCA",
+                    "url": "https://apps.apple.com/us/app/mybca/id1440241902"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "1527740494",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1527740494",
+        "time_update": "2025-01-21 14:36:32 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1527740494",
+            "title": "Halo BCA",
+            "url": "https://apps.apple.com/us/app/halo-bca/id1527740494",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/73/15/1c7315a5-b150-bb16-703d-9bbbe02ebbec/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
+            "description": "It's time for a tour of the new haloBCA world! With the new look, enjoy these benefits below:\n\n1. Easy Access with BCA ID\nIn the new world of haloBCA, you can already access haloBCA with the BCA ID that you already have.\n\nDon’t have a BCA ID? You can register in this application. \n\n2. Using Biometric, Safer and More Convenient\nAfter setting up your Biometric feature, just scan your face or fingerprint to get into haloBCA app.\n\n3. Contact Customer Service Without Credit\nYou can contact our Customer Service with Voice over Internet Protocol (VoIP) credit-free call or simply through Halo BCA Chat.\n\n4. Works Anywhere\nhaloBCA can be used anywhere in Indonesia and abroad as long as your phone is connected to an internet network.\n\n5. Trustworthy Halo BCA Number & Account\nNo need to worry about fake Halo BCA contacts that are circulating and troubling. Access official BCA contacts through the Email and X (Twitter) menu.\n\n6. Update Data Directly from the Application\nYou can update your data from a smartphone. Just access the \"Akun Saya\" menu from this application.\n\n7. Check The Report Status\nYou can check your report status and handling time estimation from the apps. \n\nCheck out more information at www.bca.co.id/halobca\nHave a great tour inside the haloBCA world!",
+            "reviews_count": 10,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 2.7,
+                "votes_count": 10,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. Bank Central Asia Tbk",
+            "developer_id": "551587257",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-central-asia-tbk/id551587257",
+            "version": "2.4.1",
+            "minimum_os_version": "14.0",
+            "size": 153242624,
+            "released_date": "2021-07-25 00:00:00 +00:00",
+            "last_update_date": "2025-01-13 17:04:00 +00:00",
+            "update_notes": "Get the updated version of haloBCA Apps, you can check your report status and handling time estimation from the apps.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/71/d2/ad/71d2aded-791a-8885-6d9c-c757e743292a/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_01.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/cd/10/1ecd10a1-c557-73ec-7414-e848a4841f2a/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_02.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/c3/b0/14c3b0b6-2054-05f8-81e6-ad20700fbcde/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_03.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0f/9c/14/0f9c1472-9f78-6ae2-5621-cdd799eedbc0/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_04.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a6/f1/f6/a6f1f6cd-2b80-b9dc-186b-46e47f3a2541/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_05.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b1/9e/46/b19e4698-b8e3-02dc-6a60-dc02bdf9c392/FA.-Feature-Graphic_Halo-BCA_iOS-5.5_update_06.jpg/1242x2208bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1555414743",
+                    "title": "Livin' by Mandiri",
+                    "url": "https://apps.apple.com/us/app/livin-by-mandiri/id1555414743"
+                },
+                {
+                    "app_id": "1142114207",
+                    "title": "OVO",
+                    "url": "https://apps.apple.com/us/app/ovo/id1142114207"
+                },
+                {
+                    "app_id": "1550237185",
+                    "title": "blu by BCA Digital",
+                    "url": "https://apps.apple.com/us/app/blu-by-bca-digital/id1550237185"
+                },
+                {
+                    "app_id": "1472320289",
+                    "title": "UOB TMRW Indonesia",
+                    "url": "https://apps.apple.com/us/app/uob-tmrw-indonesia/id1472320289"
+                },
+                {
+                    "app_id": "505917174",
+                    "title": "OCTO Mobile by CIMB Niaga",
+                    "url": "https://apps.apple.com/us/app/octo-mobile-by-cimb-niaga/id505917174"
+                },
+                {
+                    "app_id": "1539402234",
+                    "title": "Bank Jago/Jago Syariah",
+                    "url": "https://apps.apple.com/us/app/bank-jago-jago-syariah/id1539402234"
+                },
+                {
+                    "app_id": "1437123008",
+                    "title": "DANA Dompet Digital Indonesia",
+                    "url": "https://apps.apple.com/us/app/dana-dompet-digital-indonesia/id1437123008"
+                },
+                {
+                    "app_id": "1439730817",
+                    "title": "BRImo BRI",
+                    "url": "https://apps.apple.com/us/app/brimo-bri/id1439730817"
+                },
+                {
+                    "app_id": "967205539",
+                    "title": "BNI Mobile Banking",
+                    "url": "https://apps.apple.com/us/app/bni-mobile-banking/id967205539"
+                },
+                {
+                    "app_id": "1445856964",
+                    "title": "Bibit - Reksadana & Obligasi",
+                    "url": "https://apps.apple.com/us/app/bibit-reksadana-obligasi/id1445856964"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "551587254",
+                    "title": "BCA mobile",
+                    "url": "https://apps.apple.com/us/app/bca-mobile/id551587254"
+                },
+                {
+                    "app_id": "1440241902",
+                    "title": "myBCA",
+                    "url": "https://apps.apple.com/us/app/mybca/id1440241902"
+                },
+                {
+                    "app_id": "965131157",
+                    "title": "Sakuku",
+                    "url": "https://apps.apple.com/us/app/sakuku/id965131157"
+                },
+                {
+                    "app_id": "1151700413",
+                    "title": "eBranch BCA",
+                    "url": "https://apps.apple.com/us/app/ebranch-bca/id1151700413"
+                },
+                {
+                    "app_id": "1498188945",
+                    "title": "KeyBCA",
+                    "url": "https://apps.apple.com/us/app/keybca/id1498188945"
+                },
+                {
+                    "app_id": "1585153742",
+                    "title": "BCA Young Community",
+                    "url": "https://apps.apple.com/us/app/bca-young-community/id1585153742"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "1151700413",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1151700413",
+        "time_update": "2025-01-22 04:36:32 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1151700413",
+            "title": "eBranch BCA",
+            "url": "https://apps.apple.com/us/app/ebranch-bca/id1151700413",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8a/b0/be/8ab0be40-b001-034f-3d8e-30ca41bb751b/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
+            "description": "Want to make transactions at BCA branches easier and more practical? With eBranch BCA, you can fill out forms anytime and anywhere, directly from your mobile phone.\nNow, you can fill out mobile forms for Account Opening (Tahapan BCA , Tahapan Xpresi, Tahapan Prestasi, BCA Dollar, and Tahapan Berjangka), Cash Deposits, Cash Withdrawals, BCA Credit Card Applications, Internet/Mobile Banking, and Foreign Currency Orders.\n\nAlso enjoy other features, such as log in with Finger ID, transaction reminder, ease of contacting HaloBCA, and information on the status of your BCA credit card application and delivery.\n\nWant to make a reservation for Customer Service and Teller services? Can! After filling in the form, you can make a reservation for Customer Service or Teller service time according to your wishes.\n\nHaven't you had time to fill out the form yet? You can reserve service times using the online reservation feature without filling out a form first.\n\nTo enjoy additional features and reservations, don't forget to sign up.\n\nLet's download eBranch BCA now!\nUse eBranch BCA – easy and practical!\nMore info: www.bca.co.id",
+            "reviews_count": 9,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 2.3,
+                "votes_count": 9,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Business"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. Bank Central Asia Tbk",
+            "developer_id": "551587257",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-central-asia-tbk/id551587257",
+            "version": "2.8.1",
+            "minimum_os_version": "13.0",
+            "size": 141576192,
+            "released_date": "2017-11-03 00:00:00 +00:00",
+            "last_update_date": "2024-12-30 17:13:55 +00:00",
+            "update_notes": "Makan tahu sambil denger lagu,\n\nlagu baru untuk melupakanmu.\n\neBranch hadir dengan fitur yang baru, \n\njangan lupa update aplikasi mu!\n",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/d2/47/ff/d247ffd7-35bb-d988-7cc3-06e5402ce7ee/2b9dd47a-a246-430a-a8e8-1f4232d561a3_1284x2778bb__U00284_U0029.png/1284x2778bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/be/e3/3c/bee33c67-c75c-4a9f-ec9b-6f819accb1ae/c578d456-1ca7-4235-a22d-9991aa6b0e93_Playstore_eBranch-08.jpg/1284x2778bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/08/92/a4/0892a4cd-1ce5-a589-2ebe-05ba6ec4a7a9/6d52c6d3-a452-4dcb-bd39-ae95b7062b1a_Playstore_eBranch-09.jpg/1284x2778bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/4f/ad/b4/4fadb44c-4d42-a517-c538-0fe28a7b9467/a0cc8ddf-0d8f-4272-b8f3-d65d045a66ef_Playstore_eBranch-11.jpg/1284x2778bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/41/70/6c/41706c93-76c0-bea1-6e4f-b3e996364674/58e49dd2-052a-45a4-9900-2c8122657ce7_Playstore_eBranch-10.jpg/1284x2778bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/b6/4d/c0/b64dc045-7f14-5e5b-541a-1c12ca74a83b/91739d49-fee8-4ccc-9fec-e0d0ae21b3c7_Playstore_eBranch-12.jpg/1284x2778bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1472320289",
+                    "title": "UOB TMRW Indonesia",
+                    "url": "https://apps.apple.com/us/app/uob-tmrw-indonesia/id1472320289"
+                },
+                {
+                    "app_id": "1170988769",
+                    "title": "digibank by DBS Indonesia",
+                    "url": "https://apps.apple.com/us/app/digibank-by-dbs-indonesia/id1170988769"
+                },
+                {
+                    "app_id": "505917174",
+                    "title": "OCTO Mobile by CIMB Niaga",
+                    "url": "https://apps.apple.com/us/app/octo-mobile-by-cimb-niaga/id505917174"
+                },
+                {
+                    "app_id": "1544734144",
+                    "title": "HSBC Indonesia",
+                    "url": "https://apps.apple.com/us/app/hsbc-indonesia/id1544734144"
+                },
+                {
+                    "app_id": "1591223632",
+                    "title": "Allo Bank",
+                    "url": "https://apps.apple.com/us/app/allo-bank/id1591223632"
+                },
+                {
+                    "app_id": "1550237185",
+                    "title": "blu by BCA Digital",
+                    "url": "https://apps.apple.com/us/app/blu-by-bca-digital/id1550237185"
+                },
+                {
+                    "app_id": "1555414743",
+                    "title": "Livin' by Mandiri",
+                    "url": "https://apps.apple.com/us/app/livin-by-mandiri/id1555414743"
+                },
+                {
+                    "app_id": "984436451",
+                    "title": "LinkAja / LinkAja Syariah",
+                    "url": "https://apps.apple.com/us/app/linkaja-linkaja-syariah/id984436451"
+                },
+                {
+                    "app_id": "1446543289",
+                    "title": "M-Smile",
+                    "url": "https://apps.apple.com/us/app/m-smile/id1446543289"
+                },
+                {
+                    "app_id": "1532879177",
+                    "title": "D-Bank PRO",
+                    "url": "https://apps.apple.com/us/app/d-bank-pro/id1532879177"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "551587254",
+                    "title": "BCA mobile",
+                    "url": "https://apps.apple.com/us/app/bca-mobile/id551587254"
+                },
+                {
+                    "app_id": "1440241902",
+                    "title": "myBCA",
+                    "url": "https://apps.apple.com/us/app/mybca/id1440241902"
+                },
+                {
+                    "app_id": "1527740494",
+                    "title": "Halo BCA",
+                    "url": "https://apps.apple.com/us/app/halo-bca/id1527740494"
+                },
+                {
+                    "app_id": "965131157",
+                    "title": "Sakuku",
+                    "url": "https://apps.apple.com/us/app/sakuku/id965131157"
+                },
+                {
+                    "app_id": "1498188945",
+                    "title": "KeyBCA",
+                    "url": "https://apps.apple.com/us/app/keybca/id1498188945"
+                },
+                {
+                    "app_id": "1585153742",
+                    "title": "BCA Young Community",
+                    "url": "https://apps.apple.com/us/app/bca-young-community/id1585153742"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "953936698",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id953936698",
+        "time_update": "2025-01-20 08:48:34 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "953936698",
+            "title": "BCA Finance",
+            "url": "https://apps.apple.com/us/app/bca-finance/id953936698",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6c/88/ed/6c88ed37-d4c8-b36e-c26a-2da3df330b88/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/512x512bb.jpg",
+            "description": "BCAF App, aplikasi financial di tangan Anda.\nLayanan financial terpercaya, kapan saja dan dimana saja.\n\nManfaat BCAF App :\n1.Dapatkan info update promosi, suku bunga dan produk-produk dari BCAF lebih cepat.\n2.Ajukan kredit mobil dan pantau prosesnya tanpa harus keluar rumah.\n3.Layanan konsumen sesuai kebutuhan Anda, seperti informasi pelanggan, simulasi pelunasan dipercepat, reservasi pengambilan BPKB tanpa harus antri terlebih dahulu.\n4.Terhubung langsung dengan layanan digital BCAF lainnya, seperti Website BCAF, HaloBCA Chat, Astari dan Instagram BCAF.\n\nSemuanya hanya dalam genggaman tangan Anda.\n\nFitur-fitur BCAF App :\n1.Simulasi kredit mobil baru dan bekas berdasarkan budget total pembayaran pertama ataupun angsuran.\n2.Pengajuan kredit online.\n3.Tracking status pengajuan kredit online.\n4.Layanan konsumen :\na.Info Pelanggan (informasi angsuran dan histori pembayaran).\nb.Simulasi early termination / pelunasan dipercepat.\nc.Booking Pengambilan BPKB.\n5.E-Doc.\n\nUntuk bantuan lebih lanjut dapat menghubungi Astari, Virtual Assistant kami di 08111027780 atau email ke customercarebcaf@bcaf.id.\n\nSelamat menggunakan BCAF App.",
+            "reviews_count": 2,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 3,
+                "votes_count": 2,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Productivity"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. BCA Finance",
+            "developer_id": "953936697",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bca-finance/id953936697",
+            "version": "6.35.0",
+            "minimum_os_version": "11.4",
+            "size": 49254400,
+            "released_date": "2015-01-21 00:00:00 +00:00",
+            "last_update_date": "2024-12-03 12:35:44 +00:00",
+            "update_notes": "Terimakasih telah menggunakan FinA BCA Finance.\n\nYang terbaru dari kami :\nFitur “Cari Mobil Bekas” menghadirkan Klik Garasi yang merupakan website terpercaya hasil kerjasama Garasi.id bersama dengan BCA Finance untuk jual beli mobil bekas dengan mobil berkualitas dari showroom rekanan BCA Finance. Temukan beragam mobil dari seluruh Indonesia dengan kredit mudah, cepat, dan bunga ringan dari BCA Finance.\n\nSelamat menggunakan FinA BCA Finance, dan dapatkan kemudahannya.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/cb/9d/d6/cb9dd6cd-976b-6508-b355-d9c0ce24ab3f/8478bb7c-5e19-4599-8bc4-8f0c013293c7_RGB_ipad_2.jpg/2048x2732bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1485219079",
+                    "title": "adiraku - Kredit & Pinjaman",
+                    "url": "https://apps.apple.com/us/app/adiraku-kredit-pinjaman/id1485219079"
+                },
+                {
+                    "app_id": "1472320289",
+                    "title": "UOB TMRW Indonesia",
+                    "url": "https://apps.apple.com/us/app/uob-tmrw-indonesia/id1472320289"
+                },
+                {
+                    "app_id": "1151700413",
+                    "title": "eBranch BCA",
+                    "url": "https://apps.apple.com/us/app/ebranch-bca/id1151700413"
+                },
+                {
+                    "app_id": "1567847630",
+                    "title": "M-Pajak",
+                    "url": "https://apps.apple.com/us/app/m-pajak/id1567847630"
+                },
+                {
+                    "app_id": "1446543289",
+                    "title": "M-Smile",
+                    "url": "https://apps.apple.com/us/app/m-smile/id1446543289"
+                },
+                {
+                    "app_id": "1470241992",
+                    "title": "BNI Credit Card Mobile",
+                    "url": "https://apps.apple.com/us/app/bni-credit-card-mobile/id1470241992"
+                },
+                {
+                    "app_id": "1514387216",
+                    "title": "IPOT - Investment SuperApp",
+                    "url": "https://apps.apple.com/us/app/ipot-investment-superapp/id1514387216"
+                },
+                {
+                    "app_id": "1350501409",
+                    "title": "Pegadaian Digital",
+                    "url": "https://apps.apple.com/us/app/pegadaian-digital/id1350501409"
+                },
+                {
+                    "app_id": "1498188945",
+                    "title": "KeyBCA",
+                    "url": "https://apps.apple.com/us/app/keybca/id1498188945"
+                },
+                {
+                    "app_id": "1104878671",
+                    "title": "MOST Mobile Mandiri Sekuritas",
+                    "url": "https://apps.apple.com/us/app/most-mobile-mandiri-sekuritas/id1104878671"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "1407403492",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1407403492",
+        "time_update": "2025-01-21 23:17:24 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1407403492",
+            "title": "BCA Mobile",
+            "url": "https://apps.apple.com/us/app/bca-mobile/id1407403492",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1c/78/0a/1c780acb-d9a7-1a68-0ec1-7753b9149e5f/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
+            "description": "No BCA Mobile pode:\n- Efectuar a personalização do ecrã;\n- Consultar saldos, movimentos, NIB, IBAN e SWIFT;\n- Consultar contas de depósito a prazo;\n- Consultar detalhes sobre créditos contraídos;\n- Agendar e efectuar transferências Conta a Conta e Interbancárias;\n- Efectuar transferências KWiK (usando número do telemóvel, email ou nickname);   \n- Carregar o saldo do telemóvel e pagar a conta da energia, água, televisão, internet, entre outros;\n- Consultar a taxa de câmbio;\n- Levantamento sem Cartão;\n- Bloquear cartões, em situações de emergência (perda/roubo);\n- Definir limites diários nos cartões multicaixa;\n- Consultar operações e exportar detalhes em documento PDF;\n- Criar e utilizar favoritos de transferências e pagamentos de serviços;\n- Pagamentos de Impostos, incluindo RUPE;\n- Consulta de Posição Integrada, com visualização gráfica de activos vs passivos;\n- Localizador de Serviços – A partir da sua posição actual, ou outra por si determinada, pode localizar os serviços BCA mais próximos de si, assim como as respectivas moradas e contactos.\nE muito mais...",
+            "reviews_count": 1,
+            "rating": {
+                "rating_type": "Max5",
+                "value": 1,
+                "votes_count": 1,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "BCA Mobile Banking",
+            "developer_id": "1407403491",
+            "developer_url": "https://apps.apple.com/us/developer/bca-mobile-banking/id1407403491",
+            "version": "4.3.9",
+            "minimum_os_version": "12.0",
+            "size": 88451072,
+            "released_date": "2019-01-13 00:00:00 +00:00",
+            "last_update_date": "2024-07-29 23:13:54 +00:00",
+            "update_notes": "Temos o prazer de anunciar que lançamos uma nova aplicação, agora com uma imagem renovada e uma interface ainda mais amigável!\nNesta nova versão, poderá encontrar diversas melhorias e funcionalidades, pelo que convidamos todos a experimentar a nova aplicação.\nAgradecemos pela sua confiança.\nBCA, o Banco que pensa em si...",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b0/1d/2e/b01d2e5b-0c62-68cb-75e9-fa01b33f4447/26839e89-9f9c-4f64-b0e0-b087e65dc565_Login_1242_x_2688.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f0/c5/27/f0c527e3-f623-7811-bf7b-3fbd50f94f69/fe16896c-05e3-4a06-aee5-caff7434cd90_Dashboard_1242_x_2688.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/af/00/d9/af00d944-2dfd-25fc-cb48-4463d44f964e/550ae177-064b-45ff-bbb1-5d1ff52d6d7a_Accounts_U0026Movements_1242_x_2688.jpg/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/1c/6c/791c6cea-b1be-dc8b-5eea-64781c254ab6/070f53ae-bfca-45e9-a330-f1653edf8424_Checks_1242_x_2688.jpg/1242x2688bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1321863587",
+                    "title": "BNI NET Particulares",
+                    "url": "https://apps.apple.com/us/app/bni-net-particulares/id1321863587"
+                },
+                {
+                    "app_id": "1542223282",
+                    "title": "Net Yetu",
+                    "url": "https://apps.apple.com/us/app/net-yetu/id1542223282"
+                },
+                {
+                    "app_id": "1538652009",
+                    "title": "BCS Mobile Banking",
+                    "url": "https://apps.apple.com/us/app/bcs-mobile-banking/id1538652009"
+                },
+                {
+                    "app_id": "1481570364",
+                    "title": "iKeve Mobile",
+                    "url": "https://apps.apple.com/us/app/ikeve-mobile/id1481570364"
+                },
+                {
+                    "app_id": "1164157745",
+                    "title": "EconomicoNet App",
+                    "url": "https://apps.apple.com/us/app/economiconet-app/id1164157745"
+                },
+                {
+                    "app_id": "1482129908",
+                    "title": "Caixa Angola",
+                    "url": "https://apps.apple.com/us/app/caixa-angola/id1482129908"
+                },
+                {
+                    "app_id": "1600459198",
+                    "title": "BIRmobile",
+                    "url": "https://apps.apple.com/us/app/birmobile/id1600459198"
+                },
+                {
+                    "app_id": "6473017750",
+                    "title": "BAI Europa Directo",
+                    "url": "https://apps.apple.com/us/app/bai-europa-directo/id6473017750"
+                },
+                {
+                    "app_id": "1487165369",
+                    "title": "BCI MOBILE",
+                    "url": "https://apps.apple.com/us/app/bci-mobile/id1487165369"
+                },
+                {
+                    "app_id": "1495777035",
+                    "title": "AGT Mobile",
+                    "url": "https://apps.apple.com/us/app/agt-mobile/id1495777035"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "1332601797",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1332601797",
+        "time_update": "2025-01-22 00:42:49 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1332601797",
+            "title": "BCA Buyer",
+            "url": "https://apps.apple.com/us/app/bca-buyer/id1332601797",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e4/92/9c/e4929cae-511f-8923-a34a-be8aabeaa173/AppIcon-1x_U007emarketing-0-11-0-P3-85-220-0.png/512x512bb.jpg",
+            "description": "Please note: You need to be a registered BCA Trade Buyer to use this app and are for UK vehicles only. If you want to register with BCA as a trade buyer, please visit bca.co.uk/buy/register\n\nBCA Buyer lets you search for stock, track the vehicles you are interested in, bid in live sales and purchase vehicles 24/7 with BCA Buy Now. Take the guesswork out of auction timings with real time vehicle tracking so you know when the stock you want to bid on is going under the hammer. As well as book collections or request delivery for your purchased vehicles. \n \nHere’s what you can do:\n\n• Quickly search for vehicles by make, model, auction centre, sale date and/or vendor\n\n• Create and apply saved searches to save time with regular searches\n\n• View Sale Catalogues for Today and Tomorrow with an overview of sale sections and  easy access to lots\n\n• Never miss the vehicles you want to bid on with an up-to-date timeline and vehicle notifications\n\n• Place concealed proxy bids in advance of the live sale\n\n• Join and take part in the live sale with audio and video \n\n• Access detailed vehicle information including guide pricing, vehicle grades and supporting BCA Assured reports (where applicable)\n\n• Track and keep personal notes on vehicles you’re interested in\n\n• Purchase vehicles in the BCA Buy Now & Bid Now sales channel\n\n• Check details of tracked and purchased vehicles in MyBCA page\n\n• View the status of your purchased vehicles and review any outstanding and paid invoices\n\n• Pay for outstanding invoices \n\n• Book and easily manage your vehicle collections \n\n• Request a delivery booking for your purchased vehicles, with the ability to view and track your delivery bookings. * Eligible vehicles only\n\nThe app is the smartest way to select and buy your stock, never missing the opportunity to bid and buy the vehicles you need.\n\nWe are continuing to develop the app and will be adding more features based on your feedback.\n\nGetting Started:\n\nSign in using your BCA One Login username and password that you use for Search (Auction View) and Live Online. There is a simple tutorial to help you get started.\n\nYour feedback is important to us.\n\nWe want to keep improving the app for you so please share your suggestions. Just go to My BCA and then leave your feedback within the app.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "categories": [
+                "Business"
+            ],
+            "languages": null,
+            "advisories": [
+                "4+"
+            ],
+            "developer": "British Car Auctions",
+            "developer_id": "737679377",
+            "developer_url": "https://apps.apple.com/us/developer/british-car-auctions/id737679377",
+            "version": "3.4.6",
+            "minimum_os_version": "13.0",
+            "size": 50255872,
+            "released_date": "2018-11-06 00:00:00 +00:00",
+            "last_update_date": "2024-12-09 11:37:58 +00:00",
+            "update_notes": "This release includes new vehicle type filters available on the home screen. Quick-start your search by filtering vehicles by type: Car, LCV, Motorbike or Caravan and Motorhome.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/64/fd/b964fda1-861b-e280-f8c3-79800e7f055c/01.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f3/84/e9/f384e99b-3536-0bef-5ba2-6c86735fc494/9b3cf677-db26-48c0-963a-4faf26089532_02-1.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/c3/84/43c384c0-3f07-d817-00bf-ffc8682e0caa/09ca772f-60e4-4fae-9788-61e8a84c4091_03.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4f/40/63/4f40639c-c91a-8406-e6c0-c824479408ef/488fb4ef-0ae4-4640-af17-61f303f43eb1_04.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/76/4d/bf764da9-d452-0ca6-851d-e0ffc0bf612a/1fdf28f2-764d-480e-ad29-9cadf297522e_05.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e8/e5/36/e8e5363a-528d-1bba-0f14-72bc074f9477/a6c85b9e-c74d-4c47-bf4e-aa5c0f8737a8_06-.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/61/28/76612886-2cd8-92e7-9493-c6a01d661168/02538851-1b78-4f1f-a144-f2db47f8cdf1_07.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ff/57/8a/ff578a81-8625-d698-a270-208d4e1b553d/e6832084-60c3-4983-90e2-d2f775e7842e_08.png/1290x2796bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1250003470",
+                    "title": "Aston Barclay Trade Auction",
+                    "url": "https://apps.apple.com/us/app/aston-barclay-trade-auction/id1250003470"
+                },
+                {
+                    "app_id": "1173230823",
+                    "title": "Zego Delivery",
+                    "url": "https://apps.apple.com/us/app/zego-delivery/id1173230823"
+                },
+                {
+                    "app_id": "979980804",
+                    "title": "Cuvva",
+                    "url": "https://apps.apple.com/us/app/cuvva/id979980804"
+                },
+                {
+                    "app_id": "1530014952",
+                    "title": "Zego Sense",
+                    "url": "https://apps.apple.com/us/app/zego-sense/id1530014952"
+                },
+                {
+                    "app_id": "1548955591",
+                    "title": "Carmoola - Used Car Finance",
+                    "url": "https://apps.apple.com/us/app/carmoola-used-car-finance/id1548955591"
+                },
+                {
+                    "app_id": "1544485226",
+                    "title": "Marshmallow Insurance",
+                    "url": "https://apps.apple.com/us/app/marshmallow-insurance/id1544485226"
+                },
+                {
+                    "app_id": "1333008275",
+                    "title": "ANNA Business Account & Tax",
+                    "url": "https://apps.apple.com/us/app/anna-business-account-tax/id1333008275"
+                },
+                {
+                    "app_id": "709473017",
+                    "title": "Zempler Bank",
+                    "url": "https://apps.apple.com/us/app/zempler-bank/id709473017"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "1530797904",
+                    "title": "MarketPrice Vehicle Management",
+                    "url": "https://apps.apple.com/us/app/marketprice-vehicle-management/id1530797904"
+                },
+                {
+                    "app_id": "1600078594",
+                    "title": "CAR4U by RCI Bank and Services",
+                    "url": "https://apps.apple.com/us/app/car4u-by-rci-bank-and-services/id1600078594"
+                },
+                {
+                    "app_id": "1542008572",
+                    "title": "BCA Claims App",
+                    "url": "https://apps.apple.com/us/app/bca-claims-app/id1542008572"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "1490576677",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1490576677",
+        "time_update": "2023-11-21 23:27:06 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1490576677",
+            "title": "Vindi BCA",
+            "url": "https://apps.apple.com/us/app/vindi-bca/id1490576677",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/03/51/65/035165fa-8d07-12b6-60b7-a12ec4dd783e/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+            "description": "Vindi (Financial Diary) adalah layanan yang dapat membantu nasabah BCA Solitaire dan Prioritas untuk memperoleh notifikasi transaksi, rekapitulasi, dan analisa pengeluaran harian dan bulanan, atas setiap transaksi yang terkoneksi dengan Rekening BCA.\r\n\r\nVindi dapat membantu anda untuk mengawasi transaksi pengeluaran dari sumber dana rekening BCA dan kartu kredit BCA*) yang dilakukan nasabah BCA Solitaire dan Prioritas di ATM BCA, BCA mobile, KlikBCA Individu, EDC BCA dan channel lainnya.\r\n\r\n*) akan segera hadir\r\n\n\n\n\na)\tReal Time Notification \r\nFitur ini akan membantu pengguna untuk mendapatkan notifikasi pada setiap transaksi rekening yang anda pilih secara real time\r\n\nb)\tPengeluaran Bulanan (Monthly Spending)\r\nFitur ini menampilkan grafik pengeluaran pengguna pada bulan yang berjalan sebagai acuan keuangan pengguna.\r\n\nc)\tPengeluaran per Kategori (Spending by Category) \r\nFitur ini mengidentifikasi pengeluaran terbesar sampai terkecil pada masing-masing kategori yang ditampilkan\r\n\nd)\tRekap Harian (Daily Digest) \r\nFitur ini menampilkan:\r\no\tJumlah pengeluaran hari sebelumnya atas semua transaksi dari sumber dana rekening BCA yang diaktifkan.\r\no\tAnalisa pengeluaran hari sebelumnya dibandingkan dengan kebiasaan pengeluaran harian dan bulanan pengguna.\r\no\tInformasi kategori dengan pengeluaran terbesar pada hari sebelumnya.\r\n\ne)\tAnalisis Pengeluaran (Spending Analysis)\r\nFitur ini menampilkan lonjakan-lonjakan pengeluaran yang melebihi rata-rata pengeluaran pengguna.\r\n\nf)\tRiwayat Pengeluaran (Spending History) \r\nFitur ini menampilkan riwayat  hingga 12 bulan kebelakang pada pengeluaran pengguna Vindi.\r\n\ng)\tRekap Transaksi (Transaction List) \r\nFitur ini menampilkan seluruh transaksi pengeluaran pengguna yang diurutkan berdasarkan tanggal transaksi.\r\n\nh)\tPengaturan Akun (Account Setting) \r\nFitur ini digunakan untuk mengatur rekening dan kartu kredit pengguna yang terkoneksi dengan Vindi.\r\n\ni)\tProfil (Profile) \r\nFitur ini digunakan untuk mengatur notifikasi dan bahasa, serta berisi informasi smartphone pengguna yang terkoneksi dengan Vindi.\r\n\nj)\tBantuan (Support) \r\nFitur ini berisi ringkasan mengenai produk Vindi, FAQ (Frequently Asked Questions) Vindi, dan kontak Halo BCA. \r\n\n\n\nBCA terdaftar dan diawasi oleh Otoritas Jasa Keuangan. BCA merupakan peserta penjaminan LPS.\r",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Productivity"
+            ],
+            "languages": [
+                "en-US",
+                "nl",
+                "eo",
+                "fr-FR",
+                "hi",
+                "id",
+                "ja",
+                "ru",
+                "zh-Hans-CN",
+                "te",
+                "uk"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "PT. Bank Central Asia Tbk",
+            "developer_id": "551587257",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-central-asia-tbk/id551587257",
+            "version": "1.1.1",
+            "minimum_os_version": "11.0",
+            "size": 23786496,
+            "released_date": "2021-02-18 00:00:00 +00:00",
+            "last_update_date": "2023-08-25 06:03:38 +00:00",
+            "update_notes": "Thank you for using Vindi.\n\nTrack and analyze your spending with Vindi.\nTo improve Vindi's performance and security, improvent on user interface has been made on Vindi latest version.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/68/6b/27/686b276e-f2f6-bcd9-0fb8-6dc423314cd2/74884e08-f6f4-47fa-a83b-2f54ef1e9777_1._Vindi_Kelola_untuk_AppStore_1242x2208_V-01.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/be/58/39/be58397f-a031-0d60-10a3-bdd2da4f45fc/c6758baf-ca48-413a-a686-067fd7978836_2._Vindi_Jurnal_untuk_AppStore_1242x2208_V-02.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/68/24/8f/68248fc7-e1e0-7a55-0d48-8ffa4d5f1321/5b4b38bd-59fb-40a1-9553-849294839dc6_3._Vindi_Kategori_untuk_AppStore_1242x2208_V-03.jpg/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/cd/90/1a/cd901a5c-5948-6d37-1d55-8af3cef94971/dab3fc59-02b1-4108-9e5e-9df9745af007_4._Vindi_Recap_untuk_AppStore_1242x2208_V-04.jpg/1242x2208bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1550237185",
+                    "title": "blu by BCA Digital",
+                    "url": "https://apps.apple.com/us/app/blu-by-bca-digital/id1550237185"
+                },
+                {
+                    "app_id": "1544734144",
+                    "title": "HSBC Indonesia",
+                    "url": "https://apps.apple.com/us/app/hsbc-indonesia/id1544734144"
+                },
+                {
+                    "app_id": "1514387216",
+                    "title": "IPOT - Investment SuperApp",
+                    "url": "https://apps.apple.com/us/app/ipot-investment-superapp/id1514387216"
+                },
+                {
+                    "app_id": "1472320289",
+                    "title": "UOB TMRW Indonesia",
+                    "url": "https://apps.apple.com/us/app/uob-tmrw-indonesia/id1472320289"
+                },
+                {
+                    "app_id": "1539402234",
+                    "title": "Jago/Jago Syariah bank digital",
+                    "url": "https://apps.apple.com/us/app/jago-jago-syariah-bank-digital/id1539402234"
+                },
+                {
+                    "app_id": "1184800207",
+                    "title": "Stockbit - Stock Investing App",
+                    "url": "https://apps.apple.com/us/app/stockbit-stock-investing-app/id1184800207"
+                },
+                {
+                    "app_id": "953936698",
+                    "title": "BCA Finance",
+                    "url": "https://apps.apple.com/us/app/bca-finance/id953936698"
+                },
+                {
+                    "app_id": "1587320325",
+                    "title": "Finku - Track Money & Budget",
+                    "url": "https://apps.apple.com/us/app/finku-track-money-budget/id1587320325"
+                },
+                {
+                    "app_id": "1446543289",
+                    "title": "M-Smile",
+                    "url": "https://apps.apple.com/us/app/m-smile/id1446543289"
+                },
+                {
+                    "app_id": "1170988769",
+                    "title": "Digital Bank digibank by DBS",
+                    "url": "https://apps.apple.com/us/app/digital-bank-digibank-by-dbs/id1170988769"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "551587254",
+                    "title": "BCA mobile",
+                    "url": "https://apps.apple.com/us/app/bca-mobile/id551587254"
+                },
+                {
+                    "app_id": "1440241902",
+                    "title": "myBCA",
+                    "url": "https://apps.apple.com/us/app/mybca/id1440241902"
+                },
+                {
+                    "app_id": "1527740494",
+                    "title": "Halo BCA",
+                    "url": "https://apps.apple.com/us/app/halo-bca/id1527740494"
+                },
+                {
+                    "app_id": "965131157",
+                    "title": "Sakuku",
+                    "url": "https://apps.apple.com/us/app/sakuku/id965131157"
+                },
+                {
+                    "app_id": "1151700413",
+                    "title": "eBranch BCA",
+                    "url": "https://apps.apple.com/us/app/ebranch-bca/id1151700413"
+                },
+                {
+                    "app_id": "1585153742",
+                    "title": "BCA Young Community",
+                    "url": "https://apps.apple.com/us/app/bca-young-community/id1585153742"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "1528537214",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1528537214",
+        "time_update": "2025-02-04 00:36:26 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1528537214",
+            "title": "BCA Wealth",
+            "url": "https://apps.apple.com/us/app/bca-wealth/id1528537214",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7d/6e/5b/7d6e5b09-4e31-f0ef-0549-015e86e89497/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg",
+            "description": "This Mobile App allows you to view account information, balances, reports and easily contact your advisor.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Business"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "Ballentine Capital Advisors, Inc",
+            "developer_id": "1528537216",
+            "developer_url": "https://apps.apple.com/us/developer/ballentine-capital-advisors-inc/id1528537216",
+            "version": "5.14.0",
+            "minimum_os_version": "13.4",
+            "size": 38920192,
+            "released_date": "2020-08-21 00:00:00 +00:00",
+            "last_update_date": "2024-09-06 10:15:35 +00:00",
+            "update_notes": "- Custom date selection for in-depth portfolio review\n- Users able to toggle between each version of their financial plan\n- Planning customers may review behavioral finance results from BeFi20 & PulseCheck\n- Managed account daily performance change, sort order, allocation grouping, realized gain/loss and household level transactions can be enabled and viewed in mobile!\n- Bug Fixes",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ab/ed/80/abed80d9-4b0b-9af9-2ced-5abc0894fb6f/8e960a38-2322-42d0-ac4e-96df31169c6a_iPhone5.5-1.png/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/16/9f/ea169f8f-1e11-4f7d-cfc8-1103d5d87d09/35177e23-1477-40b6-8bf9-7c932e3d89c5_iPhone5.5-2.png/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/cb/4d/22cb4df0-df4a-1857-a12b-ea7ae820ac3f/512d50e6-7bd6-443b-8cce-05bdd4188c30_iPhone5.5-1242x2208px.png/1242x2208bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/87/60/cc/8760cc61-1275-c053-2a39-73c792543820/a1b0d584-809a-4634-ac5f-272966e91796_iPhone5.5-3.png/1242x2208bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "6475781425",
+                    "title": "Jump AI Notetaker",
+                    "url": "https://apps.apple.com/us/app/jump-ai-notetaker/id6475781425"
+                },
+                {
+                    "app_id": "790302194",
+                    "title": "SF Business",
+                    "url": "https://apps.apple.com/us/app/sf-business/id790302194"
+                },
+                {
+                    "app_id": "1475792834",
+                    "title": "Jiko: Spendable T-Bills",
+                    "url": "https://apps.apple.com/us/app/jiko-spendable-t-bills/id1475792834"
+                },
+                {
+                    "app_id": "1300618255",
+                    "title": "Blue Ridge Bank",
+                    "url": "https://apps.apple.com/us/app/blue-ridge-bank/id1300618255"
+                },
+                {
+                    "app_id": "411903634",
+                    "title": "Orion Mobile",
+                    "url": "https://apps.apple.com/us/app/orion-mobile/id411903634"
+                },
+                {
+                    "app_id": "6471991112",
+                    "title": "Southern First Bank Personal",
+                    "url": "https://apps.apple.com/us/app/southern-first-bank-personal/id6471991112"
+                },
+                {
+                    "app_id": "1151922549",
+                    "title": "WA Business Mobile",
+                    "url": "https://apps.apple.com/us/app/wa-business-mobile/id1151922549"
+                },
+                {
+                    "app_id": "1632859091",
+                    "title": "TreasuryViewer",
+                    "url": "https://apps.apple.com/us/app/treasuryviewer/id1632859091"
+                },
+                {
+                    "app_id": "655425604",
+                    "title": "Super Stocks with Options",
+                    "url": "https://apps.apple.com/us/app/super-stocks-with-options/id655425604"
+                },
+                {
+                    "app_id": "725728307",
+                    "title": "Primis Personal Banking",
+                    "url": "https://apps.apple.com/us/app/primis-personal-banking/id725728307"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "1542008572",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1542008572",
+        "time_update": "2025-01-21 13:15:09 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1542008572",
+            "title": "BCA Claims App",
+            "url": "https://apps.apple.com/us/app/bca-claims-app/id1542008572",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d4/b5/a8/d4b5a8cc-817a-dea0-4e12-77cd0ba599e9/AppIcon-0-0-1x_U007emarketing-0-10-0-0-0-85-220.png/512x512bb.jpg",
+            "description": "The BCA Claims App helps you report insurance claims quickly & easily. This helps Insurer to settle claims more effectively.\n\n\nIf an accident occurs, use the app to collect as much information as possible including GPS location data and images from the scene. This will be provided directly to our insurer to handle your claim.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Utilities"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "British Car Auctions",
+            "developer_id": "737679377",
+            "developer_url": "https://apps.apple.com/us/developer/british-car-auctions/id737679377",
+            "version": "3.1",
+            "minimum_os_version": "11.0",
+            "size": 15981568,
+            "released_date": "2020-12-17 00:00:00 +00:00",
+            "last_update_date": "2024-04-17 21:54:29 +00:00",
+            "update_notes": "Added new features.\nAdded security updates.\nPerformance Improvements.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ea/8c/25/ea8c2550-3224-87e4-758e-d7f3a853cc98/01e1dbc1-5bc7-4046-b6ab-fa35a695bc9c_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.49.47.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ef/f8/91/eff8919f-904f-45be-0d6b-54cec487f1e1/ba6091da-044c-4332-b78d-18263153110d_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.51.45.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cb/5e/25/cb5e2577-6c1a-aced-55df-0679c68bb14d/a58e2c7c-c337-4042-b7e4-cd77682c530b_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.52.33.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/68/07/cc/6807cc1e-97d3-e83a-c982-6d1e64347cc4/3e75b2be-d057-443a-add7-db8d6a3a6a0b_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.52.51.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cc/a7/d7/cca7d7b4-d1ff-4735-6d17-279d29ce4d67/ff2db6c9-f56a-44a2-a2db-01f07bde8bb7_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.52.56.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/39/3b/87/393b8707-9b22-c31a-3eb2-7b96bd770498/71abcaf4-72cd-47a2-9125-502ae51f44c5_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.53.37.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a5/94/df/a594df2b-36e1-9c04-1518-b789e6edb901/8d88ade0-281b-4ac4-b338-14e606f6f717_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_09.53.41.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/69/68/65/69686503-7775-9c27-bdce-2d567ae8ce5e/31953e23-8253-44dc-a519-ad2f70ca0b86_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2024-04-17_at_10.16.26.png/2048x2732bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "6469320416",
+                    "title": "JMG Insurance Brokers",
+                    "url": "https://apps.apple.com/us/app/jmg-insurance-brokers/id6469320416"
+                },
+                {
+                    "app_id": "6482294601",
+                    "title": "TBR Claims App",
+                    "url": "https://apps.apple.com/us/app/tbr-claims-app/id6482294601"
+                },
+                {
+                    "app_id": "6449932202",
+                    "title": "Masbro Insurance Brokers",
+                    "url": "https://apps.apple.com/us/app/masbro-insurance-brokers/id6449932202"
+                },
+                {
+                    "app_id": "1636846527",
+                    "title": "INFINIT",
+                    "url": "https://apps.apple.com/us/app/infinit/id1636846527"
+                },
+                {
+                    "app_id": "1667818489",
+                    "title": "iSAP.Claims by iSAP.Life FZCO",
+                    "url": "https://apps.apple.com/us/app/isap-claims-by-isap-life-fzco/id1667818489"
+                },
+                {
+                    "app_id": "1486806356",
+                    "title": "Ascend Claims App",
+                    "url": "https://apps.apple.com/us/app/ascend-claims-app/id1486806356"
+                },
+                {
+                    "app_id": "1585338257",
+                    "title": "Collard Claims",
+                    "url": "https://apps.apple.com/us/app/collard-claims/id1585338257"
+                },
+                {
+                    "app_id": "1486595622",
+                    "title": "Howden Insurance Claims App",
+                    "url": "https://apps.apple.com/us/app/howden-insurance-claims-app/id1486595622"
+                },
+                {
+                    "app_id": "1620155976",
+                    "title": "Roadchef Truck Master's",
+                    "url": "https://apps.apple.com/us/app/roadchef-truck-masters/id1620155976"
+                },
+                {
+                    "app_id": "1594406517",
+                    "title": "Connexus Claims App",
+                    "url": "https://apps.apple.com/us/app/connexus-claims-app/id1594406517"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "1332601797",
+                    "title": "BCA Buyer",
+                    "url": "https://apps.apple.com/us/app/bca-buyer/id1332601797"
+                },
+                {
+                    "app_id": "1530797904",
+                    "title": "MarketPrice Vehicle Management",
+                    "url": "https://apps.apple.com/us/app/marketprice-vehicle-management/id1530797904"
+                },
+                {
+                    "app_id": "1600078594",
+                    "title": "CAR4U by RCI Bank and Services",
+                    "url": "https://apps.apple.com/us/app/car4u-by-rci-bank-and-services/id1600078594"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "1565408439",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id1565408439",
+        "time_update": "2024-02-20 19:38:14 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "1565408439",
+            "title": "BCA FIRM",
+            "url": "https://apps.apple.com/us/app/bca-firm/id1565408439",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/55/72/0f/55720f08-5030-743f-a836-0f70d7d0cd6b/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+            "description": "Mobile app enables end customer to access full repository of pictures/videos taken at their site. Our enterprise resource planning system in inter-connected through the back-end of BuildPro/Hyphen solutions. This key element enable us to obtain real time construction scheduling and supply chain updates.\n",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "categories": [
+                "Business",
+                "Utilities"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "Adrian Salinas",
+            "developer_id": "1497348002",
+            "developer_url": "https://apps.apple.com/us/developer/adrian-salinas/id1497348002",
+            "version": "1.0.3",
+            "minimum_os_version": "11.0",
+            "size": 14859264,
+            "released_date": "2021-05-12 00:00:00 +00:00",
+            "last_update_date": "2021-07-08 00:34:58 +00:00",
+            "update_notes": "-Minor bug fixes & improvements\n",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/0b/37/99/0b3799a0-630e-db81-b7dd-375634d0e6df/e999264a-49e5-4a74-98d9-2c930f10a6ad_1.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/63/a2/39/63a23906-fe99-86f6-e0ef-ee7c6af5600a/ba876b95-6b06-4dd3-a8dc-cbc3c31638be_2.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/33/54/e9/3354e950-c18e-8feb-fe0b-a9dc2521a49c/6066f348-eb57-4f21-ae06-9753fae5cf81_3.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/bf/45/8d/bf458dbd-b7d5-eef3-80b3-e2ae408767e9/98652aca-dfdf-4f97-8238-b7ac2b84bca8_4.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/3a/1a/0f/3a1a0fb4-25b1-d60d-e525-b393c1c48bb1/7513c01e-5860-4103-aba2-f687a4efea5b_5.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/3a/bd/75/3abd7578-f9f6-ed75-966e-37d4c325543e/39595b2f-aec3-4c62-8a83-4e29a04919d7_6.png/1242x2688bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1545084095",
+                    "title": "Reviews Promoter",
+                    "url": "https://apps.apple.com/us/app/reviews-promoter/id1545084095"
+                },
+                {
+                    "app_id": "1621035564",
+                    "title": "2022 Apollo Annual Meeting",
+                    "url": "https://apps.apple.com/us/app/2022-apollo-annual-meeting/id1621035564"
+                },
+                {
+                    "app_id": "1496625725",
+                    "title": "LazyApp Lawn Care",
+                    "url": "https://apps.apple.com/us/app/lazyapp-lawn-care/id1496625725"
+                },
+                {
+                    "app_id": "992766525",
+                    "title": "InterServer Mobile",
+                    "url": "https://apps.apple.com/us/app/interserver-mobile/id992766525"
+                },
+                {
+                    "app_id": "1151404048",
+                    "title": "BCA Research",
+                    "url": "https://apps.apple.com/us/app/bca-research/id1151404048"
+                },
+                {
+                    "app_id": "1247850478",
+                    "title": "SMM - Shanghai Metals Market",
+                    "url": "https://apps.apple.com/us/app/smm-shanghai-metals-market/id1247850478"
+                },
+                {
+                    "app_id": "1577133559",
+                    "title": "Lidar 3d Scanner",
+                    "url": "https://apps.apple.com/us/app/lidar-3d-scanner/id1577133559"
+                },
+                {
+                    "app_id": "1188802260",
+                    "title": "rankingCoach",
+                    "url": "https://apps.apple.com/us/app/rankingcoach/id1188802260"
+                },
+                {
+                    "app_id": "6450509397",
+                    "title": "RealPage Vendor Mobile",
+                    "url": "https://apps.apple.com/us/app/realpage-vendor-mobile/id6450509397"
+                },
+                {
+                    "app_id": "1086764321",
+                    "title": "ACB Bank",
+                    "url": "https://apps.apple.com/us/app/acb-bank/id1086764321"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    },
+    {
+        "app_id": "596675378",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id596675378",
+        "time_update": "2025-01-20 22:15:11 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "596675378",
+            "title": "BCA Autoveiling",
+            "url": "https://apps.apple.com/us/app/bca-autoveiling/id596675378",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c2/0c/1c/c20c1cac-524f-dca2-de40-0d4d976b3931/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+            "description": "BCA is marktleider op het gebied van autoveilingen en dé beste partner in de automotive branche. Mobiliseer uzelf nu mobiel in een B2B omgeving en maak gebruik van de BCA Autoveiling app.\r\rMet de BCA Autoveiling app heeft u de mogelijkheid om vanaf uw smartphone of tablet auto’s te kopen via het AutoBLOX platform. Daarnaast kunt u voertuig- en veilinginformatie bekijken op het BCA platform.\r\rWat kunt u met de BCA Autoveiling app op het BCA en AutoBLOX platform:\r\r- Het aanbod in de online veilingen bekijken\r- Voertuigen toevoegen aan uw favorieten\r- De veilingagenda bekijken\r- Een melding/notificatie ontvangen wanneer een veiling start\r- Een zoekassistent instellen en een melding/notificatie ontvangen wanneer uw gezochte voertuig in een veiling staat\r- Een melding/notificatie ontvangen zodra u bent overboden\r- Direct contact opnemen vanuit de app\r\rDaarnaast zijn er een aantal extra functies beschikbaar voor de veilingen op het AutoBLOX platform, zoals:\r\r- Een bod uitbrengen met de biedagent\r- Live meebieden\r- Een bod uitbrengen op een biedlijst terwijl u bij het voertuig staat\r\rOm gebruik te maken van de BCA Autoveiling app heeft u inloggegevens nodig. Heeft u nog geen inloggegevens? Meld u dan nu aan via de BCA website. \r\rMocht u problemen, vragen en/of opmerkingen hebben over de werking van de app dan kunt u te allen tijde contact opnemen met BCA via marketing.nl@bca.com en per telefoon op 0031-342 40 45 40.\r\rVolg ons ook op Facebook:\r\rhttps://Facebook.com/BCAAutoveiling",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "categories": [
+                "Business",
+                "Utilities"
+            ],
+            "languages": [
+                "nl"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "Mobiel Bekeken",
+            "developer_id": "366966353",
+            "developer_url": "https://apps.apple.com/us/developer/mobiel-bekeken/id366966353",
+            "version": "5.0.1",
+            "minimum_os_version": "15.0",
+            "size": 8209408,
+            "released_date": "2013-02-04 00:00:00 +00:00",
+            "last_update_date": "2024-10-08 10:08:01 +00:00",
+            "update_notes": "Er zijn bugfixes doorgevoerd.",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/f9/4c/e1/f94ce142-4b45-c713-6c99-d56b58278519/de14e19c-6e2d-4679-b304-b1ac453c1f72_Simulator_Screen_Shot_-_iPad_Pro__U002812.9-inch_U0029__U00282nd_generation_U0029_-_2022-08-16_at_10.29.26.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/12/8e/f2/128ef206-3d34-a834-76f3-348c443d04e0/b40aec21-06cb-43aa-91a7-756fde2b74c9_Simulator_Screen_Shot_-_iPad_Pro__U002812.9-inch_U0029__U00282nd_generation_U0029_-_2022-08-16_at_10.29.35.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/1a/40/54/1a4054f1-43cc-1478-4991-b8ccaf0ea64f/a5b64350-92c1-4c63-bf07-b2ac01f0e1f9_Simulator_Screen_Shot_-_iPad_Pro__U002812.9-inch_U0029__U00282nd_generation_U0029_-_2022-08-16_at_10.29.38.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/f6/00/98/f6009815-86e7-0494-7f8f-91437935f262/fb8d2196-9288-4426-983a-c0875ad5fc6a_Simulator_Screen_Shot_-_iPad_Pro__U002812.9-inch_U0029__U00282nd_generation_U0029_-_2022-08-16_at_10.29.41.png/2048x2732bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/75/92/1e/75921eaf-dc80-5623-2d58-6368b623618e/7dd23fe7-9c61-4714-ae98-92cc1ad6474b_Simulator_Screen_Shot_-_iPad_Pro__U002812.9-inch_U0029__U00282nd_generation_U0029_-_2022-08-16_at_10.29.43.png/2048x2732bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1477029045",
+                    "title": "Yuki Assistant",
+                    "url": "https://apps.apple.com/us/app/yuki-assistant/id1477029045"
+                },
+                {
+                    "app_id": "1481078532",
+                    "title": "VWE ATC",
+                    "url": "https://apps.apple.com/us/app/vwe-atc/id1481078532"
+                },
+                {
+                    "app_id": "1543477447",
+                    "title": "Schadeautos",
+                    "url": "https://apps.apple.com/us/app/schadeautos/id1543477447"
+                },
+                {
+                    "app_id": "516565689",
+                    "title": "DeAfvalApp",
+                    "url": "https://apps.apple.com/us/app/deafvalapp/id516565689"
+                },
+                {
+                    "app_id": "1019504936",
+                    "title": "Inkoop App Autoveiling.nl",
+                    "url": "https://apps.apple.com/us/app/inkoop-app-autoveiling-nl/id1019504936"
+                },
+                {
+                    "app_id": "433619246",
+                    "title": "Exact Online",
+                    "url": "https://apps.apple.com/us/app/exact-online/id433619246"
+                },
+                {
+                    "app_id": "735115850",
+                    "title": "BelfiusWeb, banking app",
+                    "url": "https://apps.apple.com/us/app/belfiusweb-banking-app/id735115850"
+                },
+                {
+                    "app_id": "1231921275",
+                    "title": "ING Investing",
+                    "url": "https://apps.apple.com/us/app/ing-investing/id1231921275"
+                },
+                {
+                    "app_id": "1563016068",
+                    "title": "Best VAT Calculator",
+                    "url": "https://apps.apple.com/us/app/best-vat-calculator/id1563016068"
+                },
+                {
+                    "app_id": "1306619811",
+                    "title": "Openlane.eu",
+                    "url": "https://apps.apple.com/us/app/openlane-eu/id1306619811"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "651971369",
+                    "title": "Receptenmaker",
+                    "url": "https://apps.apple.com/us/app/receptenmaker/id651971369"
+                },
+                {
+                    "app_id": "518981630",
+                    "title": "Midden Nederland Makelaars",
+                    "url": "https://apps.apple.com/us/app/midden-nederland-makelaars/id518981630"
+                },
+                {
+                    "app_id": "477725858",
+                    "title": "Drieklomp",
+                    "url": "https://apps.apple.com/us/app/drieklomp/id477725858"
+                },
+                {
+                    "app_id": "477970743",
+                    "title": "Louwman Mercedes-Benz",
+                    "url": "https://apps.apple.com/us/app/louwman-mercedes-benz/id477970743"
+                },
+                {
+                    "app_id": "997690842",
+                    "title": "AutoBLOX Inspection app",
+                    "url": "https://apps.apple.com/us/app/autoblox-inspection-app/id997690842"
+                },
+                {
+                    "app_id": "924038562",
+                    "title": "Apportage formulieren",
+                    "url": "https://apps.apple.com/us/app/apportage-formulieren/id924038562"
+                },
+                {
+                    "app_id": "1110016376",
+                    "title": "Afleverapp",
+                    "url": "https://apps.apple.com/us/app/afleverapp/id1110016376"
+                },
+                {
+                    "app_id": "1094327760",
+                    "title": "Basiskwaliteit Wb1",
+                    "url": "https://apps.apple.com/us/app/basiskwaliteit-wb1/id1094327760"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "6454469916",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id6454469916",
+        "time_update": "2025-01-20 17:29:10 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "6454469916",
+            "title": "BCA Hire",
+            "url": "https://apps.apple.com/us/app/bca-hire/id6454469916",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c5/50/6d/c5506d74-583f-b3a3-c75e-8bd0d2a87ee1/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+            "description": "BCA Hire is a powerful platform designed to streamline the process of allocating and booking jobs for businesses and service providers. It serves as an efficient tool for managing resources, scheduling appointments, and ensuring smooth interactions between service providers and their clients.\nKey Features:\n1.\tUser Registration and Profiles:\nThe app allows Admin users to register and create agent/employee/contractor profiles for both service providers and clients. Each user can manage their information, including contact details, services offered, and availability.\n2.\tJob Listing and Booking:\nService providers can list their available jobs, specifying details such as the type of service, location, date, and time slots. Clients can search for services they need, and book appointments based on the service provider's availability.\n3.\tReal-Time Availability Updates:\nService providers can update their availability in real-time, enabling clients to see the most up-to-date schedules and book accordingly.\n4.\tNotifications and Reminders:\nThe app sends notifications and reminders to both service providers and clients to keep them informed about upcoming appointments, changes in schedules, and other important updates.\n5.\tJob Allocation and Management:\nThe app provides a centralised platform to allocate jobs efficiently, ensuring fair distribution and optimizing resource utilization.\n6.\tAdmin Dashboard:\nThe app comes with an admin dashboard that allows administrators to manage users, monitor bookings, and gain insights into app usage and performance.\nBenefits:\n•\tIncreased Efficiency: The app streamlines the process of job allocation and booking, reducing manual efforts and paperwork for both service providers and clients.\n•\tEnhanced Customer Experience: Clients can easily find and book services, while service providers can efficiently manage their schedules, leading to better customer satisfaction.\n•\tResource Optimisation: The app enables businesses to allocate jobs intelligently, ensuring optimal use of available resources and maximising productivity.\n•\tData-Driven Insights: With access to data and analytics, businesses can make informed decisions, identify trends, and improve their services based data reporting engine.\n•\tTime Savings: By automating scheduling and booking processes, the app saves time for both service providers and clients, allowing them to focus on delivering quality services.\nOverall, BCA Hire App simplifies the process of managing appointments, optimises resource allocation, and enhances the overall experience for both service providers and their clients, making it a valuable tool for businesses in various industries.\n",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Business",
+            "categories": [
+                "Business"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "17+"
+            ],
+            "developer": "Webtech PRO PTY LTD",
+            "developer_id": "1559675915",
+            "developer_url": "https://apps.apple.com/us/developer/webtech-pro-pty-ltd/id1559675915",
+            "version": "1.0",
+            "minimum_os_version": "12.0",
+            "size": 30143488,
+            "released_date": "2023-07-31 00:00:00 +00:00",
+            "last_update_date": "2023-07-31 11:56:49 +00:00",
+            "update_notes": null,
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/ad/41/a4/ad41a40f-b29d-049b-96d5-81ac0bfb59be/a2c73a37-ef89-4c2b-abc4-c83af9753b1b_Simulator_Screenshot_-_iPhone_11_Pro_Max_-_2023-07-28_at_04.08.00.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/99/4e/07/994e0787-be10-b7a0-7a48-28c897e8b72f/6aafd427-2116-464d-84ba-5288e62e8b8a_Simulator_Screenshot_-_iPhone_11_Pro_Max_-_2023-07-28_at_04.08.07.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/59/4c/dd/594cddfc-ae87-1cef-298e-80552637c61c/07684c4f-fd41-4147-a043-0f653aec52b8_Simulator_Screenshot_-_iPhone_11_Pro_Max_-_2023-07-28_at_04.08.13.png/1242x2688bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/aa/9f/77/aa9f77d3-6aeb-0b18-f998-6e0b7728b3fe/c8a759e2-cb67-4baa-894a-d95e210040e5_Simulator_Screenshot_-_iPhone_11_Pro_Max_-_2023-07-28_at_04.08.42.png/1242x2688bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1575502688",
+                    "title": "Option Signal Alert",
+                    "url": "https://apps.apple.com/us/app/option-signal-alert/id1575502688"
+                },
+                {
+                    "app_id": "6450065474",
+                    "title": "Forms for Google Fоrms",
+                    "url": "https://apps.apple.com/us/app/forms-for-google-f%D0%BErms/id6450065474"
+                },
+                {
+                    "app_id": "1571599845",
+                    "title": "Digi Khata - Money Manager",
+                    "url": "https://apps.apple.com/us/app/digi-khata-money-manager/id1571599845"
+                },
+                {
+                    "app_id": "335703880",
+                    "title": "WordPress – Website Builder",
+                    "url": "https://apps.apple.com/us/app/wordpress-website-builder/id335703880"
+                },
+                {
+                    "app_id": "1445856964",
+                    "title": "Bibit - Reksadana & Obligasi",
+                    "url": "https://apps.apple.com/us/app/bibit-reksadana-obligasi/id1445856964"
+                },
+                {
+                    "app_id": "1538761576",
+                    "title": "Authenticator App",
+                    "url": "https://apps.apple.com/us/app/authenticator-app/id1538761576"
+                },
+                {
+                    "app_id": "315241195",
+                    "title": "Xe Send Money & Currency",
+                    "url": "https://apps.apple.com/us/app/xe-send-money-currency/id315241195"
+                },
+                {
+                    "app_id": "692035811",
+                    "title": "TeamViewer Remote Control",
+                    "url": "https://apps.apple.com/us/app/teamviewer-remote-control/id692035811"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "6738591215",
+                    "title": "pack by versace",
+                    "url": "https://apps.apple.com/us/app/pack-by-versace/id6738591215"
+                },
+                {
+                    "app_id": "1605567557",
+                    "title": "Webtech Mail Order Pharmacy",
+                    "url": "https://apps.apple.com/us/app/webtech-mail-order-pharmacy/id1605567557"
+                },
+                {
+                    "app_id": "1572578979",
+                    "title": "Brailey",
+                    "url": "https://apps.apple.com/us/app/brailey/id1572578979"
+                },
+                {
+                    "app_id": "1559675913",
+                    "title": "Workactive",
+                    "url": "https://apps.apple.com/us/app/workactive/id1559675913"
+                },
+                {
+                    "app_id": "6452119804",
+                    "title": "Allocation360",
+                    "url": "https://apps.apple.com/us/app/allocation360/id6452119804"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "6480586033",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id6480586033",
+        "time_update": "2025-01-20 13:16:26 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "6480586033",
+            "title": "BSya by BCA Syariah",
+            "url": "https://apps.apple.com/us/app/bsya-by-bca-syariah/id6480586033",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/46/8a/24468a41-557b-b53a-b582-42399103430b/AppIcon-0-1x_U007emarketing-0-7-0-0-85-220-0.png/512x512bb.jpg",
+            "description": "Assalamu'alaikum  FrenS,\nSelamat datang di BSya by BCA Syariah. Dengan BSya, transaksi jadi lebih easy.\n \nKenapa harus pake BSya? Yuk simak keunggulan BSya berikut ini:\r\n \r\nFitur Lebih Lengkap\r\nKebutuhan transaksi kamu dapat terpenuhi dengan berbagai fitur, baik fitur transaksi finansial maupun transaksi non finansial.\r\n \r\nNyaman\r\nCukup satu aplikasi untuk mengakses semua rekening kamu, kapanpun dan dimanapun. \r\n \r\nAman\r\nTransaksi lebih aman dengan proteksi maksimal yang dilengkapi dengan sistem biometrik, kode akses dan mPIN.\r\n \r\nFitur BSya\r\n• Pembukaan rekening online\r\n• Transfer ke rekening BCA Syariah, Grup BCA, Virtual Account dan ke Bank Lain\r\n• Pembelian dan pembayaran\r\n• Mutasi rekening & histori transaksi\r\n• Informasi detail rekening deposito dan pembiayaan\r\n• Pembayaran QRIS\r\n• Top up e-Wallet\r\n• Tarik tunai tanpa kartu, baik melalui fitur Cardless maupun eBranch\r\n• Setoran biaya haji dan informasi RTJH\r\n• Informasi rekening (cek saldo, mutasi rekening dan histori transaksi)\r\n• Informasi jadwal sholat dan arah kiblat sesuai lokasi kamu\r\n• Layanan contact center melalui Halo BCA\r\n \r\nGak cuma itu.. Pembukaan rekening online di BSya juga dilengkapi dengan fitur autodebet Zakat. Ditambah lagi fitur-fitur yang memudahkan ibadah kamu seperti jadwal shalat dan arah kiblat. Jadi lebih berkah kan.. \r\n \r\nInfo penting yang kamu perlu tahu! Jadi tim FrenS BCA Syariah, kamu bakal dimanjain sama transaksi-transaksi yang bebas biaya. Bebas biaya tarik tunai, cek saldo, transfer antara BCA-BCA Syariah dan tarik tunai tanpa kartu di ATM BCA.\r\n \r\nYuk, segera download BSya dan nikmati segala kemudahannya.\r\n \r\nInformasi lebih lanjut, hubungi Halo BCA 1500 888 atau kunjungi www.bcasyariah.co.id",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance",
+                "Business"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "17+"
+            ],
+            "developer": "PT. BANK BCA SYARIAH",
+            "developer_id": "771405115",
+            "developer_url": "https://apps.apple.com/us/developer/pt-bank-bca-syariah/id771405115",
+            "version": "1.0.13",
+            "minimum_os_version": "12.0",
+            "size": 145156096,
+            "released_date": "2024-08-08 00:00:00 +00:00",
+            "last_update_date": "2025-01-03 03:35:45 +00:00",
+            "update_notes": "Assalamu’alaikum FrenS,\r\nAda yang baru nih di aplikasi BSya by BCA Syariah:\n\n\r\n\r\n- BSya Rewards. Klik tombol BSya Rewards dan cek benefit bertransaksi dari BCA Syariah.\n\n\r\n\r\nSegera update aplikasi BSya sekarang ya…\r\n",
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1c/88/1d/1c881d0d-59b7-095e-fad5-a5216bdf5af6/96daf9b3-8a21-4511-bc7b-0a7da4ec48ca_Artboard_1.jpg/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/6c/b9/aa6cb944-b892-9a7c-6500-adf4c5172ec6/9875b3d0-f2e0-4b97-9d57-6cf27aa953cd_Artboard_2.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/01/17/f101173b-cbe2-0a9a-24b9-d42203762726/7396cd11-4f96-4df2-90b7-f355f04a37dd_Artboard_3.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/36/a4/41/36a4415d-e594-1a0a-084d-ec2040206f88/4fc4d448-0893-4e9e-92db-aef3ca817d29_Artboard_4.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ec/19/5d/ec195d67-c355-98f1-de54-77b60130ae4d/34993789-05ac-4043-8a39-d946a5dd7c1e_Artboard_5.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/87/35/71/8735717a-ab49-0407-103d-a17d5518e05e/a8b6c434-d559-4010-a462-b7dc408e4be1_Artboard_6.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bb/88/26/bb88263a-0b7f-48fb-a733-08790d483f29/d597e664-d1b1-44ae-a00d-224a31ea54f4_Artboard_7.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/85/93/46/85934626-487c-da19-6058-b9ad59b3386e/bbab0921-8a7e-407d-a766-ef47609af76a_Artboard_8.png/1290x2796bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/35/fc/8c35fcab-7d33-9871-3fa4-b83878e3d5f6/94209074-19fc-479f-be28-483fb5175516_Artboard_9.png/1290x2796bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1498188945",
+                    "title": "KeyBCA",
+                    "url": "https://apps.apple.com/us/app/keybca/id1498188945"
+                },
+                {
+                    "app_id": "6467071768",
+                    "title": "BISA Mobile",
+                    "url": "https://apps.apple.com/us/app/bisa-mobile/id6467071768"
+                },
+                {
+                    "app_id": "6476260058",
+                    "title": "Aira Mobile",
+                    "url": "https://apps.apple.com/us/app/aira-mobile/id6476260058"
+                },
+                {
+                    "app_id": "1447938941",
+                    "title": "Moduit: Mutual Fund & Bond",
+                    "url": "https://apps.apple.com/us/app/moduit-mutual-fund-bond/id1447938941"
+                },
+                {
+                    "app_id": "1555600327",
+                    "title": "ALAMI P2P Funding Syariah",
+                    "url": "https://apps.apple.com/us/app/alami-p2p-funding-syariah/id1555600327"
+                },
+                {
+                    "app_id": "1445382351",
+                    "title": "FUNDtastic",
+                    "url": "https://apps.apple.com/us/app/fundtastic/id1445382351"
+                },
+                {
+                    "app_id": "1543627726",
+                    "title": "Mobile Maslahah",
+                    "url": "https://apps.apple.com/us/app/mobile-maslahah/id1543627726"
+                },
+                {
+                    "app_id": "1643490047",
+                    "title": "Nex - Card & Savings",
+                    "url": "https://apps.apple.com/us/app/nex-card-savings/id1643490047"
+                },
+                {
+                    "app_id": "1636643172",
+                    "title": "Victoria Mobile",
+                    "url": "https://apps.apple.com/us/app/victoria-mobile/id1636643172"
+                },
+                {
+                    "app_id": "1371862087",
+                    "title": "Sampoerna Mobile Banking",
+                    "url": "https://apps.apple.com/us/app/sampoerna-mobile-banking/id1371862087"
+                }
+            ],
+            "more_apps_by_developer": [
+                {
+                    "app_id": "771405112",
+                    "title": "BCASmobile",
+                    "url": "https://apps.apple.com/us/app/bcasmobile/id771405112"
+                }
+            ]
+        }
+    },
+    {
+        "app_id": "6520393145",
+        "se_domain": "itunes.apple.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "check_url": "https://apps.apple.com/us/app/id6520393145",
+        "time_update": "2024-12-01 22:23:53 +00:00",
+        "item": {
+            "type": "app_store_info_organic",
+            "rank_group": 1,
+            "rank_absolute": 1,
+            "position": "left",
+            "app_id": "6520393145",
+            "title": "Strategi BCA",
+            "url": "https://apps.apple.com/us/app/strategi-bca/id6520393145",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/ae/60/e0ae602d-4a2d-d760-e1cd-2c108f232362/AppIcon-1x_U007ephone-0-0-0-85-220-0.jpeg/512x512bb.jpg",
+            "description": "Selamat datang di Strategi BCA.\nSelamat datang untuk menggunakan dan mengunduh aplikasi kami. Tim kami akan terus-menerus optimisasi aplikasi dan memperbaiki pengalaman pengguna.\nAplikasi ini terutama menyediakan fungsi efisien dan singkat, bertujuan untuk membawa pengalaman pengguna yang lebih baik.\nJika Anda menghadapi masalah apapun selama penggunaan, silakan menghubungi kami melalui dukungan teknis.",
+            "reviews_count": null,
+            "rating": {
+                "rating_type": "Max5",
+                "value": null,
+                "votes_count": null,
+                "rating_max": 5
+            },
+            "price": {
+                "current": 0,
+                "regular": null,
+                "max_value": null,
+                "currency": "USD",
+                "is_price_range": false,
+                "displayed_price": null
+            },
+            "is_free": true,
+            "main_category": "Finance",
+            "categories": [
+                "Finance"
+            ],
+            "languages": [
+                "en-US"
+            ],
+            "advisories": [
+                "4+"
+            ],
+            "developer": "Jessie Schroeder",
+            "developer_id": "1755991694",
+            "developer_url": "https://apps.apple.com/us/developer/jessie-schroeder/id1755991694",
+            "version": "1.0",
+            "minimum_os_version": "12.0",
+            "size": 851968,
+            "released_date": "2024-07-07 00:00:00 +00:00",
+            "last_update_date": "2024-07-08 07:58:52 +00:00",
+            "update_notes": null,
+            "images": [
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f0/6a/b2/f06ab217-1b26-a85c-487e-567e4a7753ff/6dd04495-199c-4eca-a6ef-f77b51338c97_3.jpg/2688x1242bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6b/e3/d1/6be3d1d1-e547-dd5d-7fab-94e0a26d50b3/ac5676f8-8c5b-478d-bfba-94e8c2ca0d30_2.jpg/2688x1242bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/db/0a/43db0a62-0ff9-3fdd-510e-b73eb03b1e07/c266b6d4-c52e-46e6-b760-48b86b962d0e_0.jpg/2688x1242bb.jpg",
+                "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/12/5d/3e/125d3eb8-1a0d-a85c-64a0-3301fff87695/1eeb6ade-cde2-41d5-be38-cb4a7343267d_1.jpg/2688x1242bb.jpg"
+            ],
+            "similar_apps": [
+                {
+                    "app_id": "1570077919",
+                    "title": "INVITE",
+                    "url": "https://apps.apple.com/us/app/invite/id1570077919"
+                },
+                {
+                    "app_id": "1434267762",
+                    "title": "ReliMobile",
+                    "url": "https://apps.apple.com/us/app/relimobile/id1434267762"
+                },
+                {
+                    "app_id": "1609921294",
+                    "title": "GAJA",
+                    "url": "https://apps.apple.com/us/app/gaja/id1609921294"
+                },
+                {
+                    "app_id": "6450678972",
+                    "title": "OCBC Sekuritas ONE Trade",
+                    "url": "https://apps.apple.com/us/app/ocbc-sekuritas-one-trade/id6450678972"
+                },
+                {
+                    "app_id": "1276085917",
+                    "title": "INDEXQU",
+                    "url": "https://apps.apple.com/us/app/indexqu/id1276085917"
+                },
+                {
+                    "app_id": "1445382351",
+                    "title": "FUNDtastic",
+                    "url": "https://apps.apple.com/us/app/fundtastic/id1445382351"
+                },
+                {
+                    "app_id": "6457259937",
+                    "title": "GORO",
+                    "url": "https://apps.apple.com/us/app/goro/id6457259937"
+                },
+                {
+                    "app_id": "1447938941",
+                    "title": "Moduit: Mutual Fund & Bond",
+                    "url": "https://apps.apple.com/us/app/moduit-mutual-fund-bond/id1447938941"
+                },
+                {
+                    "app_id": "732814106",
+                    "title": "POEMS ID",
+                    "url": "https://apps.apple.com/us/app/poems-id/id732814106"
+                },
+                {
+                    "app_id": "1450456793",
+                    "title": "RHB TradeSmart ID",
+                    "url": "https://apps.apple.com/us/app/rhb-tradesmart-id/id1450456793"
+                }
+            ],
+            "more_apps_by_developer": null
+        }
+    }
+]

@@ -40,7 +40,6 @@ export default function ContentPage() {
           const domain = lastItem['url'].replace(/(^\w+:|^)\/\//, "").replace(/\/$/, ""); 
           console.log("ini domain",domain)
           setDataArray([lastItem]); // Update the data array
-
           // Call the API with the domain immediately
           await fetchDataApi(domain);
         } else {
@@ -84,40 +83,7 @@ export default function ContentPage() {
     }
   };
 
-  const sendItemtoCMS = async () => {
-    const dbData = await getDataFromDB();
-    const sessionId = Cookies.get('sessionId');
-
-    if (Array.isArray(dbData) && dbData.length > 0) {
-      console.log("ini data db",dbData)
-      const lastItem = dbData[dbData.length - 1];
-      lastItem['session'] = sessionId
-      try {
-        const response = await fetch('/api/cmsAdam', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ lastItem }), // Sending lastItem
-        });
-  
-        const result = await response.json();
-  
-        if (response.ok) {
-          console.log('API Response:', result);
-        } else {
-          console.error('API Error:', result.error);
-        }
-      } catch (error) {
-        console.error('Error calling API:', error);
-      }
-    } else {
-      console.log('No data found in the database.');
-    }
-  };
-  
-  
-
+ 
   return (
     <div className="relative max-h-screen w-full">
           <Header />
