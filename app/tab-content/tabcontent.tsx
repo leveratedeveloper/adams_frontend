@@ -191,16 +191,16 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //   console.log("Suggestions: respond", data);
   //   return data;
   // };
-    // if (getFetchCount() > 3) {
-    //     setLoading(false)
-    //     setSuggestionsIcon([])
-    //     setIsOpen(true)
-    //     return [];
-    //   }
+   
 
   const fetchSuggestions = async (searchQuery: string) => {
     setLoading(true);
-  
+      if (getFetchCount() > 3) {
+        setLoading(false)
+        setSuggestionsIcon([])
+        setIsOpen(true)
+        return [];
+      }
     try {
       const currentFetchCount = getFetchCount() + 1;
 

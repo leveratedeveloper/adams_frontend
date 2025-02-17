@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Footer } from '@/components/Footer';
 import React,{ useEffect, useState } from "react";
 import { getDataFromDB } from '../utils/indexedDb';
+import { useModal } from "../../contexts/ModalContext";
 
 export default function ContentPage() {
   interface DataItem {
@@ -35,6 +36,7 @@ export default function ContentPage() {
   const [objective, setObjectiveASO] = useState([])
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { isOpen, setIsOpen } = useModal();
 
    useEffect(() => {
       const fetchData = async () => {
@@ -255,8 +257,10 @@ export default function ContentPage() {
                 </p>
 
                 {/* Button */}
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
-                 >
+                <button
+                className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
+                  onClick={() => setIsOpen(true)}
+                >
                   <span>Start Your Online Growth</span>
                   <Rocket className="w-5 h-5 ml-2" />
                 </button>
@@ -288,14 +292,12 @@ export default function ContentPage() {
                 </div>
 
                 <div className="text-center mt-6">
-                <a
-                  href="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
-                  target="_blank" // Opens the link in a new tab
-                  rel="noopener noreferrer" // Security best practice for external links
-                  className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
+                <button
+                className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
+                  onClick={() => setIsOpen(true)}
                 >
                   Schedule Meeting Now
-                </a>
+                </button>
                 </div>
               </div>
             </div>
