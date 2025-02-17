@@ -2,6 +2,7 @@ import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 
+
 export function middleware(req) {
   const response = NextResponse.next();
   const sessionIdCookie = req.cookies.get('sessionId');
@@ -11,7 +12,12 @@ export function middleware(req) {
 
   if (!sessionIdCookie) {
     const sessionId = uuidv4();
-    const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.connection?.remoteAddress || req.socket?.remoteAddress || 'Unknown IP';
+    // const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.connection?.remoteAddress || req.socket?.remoteAddress || 'Unknown IP';
+    let ip = req.headers.get('x-forwarded-for') || req.ip || 'Unknown IP';
+    if (ip.includes('::ffff:')) {
+      ip = ip.split('::ffff:')[1]; // Extract only the IPv4 part
+    }
+  
     const userAgent = req.headers.get('user-agent') || 'Unknown User-Agent';
 
     console.log('Generated sessionId:', sessionId); // Debug log

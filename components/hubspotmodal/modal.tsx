@@ -13,7 +13,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-5xl">
+      <div className="bg-white p-4 rounded-lg shadow-2xl w-full max-w-5xl">
         {/* Modal Header */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Schedule a Meeting</h2>
@@ -30,12 +30,12 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
         {/* Modal Footer */}
         <div className="mt-4 flex justify-end">
-          <button
+          {/* <button
             className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition"
             onClick={onClose}
           >
             Close
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
