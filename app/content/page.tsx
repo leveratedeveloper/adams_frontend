@@ -18,7 +18,7 @@ export default function ContentPage() {
     keyword_optimized: number;
     article_development: number;
     objectiveASO: string[],
-    market: string,
+    market: string[],
     appId: string,
     appName: string,
     appIcon:string,
@@ -27,6 +27,8 @@ export default function ContentPage() {
 
   const [dataArray, setDataArray] = useState<DataItem[]>([]);
   const [data, setData] = useState(null);
+  const [dataAppStore, setDataAppStore] = useState(null);
+  
   const [appIcon, setAppIcon] = useState("");
   const [appName, setAppName] = useState("");
   const [appStarAndroid, setAppStarAndroid] = useState<number>(0);
@@ -47,7 +49,17 @@ export default function ContentPage() {
             console.log("ini lastItem",lastItem)
             setDataArray([lastItem]); // Update the data array
             // Call the API with the domain immediately
-             fetchDataApi(appID);
+            // if(lastItem['market'])
+            //  fetchDataApi(appID,deviceType);
+            lastItem['market'].forEach((deviceType: string) => {
+              if(deviceType == 'playstore'){
+                fetchDataApi(appID, 'android');
+              }
+              if(deviceType == 'appstore'){
+                fetchDataApi(appID, 'iphone');
+              }
+               
+            });
           } else {
             console.error("dbData is not an array:", dbData);
           }
@@ -58,13 +70,16 @@ export default function ContentPage() {
       // sendItemtoCMS();
       fetchData();
     }, []); 
-    const fetchDataApi = async (appID: string) => {
+    const fetchDataApi = async (appID: string, deviceType: string) => {
       setLoading(true); // Start loading
       console.log("Fetching data from API...");
-    
+
       try {
-        const response = await fetch(`/api/apptweek?appID=${encodeURIComponent(appID)}`, {
-          method: "GET",
+        // Send the deviceType and appID as query parameters in the URL
+        const url = `/api/apptweek?appID=${encodeURIComponent(appID)}&deviceType=${encodeURIComponent(deviceType)}`;
+        
+        const response = await fetch(url, {
+          method: "GET", // Keep GET method
           headers: {
             "Content-Type": "application/json",
           },
@@ -77,7 +92,13 @@ export default function ContentPage() {
     
         const result = await response.json();
         console.log("API Response:", result);
-        setData(result); // Update state with response data
+        if(deviceType == 'android'){
+          setData(result); 
+        }
+        if(deviceType == 'iphone'){
+          setDataAppStore(result); 
+        }
+       
       } catch (err: any) {
         console.error("Error calling API:", err.message);
         setError(err.message); // Store error message
@@ -129,7 +150,7 @@ export default function ContentPage() {
                           <tr>
                             <td className="px-4 py-2" colSpan={2}>Market</td>
                             <td className="px-2 py-2 text-right" colSpan={3}>
-                            {item.market}
+                            {Array.isArray(item.market) ? item.market.join(", ") : ""}
                             </td>
                           </tr>
                           <tr>
@@ -221,7 +242,7 @@ export default function ContentPage() {
                 </p>
                
                 {/* Tab switch Table */}
-                <TabSwitch data={data} dataArray={dataArray} />
+                <TabSwitch data={data}  dataAppStore={dataAppStore} dataArray={dataArray} />
 
                 {/* Call-to-Action Heading */}
                 <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center mb-2">

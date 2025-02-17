@@ -24,7 +24,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const router = useRouter();
   const [isOn, setIsOn] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
+  const [checkedItems, setCheckedItems] = useState<string[]>([]);
   const { isOpen, setIsOpen } = useModal();
   const [error, setError] = useState("");
   const [selectedValuesObj, setSelectedValuesObj] = useState<string[]>(["search ranking"]); // Default checked
@@ -51,7 +51,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     premium_backlink: true,
     keyword_optimized: 5,
     article_development: 5,
-    market: '',
+    market: [''],
     appId: '', 
     appName: '',
     appIcon:'',
@@ -121,17 +121,18 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       console.log("add data form",formData)
       router.push('/content-web')
     }else{
-      if (!checkedItems["optionGoogle"] && !checkedItems["optionApple"]) {
+      if (!checkedItems || checkedItems.length === 0 || (checkedItems.length === 1 && checkedItems[0] === "")) {
         setError("You must select Google!! or Apple!!");
         return;
       }
 
       formData.appId = appsID;
       formData.appName = nameID;
-      formData.market = checkedItems["optionGoogle"] ? 'playstore' : 'appstore'
       formData.objectiveASO = selectedValuesObj 
       formData.appIcon = appIcon
+      formData.market = checkedItems
       formData.appStarAndroid = starAndroid
+
       await saveDataToDB(formData);
       saveDataCms(formData)
       console.log("add data form",formData)
@@ -190,93 +191,94 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //   console.log("Suggestions: respond", data);
   //   return data;
   // };
+    // if (getFetchCount() > 3) {
+    //     setLoading(false)
+    //     setSuggestionsIcon([])
+    //     setIsOpen(true)
+    //     return [];
+    //   }
 
-  // const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
-  //   setLoading(true);
-  //   if (getFetchCount() > 3) {
-  //       setLoading(false)
-  //       setSuggestionsIcon([])
-  //       setIsOpen(true)
-  //       return [];
-  //     }
-  //   try {
-  //     const currentFetchCount = getFetchCount() + 1;
+  const fetchSuggestions = async (searchQuery: string) => {
+    setLoading(true);
+  
+    try {
+      const currentFetchCount = getFetchCount() + 1;
 
-  //     setFetchCount(currentFetchCount);
-  //     // Replace with your DataForSEO API credentials
-  //     const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
-  //     const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
-  //     const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
-  //     const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
+      setFetchCount(currentFetchCount);
+      // Replace with your DataForSEO API credentials
+      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
+      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
+      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
+      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
   
-  //     // API request body
-  //     const requestBody = [
-  //       {
-  //         categories: ["Finance", "Business"],
-  //         description: searchQuery,
-  //         title: searchQuery,
-  //         limit: 100,
-  //         additional_data: {
-  //           filters: [["language_code", "=", "en"]],
-  //         },
-  //       },
-  //     ];
+      // API request body
+      const requestBody = [
+        {
+          categories: ["Finance", "Business"],
+          description: searchQuery,
+          title: searchQuery,
+          limit: 100,
+          additional_data: {
+            filters: [["language_code", "=", "en"]],
+          },
+        },
+      ];
   
   
-  //     // Make both API calls in parallel by checkedItems
-  //     const apiCalls = [];
+      // Make both API calls in parallel by checkedItems
+      const apiCalls = [];
 
-  //     if (checkedItems["optionGoogle"] == true) {
-  //       apiCalls.push(
-  //         axios.post(API_URL, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
+      if (checkedItems.includes("playstore")) {
+        apiCalls.push(
+          axios.post(API_URL, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
       
-  //     if (checkedItems["optionApple"] == true) {
-  //       apiCalls.push(
-  //         axios.post(API_URL2, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
+      if (checkedItems.includes("appstore")) {
+        apiCalls.push(
+          axios.post(API_URL2, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
       
-  //     // If no API calls were made, return an empty array to avoid errors
-  //     if (apiCalls.length === 0) {
-  //       setLoading(false);
-  //       return [];
-  //     }
+      // If no API calls were made, return an empty array to avoid errors
+      if (apiCalls.length === 0) {
+        setLoading(false);
+        return [];
+      }
       
-  //     // Wait for all API calls to complete
-  //     const responses = await Promise.all(apiCalls);
+      // Wait for all API calls to complete
+      const responses = await Promise.all(apiCalls);
       
-  //     // Extract results safely
-  //     const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      // Extract results safely
+      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
       
-  //     console.log("hit 3", results);
+      console.log("hit 3", results);
       
-  //     setLoading(false);
+      setLoading(false);
       
-  //     return results;      
-  //   } catch (error) {
-  //     setLoading(false);
-  //     console.error("Error fetching suggestions:", error);
-  //     return [];
-  //   }
-  // };
+      return results;      
+    } catch (error) {
+      setLoading(false);
+      console.error("Error fetching suggestions:", error);
+      return [];
+    }
+  };
   const getFetchCount = () => {
     return parseInt(Cookies.get("fetch_count") || "0", 10);
   };
@@ -285,65 +287,66 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     Cookies.set("fetch_count", count.toString(), { expires: 1 }); // Save count in cookies for 7 days
   };
   
-  const fetchSuggestions = async (searchQuery: string, checkedItems: { [key: string]: boolean }) => {
-    setLoading(true);
+  // const fetchSuggestions = async (searchQuery: string) => {
+  //   setLoading(true);
     
-    if (getFetchCount() > 3) {
-      setLoading(false);
-      setSuggestionsIcon([]);
-      setIsOpen(true);
-      return [];
-    }
+  //   if (getFetchCount() > 3) {
+  //     setLoading(false);
+  //     setSuggestionsIcon([]);
+  //     setIsOpen(true);
+  //     return [];
+  //   }
   
-    try {
-      console.log("Fetching from local JSON...", searchQuery);
+  //   try {
+  //     console.log("Fetching from local JSON...", searchQuery);
       
-      const API_URL = "datajson/data.json";
-      const API_URL2 = "datajson/dataapple.json";
-      const currentFetchCount = getFetchCount() + 1;
-      setFetchCount(currentFetchCount);
+  //     const API_URL = "datajson/data.json";
+  //     const API_URL2 = "datajson/dataapple.json";
+  //     const currentFetchCount = getFetchCount() + 1;
+  //     setFetchCount(currentFetchCount);
   
-      // Prepare API calls based on checkedItems
-      const apiCalls = [];
+  //     // Prepare API calls based on checkedItems
+  //     const apiCalls = [];
   
-      if (checkedItems["optionApple"]) {
-        apiCalls.push(fetch(API_URL2).then((res) => res.json()));
-      }
+  //     if (checkedItems.includes("appstore")) {
+  //       apiCalls.push(fetch(API_URL2).then((res) => res.json()));
+  //     }
+    
+  //     // If 'optionGoogle' is checked
+  //     if (checkedItems.includes("playstore")) {
+  //       apiCalls.push(fetch(API_URL).then((res) => res.json()));
+  //     }
   
-      if (checkedItems["optionGoogle"]) {
-        apiCalls.push(fetch(API_URL).then((res) => res.json()));
-      }
+  //     // If no API calls, return empty result
+  //     if (apiCalls.length === 0) {
+  //       setLoading(false);
+  //       return [];
+  //     }
   
-      // If no API calls, return empty result
-      if (apiCalls.length === 0) {
-        setLoading(false);
-        return [];
-      }
-  
-      // Fetch both data sources in parallel
-      const responses = await Promise.all(apiCalls);
+  //     // Fetch both data sources in parallel
+  //     const responses = await Promise.all(apiCalls);
       
-      // Merge results
-      const allResults = responses.flatMap((data) =>
-        data.tasks?.flatMap((task: any) =>
-          task.result?.flatMap((resultItem: any) =>
-            resultItem.items?.filter((item: any) =>
-              item?.item?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              item?.item?.description?.toLowerCase().includes(searchQuery.toLowerCase())
-            ) || []
-          ) || []
-        ) || []
-      );
+  //     // Merge results
+  //     const allResults = responses.flatMap((data) =>
+  //       data.tasks?.flatMap((task: any) =>
+  //         task.result?.flatMap((resultItem: any) =>
+  //           resultItem.items?.filter((item: any) =>
+  //             item?.item?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //             item?.item?.description?.toLowerCase().includes(searchQuery.toLowerCase())
+  //           ) || []
+  //         ) || []
+  //       ) || []
+  //     );
   
-      setLoading(false);
-      console.log("Fetched data:", allResults);
-      return allResults;
-    } catch (error) {
-      setLoading(false);
-      console.error("Error fetching suggestions:", error);
-      return [];
-    }
-  };
+  //     setLoading(false);
+  //     console.log("Fetched data:", allResults);
+  //     return allResults;
+  //   } catch (error) {
+  //     setLoading(false);
+  //     console.error("Error fetching suggestions:", error);
+  //     return [];
+  //   }
+  // };
   
     
     // Handle clicking outside the dropdown
@@ -355,6 +358,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     }, []);
     
     const handleSelectItem = (data: any) => {
+      console.log("ini data selectedItem",data)
       setQuery(data.item.title);  // Set the query to the selected item
       setAppsID(data.app_id)
       setNameID(data.item.title);
@@ -366,17 +370,19 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     };
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setCheckedItems({
-        ...checkedItems,
-        [event.target.name]: event.target.checked,
-      });
-    };
+      const { value, checked } = event.target;
+  
+      setCheckedItems((prev) =>
+        checked ? [...prev, value] : prev.filter((item) => item !== value)
+      );
+    }; 
 
   const handleChangeMobile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
     if (e.target.value.length >= 3) {
       setShowDropdown(true);
-      const results = await fetchSuggestions(e.target.value, checkedItems);
+      const filteredCheckedItems = checkedItems.filter(item => item !== ""); 
+      const results = await fetchSuggestions(e.target.value);
       setSuggestions(results);
       return;
     } else {
@@ -428,9 +434,10 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   type="checkbox"
                   id="item-google"
                   name="optionGoogle"
-                  value="google"
+                  value="playstore"
                   className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
-                  checked={checkedItems["optionGoogle"] || false}
+                  // checked={checkedItems["optionGoogle"] || false}
+                  checked={checkedItems.includes("playstore")}
                   onChange={handleCheckboxChange} />
                 <Image
                   src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
@@ -445,9 +452,10 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   type="checkbox"
                   id="item-apple"
                   name="optionApple"
-                  value="apple"
+                  value="appstore"
                   className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-2"
-                  checked={checkedItems["optionApple"] || false}
+                  // checked={checkedItems["optionApple"] || false}
+                  checked={checkedItems.includes("appstore")}
                   onChange={handleCheckboxChange} />
                 <Image
                   src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path
@@ -475,7 +483,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               </div>
 
               {showDropdown && query.length >= 3 && (
-                <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-1">
+                <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
                   {loading ? (
                     <div className="p-2 text-sm text-gray-500">Loading...</div>
                   ) : suggestions.length > 0 ? (
@@ -493,48 +501,47 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                           className="object-contain"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = "/img/not_found.png"; // Fallback if image fails to load
-                          } } />
-
+                          }}
+                        />
+                        
                         <span className="flex-grow">{suggestion.item.title}</span>
 
-                        {(suggestion.se_domain === "itunes.apple.com" || suggestion.se_domain === "play.google.com") && (
-                          <div className="absolute right-0 top-0 flex items-center space-x-1">
-                            {/* Google Play Store Badge - Positioned Behind */}
-                            {suggestion.se_domain === "play.google.com" && (
-                              <span className="relative z-0 -mr-2 opacity-80">
-                                <Image
-                                  src="/img/icon/Google_Play_Icon_Logo.svg"
-                                  alt="Google Play Logo"
-                                  width={18}
-                                  height={18}
-                                  className="object-contain" />
-                              </span>
-                            )}
+                        <div className="absolute right-0 top-0 flex items-center space-x-2"> {/* space-x-2 for spacing between logos */}
+                          {suggestion.se_domain === "play.google.com" && (
+                            <span className="relative z-0 opacity-80">
+                              <Image
+                                src="/img/icon/Google_Play_Icon_Logo.svg"
+                                alt="Google Play Logo"
+                                width={18}
+                                height={18}
+                                className="object-contain"
+                              />
+                            </span>
+                          )}
 
-                            {/* Apple App Store Badge - Positioned in Front */}
-                            {suggestion.se_domain === "itunes.apple.com" && (
-                              <span className="relative z-10 bg-white py-0.5 px-2 rounded-lg">
-                                <Image
-                                  src="/img/icon/Apps_Store_Icon_Logo.svg"
-                                  alt="App Store Logo"
-                                  width={18}
-                                  height={18}
-                                  className="object-contain" />
-                              </span>
-                            )}
-                          </div>
-                        )}
+                          {suggestion.se_domain === "itunes.apple.com" && (
+                            <span className="relative z-10 bg-white py-0.5 px-2 rounded-lg">
+                              <Image
+                                src="/img/icon/Apps_Store_Icon_Logo.svg"
+                                alt="App Store Logo"
+                                width={18}
+                                height={18}
+                                className="object-contain"
+                              />
+                            </span>
+                          )}
+                        </div>
                       </div>
                     ))
                   ) : (
-                    <div className="p-2 text-sm text-gray-500 relative z-1">No results found</div>
+                    <div className="p-2 text-sm text-gray-500">No results found</div>
                   )}
 
                   {!loading && suggestions.length > 0 && (
                     <div className="p-2 text-sm text-white bg-blue-500 border-t border-blue-600">
-                      App not found? Try selecting 1 platform at a time
+                      App not found? Try selecting one platform at a time
                       <p className="text-xs opacity-80 mt-1">
-                        Inconsistent app name between platforms can affect results
+                        Inconsistent app names between platforms can affect results
                       </p>
                     </div>
                   )}
@@ -636,7 +643,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                     max={30}
                     step={1}
                     defaultValue={[5]}
-                    // onValueChange={handleChangeSlider}
+                    onValueChange={handleSliderChange}
                     ariaLabel="Slider with numbers"
                     showValue />
                 </div>

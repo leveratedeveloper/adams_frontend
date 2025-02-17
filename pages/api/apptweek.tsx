@@ -8,11 +8,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { appID } = req.query; // Use query params instead of req.body
+  console.log("req.query",req.query)
+  const { appID,deviceType } = req.query; // Use query params instead of req.body
   console.log("Received appID on server:", appID);
+  console.log("Received deviceType:", deviceType);
 
-  if (!appID) {
-    return res.status(400).json({ error: "appID is required" });
+  if (!appID || !deviceType) {
+    return res.status(400).json({ error: "appID and deviceType are required" });
   }
 
   const url = "https://public-api.apptweak.com/api/public/store/keywords/suggestions/app.json";
@@ -20,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     apps: appID,
     country: "id",
     language: "en",
-    device: "android",
+    device: deviceType,
     limit: 10,
     offset: 0,
     sort: "volume",
