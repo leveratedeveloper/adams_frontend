@@ -195,12 +195,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const fetchSuggestions = async (searchQuery: string) => {
     setLoading(true);
-      if (getFetchCount() > 3) {
-        setLoading(false)
-        setSuggestionsIcon([])
-        setIsOpen(true)
-        return [];
-      }
+      // if (getFetchCount() > 3) {
+      //   setLoading(false)
+      //   setSuggestionsIcon([])
+      //   setIsOpen(true)
+      //   return [];
+      // }
     try {
       const currentFetchCount = getFetchCount() + 1;
 
