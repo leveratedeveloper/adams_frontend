@@ -27,8 +27,8 @@ export function Footer() {
           <Link href="/terms-condition" className="hover:text-gray-300 transition-colors">
             Terms & Condition
           </Link>
-          <Link href="#" onClick={() => setIsOpen(true)} className="hover:text-gray-300 transition-colors">
-            Consult Now
+          <Link href="/disclaimer" className="hover:text-gray-300 transition-colors">
+            Disclaimer
           </Link>
         </div>
       </div>

@@ -124,13 +124,13 @@ export default function ContentPage() {
             </button>
             </Link>
           </div>
-          <div className="grid md:grid-cols-5 p-6 sm:p-8">
-            <div className="space-y-4 p-4 col-span-2">
-              <div className="border-2 border-solid rounded-lg p-4 ">
+          <div className="grid md:grid-cols-6 md:p-8 grid-cols-1 p-2">
+            <div className="md:space-y-4 md:p-4 md:col-span-2">
+              <div className="shadow-md rounded-lg md:p-4 border">
                 <table className="min-w-full table-auto border-collapse">
                   <thead>
                     <tr>
-                      <th className="px-4 py-2 border-b text-left">
+                      <th className="px-4 py-2 border-b text-center md:text-left">
                         <h2 className="text-2xl font-semibold mb-4">Inquiry</h2>
                       </th>
                       <th className="px-4 py-2 border-b text-left"></th>
@@ -182,7 +182,7 @@ export default function ContentPage() {
                     )}
                   </tbody>
                 </table>
-                <div className="mt-4 p-4 bg-gray-50 rounded-lg border-2 border-solid"> {/* Reduced top margin */}
+                <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-solid m-4"> {/* Reduced top margin */}
                   <Image
                       src={appIcon || "/img/not_found.png"}
                       width={150} 
@@ -231,8 +231,8 @@ export default function ContentPage() {
                 </div>
               </div>
             </div>
-            <div className="space-y-4 p-4 col-span-3">
-              <div className="bg-white rounded-lg p-4 shadow-md">
+            <div className="md:space-y-4 md:p-4 col-span-4 md:mt-0 mt-4">
+              <div className="bg-white rounded-lg md:p-4 shadow-md border p-6">
                 {/* Heading */}
                 <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
                   Potential keywords
@@ -267,12 +267,12 @@ export default function ContentPage() {
               </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-5 grid-flow-col p-6">
-            <div className="space-y-4 p-4 col-span-2">
+          <div className="grid md:grid-cols-6 grid-flow-col md:p-6 grid-cols-1 p-2">
+            <div className="md:space-y-4 md:p-4 col-span-2">
             </div>
-            <div className="space-y-4 p-4 col-span-3">
-              <div className="bg-white rounded-lg p-4 shadow-md">
-                <h2 className="text-2xl font-semibold mb-8">Services you&apos;ll get</h2>
+            <div className="md:space-y-4 md:p-4 col-span-4">
+              <div className="bg-white rounded-lg md:p-4 shadow-md border p-6">
+                <h2 className="text-2xl font-semibold mb-8 md:text-left text-center">Services you&apos;ll get</h2>
                 <div className="grid md:grid-cols-3">
                   <ServiceCard
                     title="Full Audit Report"
