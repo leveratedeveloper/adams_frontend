@@ -11,8 +11,9 @@ export default function TabSwitch ({ data,dataAppStore }: { data: any, dataAppSt
   }
 
   const appID = Object.keys(data)?.[0]; // Extract the first key 
+  const appIDIphone = Object.keys(dataAppStore)?.[0]; // Extract the first key 
   const suggestions = data?.[appID]?.suggestions || [];
-  const suggestionsIphone = dataAppStore?.[appID]?.suggestions || [];
+  const suggestionsIphone = dataAppStore?.[appIDIphone]?.suggestions || [];
   return (
     <div>
       {/* Tab Buttons */}

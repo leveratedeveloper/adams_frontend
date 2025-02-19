@@ -10,7 +10,7 @@ import { Footer } from '@/components/Footer';
 import React,{ useEffect, useState } from "react";
 import { getDataFromDB } from '../utils/indexedDb';
 import { useModal } from "../../contexts/ModalContext";
-
+import Modal from "@/components/hubspotmodal/modal";
 export default function ContentPage() {
   interface DataItem {
     url: string;
@@ -33,6 +33,7 @@ export default function ContentPage() {
   const [appIcon, setAppIcon] = useState("");
   const [appName, setAppName] = useState("");
   const [appStarAndroid, setAppStarAndroid] = useState<number>(0);
+  const [appStarIphone, setAppStarIphone] = useState<number>(0);
   const [objective, setObjectiveASO] = useState([])
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -44,23 +45,26 @@ export default function ContentPage() {
           const dbData = await getDataFromDB();
           if (Array.isArray(dbData)) {
             const lastItem = dbData[dbData.length - 1];
-            const appID = lastItem['appId'];
+            const appIDAndroid = lastItem['appId'];
+            const appIDApple = lastItem['appIdIphone'];
             setAppIcon(lastItem['appIcon']);
             setAppName(lastItem['appName']);
-            setAppStarAndroid(lastItem['appStarAndroid'])
+            setAppStarAndroid(lastItem['appStarAndroid']);
+            setAppStarIphone(lastItem['appStarIphone']);
             console.log("ini lastItem",lastItem)
             setDataArray([lastItem]); // Update the data array
             // Call the API with the domain immediately
             // if(lastItem['market'])
             //  fetchDataApi(appID,deviceType);
-            lastItem['market'].forEach((deviceType: string) => {
+            lastItem['market'].forEach(async (deviceType: string) => {
               if(deviceType == 'playstore'){
-                fetchDataApi(appID, 'android');
+                const result = await fetchDataApi(appIDAndroid, 'android');
+                setData(result); 
               }
               if(deviceType == 'appstore'){
-                fetchDataApi(appID, 'iphone');
+                const result = await fetchDataApi(appIDApple, 'iphone');
+                setDataAppStore(result); 
               }
-               
             });
           } else {
             console.error("dbData is not an array:", dbData);
@@ -94,12 +98,7 @@ export default function ContentPage() {
     
         const result = await response.json();
         console.log("API Response:", result);
-        if(deviceType == 'android'){
-          setData(result); 
-        }
-        if(deviceType == 'iphone'){
-          setDataAppStore(result); 
-        }
+        return result
        
       } catch (err: any) {
         console.error("Error calling API:", err.message);
@@ -207,7 +206,7 @@ export default function ContentPage() {
                             <path d="M10 15.27l4.18 2.19-1.64-5.03L18 7.24h-5.18L10 2 7.18 7.24H2l3.46 5.19-1.64 5.03L10 15.27z" />
                           </svg>
                         </span>
-                        <span className="text-sm font-medium">4.7</span>
+                        <span className="text-sm font-medium">{appStarIphone}</span>
                         <span className="text-sm text-gray-500 ml-1">(1.65 mio)</span>
                       </div>
                       <div className="flex items-center mt-1">
@@ -304,6 +303,14 @@ export default function ContentPage() {
           </div>
         {/* Services Section */}
         </div>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          {/* Embedded HubSpot Meeting */}
+          <iframe
+            src="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
+            className="w-full h-96 border rounded"
+            allowFullScreen
+          ></iframe>
+        </Modal>
       </main>
       <Footer />
     </div>

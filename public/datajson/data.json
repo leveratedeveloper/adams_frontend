@@ -2,16 +2,16 @@
     "version": "0.1.20241227",
     "status_code": 20000,
     "status_message": "Ok.",
-    "time": "0.2206 sec.",
+    "time": "0.2148 sec.",
     "cost": 0.105,
     "tasks_count": 1,
     "tasks_error": 0,
     "tasks": [
         {
-            "id": "02040234-8872-0554-0000-91d62ac28b7e",
+            "id": "02180630-8872-0554-0000-9c0925edf0c8",
             "status_code": 20000,
             "status_message": "Ok.",
-            "time": "0.2014 sec.",
+            "time": "0.1393 sec.",
             "cost": 0.105,
             "result_count": 1,
             "path": [
@@ -34,7 +34,7 @@
                 "order_by": [
                     "item.installs_count,asc"
                 ],
-                "limit": 10,
+                "limit": 200,
                 "filters": [
                     [
                         "item.rating.value",
@@ -48,7 +48,7 @@
                     "total_count": 5,
                     "count": 5,
                     "offset": 0,
-                    "offset_token": "eyJDdXJyZW50T2Zmc2V0Ijo1LCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjEwLCJvZmZzZXQiOm51bGwsImFpZCI6bnVsbH0sIlJhd1F1ZXJ5Ijp7ImZpZWxkIjoiaXRlbS5yYXRpbmcudmFsdWUiLCJ0eXBlIjoiZ3QiLCJ2YWx1ZSI6Mi41fSwiSWQiOm51bGwsIlNlYXJjaEFmdGVyRGF0YSI6WzY2NjI5MDEyLjAsImNvbS5iY2EiXX0=",
+                    "offset_token": "eyJDdXJyZW50T2Zmc2V0Ijo1LCJSZXF1ZXN0RGF0YSI6eyJsb2NhdGlvbiI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsImNhdGVnb3JpZXMiOlsiRmluYW5jZSJdLCJ0aXRsZSI6ImJjYSIsImRlc2NyaXB0aW9uIjoiYmNhIiwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImluZm8uaXRlbS5pbnN0YWxsc19jb3VudCIsIm9yZGVyX3R5cGUiOiJBc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjIwMCwib2Zmc2V0IjpudWxsLCJhaWQiOm51bGx9LCJSYXdRdWVyeSI6eyJmaWVsZCI6Iml0ZW0ucmF0aW5nLnZhbHVlIiwidHlwZSI6Imd0IiwidmFsdWUiOjIuNX0sIklkIjpudWxsLCJTZWFyY2hBZnRlckRhdGEiOls2NjYyOTAxMi4wLCJjb20uYmNhIl19",
                     "items": [
                         {
                             "app_id": "com.exictos.mbanka.bca.ao",
@@ -128,11 +128,11 @@
                         },
                         {
                             "app_id": "com.vq.mbrochuregp.client.android",
-                            "se_domain": "itunes.apple.com",
+                            "se_domain": "play.google.com",
                             "location_code": 2840,
                             "language_code": "en",
                             "check_url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
-                            "time_update": "2025-01-08 16:36:56 +00:00",
+                            "time_update": "2025-02-13 00:52:27 +00:00",
                             "item": {
                                 "type": "google_play_info_organic",
                                 "rank_group": 1,
@@ -143,11 +143,11 @@
                                 "url": "https://play.google.com/store/apps/details?id=com.vq.mbrochuregp.client.android&hl=en&gl=us",
                                 "icon": "https://play-lh.googleusercontent.com/4FpvKqIdq24Cx1SWvKPtS4GUHnRIjndAGLT9VdzNQ9sJCWjSIV1LixfOl06CITdB_EU",
                                 "description": "BCAF App, aplikasi financial di tangan Anda.\nLayanan financial terpercaya, kapan saja dan dimana saja.\n\nManfaat BCAF App :\n1.Dapatkan info update promosi, suku bunga dan produk-produk dari BCAF lebih cepat.\n2.Ajukan kredit mobil dan pantau prosesnya tanpa harus keluar rumah.\n3.Layanan konsumen sesuai kebutuhan Anda, seperti informasi pelanggan, simulasi pelunasan dipercepat, reservasi pengambilan BPKB tanpa harus antri terlebih dahulu.\n4.Terhubung langsung dengan layanan digital BCAF lainnya, seperti Website BCAF, HaloBCA Chat, Astari dan Instagram BCAF.\n\nSemuanya hanya dalam genggaman tangan Anda.\n\nFitur-fitur BCAF App :\n1.Simulasi kredit mobil baru dan bekas berdasarkan budget total pembayaran pertama ataupun angsuran.\n2.Pengajuan kredit online.\n3.Tracking status pengajuan kredit online.\n4.Layanan konsumen :\na.Info Pelanggan (informasi angsuran dan histori pembayaran).\nb.Simulasi early termination / pelunasan dipercepat.\nc.Booking Pengambilan BPKB.\n5.E-Doc.\n\nUntuk bantuan lebih lanjut dapat menghubungi Astari, Virtual Assistant kami di 08111027780 atau email ke customercarebcaf@bcaf.id\n\nSelamat menggunakan BCAF App.",
-                                "reviews_count": 12516,
+                                "reviews_count": 12575,
                                 "rating": {
                                     "rating_type": "Max5",
                                     "value": 3.5,
-                                    "votes_count": 12516,
+                                    "votes_count": 12575,
                                     "rating_max": 5
                                 },
                                 "price": {
@@ -161,7 +161,7 @@
                                 "is_free": true,
                                 "main_category": "Finance",
                                 "installs": "1,000,000+",
-                                "installs_count": 1165172,
+                                "installs_count": 1179893,
                                 "developer": "PT. BCA Finance",
                                 "developer_id": "PT.+BCA+Finance",
                                 "developer_url": "https://play.google.com/store/apps/developer?id=PT.+BCA+Finance",
