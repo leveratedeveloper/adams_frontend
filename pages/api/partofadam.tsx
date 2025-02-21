@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         formData.append("user_agent",lastItem['userAgent']);
     
         const response = await fetch(
-          process.env.DATAFORSEO_USERNAME+"/api/admin/request-inquiries",
+          process.env.CMS_ENDPOINT+"/api/admin/request-inquiries",
           {
             method: "POST",
             headers: {
