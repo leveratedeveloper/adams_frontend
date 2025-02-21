@@ -11,7 +11,7 @@ import Cookies from 'js-cookie';
 import Modal from "@/components/hubspotmodal/modal";
 import { useModal } from "../../contexts/ModalContext";
 import { Footer } from '@/components/Footer';
-
+import { validate as validateUUID } from "uuid";
 
 export default function ContentPage() {
   // const handleClick = () => {
@@ -30,6 +30,8 @@ export default function ContentPage() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const { isOpen, setIsOpen } = useModal();
+  const [sessionID, setSessionID] = useState()
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +40,7 @@ export default function ContentPage() {
         if (Array.isArray(dbData)) {
           const lastItem = dbData[dbData.length - 1];
           const domain = lastItem['url'].replace(/(^\w+:|^)\/\//, "").replace(/\/$/, ""); 
+          setSessionID(lastItem['sessionId']);
           console.log("ini domain",domain)
           setDataArray([lastItem]); // Update the data array
           // Call the API with the domain immediately
@@ -83,7 +86,45 @@ export default function ContentPage() {
     }
   };
 
- 
+  const saveDataCms = async (lastItem: any) => {
+    const response = await fetch("/api/resultadam", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(
+        {lastItem}
+      ),
+    });
+  
+    const data = await response.json();
+    console.log("Suggestions: respond", data);
+    return data;
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      if (!sessionID || !validateUUID(sessionID)) {
+        console.error("Invalid session ID:", sessionID);
+      } else {
+        console.log("Valid session ID:", sessionID);
+      }
+      if (data) {
+        console.log(" ada data android")
+        const suggestionAndroid = data;
+        const itemsResultCMS = [
+          { 
+            session_id: sessionID || "defaultSessionId", 
+            result: suggestionAndroid
+          }
+        ];
+      
+        saveDataCms(itemsResultCMS);
+        console.log("Save to dataCMS Android", itemsResultCMS);
+      }
+    }
+  }, [isOpen]);
+
   return (
     <div className="relative max-h-screen w-full">
           <Header />

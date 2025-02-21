@@ -4,6 +4,7 @@ import Header from '@/components/general/header';
 import { Footer } from '@/components/Footer';
 import React,{ useEffect, useState } from "react";
 import { useModal } from "../../contexts/ModalContext";
+import Modal from "@/components/hubspotmodal/modal";
 
 export default function Page() {
     const { isOpen, setIsOpen } = useModal();
@@ -11,6 +12,14 @@ export default function Page() {
     return (
         <>
             <Header />
+            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                {/* Embedded HubSpot Meeting */}
+                <iframe
+                src="https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment"
+                className="w-full h-96 border rounded"
+                allowFullScreen
+                ></iframe>
+            </Modal>
             <div className="container mx-auto text-gray-700" style={{ paddingTop: '15vh' }}>
             
                 <h1 className="text-2xl font-bold">Privacy Policy</h1>
@@ -69,9 +78,9 @@ export default function Page() {
                 <p className="font-semibold">Email: info@adamsolutions.asia</p>
                 <div className='mb-8'></div>
                 <p className='mb-8'>By using our website, you consent to the terms of this Privacy Policy.</p>
-      
             </div>
             <Footer />
+           
         </> 
     );
 }

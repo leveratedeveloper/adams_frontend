@@ -20,7 +20,7 @@ export default function KeywordTable({ data }: { data: any }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.result.data.slice(0, 6).map((item: any, index: number) => (
+        {data.result.data.slice(0, 3).map((item: any, index: number) => (
           <React.Fragment key={item.position + "-" + index}> {/* Ensure uniqueness */}
             <TableRow className={index == 3 ? "blur-sm" : ""}>
               <TableCell>{index + 1}</TableCell>
