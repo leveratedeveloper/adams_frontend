@@ -11,6 +11,9 @@ import React,{ useEffect, useState } from "react";
 import { getDataFromDB } from '../utils/indexedDb';
 import { useModal } from "../../contexts/ModalContext";
 import Modal from "@/components/hubspotmodal/modal";
+import Cookies from 'js-cookie';
+import { validate as validateUUID } from "uuid";
+import { last } from 'lodash';
 export default function ContentPage() {
   interface DataItem {
     url: string;
@@ -31,13 +34,17 @@ export default function ContentPage() {
   const [dataAppStore, setDataAppStore] = useState(null);
   
   const [appIcon, setAppIcon] = useState("");
+  const [appIconAndroid, setAppIconAndroid] = useState("");
   const [appName, setAppName] = useState("");
+  const [idAndroid, setIdAndroid] = useState("");
+  const [idApple, setIdApple] = useState("");
   const [appStarAndroid, setAppStarAndroid] = useState<number>(0);
   const [appStarIphone, setAppStarIphone] = useState<number>(0);
   const [objective, setObjectiveASO] = useState([])
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const { isOpen, setIsOpen } = useModal();
+  const [sessionID, setSessionID] = useState()
 
    useEffect(() => {
       const fetchData = async () => {
@@ -46,24 +53,44 @@ export default function ContentPage() {
           if (Array.isArray(dbData)) {
             const lastItem = dbData[dbData.length - 1];
             const appIDAndroid = lastItem['appId'];
-            const appIDApple = lastItem['appIdIphone'];
+            const appIDApple = lastItem['appIdIphone'] ;
             setAppIcon(lastItem['appIcon']);
+            setAppIconAndroid(lastItem['appIconAndroid']);
             setAppName(lastItem['appName']);
+            setIdAndroid(appIDAndroid);
+            setIdApple(appIDApple);
             setAppStarAndroid(lastItem['appStarAndroid']);
             setAppStarIphone(lastItem['appStarIphone']);
+            setSessionID(lastItem['sessionId']);
             console.log("ini lastItem",lastItem)
             setDataArray([lastItem]); // Update the data array
             // Call the API with the domain immediately
             // if(lastItem['market'])
             //  fetchDataApi(appID,deviceType);
             lastItem['market'].forEach(async (deviceType: string) => {
-              if(deviceType == 'playstore'){
-                const result = await fetchDataApi(appIDAndroid, 'android');
-                setData(result); 
-              }
-              if(deviceType == 'appstore'){
-                const result = await fetchDataApi(appIDApple, 'iphone');
-                setDataAppStore(result); 
+              if (deviceType === 'playstore') {
+                try {
+                    const result = await fetchDataApi(appIDAndroid, 'android');
+                    if (!result || typeof result !== "object" || Object.keys(result).length === 0) {
+                        console.error("Invalid API response:", result);
+                        return;
+                    }
+                    setData(result);
+                } catch (error) {
+                    console.error("Error fetching data:", error);
+                }
+              }            
+              if (deviceType === 'appstore') {
+                  try {
+                      const result = await fetchDataApi(appIDApple, 'iphone');
+                      if (!result || typeof result !== "object" || Object.keys(result).length === 0) {
+                          console.error("Invalid API response:", result);
+                          return;
+                      }
+                      setDataAppStore(result);
+                  } catch (error) {
+                      console.error("Error fetching data:", error);
+                  }
               }
             });
           } else {
@@ -108,6 +135,100 @@ export default function ContentPage() {
       }
     };
     
+    const saveDataCms = async (lastItem: any) => {
+      const response = await fetch("/api/resultadam", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(
+          {lastItem}
+        ),
+      });
+    
+      const data = await response.json();
+      console.log("Suggestions: respond", data);
+      return data;
+    };
+
+    useEffect(() => {
+      if (isOpen) {
+        // const data = {
+        //   "1550237185": {
+        //     "suggestions": [
+        //       {
+        //         "keyword": "seabank",
+        //         "ranking": 7,
+        //         "is_typo": false,
+        //         "volume": 80,
+        //         "score": 85.9
+        //       },
+        //       {
+        //         "keyword": "bca mobile",
+        //         "ranking": 5,
+        //         "is_typo": false,
+        //         "volume": 78,
+        //         "score": 95.16
+        //       },
+        //       {
+        //         "keyword": "my bca",
+        //         "ranking": 4,
+        //         "is_typo": false,
+        //         "volume": 76,
+        //         "score": 98.73
+        //       },
+        //       {
+        //         "keyword": "wondr by bni",
+        //         "ranking": 6,
+        //         "is_typo": false,
+        //         "volume": 72,
+        //         "score": 82.43
+        //       },
+        //       {
+        //         "keyword": "bca",
+        //         "ranking": 4,
+        //         "is_typo": false,
+        //         "volume": 69,
+        //         "score": 89.64
+        //       }
+        //     ]
+        //   }
+        // };
+        if (!sessionID || !validateUUID(sessionID)) {
+          console.error("Invalid session ID:", sessionID);
+        } else {
+          console.log("Valid session ID:", sessionID);
+        }
+        if (data) {
+          console.log(" ada data android")
+          const suggestionAndroid = data;
+          const itemsResultCMS = [
+            { 
+              session_id: sessionID || "defaultSessionId", 
+              result: suggestionAndroid
+            }
+          ];
+        
+          saveDataCms(itemsResultCMS);
+          console.log("Save to dataCMS Android", itemsResultCMS);
+        }
+        
+        if(dataAppStore){
+          console.log(" ada data apps store")
+          // const itemsResultCMS = [
+          //   { sessionID: Cookies.get('sessionId'), result: dataAppStore },
+          // ];
+          const itemsResultAppStoreCMS = [
+            { 
+              session_id: sessionID || "defaultSessionId", 
+              result: dataAppStore
+            }
+          ];
+          saveDataCms(itemsResultAppStoreCMS);
+          console.log("save to dataCMS apple",itemsResultAppStoreCMS)
+        }
+      }
+    }, [isOpen]);
 
   return (
     <div className="relative max-h-screen w-full">
@@ -140,47 +261,24 @@ export default function ContentPage() {
                   </thead>
                   <tbody>
                   {dataArray.length > 0 ? (
-                      dataArray.map((item, index) => (
-                        <React.Fragment key={item.id || index}> {/* Ensure a unique key */}
-                          <tr>
-                            <td className="px-4 py-2" colSpan={2}>App name</td>
-                            <td className="px-4 py-1 text-right" colSpan={3}>
-                                {item.appName}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="px-4 py-2" colSpan={2}>Market</td>
-                            <td className="px-2 py-2 text-right" colSpan={3}>
-                            {Array.isArray(item.market) ? item.market.join(", ") : ""}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="px-4 py-2" colSpan={2}>Country</td>
-                            <td className="px-4 py-2 text-right" colSpan={3}>
-                              {item.country}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="px-4 py-2" colSpan={2}>Objective</td>
-                            <td className="px-4 py-2 text-right" colSpan={3}>
-                            {Array.isArray(item.objectiveASO) ? item.objectiveASO.join(", ") : ""}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="px-4 py-2" colSpan={2}>Keyword Optimize</td>
-                            <td className="px-4 py-2 text-right" colSpan={3}>
-                              {item.keyword_optimized}
-                            </td>
-                          </tr>
-                        </React.Fragment>
-                      ))
-                    ) : (
-                      <tr>
-                        <td className="px-4 py-2 text-center" colSpan={4}>Loading or no data available...</td>
-                      </tr>
-                    )}
+                    dataArray.map((item, index) => (
+                      <React.Fragment key={item.id || index}> 
+                        <tr key={`${item.id}-appName-${index}`}><td className="px-4 py-2" colSpan={2}>App name</td><td className="px-4 py-1 text-right" colSpan={3}>{item.appName}</td></tr>
+                        <tr key={`${item.id}-market-${index}`}><td className="px-4 py-2" colSpan={2}>Market</td><td className="px-2 py-2 text-right" colSpan={3}>{Array.isArray(item.market) ? item.market.join(", ") : ""}</td></tr>
+                        <tr key={`${item.id}-country-${index}`}><td className="px-4 py-2" colSpan={2}>Country</td><td className="px-4 py-2 text-right" colSpan={3}>{item.country}</td></tr>
+                        <tr key={`${item.id}-objective-${index}`}><td className="px-4 py-2" colSpan={2}>Objective</td><td className="px-4 py-2 text-right" colSpan={3}>{Array.isArray(item.objectiveASO) ? item.objectiveASO.join(", ") : ""}</td></tr>
+                        <tr key={`${item.id}-keyword-${index}`}><td className="px-4 py-2" colSpan={2}>Keyword Optimize</td><td className="px-4 py-2 text-right" colSpan={3}>{item.keyword_optimized}</td></tr>
+                      </React.Fragment>
+                    ))
+                  ) : (
+                    <tr>
+                      <td className="px-4 py-2 text-center" colSpan={4}>Loading or no data available...</td>
+                    </tr>
+                  )}
+
                   </tbody>
                 </table>
+                {idApple !== '' ?
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-solid m-4"> {/* Reduced top margin */}
                   <Image
                       src={appIcon || "/img/not_found.png"}
@@ -209,6 +307,23 @@ export default function ContentPage() {
                         <span className="text-sm font-medium">{appStarIphone}</span>
                         <span className="text-sm text-gray-500 ml-1">(1.65 mio)</span>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                 : <div></div>}
+                {idAndroid !== '' ?
+                <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-solid m-4"> {/* Reduced top margin */}
+                  <Image
+                      src={appIconAndroid || "/img/not_found.png"}
+                      width={150} 
+                      height={100}
+                      alt="Icon App"
+                      unoptimized={appIcon?.startsWith("http")} 
+                    />
+                  <div className="flex items-center space-x-4">
+                    <div>
+                      <h3 className="text-xl font-semibold">{appName}</h3>
+                      <p className="text-gray-600">{appName}</p>
                       <div className="flex items-center mt-1">
                         <Image
                            src="img/icon/Google_Play_Icon_Logo.svg" // Replace with your logo's path
@@ -228,6 +343,7 @@ export default function ContentPage() {
                     </div>
                   </div>
                 </div>
+                : '' }
               </div>
             </div>
             <div className="md:space-y-4 md:p-4 col-span-4 md:mt-0 mt-4">
@@ -243,7 +359,11 @@ export default function ContentPage() {
                 </p>
                
                 {/* Tab switch Table */}
-                <TabSwitch data={data}  dataAppStore={dataAppStore} dataArray={dataArray} />
+                <TabSwitch 
+                  data={data || {}} 
+                  dataAppStore={dataAppStore || {}} 
+                  dataArray={Array.isArray(dataArray) ? dataArray : []} 
+                />
 
                 {/* Call-to-Action Heading */}
                 <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center mb-2">

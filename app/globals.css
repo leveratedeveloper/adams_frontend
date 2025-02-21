@@ -137,3 +137,7 @@ body {
     transform: translateX(-50%);
   }
 }
+
+.h-96{
+  height: 90%;
+}
