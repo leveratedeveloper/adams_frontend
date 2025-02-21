@@ -12,8 +12,6 @@ import { saveDataToDB, getDataFromDB,deleteAllData } from '../utils/indexedDb';
 import Cookies from 'js-cookie';
 import { useModal } from "../../contexts/ModalContext";
 import Modal from "@/components/hubspotmodal/modal";
-import axios from 'axios';
-import { userAgent } from 'next/server';
 import debounce from "lodash/debounce";
 
 interface TabContentProps {
@@ -47,6 +45,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [appsIDIphone, setAppsIDIphone] = useState("");
   const [nameID, setNameID] = useState("");
   const [appIcon, setAppIcon] = useState("");
+  const [appIconAndroid, setAppIconAndroid] = useState("");
   const [market, setMarket] = useState<string[]>([]); 
   const [statMarket, setStatMarket] = useState("")
   const [starAndroid, setStarAndroid] = useState<number>(0);
@@ -67,6 +66,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     appIdIphone:'',
     appName: '',
     appIcon:'',
+    appIconAndroid:'',
     appStarIphone:0,
     appStarAndroid:0,
     objectiveASO: [''],
@@ -137,9 +137,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       //   setError("You must select Google!! or Apple!!");
       //   return;
       // }
-      if (query.trim() === "") {
-        setError("App name cannot be empty");
-        return;
+      if (query.trim() === "" && queryAndro.trim() === "") {
+          setError("App name cannot be empty");
+          return;
       }
 
       formData.appId = appsID;
@@ -147,6 +147,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       formData.appName = nameID;
       formData.objectiveASO = selectedValuesObj;
       formData.appIcon = appIcon;
+      formData.appIconAndroid = appIconAndroid
       formData.market = market;
       formData.appStarAndroid = starAndroid;
       formData.appStarIphone = starIphone;
@@ -375,7 +376,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       setQueryAndro(data.item.title);  // Set the query to the selected item
       setAppsID(data.app_id)
       setNameID(data.item.title);
-      setAppIcon(data.item.icon)
+      setAppIconAndroid(data.item.icon)
       setStarAndroid(data.item.rating.value)
       setShowDropdownAndroid(false);  // Close the dropdown
       setIconAndro(true)
@@ -892,7 +893,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               <h3 className="text-sm font-medium mr-2">Country</h3>
               <div className="relative group">
                 <button
-                  className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                  className="text-gray-400 hover:text-gray-600 cursor-pointer relative"
                   aria-label="Information"
                 >
                   ⓘ

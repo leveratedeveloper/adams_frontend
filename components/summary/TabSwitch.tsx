@@ -14,6 +14,22 @@ export default function TabSwitch ({ data,dataAppStore }: { data: any, dataAppSt
   const appIDIphone = Object.keys(dataAppStore)?.[0]; // Extract the first key 
   const suggestions = data?.[appID]?.suggestions || [];
   const suggestionsIphone = dataAppStore?.[appIDIphone]?.suggestions || [];
+
+  const saveDataCms = async (lastItem: any) => {
+    const response = await fetch("/api/resultadam", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        lastItem
+      }),
+    });
+  
+    const data = await response.json();
+    console.log("Suggestions: respond", data);
+    return data;
+  };
   return (
     <div>
       {/* Tab Buttons */}

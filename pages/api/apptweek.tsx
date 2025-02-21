@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     country: "id",
     language: "en",
     device: deviceType,
-    limit: 10,
+    limit: 5,
     offset: 0,
     sort: "volume",
     sort_direction: "desc",
