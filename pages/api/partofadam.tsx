@@ -4,7 +4,8 @@ import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method !== "POST") {
+      console.log("ini request method partofadam",req)
+      if (req.method !== "POST") {
         return res.status(405).json({ error: "Method Not Allowed" });
       }
 
@@ -28,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         formData.append("user_agent",lastItem['userAgent']);
     
         const response = await fetch(
-          "https://backend-stg.adamsolutions.asia/api/admin/request-inquiries",
+          process.env.DATAFORSEO_USERNAME+"/api/admin/request-inquiries",
           {
             method: "POST",
             headers: {

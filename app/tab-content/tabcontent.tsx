@@ -159,7 +159,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   };
   
   const saveDataCms = async (lastItem: any) => {
-      const response = await fetch("/api/cmsadam", {
+      const response = await fetch("/api/partofadam", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
