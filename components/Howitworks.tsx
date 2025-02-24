@@ -36,7 +36,7 @@ const tabs = [
 
 export default function HowItWorks() {
   const [activeTab, setActiveTab] = useState(0);
-  const intervals = [6100, 6300, 11000]; // Different durations for each tab
+  const intervals = [7100, 6300, 11000]; // Different durations for each tab
   const videoWidth = "w-auto"
   const [isFading, setIsFading] = useState(false);
 
