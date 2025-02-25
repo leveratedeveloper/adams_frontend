@@ -3,11 +3,14 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
-  if (!data?.result?.data) {
-    return <p className="text-center">data not found ...</p>;
-  }
+  if (!data?.result?.data || data.result.data.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-40">
+        <div className="w-5 h-5 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+      </div>
+    );
+  }  
 
-  console.log("ini data table", data.result.data);
 
   return (
     <Table>
