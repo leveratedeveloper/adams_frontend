@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ModalProvider } from "../contexts/ModalContext";
 import CookieConsent from "../components/CookieConsent";
+import GAnalytics  from "../components/googleanalytics/analytics";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <ModalProvider>
+          <GAnalytics />
           <body className={inter.className}>{children}
           <CookieConsent />
           </body>
