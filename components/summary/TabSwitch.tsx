@@ -7,7 +7,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 export default function TabSwitch ({ data,dataAppStore }: { data: any, dataAppStore: any, dataArray: any }) {
   const [activeTab, setActiveTab] = useState("appStore");
   if (!data) {
-    return <p className="text-center">data not found ...</p>;
+    return (
+      <div className="flex justify-center items-center h-40">
+        <div className="w-5 h-5 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+      </div>
+    );
   }
 
   const appID = Object.keys(data)?.[0]; // Extract the first key 

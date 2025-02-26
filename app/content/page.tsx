@@ -36,6 +36,7 @@ export default function ContentPage() {
   const [appIcon, setAppIcon] = useState("");
   const [appIconAndroid, setAppIconAndroid] = useState("");
   const [appName, setAppName] = useState("");
+  const [appNameIphone, setAppNameIphone] = useState("")
   const [idAndroid, setIdAndroid] = useState("");
   const [idApple, setIdApple] = useState("");
   const [appStarAndroid, setAppStarAndroid] = useState<number>(0);
@@ -57,6 +58,7 @@ export default function ContentPage() {
             setAppIcon(lastItem['appIcon']);
             setAppIconAndroid(lastItem['appIconAndroid']);
             setAppName(lastItem['appName']);
+            setAppNameIphone(lastItem['appNameIphone']);
             setIdAndroid(appIDAndroid);
             setIdApple(appIDApple);
             setAppStarAndroid(lastItem['appStarAndroid']);
@@ -289,8 +291,8 @@ export default function ContentPage() {
                     />
                   <div className="flex items-center space-x-4">
                     <div>
-                      <h3 className="text-xl font-semibold">{appName}</h3>
-                      <p className="text-gray-600">{appName}</p>
+                      <h3 className="text-xl font-semibold">{appNameIphone}</h3>
+                      <p className="text-gray-600">{appNameIphone}</p>
                       <div className="flex items-center mt-1">
                         <Image
                           src="img/icon/Apps_Store_Icon_Logo.svg" // Replace with your logo's path

@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import { useModal } from "../../contexts/ModalContext";
 import Modal from "@/components/hubspotmodal/modal";
 import debounce from "lodash/debounce";
+import axios from 'axios';
 
 interface TabContentProps {
   value: string;
@@ -44,6 +45,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   const [appsID, setAppsID] = useState("");
   const [appsIDIphone, setAppsIDIphone] = useState("");
   const [nameID, setNameID] = useState("");
+  const [nameIDiphone, setNameIDiphone] = useState("");
   const [appIcon, setAppIcon] = useState("");
   const [appIconAndroid, setAppIconAndroid] = useState("");
   const [market, setMarket] = useState<string[]>([]); 
@@ -65,6 +67,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     appId: '', 
     appIdIphone:'',
     appName: '',
+    appNameIphone: '',
     appIcon:'',
     appIconAndroid:'',
     appStarIphone:0,
@@ -145,6 +148,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       formData.appId = appsID;
       formData.appIdIphone = appsIDIphone;
       formData.appName = nameID;
+      formData.appNameIphone = nameIDiphone
       formData.objectiveASO = selectedValuesObj;
       formData.appIcon = appIcon;
       formData.appIconAndroid = appIconAndroid
@@ -193,92 +197,92 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   
   //DataforSEO
-  // const fetchSuggestions = async (searchQuery: string) => {
-  //   setLoading(true);
-  //     // if (getFetchCount() > 3) {
-  //     //   setLoading(false)
-  //     //   setSuggestionsIcon([])
-  //     //   setIsOpen(true)
-  //     //   return [];
-  //     // }
-  //   try {
-  //     const currentFetchCount = getFetchCount() + 1;
+  const fetchSuggestions = async (searchQuery: string) => {
+    setLoading(true);
+      if (getFetchCount() > 6) {
+        setLoading(false)
+        setSuggestionsIcon([])
+        setIsOpen(true)
+        return [];
+      }
+    try {
+      const currentFetchCount = getFetchCount() + 1;
 
-  //     setFetchCount(currentFetchCount);
-  //     // Replace with your DataForSEO API credentials
-  //     const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
-  //     const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
-  //     const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
-  //     const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
+      setFetchCount(currentFetchCount);
+      // Replace with your DataForSEO API credentials
+      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
+      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
+      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
+      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
   
-  //     // API request body
-  //     const requestBody = [
-  //       {
-  //         categories: ["Finance", "Business"],
-  //         description: searchQuery,
-  //         title: searchQuery,
-  //         limit: 100,
-  //         additional_data: {
-  //           filters: [["language_code", "=", "en"]],
-  //         },
-  //       },
-  //     ];
+      // API request body
+      const requestBody = [
+        {
+          categories: ["Finance", "Business"],
+          description: searchQuery,
+          title: searchQuery,
+          limit: 100,
+          additional_data: {
+            filters: [["language_code", "=", "en"]],
+          },
+        },
+      ];
   
   
-  //     // Make both API calls in parallel by checkedItems
-  //     const apiCalls = [];
+      // Make both API calls in parallel by checkedItems
+      const apiCalls = [];
 
-  //     if (checkedItems.includes("playstore")) {
-  //       apiCalls.push(
-  //         axios.post(API_URL, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
+      if (statMarket == "playstore") {
+        apiCalls.push(
+          axios.post(API_URL, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
       
-  //     if (checkedItems.includes("appstore")) {
-  //       apiCalls.push(
-  //         axios.post(API_URL2, requestBody, {
-  //           auth: {
-  //             username: API_USERNAME,
-  //             password: API_PASSWORD,
-  //           },
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         })
-  //       );
-  //     }
+      if (statMarket == "appstore") {
+        apiCalls.push(
+          axios.post(API_URL2, requestBody, {
+            auth: {
+              username: API_USERNAME,
+              password: API_PASSWORD,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+        );
+      }
       
-  //     // If no API calls were made, return an empty array to avoid errors
-  //     if (apiCalls.length === 0) {
-  //       setLoading(false);
-  //       return [];
-  //     }
+      // If no API calls were made, return an empty array to avoid errors
+      if (apiCalls.length === 0) {
+        setLoading(false);
+        return [];
+      }
       
-  //     // Wait for all API calls to complete
-  //     const responses = await Promise.all(apiCalls);
+      // Wait for all API calls to complete
+      const responses = await Promise.all(apiCalls);
       
-  //     // Extract results safely
-  //     const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      // Extract results safely
+      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
       
-  //     console.log("hit 3", results);
+      console.log("hit 3", results);
       
-  //     setLoading(false);
+      setLoading(false);
       
-  //     return results;      
-  //   } catch (error) {
-  //     setLoading(false);
-  //     console.error("Error fetching suggestions:", error);
-  //     return [];
-  //   }
-  // };
+      return results;      
+    } catch (error) {
+      setLoading(false);
+      console.error("Error fetching suggestions:", error);
+      return [];
+    }
+  };
   const getFetchCount = () => {
     return parseInt(Cookies.get("fetch_count") || "0", 10);
   };
@@ -287,68 +291,68 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     Cookies.set("fetch_count", count.toString(), { expires: 1 }); // Save count in cookies for 7 days
   };
   
-  const fetchSuggestions = async (searchQuery: string) => {
-    setLoading(true);
+  // const fetchSuggestions = async (searchQuery: string) => {
+  //   setLoading(true);
     
-    // if (getFetchCount() > 3) {
-    //   setLoading(false);
-    //   setSuggestionsIcon([]);
-    //   setIsOpen(true);
-    //   return [];
-    // }
+  //   // if (getFetchCount() > 3) {
+  //   //   setLoading(false);
+  //   //   setSuggestionsIcon([]);
+  //   //   setIsOpen(true);
+  //   //   return [];
+  //   // }
   
-    try {
-      console.log("Fetching from local JSON...", searchQuery);
+  //   try {
+  //     console.log("Fetching from local JSON...", searchQuery);
       
-      const API_URL = "datajson/data.json";
-      const API_URL2 = "datajson/dataapple.json";
-      const currentFetchCount = getFetchCount() + 1;
-      setFetchCount(currentFetchCount);
+  //     const API_URL = "datajson/data.json";
+  //     const API_URL2 = "datajson/dataapple.json";
+  //     const currentFetchCount = getFetchCount() + 1;
+  //     setFetchCount(currentFetchCount);
   
-      // Prepare API calls based on checkedItems
-      const apiCalls = [];
+  //     // Prepare API calls based on checkedItems
+  //     const apiCalls = [];
   
-      if (statMarket == "appstore") {
-        console.log("hit api log appstore")
-        apiCalls.push(fetch(API_URL2).then((res) => res.json()));
-      }
+  //     if (statMarket == "appstore") {
+  //       console.log("hit api log appstore")
+  //       apiCalls.push(fetch(API_URL2).then((res) => res.json()));
+  //     }
     
-      // If 'optionGoogle' is checked
-      if (statMarket == "playstore") {
-        console.log("hit api log playstore")
-        apiCalls.push(fetch(API_URL).then((res) => res.json()));
-      }
+  //     // If 'optionGoogle' is checked
+  //     if (statMarket == "playstore") {
+  //       console.log("hit api log playstore")
+  //       apiCalls.push(fetch(API_URL).then((res) => res.json()));
+  //     }
   
-      // If no API calls, return empty result
-      if (apiCalls.length === 0) {
-        setLoading(false);
-        return [];
-      }
+  //     // If no API calls, return empty result
+  //     if (apiCalls.length === 0) {
+  //       setLoading(false);
+  //       return [];
+  //     }
   
-      // Fetch both data sources in parallel
-      const responses = await Promise.all(apiCalls);
+  //     // Fetch both data sources in parallel
+  //     const responses = await Promise.all(apiCalls);
       
-      // Merge results
-      const allResults = responses.flatMap((data) =>
-        data.tasks?.flatMap((task: any) =>
-          task.result?.flatMap((resultItem: any) =>
-            resultItem.items?.filter((item: any) =>
-              item?.item?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              item?.item?.description?.toLowerCase().includes(searchQuery.toLowerCase())
-            ) || []
-          ) || []
-        ) || []
-      );
+  //     // Merge results
+  //     const allResults = responses.flatMap((data) =>
+  //       data.tasks?.flatMap((task: any) =>
+  //         task.result?.flatMap((resultItem: any) =>
+  //           resultItem.items?.filter((item: any) =>
+  //             item?.item?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //             item?.item?.description?.toLowerCase().includes(searchQuery.toLowerCase())
+  //           ) || []
+  //         ) || []
+  //       ) || []
+  //     );
   
-      setLoading(false);
-      console.log("Fetched data:", allResults);
-      return allResults;
-    } catch (error) {
-      setLoading(false);
-      console.error("Error fetching suggestions:", error);
-      return [];
-    }
-  };
+  //     setLoading(false);
+  //     console.log("Fetched data:", allResults);
+  //     return allResults;
+  //   } catch (error) {
+  //     setLoading(false);
+  //     console.error("Error fetching suggestions:", error);
+  //     return [];
+  //   }
+  // };
   
     
     // Handle clicking outside the dropdown
@@ -363,7 +367,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       console.log("ini data selectedItem",data)
       setQuery(data.item.title);  // Set the query to the selected item
       setAppsIDIphone(data.app_id)
-      setNameID(data.item.title);
+      setNameIDiphone(data.item.title);
       setAppIcon(data.item.icon)
       setStarIphone(data.item.rating.value)
       setShowDropdownApple(false);  // Close the dropdown
