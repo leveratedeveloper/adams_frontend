@@ -43,11 +43,21 @@ export default function Header() {
           
           {/* Button on the far right */}
           <button
-          className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
-            onClick={() => setIsOpen(true)}
+            className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
+            data-gtm-event="popup_button_click"
+            onClick={() => {
+              (window as any).dataLayer = (window as any).dataLayer || [];
+              (window as any).dataLayer.push({
+                event: "popup_button_click",
+                button_text: "Consult Now",
+                button_class: "button-gradient bg-blue-500",
+              });
+              setIsOpen(true);
+            }}
           >
             Consult Now
           </button>
+
         </nav>
 
 
