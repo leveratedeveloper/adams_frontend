@@ -41,7 +41,6 @@ export default function ContentPage() {
           const lastItem = dbData[dbData.length - 1];
           const domain = lastItem['url'].replace(/(^\w+:|^)\/\//, "").replace(/\/$/, ""); 
           setSessionID(lastItem['sessionId']);
-          console.log("ini domain",domain)
           setDataArray([lastItem]); // Update the data array
           // Call the API with the domain immediately
           await fetchDataApi(domain);
@@ -72,7 +71,6 @@ export default function ContentPage() {
       });
       const result = await response.json();
       if (response.ok) {
-        console.log("API Response:", result);
         setData(result); // Set the response data to state
       } else {
         console.error("API Error:", result.error);
@@ -98,7 +96,6 @@ export default function ContentPage() {
     });
   
     const data = await response.json();
-    console.log("Suggestions: respond", data);
     return data;
   };
 

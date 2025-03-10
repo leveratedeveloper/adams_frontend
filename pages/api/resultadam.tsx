@@ -4,7 +4,6 @@ import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log("ini request method resultadam",req)
     if (req.method !== "POST") {
         return res.status(405).json({ error: "Method Not Allowed" });
       }
@@ -22,8 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (!sessionId) {
           return res.status(400).json({ error: "Missing session_id" });
         }
-      
-        console.log("Valid session_id:", sessionId);
       
         const formData = new FormData();
         formData.append("session_id", sessionId); // ✅ Correct extraction

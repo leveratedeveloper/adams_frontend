@@ -7,8 +7,6 @@ export function middleware(req) {
   const response = NextResponse.next();
   const sessionIdCookie = req.cookies.get('sessionId');
 
-  // Log cookie status
-  console.log('Existing sessionId:', sessionIdCookie);
 
   if (!sessionIdCookie) {
     const sessionId = uuidv4();
@@ -20,8 +18,6 @@ export function middleware(req) {
   
     const userAgent = req.headers.get('user-agent') || 'Unknown User-Agent';
 
-    console.log('Generated sessionId:', sessionId); // Debug log
-    console.log('ip Address', ip)
     response.cookies.set('sessionId', sessionId, {
       httpOnly: false,
       sameSite: 'Lax',
