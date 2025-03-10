@@ -56,7 +56,7 @@ export default function ContentPage() {
   }, []); // No need to include `domain` in the dependency array
  // Function to call the API
  const fetchDataApi = async (domains: any) => {
-    // setLoading(true); // Start loading
+    setLoading(true); // Start loading
     try {
       const response = await fetch('/api/serpstat', {
         method: 'POST',
@@ -107,7 +107,6 @@ export default function ContentPage() {
         console.log("Valid session ID:", sessionID);
       }
       if (data) {
-        console.log(" ada data android")
         const suggestionAndroid = data;
         const itemsResultCMS = [
           { 
@@ -117,7 +116,6 @@ export default function ContentPage() {
         ];
       
         saveDataCms(itemsResultCMS);
-        console.log("Save to dataCMS Android", itemsResultCMS);
       }
     }
   }, [isOpen]);
@@ -213,9 +211,13 @@ export default function ContentPage() {
                 <p className="text-gray-600 mb-4 text-center md:text-left">
                   Suggested keywords to be optimized based on analysis from our AI engine:
                 </p>
-
-                 <KeywordTable data={data}/>
-
+                {loading ? (
+                  <div className="flex justify-center items-center h-40">
+                    <div className="w-5 h-5 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+                  </div>
+                ) : (
+                  <KeywordTable data={data} />
+                )}
                 {/* Call-to-Action Heading */}
                 <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center mb-2">
                   Unlock the best keywords to boost your online presence
