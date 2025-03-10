@@ -66,7 +66,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     
     const responses = await Promise.all(apiCalls);
-    console.log("ini responses",responses)
     const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
 
     return res.status(200).json(results);

@@ -31,7 +31,6 @@ export default function TabSwitch ({ data,dataAppStore }: { data: any, dataAppSt
     });
   
     const data = await response.json();
-    console.log("Suggestions: respond", data);
     return data;
   };
   return (

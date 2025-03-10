@@ -80,8 +80,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   
   useEffect(() => {
     const sessionId = Cookies.get('sessionId');
-    console.log('Session ID:', sessionId);
-    console.log('suggestionsIcon ',suggestionsIcon)
   }, []);
 
   const handleToggle = () => {
@@ -133,7 +131,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       }
       await saveDataToDB(formData);
       saveDataCms(formData)
-      console.log("add data form",formData)
       router.push('/content-web')
     }else{
       // if (!checkedItems || checkedItems.length === 0 || (checkedItems.length === 1 && checkedItems[0] === "")) {
@@ -157,7 +154,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       formData.appStarIphone = starIphone;
       await saveDataToDB(formData);
       saveDataCms(formData)
-      console.log("add data form",formData)
       router.push('/content')
     }
   };
@@ -174,15 +170,12 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       });
     
       const data = await response.json();
-      console.log("Suggestions: respond", data);
       return data;
     };
     
   useEffect(() => {
     const fetchDataDB = async () => {
       const dbData = await getDataFromDB();
-      console.log("ini dbData", dbData);
-      console.log("ini count",getFetchCount())
       // const timeout = setTimeout(() => {
       //   deleteAllData();
       //   console.log("Deleted all data after 10 seconds");
@@ -271,9 +264,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       
       // Extract results safely
       const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
-      
-      console.log("hit 3", results);
-      
       setLoading(false);
       
       return results;      
@@ -364,7 +354,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     // }, []);
     
     const handleSelectItemApple = (data: any) => {
-      console.log("ini data selectedItem",data)
       setQuery(data.item.title);  // Set the query to the selected item
       setAppsIDIphone(data.app_id)
       setNameIDiphone(data.item.title);
@@ -376,7 +365,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     };
 
     const handleSelectItemAndroid = (data: any) => {
-      console.log("ini data selectedItem andro",data)
       setQueryAndro(data.item.title);  // Set the query to the selected item
       setAppsID(data.app_id)
       setNameID(data.item.title);
@@ -402,7 +390,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     );
     setIsLoading(true)
     setStatMarket("appstore")
-    if (e.target.value.length >= 3) {
+    if (e.target.value.length >= 2) {
       fetchSuggestionsDebounced(query,"appstore");
     } else {
       setShowDropdownApple(false);
@@ -416,7 +404,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     );
     setIsLoadingAndro(true)
     setStatMarket("playstore")
-    if (e.target.value.length >= 3) {
+    if (e.target.value.length >= 2) {
       fetchSuggestionsDebounced(queryAndro,"playstore");
     } else {
       setShowDropdownAndroid(false);
@@ -425,12 +413,10 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
   const fetchSuggestionsDebounced = useCallback(
     debounce(async (query, markets) => {
-      console.log("debounce =", query);
       if (markets === "appstore") {
         setIsLoading(true);
         try {
           const results = await fetchSuggestions(query);
-          console.log("debounce results =", results);
           setSuggestions(results);
           setShowDropdownApple(true);
           setIsLoading(false)
@@ -444,11 +430,9 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
         setIsLoadingAndro(true);
         try {
           const results = await fetchSuggestions(query);
-          console.log("debounce playstore =", results);
           setSuggestionsAndro(results);
           setShowDropdownAndroid(true);
           setIsLoadingAndro(false)
-          console.log("ini suggestionsAndro",suggestionsAndro)
         } catch (error) {
           console.error("Error fetching play store suggestions:", error);
           setIsLoadingAndro(false)
@@ -791,7 +775,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 <h3 className="text-sm font-medium mr-2">Country</h3>
                 <div className="relative group">
                   <button
-                    className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-10"
+                    className="text-gray-400 hover:text-gray-600 cursor-pointer relative z-1"
                     aria-label="Information"
                   >
                     ⓘ

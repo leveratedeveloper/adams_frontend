@@ -64,7 +64,6 @@ export default function ContentPage() {
             setAppStarAndroid(lastItem['appStarAndroid']);
             setAppStarIphone(lastItem['appStarIphone']);
             setSessionID(lastItem['sessionId']);
-            console.log("ini lastItem",lastItem)
             setDataArray([lastItem]); // Update the data array
             // Call the API with the domain immediately
             // if(lastItem['market'])
@@ -107,7 +106,6 @@ export default function ContentPage() {
     }, []); 
     const fetchDataApi = async (appID: string, deviceType: string) => {
       setLoading(true); // Start loading
-      console.log("Fetching data from API...");
 
       try {
         // Send the deviceType and appID as query parameters in the URL
@@ -126,7 +124,6 @@ export default function ContentPage() {
         }
     
         const result = await response.json();
-        console.log("API Response:", result);
         return result
        
       } catch (err: any) {
@@ -149,7 +146,6 @@ export default function ContentPage() {
       });
     
       const data = await response.json();
-      console.log("Suggestions: respond", data);
       return data;
     };
 
@@ -202,7 +198,6 @@ export default function ContentPage() {
           console.log("Valid session ID:", sessionID);
         }
         if (data) {
-          console.log(" ada data android")
           const suggestionAndroid = data;
           const itemsResultCMS = [
             { 
@@ -212,11 +207,9 @@ export default function ContentPage() {
           ];
         
           saveDataCms(itemsResultCMS);
-          console.log("Save to dataCMS Android", itemsResultCMS);
         }
         
         if(dataAppStore){
-          console.log(" ada data apps store")
           // const itemsResultCMS = [
           //   { sessionID: Cookies.get('sessionId'), result: dataAppStore },
           // ];
@@ -227,7 +220,6 @@ export default function ContentPage() {
             }
           ];
           saveDataCms(itemsResultAppStoreCMS);
-          console.log("save to dataCMS apple",itemsResultAppStoreCMS)
         }
       }
     }, [isOpen]);
