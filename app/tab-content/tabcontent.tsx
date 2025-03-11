@@ -473,17 +473,29 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       {/* URL Input */}
       <div className="mb-8">
         {value === 'website' && (
-          <div className="md:grid-cols-3 gap-8 mb-8">
-            <input
-              name="url"
-              type="url"
-              placeholder={placeholder}
-              className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
-              onChange={handleChange}
-              value={formData.url}
-              required />
-            {error && <p className="text-red-500 text-sm">{error}</p>} {/* Error Message */}
-          </div>
+         <div className="md:grid-cols-3 gap-8 mb-8">
+         <input
+           name="url"
+           type="url"
+           placeholder={placeholder}
+           className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
+           onChange={(e) => {
+             // Ensure window.dataLayer exists
+             (window as any).dataLayer = (window as any).dataLayer || [];
+             (window as any).dataLayer.push({
+               event: "user_click_kolom",
+               input_name: "url",
+               input_value: e.target.value, // Captures user input
+             });
+             // Call existing change handler
+             handleChange(e);
+           }}
+           value={formData.url}
+           required
+           data-gtm-event="url_input_change"
+         />
+         {error && <p className="text-red-500 text-sm">{error}</p>} {/* Error Message */}
+       </div>
         )}
         {value === 'app' && (
           <><div className="flex flex-col md:flex-row items-center rounded-full border border-gray-300 p-2 mb-8 mx-auto max-w-full md:max-w-lg lg:max-w-xl xl:max-w-4xl">
@@ -998,16 +1010,27 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
       {/* Check Now Button */}
       <div className="text-center">
-        {/* <Link href="/content"> */}
-        <button onClick={handleSubmit}
+        <button
+          onClick={() => {
+            // Ensure window.dataLayer exists
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            (window as any).dataLayer.push({
+              event: "check_now_click",
+              button_text: "Check Now",
+              button_class: "bg-blue-600 text-white",
+            });
+
+            // Call the existing submit handler
+            handleSubmit();
+          }}
           className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
+          data-gtm-event="check_now_click"
         >
           Check Now
           <span className="text-xl">→</span>
         </button>
-
-        {/* </Link> */}
       </div>
+
     </TabsContent><Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         {/* Embedded HubSpot Meeting */}
         <iframe

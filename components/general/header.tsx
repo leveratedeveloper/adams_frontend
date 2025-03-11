@@ -48,7 +48,7 @@ export default function Header() {
             onClick={() => {
               (window as any).dataLayer = (window as any).dataLayer || [];
               (window as any).dataLayer.push({
-                event: "button_consult_now_click",
+                event: "button_Consult_Now",
                 button_text: "Consult Now",
                 button_class: "button-gradient bg-blue-500",
               });
