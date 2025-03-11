@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           {
             method: "POST",
             headers: {
-              Authorization: "Bearer 2|Zqq7C13xOPmhqSoyv9vdzmmg0Z3qvTMIq2b3RWCza3b6265b", 
+              Authorization: "Bearer "+process.env.CMS_TOKEN, 
             },
             body: formData,
           }
