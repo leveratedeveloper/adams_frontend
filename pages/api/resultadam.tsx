@@ -1,6 +1,5 @@
 'use server';
 
-import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -27,11 +26,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         formData.append("result", JSON.stringify(items[0]?.result)); // Convert result to JSON if needed
       
         const response = await fetch(
-          "https://backend-stg.adamsolutions.asia/api/admin/request-results",
+          process.env.CMS_ENDPOINT+"/api/admin/request-results",
           {
             method: "POST",
             headers: {
-              Authorization: "Bearer 2|Zqq7C13xOPmhqSoyv9vdzmmg0Z3qvTMIq2b3RWCza3b6265b",
+              Authorization: "Bearer "+process.env.CMS_TOKEN,
             },
             body: formData,
           }
