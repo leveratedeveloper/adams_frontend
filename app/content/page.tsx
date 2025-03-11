@@ -371,8 +371,20 @@ export default function ContentPage() {
 
                 {/* Button */}
                 <button
-                className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
-                  onClick={() => setIsOpen(true)}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
+                  onClick={() => {
+                    // Ensure window.dataLayer exists
+                    (window as any).dataLayer = (window as any).dataLayer || [];
+                    (window as any).dataLayer.push({
+                      event: "button_start_your_online_growth_click",
+                      button_text: "Start Your Online Growth",
+                      button_class: "bg-blue-600 text-white",
+                    });
+
+                    // Open popup/modal
+                    setIsOpen(true);
+                  }}
+                  data-gtm-event="start_growth_click"
                 >
                   <span>Start Your Online Growth</span>
                   <Rocket className="w-5 h-5 ml-2" />
@@ -406,11 +418,24 @@ export default function ContentPage() {
 
                 <div className="text-center mt-6">
                 <button
-                className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
-                  onClick={() => setIsOpen(true)}
+                  className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
+                  onClick={() => {
+                    // Ensure window.dataLayer exists
+                    (window as any).dataLayer = (window as any).dataLayer || [];
+                    (window as any).dataLayer.push({
+                      event: "button_schedule_meeting_now_click",
+                      button_text: "Schedule Meeting Now",
+                      button_class: "bg-white text-blue-600 border-blue-600",
+                    });
+
+                    // Open popup/modal
+                    setIsOpen(true);
+                  }}
+                  data-gtm-event="schedule_meeting_click"
                 >
                   Schedule Meeting Now
                 </button>
+
                 </div>
               </div>
             </div>
