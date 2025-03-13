@@ -423,7 +423,7 @@ export default function ContentPage() {
                     // Ensure window.dataLayer exists
                     (window as any).dataLayer = (window as any).dataLayer || [];
                     (window as any).dataLayer.push({
-                      event: "button_schedule_meeting_now_click",
+                      event: "button_schedule_meeting_now",
                       button_text: "Schedule Meeting Now",
                       button_class: "bg-white text-blue-600 border-blue-600",
                     });
@@ -431,7 +431,7 @@ export default function ContentPage() {
                     // Open popup/modal
                     setIsOpen(true);
                   }}
-                  data-gtm-event="schedule_meeting_click"
+                  data-gtm-event="button_schedule_meeting_now"
                 >
                   Schedule Meeting Now
                 </button>

@@ -1015,7 +1015,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             // Ensure window.dataLayer exists
             (window as any).dataLayer = (window as any).dataLayer || [];
             (window as any).dataLayer.push({
-              event: "check_now_click",
+              event: "button_check_now",
               button_text: "Check Now",
               button_class: "bg-blue-600 text-white",
             });
@@ -1024,7 +1024,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
             handleSubmit();
           }}
           className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors flex items-center gap-2 mx-auto"
-          data-gtm-event="check_now_click"
+          data-gtm-event="button_check_now"
         >
           Check Now
           <span className="text-xl">→</span>
