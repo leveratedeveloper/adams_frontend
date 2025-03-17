@@ -132,6 +132,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       if (!validateURL(formData.url) || (!formData.url)) {
         alert("Invalid URL. Please enter a valid website URL.");
         return;
+      }else{
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          event: "button_check_now",
+          input_name: "url",
+          input_value: formData.url, // Captures valid user input
+        });
       }
       await saveDataToDB(formData);
       saveDataCms(formData)
@@ -1004,14 +1011,6 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       <div className="text-center">
         <button
           onClick={() => {
-            // Ensure window.dataLayer exists
-            (window as any).dataLayer = (window as any).dataLayer || [];
-            (window as any).dataLayer.push({
-              event: "button_check_now",
-              button_text: "Check Now",
-              button_class: "bg-blue-600 text-white",
-            });
-
             // Call the existing submit handler
             handleSubmit();
           }}
