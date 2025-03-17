@@ -3,7 +3,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
-  if (!data?.result?.data || data.result.data.length === 0 || data.result.data == null) {
+  if (!data?.result?.data == null) {
     return (
       <div className="flex justify-center items-center h-40">
         NO DATA
