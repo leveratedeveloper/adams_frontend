@@ -121,14 +121,26 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     });
   }
   
+  const validateURL = (url: string) => {
+    const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,4}(:\d+)?(\/.*)?$/i;
+    return urlPattern.test(url);
+  };
 
   const handleSubmit = async () => {
     setLoading(true);
     if (value == 'website'){
-      if (!formData.url) {
-        setError("URL is required!");
+      if (!validateURL(formData.url) || (!formData.url)) {
+        alert("Invalid URL. Please enter a valid website URL.");
         return;
+      }else{
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          event: "user_click_kolom",
+          input_name: "url",
+          input_value: formData.url, // Captures valid user input
+        });
       }
+      
       await saveDataToDB(formData);
       saveDataCms(formData)
       router.push('/content-web')
@@ -474,26 +486,14 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       <div className="mb-8">
         {value === 'website' && (
          <div className="md:grid-cols-3 gap-8 mb-8">
-         <input
-           name="url"
-           type="url"
-           placeholder={placeholder}
-           className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
-           onChange={(e) => {
-             // Ensure window.dataLayer exists
-             (window as any).dataLayer = (window as any).dataLayer || [];
-             (window as any).dataLayer.push({
-               event: "user_click_kolom",
-               input_name: "url",
-               input_value: e.target.value, // Captures user input
-             });
-             // Call existing change handler
-             handleChange(e);
-           }}
-           value={formData.url}
-           required
-           data-gtm-event="url_input_change"
-         />
+          <input
+            name="url"
+            type="url"
+            placeholder={placeholder}
+            className="w-full px-4 py-3 rounded-full border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-center"
+            onChange={handleChange}
+            value={formData.url}
+          required />
          {error && <p className="text-red-500 text-sm">{error}</p>} {/* Error Message */}
        </div>
         )}
