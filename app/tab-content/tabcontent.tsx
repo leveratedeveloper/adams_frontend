@@ -132,15 +132,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
       if (!validateURL(formData.url) || (!formData.url)) {
         alert("Invalid URL. Please enter a valid website URL.");
         return;
-      }else{
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        (window as any).dataLayer.push({
-          event: "user_click_kolom",
-          input_name: "url",
-          input_value: formData.url, // Captures valid user input
-        });
       }
-      
       await saveDataToDB(formData);
       saveDataCms(formData)
       router.push('/content-web')
