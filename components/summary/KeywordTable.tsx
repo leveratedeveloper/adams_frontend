@@ -4,28 +4,22 @@ import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
   if (!data?.result?.data) {
+    (window as any).dataLayer.push({
+      event: "button_check_now",
+      input_name: "invalid_url",
+      input_class: "invalid_url",
+    });
     return (
       <div className="flex flex-col justify-center items-center h-40">
         <p className="mb-4">No data available! Please check the URL.</p>
-        <button
-          className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
-          onClick={() => {
-            // Log retry event
-            (window as any).dataLayer.push({
-              event: "invalid_url",
-              button_text: "invalid_url",
-              button_class: "invalid_url",
-            });
-
-            // Trigger a retry action (replace with your actual retry logic)
-            window.location.reload();
-          }}
-          data-gtm-event="invalid_url"
-        >
-          Retry
-        </button>
       </div>
     );
+  }else{
+    (window as any).dataLayer.push({
+      event: "button_check_now",
+      input_name: "valid_url",
+      input_class: "valid_url",
+    });
   }
   
   return (
