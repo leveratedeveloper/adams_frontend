@@ -14,13 +14,13 @@ export default function KeywordTable({ data }: { data: any }) {
             (window as any).dataLayer.push({
               event: "invalid_url",
               button_text: "invalid_url",
-              button_class: "bg-blue-600 text-white",
+              button_class: "invalid_url",
             });
 
             // Trigger a retry action (replace with your actual retry logic)
             window.location.reload();
           }}
-          data-gtm-event="retry_button_click"
+          data-gtm-event="invalid_url"
         >
           Retry
         </button>
