@@ -130,24 +130,13 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
     setLoading(true);
     if (value == 'website'){
       if (!validateURL(formData.url) || (!formData.url)) {
-        alert("Invalid URL. Please enter a valid website URL.");
+        setError("Invalid URL. Please enter a valid website URL.");
         return;
-      }else{
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        (window as any).dataLayer.push({
-          event: "button_check_now",
-          input_name: "url",
-          input_value: formData.url, // Captures valid user input
-        });
       }
       await saveDataToDB(formData);
       saveDataCms(formData)
       router.push('/content-web')
     }else{
-      // if (!checkedItems || checkedItems.length === 0 || (checkedItems.length === 1 && checkedItems[0] === "")) {
-      //   setError("You must select Google!! or Apple!!");
-      //   return;
-      // }
       if (query.trim() === "" && queryAndro.trim() === "") {
           setError("App name cannot be empty");
           return;
@@ -533,7 +522,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               </div>
 
               {showDropdownApple && query.length >= 3 && statMarket == 'appstore' && (
-                <div id="apple" className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
+                <div id="apple" className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-1">
                   {loading ? (
                     <div className="p-2 text-sm text-gray-500">Loading...</div>
                   ) : suggestions.length > 0 ? (
@@ -665,7 +654,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                 </div>
 
                 {showDropdownAndroid && queryAndro.length >= 3 && statMarket == 'playstore' && (
-                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
+                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-1">
                     {isLoadingAndro ? (
                       <div className="p-2 text-sm text-gray-500">Loading...</div>
                     ) : suggestionsAndro.length > 0 ? (
