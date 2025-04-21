@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <><div className="relative min-h-screen w-full">
       <Header />
-
+      <meta name="google-site-verification" content="1Poi8wX7ceY0CI0EBBNAxlcj53xrcmm7jl6RRxHcSNo" />
       <div className="absolute inset-0 backdrop-blur-lg" style={{
         backgroundImage: `url('../public/img/background_adams.webp')`,
         backgroundSize: 'contain',
