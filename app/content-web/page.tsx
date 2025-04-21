@@ -29,7 +29,7 @@ export default function ContentPage() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [finalResult, setFinalResult] = useState(false)
+  const [finalResult, setFinalResult] = useState('')
   const { isOpen, setIsOpen } = useModal();
   const [sessionID, setSessionID] = useState()
 
@@ -81,7 +81,7 @@ export default function ContentPage() {
       // console.error("Error calling API:", err.message);
       // setError('Error calling API: ' + err.message);
     } finally {
-      setFinalResult(true)
+      setFinalResult("save")
       setLoading(false); // Stop loading
     }
   };
@@ -102,7 +102,8 @@ export default function ContentPage() {
   };
 
   useEffect(() => {
-    if (finalResult == true) {
+  
+    if (finalResult == 'save') {
       if (!sessionID || !validateUUID(sessionID)) {
         console.error("Invalid session ID:", sessionID);
       } else {
@@ -120,7 +121,7 @@ export default function ContentPage() {
         saveDataCms(itemsResultCMS);
       }
     }
-  }, [isOpen]);
+  }, [finalResult]);
 
   return (
     <div className="relative max-h-screen w-full">
