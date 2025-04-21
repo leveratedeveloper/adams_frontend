@@ -29,6 +29,7 @@ export default function ContentPage() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [finalResult, setFinalResult] = useState(false)
   const { isOpen, setIsOpen } = useModal();
   const [sessionID, setSessionID] = useState()
 
@@ -80,6 +81,7 @@ export default function ContentPage() {
       // console.error("Error calling API:", err.message);
       // setError('Error calling API: ' + err.message);
     } finally {
+      setFinalResult(true)
       setLoading(false); // Stop loading
     }
   };
@@ -100,7 +102,7 @@ export default function ContentPage() {
   };
 
   useEffect(() => {
-    if (isOpen) {
+    if (finalResult == true) {
       if (!sessionID || !validateUUID(sessionID)) {
         console.error("Invalid session ID:", sessionID);
       } else {
