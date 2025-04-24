@@ -35,6 +35,7 @@ export default function ContentPage() {
   }
 
   useEffect(() => {
+    localStorage.removeItem('cachedApiResponse');
     const hasHitApiRaw = localStorage.getItem('hasHitApi');
     if (hasHitApiRaw) {
       try {
@@ -97,7 +98,7 @@ export default function ContentPage() {
         });
         const result = await response.json();
         if (response.ok) {
-          // setData(result); // Set the response data to state
+          setData(result); // Set the response data to state
           localStorage.setItem('cachedApiResponse', JSON.stringify(result));
           const expirationTime = Date.now() + 5 * 60 * 1000; // 5 minutes from now
           localStorage.setItem('hasHitApi', JSON.stringify({
@@ -247,7 +248,7 @@ export default function ContentPage() {
                     <div className="w-5 h-5 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
                   </div>
                 ) : (
-                  <KeywordTable data={data} />
+                  <KeywordTable data={data}/>
                 )}
                 {/* Call-to-Action Heading */}
                 <h2 className="text-2xl font-semibold text-blue-600 mb-2 text-center mb-2">
