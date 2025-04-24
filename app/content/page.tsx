@@ -374,13 +374,14 @@ export default function ContentPage() {
                   className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
                   onClick={() => {
                     // Ensure window.dataLayer exists
+                  if (typeof window !== 'undefined') {
                     (window as any).dataLayer = (window as any).dataLayer || [];
                     (window as any).dataLayer.push({
                       event: "button_start_your_online_growth_click",
                       button_text: "Start Your Online Growth",
                       button_class: "bg-blue-600 text-white",
                     });
-
+                  }
                     // Open popup/modal
                     setIsOpen(true);
                   }}
@@ -421,13 +422,14 @@ export default function ContentPage() {
                   className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
                   onClick={() => {
                     // Ensure window.dataLayer exists
-                    (window as any).dataLayer = (window as any).dataLayer || [];
-                    (window as any).dataLayer.push({
-                      event: "button_schedule_meeting_now",
-                      button_text: "Schedule Meeting Now",
-                      button_class: "bg-white text-blue-600 border-blue-600",
-                    });
-
+                    if (typeof window !== 'undefined') {
+                      (window as any).dataLayer = (window as any).dataLayer || [];
+                      (window as any).dataLayer.push({
+                        event: "button_schedule_meeting_now",
+                        button_text: "Schedule Meeting Now",
+                        button_class: "bg-white text-blue-600 border-blue-600",
+                      });
+                    }
                     // Open popup/modal
                     setIsOpen(true);
                   }}

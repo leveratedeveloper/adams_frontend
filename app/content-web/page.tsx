@@ -7,22 +7,16 @@ import Link from 'next/link';
 import KeywordTable from '@/components/summary/KeywordTable';
 import React,{ useEffect, useState } from "react";
 import { getDataFromDB } from '../utils/indexedDb';
-import Cookies from 'js-cookie';
 import Modal from "@/components/hubspotmodal/modal";
 import { useModal } from "../../contexts/ModalContext";
 import { Footer } from '@/components/Footer';
 import { validate as validateUUID } from "uuid";
 
 export default function ContentPage() {
- 
-  interface DataItem {
-    url: string;
-    country: string;
-    premium_backlink: string;
-    keyword_optimized: number;
-    article_development: number;
-    id: number;
-  }
+  // const handleClick = () => {
+  //   window.location.href = 'https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment';
+  // };
+
   const [dataArray, setDataArray] = useState<DataItem[]>([]);
   const [data, setData] = useState('');
   const [error, setError] = useState(null);
@@ -31,6 +25,14 @@ export default function ContentPage() {
   const { isOpen, setIsOpen } = useModal();
   const [sessionID, setSessionID] = useState()
 
+  interface DataItem {
+    url: string;
+    country: string;
+    premium_backlink: string;
+    keyword_optimized: number;
+    article_development: number;
+    id: number;
+  }
 
   useEffect(() => {
     const hasHitApiRaw = localStorage.getItem('hasHitApi');
@@ -261,17 +263,16 @@ export default function ContentPage() {
                 <button
                   className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium flex items-center justify-center w-full md:w-auto mx-auto hover:bg-blue-700 transition-colors shadow-sm"
                   onClick={() => {
-                    // Ensure window.dataLayer exists
-                    (window as any).dataLayer = (window as any).dataLayer || [];
-                    (window as any).dataLayer.push({
-                      event: "button_start_your_online_growth",
-                      button_text: "Start Your Online Growth",
-                      button_class: "bg-blue-600 text-white",
-                    });
-
-                    // Open popup/modal
+                    if (typeof window !== 'undefined') {
+                      (window as any).dataLayer = (window as any).dataLayer || [];
+                      (window as any).dataLayer.push({
+                        event: "button_start_your_online_growth",
+                        button_text: "Start Your Online Growth",
+                        button_class: "bg-blue-600 text-white",
+                      });
+                    }
                     setIsOpen(true);
-                  }}
+                  }}                  
                   data-gtm-event="button_start_your_online_growth"
                 >
                   Start Your Online Growth
@@ -308,17 +309,18 @@ export default function ContentPage() {
                   <button
                     className="bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors"
                     onClick={() => {
-                      // Ensure window.dataLayer exists
-                      (window as any).dataLayer = (window as any).dataLayer || [];
-                      (window as any).dataLayer.push({
-                        event: "button_schedule_meeting_now",
-                        button_text: "Schedule Meeting Now",
-                        button_class: "bg-white text-blue-600 border-blue-600",
-                      });
+                      if (typeof window !== 'undefined') {
+                        (window as any).dataLayer = (window as any).dataLayer || [];
+                        (window as any).dataLayer.push({
+                          event: "button_schedule_meeting_now",
+                          button_text: "Schedule Meeting Now",
+                          button_class: "bg-white text-blue-600 border-blue-600",
+                        });
+                      }
 
-                      // Open popup/modal
                       setIsOpen(true);
                     }}
+
                     data-gtm-event="button_schedule_meeting_now"
                   >
                     Schedule Meeting Now
