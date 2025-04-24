@@ -46,12 +46,14 @@ export default function Header() {
             className="ml-auto button-gradient bg-blue-500 text-white text-sm px-3 py-1 rounded hover:bg-blue-600 transition flex items-center gap-2"
             data-gtm-event="popup_button_click"
             onClick={() => {
-              (window as any).dataLayer = (window as any).dataLayer || [];
-              (window as any).dataLayer.push({
-                event: "button_Consult_Now",
-                button_text: "Consult Now",
-                button_class: "button-gradient bg-blue-500",
-              });
+              if (typeof window !== 'undefined') {
+                (window as any).dataLayer = (window as any).dataLayer || [];
+                (window as any).dataLayer.push({
+                  event: "button_Consult_Now",
+                  button_text: "Consult Now",
+                  button_class: "button-gradient bg-blue-500",
+                });
+              }
               setIsOpen(true);
             }}
           >
