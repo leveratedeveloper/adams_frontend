@@ -14,9 +14,7 @@ import { Footer } from '@/components/Footer';
 import { validate as validateUUID } from "uuid";
 
 export default function ContentPage() {
-  // const handleClick = () => {
-  //   window.location.href = 'https://meetings-eu1.hubspot.com/meetings/adamsmeeting/appointment';
-  // };
+ 
   interface DataItem {
     url: string;
     country: string;
@@ -36,7 +34,6 @@ export default function ContentPage() {
 
   useEffect(() => {
     const hasHitApiRaw = localStorage.getItem('hasHitApi');
-
     if (hasHitApiRaw) {
       try {
         const { expiresAt } = JSON.parse(hasHitApiRaw);
