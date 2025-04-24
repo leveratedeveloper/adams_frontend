@@ -26,13 +26,30 @@ export default function ContentPage() {
     id: number;
   }
   const [dataArray, setDataArray] = useState<DataItem[]>([]);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState('');
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [finalResult, setFinalResult] = useState('')
   const { isOpen, setIsOpen } = useModal();
   const [sessionID, setSessionID] = useState()
 
+
+  useEffect(() => {
+    const hasHitApiRaw = localStorage.getItem('hasHitApi');
+
+    if (hasHitApiRaw) {
+      try {
+        const { expiresAt } = JSON.parse(hasHitApiRaw);
+        if (Date.now() > expiresAt) {
+          localStorage.removeItem('hasHitApi');
+          localStorage.removeItem('cachedApiResponse');
+        } 
+      } catch (error) {
+        console.error('Failed to parse hasHitApi:', error);
+        localStorage.removeItem('hasHitApi'); // optional cleanup
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,7 +61,14 @@ export default function ContentPage() {
           setSessionID(lastItem['sessionId']);
           setDataArray([lastItem]); // Update the data array
           // Call the API with the domain immediately
-          await fetchDataApi(domain);
+          const dataAPI = localStorage.getItem('cachedApiResponse');
+          if (dataAPI) {
+            const parsed = JSON.parse(dataAPI);
+            setData(parsed);
+          }else{
+            await fetchDataApi(domain);
+          }
+
         } else {
           console.error("dbData is not an array:", dbData);
         }
@@ -58,32 +82,39 @@ export default function ContentPage() {
  // Function to call the API
  const fetchDataApi = async (domains: any) => {
     setLoading(true); // Start loading
-    try {
-      const response = await fetch('/api/serpstat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          params: {
-            domain: domains, // Use the passed domain directly
+    
+    // console.log("hit ini",hitApi)
+      try {
+        const response = await fetch('/api/serpstat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
           },
-        }),
-      });
-      const result = await response.json();
-      if (response.ok) {
-        setData(result); // Set the response data to state
-      } else {
-        console.error("API Error:", result.error);
-        setError(result.error); // Set the error if any
+          body: JSON.stringify({
+            params: {
+              domain: domains, // Use the passed domain directly
+            },
+          }),
+        });
+        const result = await response.json();
+        if (response.ok) {
+          // setData(result); // Set the response data to state
+          localStorage.setItem('cachedApiResponse', JSON.stringify(result));
+          const expirationTime = Date.now() + 5 * 60 * 1000; // 5 minutes from now
+          localStorage.setItem('hasHitApi', JSON.stringify({
+            value: 'true',
+            expiresAt: expirationTime,
+          }));
+        } else {
+          setError(result.error); // Set the error if any
+        }
+      } catch (err) {
+        // console.error("Error calling API:", err.message);
+        // setError('Error calling API: ' + err.message);
+      } finally {
+        setFinalResult("save")
+        setLoading(false); // Stop loading
       }
-    } catch (err) {
-      // console.error("Error calling API:", err.message);
-      // setError('Error calling API: ' + err.message);
-    } finally {
-      setFinalResult("save")
-      setLoading(false); // Stop loading
-    }
   };
 
   const saveDataCms = async (lastItem: any) => {
@@ -106,9 +137,7 @@ export default function ContentPage() {
     if (finalResult == 'save') {
       if (!sessionID || !validateUUID(sessionID)) {
         console.error("Invalid session ID:", sessionID);
-      } else {
-        console.log("Valid session ID:", sessionID);
-      }
+      } 
       if (data) {
         const suggestionAndroid = data;
         const itemsResultCMS = [

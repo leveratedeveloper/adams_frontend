@@ -4,6 +4,8 @@ import React from "react";
 
 export default function KeywordTable({ data }: { data: any }) {
   if (!data?.result?.data) {
+    (window as any).dataLayer = (window as any).dataLayer || [];
+
     (window as any).dataLayer.push({
       event: "button_check_now",
       input_name: "invalid_url",
@@ -11,7 +13,7 @@ export default function KeywordTable({ data }: { data: any }) {
     });
     return (
       <div className="flex flex-col justify-center items-center h-40">
-        <p className="mb-4">No data available! Please check the URL.</p>
+        <p className="mb-4">Oops! No data found at the moment.</p>
       </div>
     );
   }else{
