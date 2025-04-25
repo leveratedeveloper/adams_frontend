@@ -27,14 +27,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       domain,
       se: "g_id",
       withIntents: true,
-      sort: { traff: "desc", region_queries_count: "desc" },
+      sort: { region_queries_count: "desc" },
       size:"40",
       filters: {
         right_spelling: false,
-        position_from: 1,
-        position_to: 15,
-        difficulty_from: 0,
-        difficulty_to: 50,
+        position_from: 6,
+        position_to: 20,
       },
     },
   };
