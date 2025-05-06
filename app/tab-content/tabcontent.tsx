@@ -192,87 +192,43 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
   //DataforSEO
   const fetchSuggestions = async (searchQuery: string) => {
     setLoading(true);
-      if (getFetchCount() > 6) {
-        setLoading(false)
-        setSuggestionsIcon([])
-        setIsOpen(true)
-        return [];
-      }
+  
+    if (getFetchCount() > 6) {
+      setLoading(false);
+      setSuggestionsIcon([]);
+      setIsOpen(true);
+      return [];
+    }
+  
     try {
       const currentFetchCount = getFetchCount() + 1;
-
       setFetchCount(currentFetchCount);
-      // Replace with your DataForSEO API credentials
-      const API_URL = "https://api.dataforseo.com/v3/app_data/google/app_listings/search/live";
-      const API_URL2 = "https://api.dataforseo.com/v3/app_data/apple/app_listings/search/live";
-      const API_USERNAME = "developer@leverate.co.id"; // Store in .env file
-      const API_PASSWORD = "642c7b7c43fd18af"; // Store in .env file
   
       // API request body
-      const requestBody = [
-        {
-          categories: ["Finance", "Business"],
-          description: searchQuery,
-          title: searchQuery,
-          limit: 100,
-          additional_data: {
-            filters: [["language_code", "=", "en"]],
-          },
+      const requestBody = {
+        searchQuery,
+        statMarket,
+      };
+  
+      // Make request to Next.js API route
+      const response = await axios.post("/api/dataforseo", requestBody, {
+        headers: {
+          "Content-Type": "application/json",
         },
-      ];
+      });
   
-  
-      // Make both API calls in parallel by checkedItems
-      const apiCalls = [];
-
-      if (statMarket == "playstore") {
-        apiCalls.push(
-          axios.post(API_URL, requestBody, {
-            auth: {
-              username: API_USERNAME,
-              password: API_PASSWORD,
-            },
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-        );
-      }
-      
-      if (statMarket == "appstore") {
-        apiCalls.push(
-          axios.post(API_URL2, requestBody, {
-            auth: {
-              username: API_USERNAME,
-              password: API_PASSWORD,
-            },
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-        );
-      }
-      
-      // If no API calls were made, return an empty array to avoid errors
-      if (apiCalls.length === 0) {
-        setLoading(false);
-        return [];
-      }
-      
-      // Wait for all API calls to complete
-      const responses = await Promise.all(apiCalls);
-      
       // Extract results safely
-      const results = responses.flatMap((response) => response.data.tasks?.[0]?.result?.[0]?.items || []);
+      const results = response.data?.items || [];
       setLoading(false);
-      
-      return results;      
+  
+      return results;
     } catch (error) {
       setLoading(false);
       console.error("Error fetching suggestions:", error);
       return [];
     }
   };
+  
   const getFetchCount = () => {
     return parseInt(Cookies.get("fetch_count") || "0", 10);
   };
@@ -522,7 +478,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
               </div>
 
               {showDropdownApple && query.length >= 3 && statMarket == 'appstore' && (
-                <div id="apple" className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-1">
+                <div id="apple" className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
                   {loading ? (
                     <div className="p-2 text-sm text-gray-500">Loading...</div>
                   ) : suggestions.length > 0 ? (
@@ -546,7 +502,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
 
                         <div className="absolute right-0 top-0 flex items-center space-x-2"> {/* space-x-2 for spacing between logos */}
                           {suggestion.se_domain === "itunes.apple.com" && (
-                            <span className="relative z-10 bg-white py-0.5 px-2 rounded-lg">
+                            <span className="relative z-1 bg-white py-0.5 px-2 rounded-lg">
                               <Image
                                 src="/img/icon/Apps_Store_Icon_Logo.svg"
                                 alt="App Store Logo"
@@ -852,7 +808,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 z-1">
                 <div className="flex flex-col items-center w-5/6 p-2">
                   <Slider
                     min={5}
@@ -954,7 +910,7 @@ export default function  Page({ value, placeholder }: TabContentProps)  {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 z-1">
                 <div className="flex flex-col items-center w-5/6 p-2">
                   <Slider
                     min={5}

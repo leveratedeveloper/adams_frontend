@@ -9,8 +9,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ADAMS - Automated Digital Marketing Solution',
-  description: 'Accurate & efficient way to grow your website SEO easily.',
+  title: 'ADAMS - Automated SEO & ASO Services',
+  description: 'Discover high-potential SEO & ASO keywords with our AI-powered tool. Get a free glimpse—book a call to unlock more.',
   icons: '/img/favico.ico',
 };
 
