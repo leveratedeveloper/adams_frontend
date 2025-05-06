@@ -18,8 +18,8 @@ const tabs = [
     number: 2,
     title: "Get Result",
     video:"video/step_2_adams.mp4",
-    subtitle: "Instant result by our machine learning & technology",
-    description: "Instant result by our machine learning & technology.",
+    subtitle: "Instant AI-powered result by our machine learning & technology",
+    description: "Instant AI-powered result by our machine learning & technology",
     color: "bg-green-500", // Color for active tab
     icon: <LineChart className="w-6 h-6 text-white" />, // Adding icon to each tab
   },
@@ -28,7 +28,7 @@ const tabs = [
     title: "Consult with Us",
     video:"video/step_3_adams.mp4",
     subtitle: "Schedule an appointment with our consultant to get started",
-    description: "Schedule an appointment with our consultant to get started.",
+    description: "Schedule an appointment with our consultant to get started",
     color: "bg-purple-500", // Color for active tab
     icon: <Users className="w-6 h-6 text-white" />, // Adding icon to each tab
   },

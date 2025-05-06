@@ -13,7 +13,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-2xl relative w-full max-w-7xl h-full">
+      <div className="bg-white p-4 rounded-lg shadow-2xl relative w-full max-w-7xl h-full z-10">
         {/* Modal Header */}
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Schedule a Meeting</h2>

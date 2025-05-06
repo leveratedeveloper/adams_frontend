@@ -19,7 +19,7 @@ export default function Home() {
           <FeatureCard
             icon={<BadgeCheckIcon />}
             title="Guaranteed Performance"
-            description="Boost your rank to the #1 page on Google's Search Result with our SEO and ASO strategy."
+            description="Boost your keyword rank to the 1st page of Google's Search Result with our SEO and ASO strategy."
           />
           
           <FeatureCard
