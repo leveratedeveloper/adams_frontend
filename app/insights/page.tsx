@@ -30,11 +30,9 @@ export default async function Insight() {
         process.env.CMS_ENDPOINT+'/api/admin/blog/posts', {
         cache: 'no-store', // disables ISR for fresh data
       });
-    
       if (!res.ok) {
         throw new Error('Failed to fetch blogs');
       }
-    
       const json = await res.json();
       const data: Insights[] = json.data || json.results || [];
     
