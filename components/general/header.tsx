@@ -39,6 +39,9 @@ export default function Header() {
             <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
               Proven Results
             </Link>
+            <Link href="/insights" className="text-gray-700 hover:text-blue-500">
+              Insights
+            </Link>
           </div>
           
           {/* Button on the far right */}
@@ -96,6 +99,9 @@ export default function Header() {
             </Link>
             <Link href="/#proven-results" className="text-gray-700 hover:text-blue-500">
               Proven Results
+            </Link>
+            <Link href="/insights" className="text-gray-700 hover:text-blue-500">
+            Insights
             </Link>
           </nav>
         </div>
