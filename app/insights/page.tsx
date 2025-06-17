@@ -10,7 +10,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Blog Insights',
   };
-  
+
   type Insights = {
     id: string;
     title: string;
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     seo_description: string;
     tags: string;
   };
-
 
 export default async function Insight() {
     const res = await fetch(
