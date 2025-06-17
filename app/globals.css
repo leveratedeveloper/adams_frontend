@@ -141,3 +141,22 @@ body {
 .h-96{
   height: 90%;
 }
+
+@media screen and (max-width: 768px) {
+  .container-blog-detail{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+}
+@media screen and (min-width: 770px) {
+  .container-blog-detail{
+    max-width: 58%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+}
+
+

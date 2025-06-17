@@ -1,0 +1,57 @@
+
+@media screen and (min-width: 770px) {
+    .blog_detail h1{
+        font-size: 59.72px !important;
+        line-height: 3.986rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 600;
+    }
+    .blog_detail h2{
+        font-size: 49.77px;
+        line-height: 2.9rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    .blog_detail h3{
+        font-size: 41.47px;
+        line-height: 2.4rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    .blog_detail br{
+        margin-bottom: 200px !important;
+    }
+    .blog_detail {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog_detail h1{
+        @apply text-2xl font-semibold;
+        font-size: 32px;
+        line-height: 2.2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .blog_detail h2{
+        @apply text-xl font-semibold;
+        font-size: 22px;
+        line-height: 1.7rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .blog_detail h3{
+        @apply text-lg font-semibold;
+        font-size: 20px;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .blog_detail {
+        font-size: 16px;
+    }
+}
