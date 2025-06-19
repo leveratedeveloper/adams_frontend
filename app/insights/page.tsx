@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { parseTags } from '../utils/parseTags';
 
 
 export const metadata: Metadata = {
@@ -31,12 +32,14 @@ export default async function Insight() {
         process.env.CMS_ENDPOINT+'/api/admin/blog/posts', {
         cache: 'no-store', // disables ISR for fresh data
       });
+    
       if (!res.ok) {
         throw new Error('Failed to fetch blogs');
       }
       const json = await res.json();
       const data: Insights[] = json.data || json.results || [];
     
+      console.log("ini data",data)
   return (
       <div className="relative max-h-screen w-full">
                       <Header />
@@ -60,12 +63,16 @@ export default async function Insight() {
                 </div>
                 </Link>
                 
-                {post.tags.map(tag => 
-                    <span className="inline-block text-xs font-medium px-2.5 py-0.5 rounded me-2 capitalize" style={{ backgroundColor: '#EBF1FF !important', color: '#0E52DA !important' }}>
-                    {JSON.parse(tag.name).en}
+                {parseTags(post.tags).map((tagName, index) => (
+                    <span
+                      key={index}
+                      className="inline-block text-xs font-medium px-2.5 py-0.5 rounded me-2 capitalize"
+                      style={{ backgroundColor: '#EBF1FF', color: '#0E52DA' }}
+                    >
+                      {tagName}
                     </span>
-                )}
-                
+                  ))}
+
                 
                 <Link href={`insights/${post.slug}`} className="transition-colors">
                     <h3 className="font-semibold text-sm mt-3">{post.title}</h3>

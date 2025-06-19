@@ -1,26 +1,27 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 
-
-type Insights = {
-    id: string;
-    title: string;
-    slug: string;
-    content: string;
-    content_overview: string;
-    image: string;
-    is_featured: boolean;
-    published_at: string;
-    seo_title: string;
-    seo_description: string;
-    tags: string;
-  };
-
-type Props = {
-    posts: Insights[];
+type Tag = {
+  name: string; // Stored as JSON string, e.g., '{"en": "Finance"}'
 };
 
+type Insights = {
+  id: string;
+  title: string;
+  slug: string;
+  content: string;
+  content_overview: string;
+  image: string;
+  is_featured: boolean;
+  published_at: string;
+  seo_title: string;
+  seo_description: string;
+  tags: Tag[];
+};
+
+type Props = {
+  posts: Insights[];
+};
 
 export default function OtherInsights({ posts }: Props) {
   return (
@@ -30,29 +31,47 @@ export default function OtherInsights({ posts }: Props) {
       <div className="space-y-6">
         {posts.map((post) => (
           <div key={post.id} className="flex items-center gap-4">
-            <Link href={post.slug} className="" >
-            <div className="flex-shrink-0 w-24 h-16 rounded-lg bg-green-200 shadow overflow-hidden relative">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded-lg"
-                priority
-              />
-            </div>
+            <Link href={`/insights/${post.slug}`} className="block">
+              <div className="flex-shrink-0 w-24 h-16 rounded-lg bg-gray-200 shadow overflow-hidden relative">
+                <Image
+                  src={post.image || '/img/no-image.png'}
+                  alt={post.title}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="rounded-lg"
+                  priority
+                />
+              </div>
             </Link>
 
             <div>
-            <Link href={post.slug} className="text-blue-600" >
-              <h3 className="text-blue-600 font-medium text-lg leading-snug">{post.title}</h3>
+              <Link href={`/insights/${post.slug}`} className="text-blue-600 block">
+                <h3 className="text-blue-600 font-medium text-lg leading-snug">
+                  {post.title}
+                </h3>
               </Link>
-              
-              {post.tags.map(tag => 
-                    <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded me-2 capitalize">
-                    {JSON.parse(tag.name).en}
+
+              {/* Tags */}
+              <div className="mt-1">
+                {post.tags.map((tag, i) => {
+                  let tagText = '';
+                  try {
+                    const parsed = JSON.parse(tag.name);
+                    tagText = parsed.en || tag.name;
+                  } catch {
+                    tagText = tag.name;
+                  }
+
+                  return (
+                    <span
+                      key={i}
+                      className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded me-2 capitalize"
+                    >
+                      {tagText}
                     </span>
-                )}
+                  );
+                })}
+              </div>
             </div>
           </div>
         ))}
