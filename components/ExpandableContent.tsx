@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from '@/app/insights/[slug]/page.module.css';
 
-export default function ExpandableContent({ html, limit = 500 }: { html: string; limit?: number }) {
+export default function ExpandableContent({ html, limit = 1000 }: { html: string; limit?: number }) {
   const [expanded, setExpanded] = useState(false);
 
   const shortened = html.slice(0, limit);
@@ -17,7 +17,7 @@ export default function ExpandableContent({ html, limit = 500 }: { html: string;
           onClick={() => setExpanded(!expanded)}
           className="mt-4 text-blue-600 font-medium hover:underline"
         >
-          {expanded ? 'Read less' : 'Read more'}
+          {expanded ? '' : 'Read more'}
         </button>
       )}
     </div>

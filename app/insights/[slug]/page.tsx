@@ -79,7 +79,8 @@ export default function BlogDetail() {
         const json = await res.json();
         const postData: InsightDetail = json.data || json.results;
         setPost(postData);
-        setHtml(convertMarkdownToHtml(postData.content));
+        // setHtml(convertMarkdownToHtml(postData.content));
+        setHtml(convertMarkdownToHtml(postData.content.replace(/white-space:\s*pre;?/gi, '')) );
 
         const ins = await fetch(
           process.env.NEXT_PUBLIC_CMS_ENDPOINT + `/api/admin/blog/posts`,
@@ -137,10 +138,13 @@ export default function BlogDetail() {
             />
           </div>
 
-          <ExpandableContent html={html} limit={700} />
+          <ExpandableContent html={html} limit={5000} />
 
-          <div className="mt-16 border-t">
-            <OtherInsights posts={otherPosts} />
+          <div className="mt-8 border-t">
+            {!otherPosts.length 
+              ? null
+              : <OtherInsights posts={otherPosts} />}
+            
           </div>
         </div>
       </main>

@@ -193,9 +193,9 @@ export default function ContentPage() {
         //   }
         // };
         if (!sessionID || !validateUUID(sessionID)) {
-          console.error("Invalid session ID:", sessionID);
+          // console.error("Invalid session ID:", sessionID);
         } else {
-          console.log("Valid session ID:", sessionID);
+          // console.log("Valid session ID:", sessionID);
         }
         if (data) {
           const suggestionAndroid = data;
