@@ -9,7 +9,9 @@ import { parseTags } from '../utils/parseTags';
 
 
 export const metadata: Metadata = {
-    title: 'Blog Insights',
+    title: 'ADAMS - Released Insights',
+    description: 'Discover high-potential SEO & ASO keywords with our AI-powered tool. Get a free glimpse—book a call to unlock more.',
+    icons: '/img/favico.ico',
   };
 
   type Insights = {

@@ -89,6 +89,11 @@ export default function BlogDetail() {
         const jsonPosts = await ins.json();
         const allPosts: Insights[] = jsonPosts.data || jsonPosts.results || [];
         setOtherPosts(getOtherArticles(allPosts, slug).slice(0, 5));
+        // set meta data
+        document.title = postData.title;
+        document
+          .querySelector('meta[name="description"]')
+          ?.setAttribute('content', postData.seo_description);
       } catch (err) {
         console.error(err);
       }
