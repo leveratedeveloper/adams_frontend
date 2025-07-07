@@ -38,7 +38,6 @@ export default async function Insight() {
       const json = await res.json();
       const data: Insights[] = json.data || json.results || [];
     
-      console.log("ini data",data)
   return (
       <div className="relative max-h-screen w-full">
                       <Header />
