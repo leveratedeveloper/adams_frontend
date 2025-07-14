@@ -143,7 +143,7 @@ export default function BlogDetail() {
             />
           </div>
 
-          <ExpandableContent html={html} limit={5000} />
+          <ExpandableContent html={html} limit={0} />
 
           <div className="mt-8 border-t">
             {!otherPosts.length 
