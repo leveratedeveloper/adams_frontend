@@ -76,7 +76,7 @@ export default function ProvenResult() {
 return (
     <main id="proven-results"  className="py-28 rounded bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-        <h1 className="text-6xl font-bold text-left mb-12"  style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}>Proven Results</h1>
+        <h2 className="text-6xl font-bold text-left mb-12"  style={{ fontFamily: 'Chillax, sans-serif', fontWeight: 500 }}>Proven Results</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {results.map((result, index) => (
                 <ResultCard key={index} {...result} />

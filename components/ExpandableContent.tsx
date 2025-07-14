@@ -11,15 +11,16 @@ export default function ExpandableContent({ html, limit = 1000 }: { html: string
 
   return (
     <div className="text-sm text-gray-800 leading-relaxed">
-      <div className={styles.blog_detail} dangerouslySetInnerHTML={{ __html: expanded ? html : shortened + (isLong ? '...' : '') }} />
-      {isLong && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="mt-4 text-blue-600 font-medium hover:underline"
-        >
-          {expanded ? '' : 'Read more'}
-        </button>
-      )}
+      <div className={styles.blog_detail} dangerouslySetInnerHTML={{ __html: html }} />
+    {/*    <div className={styles.blog_detail} dangerouslySetInnerHTML={{ __html: expanded ? html : shortened + (isLong ? '...' : '') }} />
+       {isLong && (
+         <button
+           onClick={() => setExpanded(!expanded)}
+           className="mt-4 text-blue-600 font-medium hover:underline"
+         >
+           {expanded ? '' : 'Read more'}
+         </button>
+       )} */}
     </div>
   );
 }
