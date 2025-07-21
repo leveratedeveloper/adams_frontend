@@ -10,7 +10,7 @@ import OtherInsights from '@/components/OtherInsights';
 import ExpandableContent from '@/components/ExpandableContent';
 
 type Tag = {
-  name: string; // Stored as JSON string, e.g., '{"en": "Finance"}'
+  name: string;
 };
 
 type InsightDetail = {
@@ -60,11 +60,13 @@ export default function BlogDetail() {
   const [post, setPost] = useState<InsightDetail | null>(null);
   const [otherPosts, setOtherPosts] = useState<Insights[]>([]);
   const [html, setHtml] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     if (!slug) return;
 
     async function fetchData() {
+      setLoading(true);
       try {
         const res = await fetch(
           process.env.NEXT_PUBLIC_CMS_ENDPOINT + `/api/admin/blog/posts/${slug}`,
@@ -73,14 +75,14 @@ export default function BlogDetail() {
 
         if (!res.ok) {
           setPost(null);
+          setLoading(false);
           return;
         }
 
         const json = await res.json();
         const postData: InsightDetail = json.data || json.results;
         setPost(postData);
-        // setHtml(convertMarkdownToHtml(postData.content));
-        setHtml(convertMarkdownToHtml(postData.content.replace(/white-space:\s*pre;?/gi, '')) );
+        setHtml(convertMarkdownToHtml(postData.content.replace(/white-space:\s*pre;?/gi, '')));
 
         const ins = await fetch(
           process.env.NEXT_PUBLIC_CMS_ENDPOINT + `/api/admin/blog/posts`,
@@ -89,68 +91,79 @@ export default function BlogDetail() {
         const jsonPosts = await ins.json();
         const allPosts: Insights[] = jsonPosts.data || jsonPosts.results || [];
         setOtherPosts(getOtherArticles(allPosts, slug).slice(0, 5));
-        // set meta data
+
         document.title = postData.title;
         document
           .querySelector('meta[name="description"]')
           ?.setAttribute('content', postData.seo_description);
       } catch (err) {
         console.error(err);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchData();
   }, [slug]);
 
-  if (!post) {
-    return <div>Blog not found</div>;
-  }
-
-  const date = new Date(post.published_at);
-  const formatted = date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const date = post?.published_at
+    ? new Date(post.published_at).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    : '';
 
   return (
-    <div className="relative max-h-screen w-full">
+    <div className="relative w-full">
       <Header />
-      <main className="relative z-10 items-center justify-center min-h-screen">
+      <main className="relative z-10 min-h-screen">
         <div
           className="container container-blog-detail mx-auto text-gray-700"
           style={{ paddingTop: '15vh', paddingBottom: '15vh' }}
         >
-          <div className="text-sm text-gray-500 mb-10">
-            <a href="/insights" className="text-blue-600 hover:underline">
-              Insights
-            </a>
-            <span> / </span>
-            <span className="font-medium">{post.title}</span>
-          </div>
+          {loading ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-500 animate-pulse">Loading insight...</p>
+            </div>
+          ) : post ? (
+            <>
+              <div className="text-sm text-gray-500 mb-10">
+                <a href="/insights" className="text-blue-600 hover:underline">
+                  Insights
+                </a>
+                <span> / </span>
+                <span className="font-medium">{post.title}</span>
+              </div>
 
-          <h1 className="text-3xl font-semibold leading-tight mb-2 text-center">{post.title}</h1>
-          <p className="text-sm text-gray-500 mb-6 text-center">
-            {post.author?.name} • {formatted}
-          </p>
+              <h1 className="text-3xl font-semibold leading-tight mb-2 text-center">
+                {post.title}
+              </h1>
+              <p className="text-sm text-gray-500 mb-6 text-center">
+                {post.author?.name} • {date}
+              </p>
 
-          <div className="w-full h-72 relative rounded overflow-hidden mb-8">
-            <Image
-              src={post.image || '/img/no-image.png'}
-              alt={post.title}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
+              <div className="w-full h-72 relative rounded overflow-hidden mb-8">
+                <Image
+                  src={post.image || '/img/no-image.png'}
+                  alt={post.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
 
-          <ExpandableContent html={html} limit={0} />
+              <ExpandableContent html={html} limit={0} />
 
-          <div className="mt-8 border-t">
-            {!otherPosts.length 
-              ? null
-              : <OtherInsights posts={otherPosts} />}
-            
-          </div>
+              <div className="mt-8 border-t">
+                {otherPosts.length > 0 && <OtherInsights posts={otherPosts} />}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-20">
+              <h2 className="text-2xl text-red-600 font-semibold">Insight not found</h2>
+              <p className="text-gray-500">We couldn't find the article you're looking for.</p>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
