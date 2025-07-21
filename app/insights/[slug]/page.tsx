@@ -140,7 +140,7 @@ export default function BlogDetail() {
                 {post.title}
               </h1>
               <p className="text-sm text-gray-500 mb-6 text-center">
-                {post.author?.name} • {date}
+                • {date}
               </p>
 
               <div className="w-full h-72 relative rounded overflow-hidden mb-8">
